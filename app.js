@@ -19,9 +19,17 @@ const cache = {};
 /* ---------- saved progress ---------- */
 const KEY = 'lingoWorld.v1';
 const S = Object.assign({ xp: 0, streak: 0, lastDay: null, known: {}, best: {}, done: {}, srs: {}, blingos: 30, slow: false, owned: {}, equip: {} }, JSON.parse(localStorage.getItem(KEY) || '{}'));
-S.owned = Object.assign({ chars: ['strawberry'], colors: [], outfits: [], accs: [], faces: [] }, S.owned);
+S.owned = Object.assign({ chars: ['strawberry'], colors: [], accs: [], faces: [], pets: [] }, S.owned);
 S.lang = S.lang || null;
-S.equip = Object.assign({ char: 'strawberry', color: null, outfit: null, face: null, acc: {} }, S.equip);
+S.equip = Object.assign({ char: 'strawberry', color: null, face: null, acc: {}, pet: null }, S.equip);
+{ // round 5: outfits + neck/back accessories were removed -> refund once, unequip
+  let refund = 0;
+  for (const id of S.owned.outfits || []) refund += REMOVED_ITEMS.outfits[id] || 0;
+  S.owned.accs = S.owned.accs.filter(id => { if (REMOVED_ITEMS.accs[id]) { refund += REMOVED_ITEMS.accs[id]; return false; } return !!ACCS[id]; });
+  delete S.owned.outfits; delete S.equip.outfit; delete S.equip.acc.neck; delete S.equip.acc.back;
+  for (const k of ['chars', 'colors', 'faces', 'pets']) S.owned[k] = S.owned[k].filter(id => SHOP_CATS[k][1][id]);
+  if (refund) { S.blingos += refund; S.refundMsg = refund; }
+}
 const save = () => localStorage.setItem(KEY, JSON.stringify(S));
 const dayStr = d => d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
 function liveStreak() { const y = new Date(); y.setDate(y.getDate() - 1); return (S.lastDay === dayStr(new Date()) || S.lastDay === dayStr(y)) ? S.streak : 0; }
@@ -68,7 +76,8 @@ async function load(code) {
 }
 const wordByKey = (L, k) => { const [, tid, i] = k.split('|'); return L.all.find(w => w.tid === tid && w.i === +i); };
 const sayable = w => !w.t.includes('…') && !w.en.includes('…');
-const mascot = (mood, size, cls) => charSVG(S.equip, mood, size, cls);
+const withPet = (eq, html, size) => eq.pet && PETS[eq.pet] ? `<span class="duo">${html}${petSVG(eq.pet, Math.round(size * .46), 'petbob')}</span>` : html;
+const mascot = (mood, size, cls) => withPet(S.equip, charSVG(S.equip, mood, size, cls), size);
 
 /* ---------- speech out (TTS) ---------- */
 let voices = [];
@@ -360,7 +369,7 @@ function runSession(L, cfg) {
 
   function frame(ex, title, body, speakEx) {
     app.innerHTML = `<div class="lesson"><div class="lbar"><a class="x" href="#/${code}" aria-label="Quit">✕</a>
-      <div class="progress"><i style="width:${solved / unique * 100}%"></i></div><span class="hearts">❤️ ${hearts}</span></div>
+      <div class="progress"><i style="width:${solved / unique * 100}%"></i></div>${S.equip.pet ? petSVG(S.equip.pet, 38, 'petbob') : ''}<span class="hearts">❤️ ${hearts}</span></div>
       ${ex.retry ? '<span class="pill-label warm">🔁 Let\'s fix this one</span>' : ''}${speakEx ? '<span class="pill-label">🎤 Speaking · +3 Blingos</span>' : ''}
       <h2 class="ex-title">${title}</h2><div class="ex-body">${body}</div></div>
       <div class="checkbar" id="checkbar"><div class="checkbar-in">${speakEx ? `<button class="bigbtn alt" id="skip">CAN'T SPEAK NOW</button>${!SR ? '<button class="bigbtn" id="selfok">I SAID IT ✓</button>' : ''}`
@@ -728,12 +737,12 @@ const DEFAULT_NAME = { colors: 'Original color', faces: 'Kawaii face' };
 const ownedList = cat => DEFAULT_NAME[cat] ? [null, ...S.owned[cat]] : S.owned[cat];
 function withItem(eq, cat, id) {
   const e = { ...eq, acc: { ...eq.acc } };
-  if (cat === 'chars') e.char = id; else if (cat === 'colors') e.color = id; else if (cat === 'faces') e.face = id; else if (cat === 'outfits') e.outfit = id; else e.acc[ACCS[id].slot] = id;
+  if (cat === 'chars') e.char = id; else if (cat === 'colors') e.color = id; else if (cat === 'faces') e.face = id; else if (cat === 'pets') e.pet = id; else e.acc[ACCS[id].slot] = id;
   return e;
 }
 function isEquipped(cat, id) {
   const e = S.equip;
-  return cat === 'chars' ? e.char === id : cat === 'colors' ? e.color === id : cat === 'faces' ? e.face === id : cat === 'outfits' ? e.outfit === id : e.acc[ACCS[id].slot] === id;
+  return cat === 'chars' ? e.char === id : cat === 'colors' ? e.color === id : cat === 'faces' ? e.face === id : cat === 'pets' ? e.pet === id : e.acc[ACCS[id].slot] === id;
 }
 function charScreen(mode) {
   const shop = mode === 'shop', items = SHOP_CATS[charTab][1];
@@ -741,7 +750,7 @@ function charScreen(mode) {
   const preview = tryOn ? withItem(S.equip, tryOn.cat, tryOn.id) : S.equip;
   const nameOf = (cat, id) => id == null ? DEFAULT_NAME[cat] : SHOP_CATS[cat][1][id].name;
   app.innerHTML = `<a class="back" href="#/">← Home</a>
-    <div class="stage card">${charSVG(preview, 'cheer', 170, 'bob')}<div><h1>${shop ? '🛍️ Shop' : '👗 My Character'}</h1><div class="sub">${CHARS[preview.char].name}</div>
+    <div class="stage card">${withPet(preview, charSVG(preview, 'cheer', 170, 'bob'), 170)}<div><h1>${shop ? '🛍️ Shop' : '👗 My Character'}</h1><div class="sub">${CHARS[preview.char].name}</div>
       <div class="wallet"><span class="coin">B</span> ${S.blingos} Blingos</div>${tryOn ? `<div class="sub">Trying on: <b>${esc(nameOf(tryOn.cat, tryOn.id))}</b></div>` : '<div class="sub">Tap any item to try it on.</div>'}
       <p class="sub small-print">Earn Blingos from lessons, speaking (bonus!), reviews, quizzes and your daily streak.</p></div></div>
     <div class="tabs"><a class="tab ${!shop ? 'on' : ''}" href="#/me">👗 Closet</a><a class="tab ${shop ? 'on' : ''}" href="#/shop">🛍️ Shop</a></div>
@@ -750,7 +759,7 @@ function charScreen(mode) {
       const it = id == null ? { name: DEFAULT_NAME[charTab], price: 0 } : items[id];
       const own = id == null || S.owned[charTab].includes(id), eq = id == null ? S.equip[charTab === 'colors' ? 'color' : 'face'] == null : isEquipped(charTab, id);
       const sticky = charTab === 'chars' || id == null || charTab === 'colors' || charTab === 'faces';
-      return `<div class="item card ${eq ? 'eq' : ''}" data-id="${id ?? ''}">${charSVG(withItem(S.equip, charTab, id), 'happy', 92)}<div class="iname">${esc(it.name)}${charTab === 'accs' ? `<small>${ACCS[id].slot}</small>` : ''}</div>
+      return `<div class="item card ${eq ? 'eq' : ''}" data-id="${id ?? ''}">${charTab === 'pets' ? petSVG(id, 92, 'petbob') : charSVG(withItem(S.equip, charTab, id), 'happy', 92)}<div class="iname">${esc(it.name)}${charTab === 'accs' ? `<small>${ACCS[id].slot}</small>` : ''}</div>
         ${own ? `<button class="btn small ${eq ? 'alt' : ''}" data-act="wear" ${eq && sticky ? 'disabled' : ''}>${eq ? (sticky ? 'Wearing ✓' : 'Take off') : 'Wear'}</button>`
           : `<button class="btn small buy" data-act="buy" ${S.blingos < it.price ? 'disabled' : ''}><span class="coin">B</span> ${it.price}</button>`}</div>`;
     }).join('') : `<p class="sub">Nothing here yet. Visit the <a href="#/shop"><b>Shop</b></a>!</p>`}</div><p class="center"><button class="linkbtn" id="redeem">Redeem code</button></p>`;
@@ -769,7 +778,7 @@ function charScreen(mode) {
       }
       if (act === 'wear') {
         if (cat === 'chars') S.equip.char = id; else if (cat === 'colors') S.equip.color = id; else if (cat === 'faces') S.equip.face = id;
-        else if (cat === 'outfits') S.equip.outfit = S.equip.outfit === id ? null : id;
+        else if (cat === 'pets') S.equip.pet = S.equip.pet === id ? null : id;
         else { const sl = ACCS[id].slot; S.equip.acc[sl] = S.equip.acc[sl] === id ? null : id; }
         tryOn = null; save(); return charScreen(mode);
       }
@@ -823,5 +832,29 @@ function route() {
 }
 window.addEventListener('hashchange', route);
 document.addEventListener('keydown', e => keyHandler && keyHandler(e));
+/* ---------- soft floating background shapes ---------- */
+(function deco() {
+  const el = document.querySelector('.bubbles'); if (!el) return;
+  const cols = ['#ffc9dc', '#ffd9c4', '#fff0b0', '#c9f3df', '#bfeee8', '#cce7ff', '#c8cfff', '#e0d4ff', '#f2d0f6', '#ffd3da'];
+  const sh = [
+    c => `<circle cx="20" cy="20" r="16" fill="${c}"/><circle cx="14" cy="13" r="5" fill="#fff" opacity=".7"/>`,
+    c => `<path d="M20 3 L24.5 14 L36 14.5 L27 22 L30 34 L20 27.5 L10 34 L13 22 L4 14.5 L15.5 14Z" fill="${c}" stroke-linejoin="round"/>`,
+    c => `<path d="M20 34 C4 24 4 10 12 8 C16 7 19 10 20 13 C21 10 24 7 28 8 C36 10 36 24 20 34Z" fill="${c}"/>`,
+    c => `<path d="M8 22 C4 10 16 2 26 6 C36 10 38 24 30 32 C22 38 10 34 8 22Z" fill="${c}"/>`,
+    c => `<path d="M20 2 Q22 18 38 20 Q22 22 20 38 Q18 22 2 20 Q18 18 20 2Z" fill="${c}"/>`,
+    c => `<path d="M3 24 Q9 10 15 24 T27 24 T37 18" fill="none" stroke="${c}" stroke-width="5" stroke-linecap="round"/>`,
+    c => `<circle cx="20" cy="20" r="13" fill="none" stroke="${c}" stroke-width="5"/>`,
+    c => `<rect x="8" y="8" width="24" height="24" rx="8" fill="${c}" transform="rotate(20 20 20)"/>`,
+  ];
+  let seed = 11; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  let h = '';
+  for (let i = 0; i < 38; i++) {
+    const s = 14 + Math.round(rnd() * 30), shape = sh[i % sh.length], c = cols[Math.floor(rnd() * cols.length)];
+    h += `<svg class="deco" viewBox="0 0 40 40" style="left:${(rnd() * 96).toFixed(1)}%;top:${(rnd() * 96).toFixed(1)}%;width:${s}px;height:${s}px;animation-duration:${(12 + rnd() * 14).toFixed(1)}s;animation-delay:-${(rnd() * 20).toFixed(1)}s;--r:${Math.round(rnd() * 40 - 20)}deg">${shape(c)}</svg>`;
+  }
+  el.innerHTML = h + '<b class="blob b1"></b><b class="blob b2"></b><b class="blob b3"></b>';
+})();
 updateStats(); route();
+if (S.refundMsg) { setTimeout(() => toast(`👗 Outfits were retired: <span class="coin">B</span> +${S.refundMsg} Blingos refunded`), 600); delete S.refundMsg; }
+save();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
