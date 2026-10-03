@@ -1,0 +1,418 @@
+{
+ "code": "es",
+ "name": "Spanish",
+ "native": "Español",
+ "flag": "🇪🇸",
+ "speech": "es-ES",
+ "color": "#ff6b4a",
+ "romanLabel": null,
+ "topics": [
+  {
+   "id": "greetings",
+   "name": "Greetings",
+   "icon": "👋",
+   "words": [
+    {
+     "en": "Hello",
+     "t": "Hola"
+    },
+    {
+     "en": "Good morning",
+     "t": "Buenos días"
+    },
+    {
+     "en": "Good afternoon",
+     "t": "Buenas tardes"
+    },
+    {
+     "en": "Good evening",
+     "t": "Buenas noches"
+    },
+    {
+     "en": "Good night",
+     "t": "Buenas noches"
+    },
+    {
+     "en": "Goodbye",
+     "t": "Adiós"
+    },
+    {
+     "en": "See you later",
+     "t": "Hasta luego"
+    },
+    {
+     "en": "How are you?",
+     "t": "¿Cómo estás?"
+    },
+    {
+     "en": "I'm fine",
+     "t": "Estoy bien"
+    },
+    {
+     "en": "Thank you",
+     "t": "Gracias"
+    },
+    {
+     "en": "You're welcome",
+     "t": "De nada"
+    },
+    {
+     "en": "Please",
+     "t": "Por favor"
+    },
+    {
+     "en": "Excuse me",
+     "t": "Disculpe"
+    },
+    {
+     "en": "Sorry",
+     "t": "Lo siento"
+    },
+    {
+     "en": "Nice to meet you",
+     "t": "Mucho gusto"
+    }
+   ],
+   "note": "Buenas noches means both “good evening” and “good night”."
+  },
+  {
+   "id": "numbers",
+   "name": "Numbers",
+   "icon": "🔢",
+   "words": [
+    {
+     "en": "Zero",
+     "t": "cero"
+    },
+    {
+     "en": "One",
+     "t": "uno"
+    },
+    {
+     "en": "Two",
+     "t": "dos"
+    },
+    {
+     "en": "Three",
+     "t": "tres"
+    },
+    {
+     "en": "Four",
+     "t": "cuatro"
+    },
+    {
+     "en": "Five",
+     "t": "cinco"
+    },
+    {
+     "en": "Six",
+     "t": "seis"
+    },
+    {
+     "en": "Seven",
+     "t": "siete"
+    },
+    {
+     "en": "Eight",
+     "t": "ocho"
+    },
+    {
+     "en": "Nine",
+     "t": "nueve"
+    },
+    {
+     "en": "Ten",
+     "t": "diez"
+    },
+    {
+     "en": "Eleven",
+     "t": "once"
+    },
+    {
+     "en": "Twenty",
+     "t": "veinte"
+    },
+    {
+     "en": "One hundred",
+     "t": "cien"
+    },
+    {
+     "en": "One thousand",
+     "t": "mil"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "name": "Food & Drinks",
+   "icon": "🍜",
+   "words": [
+    {
+     "en": "Water",
+     "t": "el agua"
+    },
+    {
+     "en": "Bread",
+     "t": "el pan"
+    },
+    {
+     "en": "Rice",
+     "t": "el arroz"
+    },
+    {
+     "en": "Apple",
+     "t": "la manzana"
+    },
+    {
+     "en": "Banana",
+     "t": "el plátano"
+    },
+    {
+     "en": "Egg",
+     "t": "el huevo"
+    },
+    {
+     "en": "Milk",
+     "t": "la leche"
+    },
+    {
+     "en": "Coffee",
+     "t": "el café"
+    },
+    {
+     "en": "Tea",
+     "t": "el té"
+    },
+    {
+     "en": "Meat",
+     "t": "la carne"
+    },
+    {
+     "en": "Chicken",
+     "t": "el pollo"
+    },
+    {
+     "en": "Fish",
+     "t": "el pescado"
+    },
+    {
+     "en": "Vegetables",
+     "t": "las verduras"
+    },
+    {
+     "en": "Cheese",
+     "t": "el queso"
+    },
+    {
+     "en": "Soup",
+     "t": "la sopa"
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "name": "Colors",
+   "icon": "🎨",
+   "words": [
+    {
+     "en": "Red",
+     "t": "rojo"
+    },
+    {
+     "en": "Blue",
+     "t": "azul"
+    },
+    {
+     "en": "Green",
+     "t": "verde"
+    },
+    {
+     "en": "Yellow",
+     "t": "amarillo"
+    },
+    {
+     "en": "Orange",
+     "t": "naranja"
+    },
+    {
+     "en": "Purple",
+     "t": "morado"
+    },
+    {
+     "en": "Pink",
+     "t": "rosa"
+    },
+    {
+     "en": "Black",
+     "t": "negro"
+    },
+    {
+     "en": "White",
+     "t": "blanco"
+    },
+    {
+     "en": "Gray",
+     "t": "gris"
+    },
+    {
+     "en": "Brown",
+     "t": "marrón"
+    },
+    {
+     "en": "Gold",
+     "t": "dorado"
+    },
+    {
+     "en": "Silver",
+     "t": "plateado"
+    },
+    {
+     "en": "Color",
+     "t": "el color"
+    },
+    {
+     "en": "Rainbow",
+     "t": "el arcoíris"
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family & Friends",
+   "icon": "👨‍👩‍👧",
+   "words": [
+    {
+     "en": "Family",
+     "t": "la familia"
+    },
+    {
+     "en": "Mother",
+     "t": "la madre"
+    },
+    {
+     "en": "Father",
+     "t": "el padre"
+    },
+    {
+     "en": "Parents",
+     "t": "los padres"
+    },
+    {
+     "en": "Older brother",
+     "t": "el hermano mayor"
+    },
+    {
+     "en": "Younger brother",
+     "t": "el hermano menor"
+    },
+    {
+     "en": "Older sister",
+     "t": "la hermana mayor"
+    },
+    {
+     "en": "Younger sister",
+     "t": "la hermana menor"
+    },
+    {
+     "en": "Grandmother",
+     "t": "la abuela"
+    },
+    {
+     "en": "Grandfather",
+     "t": "el abuelo"
+    },
+    {
+     "en": "Son",
+     "t": "el hijo"
+    },
+    {
+     "en": "Daughter",
+     "t": "la hija"
+    },
+    {
+     "en": "Husband",
+     "t": "el esposo"
+    },
+    {
+     "en": "Wife",
+     "t": "la esposa"
+    },
+    {
+     "en": "Baby",
+     "t": "el bebé"
+    },
+    {
+     "en": "Friend",
+     "t": "el amigo / la amiga"
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "name": "Common Phrases",
+   "icon": "💬",
+   "words": [
+    {
+     "en": "Yes",
+     "t": "Sí"
+    },
+    {
+     "en": "No",
+     "t": "No"
+    },
+    {
+     "en": "What's your name?",
+     "t": "¿Cómo te llamas?"
+    },
+    {
+     "en": "My name is …",
+     "t": "Me llamo …"
+    },
+    {
+     "en": "I don't understand",
+     "t": "No entiendo"
+    },
+    {
+     "en": "Please speak slowly",
+     "t": "Más despacio, por favor"
+    },
+    {
+     "en": "Do you speak English?",
+     "t": "¿Hablas inglés?"
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "¿Dónde está el baño?"
+    },
+    {
+     "en": "How much is this?",
+     "t": "¿Cuánto cuesta?"
+    },
+    {
+     "en": "I'm hungry",
+     "t": "Tengo hambre"
+    },
+    {
+     "en": "It's delicious!",
+     "t": "¡Está delicioso!"
+    },
+    {
+     "en": "I don't know",
+     "t": "No sé"
+    },
+    {
+     "en": "Let's go!",
+     "t": "¡Vamos!"
+    },
+    {
+     "en": "Good luck!",
+     "t": "¡Buena suerte!"
+    },
+    {
+     "en": "Cheers!",
+     "t": "¡Salud!"
+    }
+   ]
+  }
+ ]
+}

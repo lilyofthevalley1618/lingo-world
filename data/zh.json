@@ -1,0 +1,509 @@
+{
+ "code": "zh",
+ "name": "Chinese",
+ "native": "中文 (普通话)",
+ "flag": "🇨🇳",
+ "speech": "zh-CN",
+ "color": "#e63946",
+ "romanLabel": "pinyin",
+ "topics": [
+  {
+   "id": "greetings",
+   "name": "Greetings",
+   "icon": "👋",
+   "words": [
+    {
+     "en": "Hello",
+     "t": "你好",
+     "r": "nǐ hǎo"
+    },
+    {
+     "en": "Good morning",
+     "t": "早上好",
+     "r": "zǎoshang hǎo"
+    },
+    {
+     "en": "Good afternoon",
+     "t": "下午好",
+     "r": "xiàwǔ hǎo"
+    },
+    {
+     "en": "Good evening",
+     "t": "晚上好",
+     "r": "wǎnshang hǎo"
+    },
+    {
+     "en": "Good night",
+     "t": "晚安",
+     "r": "wǎn'ān"
+    },
+    {
+     "en": "Goodbye",
+     "t": "再见",
+     "r": "zàijiàn"
+    },
+    {
+     "en": "See you later",
+     "t": "回头见",
+     "r": "huítóu jiàn"
+    },
+    {
+     "en": "How are you?",
+     "t": "你好吗？",
+     "r": "nǐ hǎo ma?"
+    },
+    {
+     "en": "I'm fine",
+     "t": "我很好",
+     "r": "wǒ hěn hǎo"
+    },
+    {
+     "en": "Thank you",
+     "t": "谢谢",
+     "r": "xièxie"
+    },
+    {
+     "en": "You're welcome",
+     "t": "不客气",
+     "r": "bú kèqi"
+    },
+    {
+     "en": "Please",
+     "t": "请",
+     "r": "qǐng"
+    },
+    {
+     "en": "Excuse me",
+     "t": "打扰一下",
+     "r": "dǎrǎo yíxià"
+    },
+    {
+     "en": "Sorry",
+     "t": "对不起",
+     "r": "duìbuqǐ"
+    },
+    {
+     "en": "Nice to meet you",
+     "t": "很高兴认识你",
+     "r": "hěn gāoxìng rènshi nǐ"
+    }
+   ]
+  },
+  {
+   "id": "numbers",
+   "name": "Numbers",
+   "icon": "🔢",
+   "words": [
+    {
+     "en": "Zero",
+     "t": "零",
+     "r": "líng"
+    },
+    {
+     "en": "One",
+     "t": "一",
+     "r": "yī"
+    },
+    {
+     "en": "Two",
+     "t": "二",
+     "r": "èr"
+    },
+    {
+     "en": "Three",
+     "t": "三",
+     "r": "sān"
+    },
+    {
+     "en": "Four",
+     "t": "四",
+     "r": "sì"
+    },
+    {
+     "en": "Five",
+     "t": "五",
+     "r": "wǔ"
+    },
+    {
+     "en": "Six",
+     "t": "六",
+     "r": "liù"
+    },
+    {
+     "en": "Seven",
+     "t": "七",
+     "r": "qī"
+    },
+    {
+     "en": "Eight",
+     "t": "八",
+     "r": "bā"
+    },
+    {
+     "en": "Nine",
+     "t": "九",
+     "r": "jiǔ"
+    },
+    {
+     "en": "Ten",
+     "t": "十",
+     "r": "shí"
+    },
+    {
+     "en": "Eleven",
+     "t": "十一",
+     "r": "shíyī"
+    },
+    {
+     "en": "Twenty",
+     "t": "二十",
+     "r": "èrshí"
+    },
+    {
+     "en": "One hundred",
+     "t": "一百",
+     "r": "yìbǎi"
+    },
+    {
+     "en": "One thousand",
+     "t": "一千",
+     "r": "yìqiān"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "name": "Food & Drinks",
+   "icon": "🍜",
+   "words": [
+    {
+     "en": "Water",
+     "t": "水",
+     "r": "shuǐ"
+    },
+    {
+     "en": "Bread",
+     "t": "面包",
+     "r": "miànbāo"
+    },
+    {
+     "en": "Rice",
+     "t": "米饭",
+     "r": "mǐfàn"
+    },
+    {
+     "en": "Apple",
+     "t": "苹果",
+     "r": "píngguǒ"
+    },
+    {
+     "en": "Banana",
+     "t": "香蕉",
+     "r": "xiāngjiāo"
+    },
+    {
+     "en": "Egg",
+     "t": "鸡蛋",
+     "r": "jīdàn"
+    },
+    {
+     "en": "Milk",
+     "t": "牛奶",
+     "r": "niúnǎi"
+    },
+    {
+     "en": "Coffee",
+     "t": "咖啡",
+     "r": "kāfēi"
+    },
+    {
+     "en": "Tea",
+     "t": "茶",
+     "r": "chá"
+    },
+    {
+     "en": "Meat",
+     "t": "肉",
+     "r": "ròu"
+    },
+    {
+     "en": "Chicken",
+     "t": "鸡肉",
+     "r": "jīròu"
+    },
+    {
+     "en": "Fish",
+     "t": "鱼",
+     "r": "yú"
+    },
+    {
+     "en": "Vegetables",
+     "t": "蔬菜",
+     "r": "shūcài"
+    },
+    {
+     "en": "Cheese",
+     "t": "奶酪",
+     "r": "nǎilào"
+    },
+    {
+     "en": "Soup",
+     "t": "汤",
+     "r": "tāng"
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "name": "Colors",
+   "icon": "🎨",
+   "words": [
+    {
+     "en": "Red",
+     "t": "红色",
+     "r": "hóngsè"
+    },
+    {
+     "en": "Blue",
+     "t": "蓝色",
+     "r": "lánsè"
+    },
+    {
+     "en": "Green",
+     "t": "绿色",
+     "r": "lǜsè"
+    },
+    {
+     "en": "Yellow",
+     "t": "黄色",
+     "r": "huángsè"
+    },
+    {
+     "en": "Orange",
+     "t": "橙色",
+     "r": "chéngsè"
+    },
+    {
+     "en": "Purple",
+     "t": "紫色",
+     "r": "zǐsè"
+    },
+    {
+     "en": "Pink",
+     "t": "粉色",
+     "r": "fěnsè"
+    },
+    {
+     "en": "Black",
+     "t": "黑色",
+     "r": "hēisè"
+    },
+    {
+     "en": "White",
+     "t": "白色",
+     "r": "báisè"
+    },
+    {
+     "en": "Gray",
+     "t": "灰色",
+     "r": "huīsè"
+    },
+    {
+     "en": "Brown",
+     "t": "棕色",
+     "r": "zōngsè"
+    },
+    {
+     "en": "Gold",
+     "t": "金色",
+     "r": "jīnsè"
+    },
+    {
+     "en": "Silver",
+     "t": "银色",
+     "r": "yínsè"
+    },
+    {
+     "en": "Color",
+     "t": "颜色",
+     "r": "yánsè"
+    },
+    {
+     "en": "Rainbow",
+     "t": "彩虹",
+     "r": "cǎihóng"
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family & Friends",
+   "icon": "👨‍👩‍👧",
+   "words": [
+    {
+     "en": "Family",
+     "t": "家人",
+     "r": "jiārén"
+    },
+    {
+     "en": "Mother",
+     "t": "妈妈",
+     "r": "māma"
+    },
+    {
+     "en": "Father",
+     "t": "爸爸",
+     "r": "bàba"
+    },
+    {
+     "en": "Parents",
+     "t": "父母",
+     "r": "fùmǔ"
+    },
+    {
+     "en": "Older brother",
+     "t": "哥哥",
+     "r": "gēge"
+    },
+    {
+     "en": "Younger brother",
+     "t": "弟弟",
+     "r": "dìdi"
+    },
+    {
+     "en": "Older sister",
+     "t": "姐姐",
+     "r": "jiějie"
+    },
+    {
+     "en": "Younger sister",
+     "t": "妹妹",
+     "r": "mèimei"
+    },
+    {
+     "en": "Grandmother",
+     "t": "奶奶",
+     "r": "nǎinai"
+    },
+    {
+     "en": "Grandfather",
+     "t": "爷爷",
+     "r": "yéye"
+    },
+    {
+     "en": "Son",
+     "t": "儿子",
+     "r": "érzi"
+    },
+    {
+     "en": "Daughter",
+     "t": "女儿",
+     "r": "nǚ'ér"
+    },
+    {
+     "en": "Husband",
+     "t": "丈夫",
+     "r": "zhàngfu"
+    },
+    {
+     "en": "Wife",
+     "t": "妻子",
+     "r": "qīzi"
+    },
+    {
+     "en": "Baby",
+     "t": "宝宝",
+     "r": "bǎobao"
+    },
+    {
+     "en": "Friend",
+     "t": "朋友",
+     "r": "péngyou"
+    }
+   ],
+   "note": "奶奶/爷爷 are your dad's parents; mom's parents are 外婆/外公 (wàipó/wàigōng)."
+  },
+  {
+   "id": "phrases",
+   "name": "Common Phrases",
+   "icon": "💬",
+   "words": [
+    {
+     "en": "Yes",
+     "t": "是的",
+     "r": "shì de"
+    },
+    {
+     "en": "No",
+     "t": "不是",
+     "r": "bú shì"
+    },
+    {
+     "en": "What's your name?",
+     "t": "你叫什么名字？",
+     "r": "nǐ jiào shénme míngzi?"
+    },
+    {
+     "en": "My name is …",
+     "t": "我叫…",
+     "r": "wǒ jiào …"
+    },
+    {
+     "en": "I don't understand",
+     "t": "我听不懂",
+     "r": "wǒ tīng bu dǒng"
+    },
+    {
+     "en": "Please speak slowly",
+     "t": "请说慢一点",
+     "r": "qǐng shuō màn yìdiǎn"
+    },
+    {
+     "en": "Do you speak English?",
+     "t": "你会说英语吗？",
+     "r": "nǐ huì shuō Yīngyǔ ma?"
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "洗手间在哪里？",
+     "r": "xǐshǒujiān zài nǎlǐ?"
+    },
+    {
+     "en": "How much is this?",
+     "t": "这个多少钱？",
+     "r": "zhège duōshao qián?"
+    },
+    {
+     "en": "I'm hungry",
+     "t": "我饿了",
+     "r": "wǒ è le"
+    },
+    {
+     "en": "It's delicious!",
+     "t": "很好吃！",
+     "r": "hěn hǎochī!"
+    },
+    {
+     "en": "I don't know",
+     "t": "我不知道",
+     "r": "wǒ bù zhīdào"
+    },
+    {
+     "en": "Let's go!",
+     "t": "我们走吧！",
+     "r": "wǒmen zǒu ba!"
+    },
+    {
+     "en": "Good luck!",
+     "t": "祝你好运！",
+     "r": "zhù nǐ hǎoyùn!"
+    },
+    {
+     "en": "Cheers!",
+     "t": "干杯！",
+     "r": "gānbēi!"
+    }
+   ]
+  }
+ ]
+}

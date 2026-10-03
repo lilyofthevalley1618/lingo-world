@@ -1,0 +1,417 @@
+{
+ "code": "fr",
+ "name": "French",
+ "native": "Français",
+ "flag": "🇫🇷",
+ "speech": "fr-FR",
+ "color": "#4a7bff",
+ "romanLabel": null,
+ "topics": [
+  {
+   "id": "greetings",
+   "name": "Greetings",
+   "icon": "👋",
+   "words": [
+    {
+     "en": "Hello",
+     "t": "Salut"
+    },
+    {
+     "en": "Good morning",
+     "t": "Bonjour"
+    },
+    {
+     "en": "Good afternoon",
+     "t": "Bon après-midi"
+    },
+    {
+     "en": "Good evening",
+     "t": "Bonsoir"
+    },
+    {
+     "en": "Good night",
+     "t": "Bonne nuit"
+    },
+    {
+     "en": "Goodbye",
+     "t": "Au revoir"
+    },
+    {
+     "en": "See you later",
+     "t": "À plus tard"
+    },
+    {
+     "en": "How are you?",
+     "t": "Comment ça va ?"
+    },
+    {
+     "en": "I'm fine",
+     "t": "Je vais bien"
+    },
+    {
+     "en": "Thank you",
+     "t": "Merci"
+    },
+    {
+     "en": "You're welcome",
+     "t": "De rien"
+    },
+    {
+     "en": "Please",
+     "t": "S'il vous plaît"
+    },
+    {
+     "en": "Excuse me",
+     "t": "Excusez-moi"
+    },
+    {
+     "en": "Sorry",
+     "t": "Désolé(e)"
+    },
+    {
+     "en": "Nice to meet you",
+     "t": "Enchanté(e)"
+    }
+   ]
+  },
+  {
+   "id": "numbers",
+   "name": "Numbers",
+   "icon": "🔢",
+   "words": [
+    {
+     "en": "Zero",
+     "t": "zéro"
+    },
+    {
+     "en": "One",
+     "t": "un"
+    },
+    {
+     "en": "Two",
+     "t": "deux"
+    },
+    {
+     "en": "Three",
+     "t": "trois"
+    },
+    {
+     "en": "Four",
+     "t": "quatre"
+    },
+    {
+     "en": "Five",
+     "t": "cinq"
+    },
+    {
+     "en": "Six",
+     "t": "six"
+    },
+    {
+     "en": "Seven",
+     "t": "sept"
+    },
+    {
+     "en": "Eight",
+     "t": "huit"
+    },
+    {
+     "en": "Nine",
+     "t": "neuf"
+    },
+    {
+     "en": "Ten",
+     "t": "dix"
+    },
+    {
+     "en": "Eleven",
+     "t": "onze"
+    },
+    {
+     "en": "Twenty",
+     "t": "vingt"
+    },
+    {
+     "en": "One hundred",
+     "t": "cent"
+    },
+    {
+     "en": "One thousand",
+     "t": "mille"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "name": "Food & Drinks",
+   "icon": "🍜",
+   "words": [
+    {
+     "en": "Water",
+     "t": "l'eau"
+    },
+    {
+     "en": "Bread",
+     "t": "le pain"
+    },
+    {
+     "en": "Rice",
+     "t": "le riz"
+    },
+    {
+     "en": "Apple",
+     "t": "la pomme"
+    },
+    {
+     "en": "Banana",
+     "t": "la banane"
+    },
+    {
+     "en": "Egg",
+     "t": "l'œuf"
+    },
+    {
+     "en": "Milk",
+     "t": "le lait"
+    },
+    {
+     "en": "Coffee",
+     "t": "le café"
+    },
+    {
+     "en": "Tea",
+     "t": "le thé"
+    },
+    {
+     "en": "Meat",
+     "t": "la viande"
+    },
+    {
+     "en": "Chicken",
+     "t": "le poulet"
+    },
+    {
+     "en": "Fish",
+     "t": "le poisson"
+    },
+    {
+     "en": "Vegetables",
+     "t": "les légumes"
+    },
+    {
+     "en": "Cheese",
+     "t": "le fromage"
+    },
+    {
+     "en": "Soup",
+     "t": "la soupe"
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "name": "Colors",
+   "icon": "🎨",
+   "words": [
+    {
+     "en": "Red",
+     "t": "rouge"
+    },
+    {
+     "en": "Blue",
+     "t": "bleu"
+    },
+    {
+     "en": "Green",
+     "t": "vert"
+    },
+    {
+     "en": "Yellow",
+     "t": "jaune"
+    },
+    {
+     "en": "Orange",
+     "t": "orange"
+    },
+    {
+     "en": "Purple",
+     "t": "violet"
+    },
+    {
+     "en": "Pink",
+     "t": "rose"
+    },
+    {
+     "en": "Black",
+     "t": "noir"
+    },
+    {
+     "en": "White",
+     "t": "blanc"
+    },
+    {
+     "en": "Gray",
+     "t": "gris"
+    },
+    {
+     "en": "Brown",
+     "t": "marron"
+    },
+    {
+     "en": "Gold",
+     "t": "doré"
+    },
+    {
+     "en": "Silver",
+     "t": "argenté"
+    },
+    {
+     "en": "Color",
+     "t": "la couleur"
+    },
+    {
+     "en": "Rainbow",
+     "t": "l'arc-en-ciel"
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family & Friends",
+   "icon": "👨‍👩‍👧",
+   "words": [
+    {
+     "en": "Family",
+     "t": "la famille"
+    },
+    {
+     "en": "Mother",
+     "t": "la mère"
+    },
+    {
+     "en": "Father",
+     "t": "le père"
+    },
+    {
+     "en": "Parents",
+     "t": "les parents"
+    },
+    {
+     "en": "Older brother",
+     "t": "le grand frère"
+    },
+    {
+     "en": "Younger brother",
+     "t": "le petit frère"
+    },
+    {
+     "en": "Older sister",
+     "t": "la grande sœur"
+    },
+    {
+     "en": "Younger sister",
+     "t": "la petite sœur"
+    },
+    {
+     "en": "Grandmother",
+     "t": "la grand-mère"
+    },
+    {
+     "en": "Grandfather",
+     "t": "le grand-père"
+    },
+    {
+     "en": "Son",
+     "t": "le fils"
+    },
+    {
+     "en": "Daughter",
+     "t": "la fille"
+    },
+    {
+     "en": "Husband",
+     "t": "le mari"
+    },
+    {
+     "en": "Wife",
+     "t": "la femme"
+    },
+    {
+     "en": "Baby",
+     "t": "le bébé"
+    },
+    {
+     "en": "Friend",
+     "t": "l'ami / l'amie"
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "name": "Common Phrases",
+   "icon": "💬",
+   "words": [
+    {
+     "en": "Yes",
+     "t": "Oui"
+    },
+    {
+     "en": "No",
+     "t": "Non"
+    },
+    {
+     "en": "What's your name?",
+     "t": "Comment tu t'appelles ?"
+    },
+    {
+     "en": "My name is …",
+     "t": "Je m'appelle …"
+    },
+    {
+     "en": "I don't understand",
+     "t": "Je ne comprends pas"
+    },
+    {
+     "en": "Please speak slowly",
+     "t": "Plus lentement, s'il vous plaît"
+    },
+    {
+     "en": "Do you speak English?",
+     "t": "Vous parlez anglais ?"
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "Où sont les toilettes ?"
+    },
+    {
+     "en": "How much is this?",
+     "t": "Combien ça coûte ?"
+    },
+    {
+     "en": "I'm hungry",
+     "t": "J'ai faim"
+    },
+    {
+     "en": "It's delicious!",
+     "t": "C'est délicieux !"
+    },
+    {
+     "en": "I don't know",
+     "t": "Je ne sais pas"
+    },
+    {
+     "en": "Let's go!",
+     "t": "On y va !"
+    },
+    {
+     "en": "Good luck!",
+     "t": "Bonne chance !"
+    },
+    {
+     "en": "Cheers!",
+     "t": "Santé !"
+    }
+   ]
+  }
+ ]
+}

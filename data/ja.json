@@ -1,0 +1,509 @@
+{
+ "code": "ja",
+ "name": "Japanese",
+ "native": "日本語",
+ "flag": "🇯🇵",
+ "speech": "ja-JP",
+ "color": "#ff5fa2",
+ "romanLabel": "romaji",
+ "topics": [
+  {
+   "id": "greetings",
+   "name": "Greetings",
+   "icon": "👋",
+   "words": [
+    {
+     "en": "Hello",
+     "t": "こんにちは",
+     "r": "konnichiwa"
+    },
+    {
+     "en": "Good morning",
+     "t": "おはようございます",
+     "r": "ohayō gozaimasu"
+    },
+    {
+     "en": "Good afternoon",
+     "t": "こんにちは",
+     "r": "konnichiwa"
+    },
+    {
+     "en": "Good evening",
+     "t": "こんばんは",
+     "r": "konbanwa"
+    },
+    {
+     "en": "Good night",
+     "t": "おやすみなさい",
+     "r": "oyasuminasai"
+    },
+    {
+     "en": "Goodbye",
+     "t": "さようなら",
+     "r": "sayōnara"
+    },
+    {
+     "en": "See you later",
+     "t": "またね",
+     "r": "mata ne"
+    },
+    {
+     "en": "How are you?",
+     "t": "お元気ですか？（おげんきですか）",
+     "r": "o-genki desu ka?"
+    },
+    {
+     "en": "I'm fine",
+     "t": "元気です（げんきです）",
+     "r": "genki desu"
+    },
+    {
+     "en": "Thank you",
+     "t": "ありがとうございます",
+     "r": "arigatō gozaimasu"
+    },
+    {
+     "en": "You're welcome",
+     "t": "どういたしまして",
+     "r": "dō itashimashite"
+    },
+    {
+     "en": "Please",
+     "t": "お願いします（おねがいします）",
+     "r": "onegai shimasu"
+    },
+    {
+     "en": "Excuse me",
+     "t": "すみません",
+     "r": "sumimasen"
+    },
+    {
+     "en": "Sorry",
+     "t": "ごめんなさい",
+     "r": "gomen nasai"
+    },
+    {
+     "en": "Nice to meet you",
+     "t": "はじめまして",
+     "r": "hajimemashite"
+    }
+   ],
+   "note": "こんにちは is used for both “hello” and “good afternoon”."
+  },
+  {
+   "id": "numbers",
+   "name": "Numbers",
+   "icon": "🔢",
+   "words": [
+    {
+     "en": "Zero",
+     "t": "ゼロ",
+     "r": "zero"
+    },
+    {
+     "en": "One",
+     "t": "一（いち）",
+     "r": "ichi"
+    },
+    {
+     "en": "Two",
+     "t": "二（に）",
+     "r": "ni"
+    },
+    {
+     "en": "Three",
+     "t": "三（さん）",
+     "r": "san"
+    },
+    {
+     "en": "Four",
+     "t": "四（よん）",
+     "r": "yon"
+    },
+    {
+     "en": "Five",
+     "t": "五（ご）",
+     "r": "go"
+    },
+    {
+     "en": "Six",
+     "t": "六（ろく）",
+     "r": "roku"
+    },
+    {
+     "en": "Seven",
+     "t": "七（なな）",
+     "r": "nana"
+    },
+    {
+     "en": "Eight",
+     "t": "八（はち）",
+     "r": "hachi"
+    },
+    {
+     "en": "Nine",
+     "t": "九（きゅう）",
+     "r": "kyū"
+    },
+    {
+     "en": "Ten",
+     "t": "十（じゅう）",
+     "r": "jū"
+    },
+    {
+     "en": "Eleven",
+     "t": "十一（じゅういち）",
+     "r": "jūichi"
+    },
+    {
+     "en": "Twenty",
+     "t": "二十（にじゅう）",
+     "r": "nijū"
+    },
+    {
+     "en": "One hundred",
+     "t": "百（ひゃく）",
+     "r": "hyaku"
+    },
+    {
+     "en": "One thousand",
+     "t": "千（せん）",
+     "r": "sen"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "name": "Food & Drinks",
+   "icon": "🍜",
+   "words": [
+    {
+     "en": "Water",
+     "t": "水（みず）",
+     "r": "mizu"
+    },
+    {
+     "en": "Bread",
+     "t": "パン",
+     "r": "pan"
+    },
+    {
+     "en": "Rice",
+     "t": "ご飯（ごはん）",
+     "r": "gohan"
+    },
+    {
+     "en": "Apple",
+     "t": "りんご",
+     "r": "ringo"
+    },
+    {
+     "en": "Banana",
+     "t": "バナナ",
+     "r": "banana"
+    },
+    {
+     "en": "Egg",
+     "t": "卵（たまご）",
+     "r": "tamago"
+    },
+    {
+     "en": "Milk",
+     "t": "牛乳（ぎゅうにゅう）",
+     "r": "gyūnyū"
+    },
+    {
+     "en": "Coffee",
+     "t": "コーヒー",
+     "r": "kōhī"
+    },
+    {
+     "en": "Tea",
+     "t": "お茶（おちゃ）",
+     "r": "ocha"
+    },
+    {
+     "en": "Meat",
+     "t": "肉（にく）",
+     "r": "niku"
+    },
+    {
+     "en": "Chicken",
+     "t": "鶏肉（とりにく）",
+     "r": "toriniku"
+    },
+    {
+     "en": "Fish",
+     "t": "魚（さかな）",
+     "r": "sakana"
+    },
+    {
+     "en": "Vegetables",
+     "t": "野菜（やさい）",
+     "r": "yasai"
+    },
+    {
+     "en": "Cheese",
+     "t": "チーズ",
+     "r": "chīzu"
+    },
+    {
+     "en": "Soup",
+     "t": "スープ",
+     "r": "sūpu"
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "name": "Colors",
+   "icon": "🎨",
+   "words": [
+    {
+     "en": "Red",
+     "t": "赤（あか）",
+     "r": "aka"
+    },
+    {
+     "en": "Blue",
+     "t": "青（あお）",
+     "r": "ao"
+    },
+    {
+     "en": "Green",
+     "t": "緑（みどり）",
+     "r": "midori"
+    },
+    {
+     "en": "Yellow",
+     "t": "黄色（きいろ）",
+     "r": "kiiro"
+    },
+    {
+     "en": "Orange",
+     "t": "オレンジ",
+     "r": "orenji"
+    },
+    {
+     "en": "Purple",
+     "t": "紫（むらさき）",
+     "r": "murasaki"
+    },
+    {
+     "en": "Pink",
+     "t": "ピンク",
+     "r": "pinku"
+    },
+    {
+     "en": "Black",
+     "t": "黒（くろ）",
+     "r": "kuro"
+    },
+    {
+     "en": "White",
+     "t": "白（しろ）",
+     "r": "shiro"
+    },
+    {
+     "en": "Gray",
+     "t": "灰色（はいいろ）",
+     "r": "haiiro"
+    },
+    {
+     "en": "Brown",
+     "t": "茶色（ちゃいろ）",
+     "r": "chairo"
+    },
+    {
+     "en": "Gold",
+     "t": "金色（きんいろ）",
+     "r": "kin'iro"
+    },
+    {
+     "en": "Silver",
+     "t": "銀色（ぎんいろ）",
+     "r": "gin'iro"
+    },
+    {
+     "en": "Color",
+     "t": "色（いろ）",
+     "r": "iro"
+    },
+    {
+     "en": "Rainbow",
+     "t": "虹（にじ）",
+     "r": "niji"
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family & Friends",
+   "icon": "👨‍👩‍👧",
+   "words": [
+    {
+     "en": "Family",
+     "t": "家族（かぞく）",
+     "r": "kazoku"
+    },
+    {
+     "en": "Mother",
+     "t": "お母さん（おかあさん）",
+     "r": "okāsan"
+    },
+    {
+     "en": "Father",
+     "t": "お父さん（おとうさん）",
+     "r": "otōsan"
+    },
+    {
+     "en": "Parents",
+     "t": "両親（りょうしん）",
+     "r": "ryōshin"
+    },
+    {
+     "en": "Older brother",
+     "t": "お兄さん（おにいさん）",
+     "r": "onīsan"
+    },
+    {
+     "en": "Younger brother",
+     "t": "弟（おとうと）",
+     "r": "otōto"
+    },
+    {
+     "en": "Older sister",
+     "t": "お姉さん（おねえさん）",
+     "r": "onēsan"
+    },
+    {
+     "en": "Younger sister",
+     "t": "妹（いもうと）",
+     "r": "imōto"
+    },
+    {
+     "en": "Grandmother",
+     "t": "おばあさん",
+     "r": "obāsan"
+    },
+    {
+     "en": "Grandfather",
+     "t": "おじいさん",
+     "r": "ojīsan"
+    },
+    {
+     "en": "Son",
+     "t": "息子（むすこ）",
+     "r": "musuko"
+    },
+    {
+     "en": "Daughter",
+     "t": "娘（むすめ）",
+     "r": "musume"
+    },
+    {
+     "en": "Husband",
+     "t": "夫（おっと）",
+     "r": "otto"
+    },
+    {
+     "en": "Wife",
+     "t": "妻（つま）",
+     "r": "tsuma"
+    },
+    {
+     "en": "Baby",
+     "t": "赤ちゃん（あかちゃん）",
+     "r": "akachan"
+    },
+    {
+     "en": "Friend",
+     "t": "友達（ともだち）",
+     "r": "tomodachi"
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "name": "Common Phrases",
+   "icon": "💬",
+   "words": [
+    {
+     "en": "Yes",
+     "t": "はい",
+     "r": "hai"
+    },
+    {
+     "en": "No",
+     "t": "いいえ",
+     "r": "iie"
+    },
+    {
+     "en": "What's your name?",
+     "t": "お名前は何ですか？（おなまえはなんですか）",
+     "r": "o-namae wa nan desu ka?"
+    },
+    {
+     "en": "My name is …",
+     "t": "わたしは…です",
+     "r": "watashi wa … desu"
+    },
+    {
+     "en": "I don't understand",
+     "t": "わかりません",
+     "r": "wakarimasen"
+    },
+    {
+     "en": "Please speak slowly",
+     "t": "ゆっくり話してください（ゆっくりはなしてください）",
+     "r": "yukkuri hanashite kudasai"
+    },
+    {
+     "en": "Do you speak English?",
+     "t": "英語を話せますか？（えいごをはなせますか）",
+     "r": "eigo o hanasemasu ka?"
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "トイレはどこですか？",
+     "r": "toire wa doko desu ka?"
+    },
+    {
+     "en": "How much is this?",
+     "t": "これはいくらですか？",
+     "r": "kore wa ikura desu ka?"
+    },
+    {
+     "en": "I'm hungry",
+     "t": "お腹が空きました（おなかがすきました）",
+     "r": "onaka ga sukimashita"
+    },
+    {
+     "en": "It's delicious!",
+     "t": "おいしい！",
+     "r": "oishii!"
+    },
+    {
+     "en": "I don't know",
+     "t": "知りません（しりません）",
+     "r": "shirimasen"
+    },
+    {
+     "en": "Let's go!",
+     "t": "行きましょう！（いきましょう）",
+     "r": "ikimashō!"
+    },
+    {
+     "en": "Good luck!",
+     "t": "頑張って！（がんばって）",
+     "r": "ganbatte!"
+    },
+    {
+     "en": "Cheers!",
+     "t": "乾杯！（かんぱい）",
+     "r": "kanpai!"
+    }
+   ]
+  }
+ ]
+}

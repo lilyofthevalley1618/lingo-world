@@ -1,0 +1,509 @@
+{
+ "code": "ko",
+ "name": "Korean",
+ "native": "한국어",
+ "flag": "🇰🇷",
+ "speech": "ko-KR",
+ "color": "#7b5cff",
+ "romanLabel": "romanization",
+ "topics": [
+  {
+   "id": "greetings",
+   "name": "Greetings",
+   "icon": "👋",
+   "words": [
+    {
+     "en": "Hello",
+     "t": "안녕하세요",
+     "r": "annyeonghaseyo"
+    },
+    {
+     "en": "Good morning",
+     "t": "좋은 아침이에요",
+     "r": "joeun achimieyo"
+    },
+    {
+     "en": "Good afternoon",
+     "t": "안녕하세요",
+     "r": "annyeonghaseyo"
+    },
+    {
+     "en": "Good evening",
+     "t": "안녕하세요",
+     "r": "annyeonghaseyo"
+    },
+    {
+     "en": "Good night",
+     "t": "안녕히 주무세요",
+     "r": "annyeonghi jumuseyo"
+    },
+    {
+     "en": "Goodbye",
+     "t": "안녕히 가세요",
+     "r": "annyeonghi gaseyo"
+    },
+    {
+     "en": "See you later",
+     "t": "나중에 봐요",
+     "r": "najunge bwayo"
+    },
+    {
+     "en": "How are you?",
+     "t": "잘 지내요?",
+     "r": "jal jinaeyo?"
+    },
+    {
+     "en": "I'm fine",
+     "t": "저는 잘 지내요",
+     "r": "jeoneun jal jinaeyo"
+    },
+    {
+     "en": "Thank you",
+     "t": "감사합니다",
+     "r": "gamsahamnida"
+    },
+    {
+     "en": "You're welcome",
+     "t": "천만에요",
+     "r": "cheonmaneyo"
+    },
+    {
+     "en": "Please",
+     "t": "부탁합니다",
+     "r": "butakamnida"
+    },
+    {
+     "en": "Excuse me",
+     "t": "실례합니다",
+     "r": "sillyehamnida"
+    },
+    {
+     "en": "Sorry",
+     "t": "죄송합니다",
+     "r": "joesonghamnida"
+    },
+    {
+     "en": "Nice to meet you",
+     "t": "만나서 반가워요",
+     "r": "mannaseo bangawoyo"
+    }
+   ]
+  },
+  {
+   "id": "numbers",
+   "name": "Numbers",
+   "icon": "🔢",
+   "words": [
+    {
+     "en": "Zero",
+     "t": "영",
+     "r": "yeong"
+    },
+    {
+     "en": "One",
+     "t": "일 / 하나",
+     "r": "il / hana"
+    },
+    {
+     "en": "Two",
+     "t": "이 / 둘",
+     "r": "i / dul"
+    },
+    {
+     "en": "Three",
+     "t": "삼 / 셋",
+     "r": "sam / set"
+    },
+    {
+     "en": "Four",
+     "t": "사 / 넷",
+     "r": "sa / net"
+    },
+    {
+     "en": "Five",
+     "t": "오 / 다섯",
+     "r": "o / daseot"
+    },
+    {
+     "en": "Six",
+     "t": "육 / 여섯",
+     "r": "yuk / yeoseot"
+    },
+    {
+     "en": "Seven",
+     "t": "칠 / 일곱",
+     "r": "chil / ilgop"
+    },
+    {
+     "en": "Eight",
+     "t": "팔 / 여덟",
+     "r": "pal / yeodeol"
+    },
+    {
+     "en": "Nine",
+     "t": "구 / 아홉",
+     "r": "gu / ahop"
+    },
+    {
+     "en": "Ten",
+     "t": "십 / 열",
+     "r": "sip / yeol"
+    },
+    {
+     "en": "Eleven",
+     "t": "십일 / 열하나",
+     "r": "sibil / yeolhana"
+    },
+    {
+     "en": "Twenty",
+     "t": "이십 / 스물",
+     "r": "isip / seumul"
+    },
+    {
+     "en": "One hundred",
+     "t": "백",
+     "r": "baek"
+    },
+    {
+     "en": "One thousand",
+     "t": "천",
+     "r": "cheon"
+    }
+   ],
+   "note": "Left: Sino-Korean numbers (dates, money). Right: native Korean numbers (counting things, age)."
+  },
+  {
+   "id": "food",
+   "name": "Food & Drinks",
+   "icon": "🍜",
+   "words": [
+    {
+     "en": "Water",
+     "t": "물",
+     "r": "mul"
+    },
+    {
+     "en": "Bread",
+     "t": "빵",
+     "r": "ppang"
+    },
+    {
+     "en": "Rice",
+     "t": "밥",
+     "r": "bap"
+    },
+    {
+     "en": "Apple",
+     "t": "사과",
+     "r": "sagwa"
+    },
+    {
+     "en": "Banana",
+     "t": "바나나",
+     "r": "banana"
+    },
+    {
+     "en": "Egg",
+     "t": "달걀",
+     "r": "dalgyal"
+    },
+    {
+     "en": "Milk",
+     "t": "우유",
+     "r": "uyu"
+    },
+    {
+     "en": "Coffee",
+     "t": "커피",
+     "r": "keopi"
+    },
+    {
+     "en": "Tea",
+     "t": "차",
+     "r": "cha"
+    },
+    {
+     "en": "Meat",
+     "t": "고기",
+     "r": "gogi"
+    },
+    {
+     "en": "Chicken",
+     "t": "닭고기",
+     "r": "dakgogi"
+    },
+    {
+     "en": "Fish",
+     "t": "생선",
+     "r": "saengseon"
+    },
+    {
+     "en": "Vegetables",
+     "t": "채소",
+     "r": "chaeso"
+    },
+    {
+     "en": "Cheese",
+     "t": "치즈",
+     "r": "chijeu"
+    },
+    {
+     "en": "Soup",
+     "t": "국 / 수프",
+     "r": "guk / supeu"
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "name": "Colors",
+   "icon": "🎨",
+   "words": [
+    {
+     "en": "Red",
+     "t": "빨간색",
+     "r": "ppalgansaek"
+    },
+    {
+     "en": "Blue",
+     "t": "파란색",
+     "r": "paransaek"
+    },
+    {
+     "en": "Green",
+     "t": "초록색",
+     "r": "choroksaek"
+    },
+    {
+     "en": "Yellow",
+     "t": "노란색",
+     "r": "noransaek"
+    },
+    {
+     "en": "Orange",
+     "t": "주황색",
+     "r": "juhwangsaek"
+    },
+    {
+     "en": "Purple",
+     "t": "보라색",
+     "r": "borasaek"
+    },
+    {
+     "en": "Pink",
+     "t": "분홍색",
+     "r": "bunhongsaek"
+    },
+    {
+     "en": "Black",
+     "t": "검은색",
+     "r": "geomeunsaek"
+    },
+    {
+     "en": "White",
+     "t": "흰색",
+     "r": "huinsaek"
+    },
+    {
+     "en": "Gray",
+     "t": "회색",
+     "r": "hoesaek"
+    },
+    {
+     "en": "Brown",
+     "t": "갈색",
+     "r": "galsaek"
+    },
+    {
+     "en": "Gold",
+     "t": "금색",
+     "r": "geumsaek"
+    },
+    {
+     "en": "Silver",
+     "t": "은색",
+     "r": "eunsaek"
+    },
+    {
+     "en": "Color",
+     "t": "색깔",
+     "r": "saekkkal"
+    },
+    {
+     "en": "Rainbow",
+     "t": "무지개",
+     "r": "mujigae"
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family & Friends",
+   "icon": "👨‍👩‍👧",
+   "words": [
+    {
+     "en": "Family",
+     "t": "가족",
+     "r": "gajok"
+    },
+    {
+     "en": "Mother",
+     "t": "어머니 / 엄마",
+     "r": "eomeoni / eomma"
+    },
+    {
+     "en": "Father",
+     "t": "아버지 / 아빠",
+     "r": "abeoji / appa"
+    },
+    {
+     "en": "Parents",
+     "t": "부모님",
+     "r": "bumonim"
+    },
+    {
+     "en": "Older brother",
+     "t": "오빠 / 형",
+     "r": "oppa (girl says) / hyeong (boy says)"
+    },
+    {
+     "en": "Younger brother",
+     "t": "남동생",
+     "r": "namdongsaeng"
+    },
+    {
+     "en": "Older sister",
+     "t": "언니 / 누나",
+     "r": "eonni (girl says) / nuna (boy says)"
+    },
+    {
+     "en": "Younger sister",
+     "t": "여동생",
+     "r": "yeodongsaeng"
+    },
+    {
+     "en": "Grandmother",
+     "t": "할머니",
+     "r": "halmeoni"
+    },
+    {
+     "en": "Grandfather",
+     "t": "할아버지",
+     "r": "harabeoji"
+    },
+    {
+     "en": "Son",
+     "t": "아들",
+     "r": "adeul"
+    },
+    {
+     "en": "Daughter",
+     "t": "딸",
+     "r": "ttal"
+    },
+    {
+     "en": "Husband",
+     "t": "남편",
+     "r": "nampyeon"
+    },
+    {
+     "en": "Wife",
+     "t": "아내",
+     "r": "anae"
+    },
+    {
+     "en": "Baby",
+     "t": "아기",
+     "r": "agi"
+    },
+    {
+     "en": "Friend",
+     "t": "친구",
+     "r": "chingu"
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "name": "Common Phrases",
+   "icon": "💬",
+   "words": [
+    {
+     "en": "Yes",
+     "t": "네",
+     "r": "ne"
+    },
+    {
+     "en": "No",
+     "t": "아니요",
+     "r": "aniyo"
+    },
+    {
+     "en": "What's your name?",
+     "t": "이름이 뭐예요?",
+     "r": "ireumi mwoyeyo?"
+    },
+    {
+     "en": "My name is …",
+     "t": "제 이름은 …입니다",
+     "r": "je ireumeun … imnida"
+    },
+    {
+     "en": "I don't understand",
+     "t": "이해가 안 돼요",
+     "r": "ihaega an dwaeyo"
+    },
+    {
+     "en": "Please speak slowly",
+     "t": "천천히 말해 주세요",
+     "r": "cheoncheonhi malhae juseyo"
+    },
+    {
+     "en": "Do you speak English?",
+     "t": "영어 할 줄 아세요?",
+     "r": "yeongeo hal jul aseyo?"
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "화장실이 어디예요?",
+     "r": "hwajangsiri eodiyeyo?"
+    },
+    {
+     "en": "How much is this?",
+     "t": "이거 얼마예요?",
+     "r": "igeo eolmayeyo?"
+    },
+    {
+     "en": "I'm hungry",
+     "t": "배고파요",
+     "r": "baegopayo"
+    },
+    {
+     "en": "It's delicious!",
+     "t": "맛있어요!",
+     "r": "masisseoyo!"
+    },
+    {
+     "en": "I don't know",
+     "t": "몰라요",
+     "r": "mollayo"
+    },
+    {
+     "en": "Let's go!",
+     "t": "가자!",
+     "r": "gaja!"
+    },
+    {
+     "en": "Good luck!",
+     "t": "행운을 빌어요!",
+     "r": "haenguneul bireoyo!"
+    },
+    {
+     "en": "Cheers!",
+     "t": "건배!",
+     "r": "geonbae!"
+    }
+   ]
+  }
+ ]
+}
