@@ -193,3 +193,4 @@ a.card,.pcard,.item,.lcard,.fc{transition:transform .15s}a.card:hover,.pcard:hov
 .lbar .pet{margin-right:-4px}
 .vrow{display:grid;grid-template-columns:110px 1fr 48px;gap:8px;align-items:center}.vrow select{font:inherit;font-size:.88rem;padding:9px 10px;border-radius:14px;border:2px solid #ece6da;background:#fff;color:var(--ink);min-width:0;width:100%}.vl{font-weight:800;font-size:.9rem}
 @media(max-width:400px){.vrow{grid-template-columns:1fr 48px}.vl{grid-column:1/-1}}
+.sline.rt{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:4px 10px}.rtile{display:inline-flex;flex-direction:column;align-items:center;line-height:1.2}.rtile small,.sline.rt .blank{font-size:.78rem}.rtile small{color:var(--peri-d);font-style:italic;font-weight:600}.sline.rt .blank{font-size:1.3rem;align-self:center}

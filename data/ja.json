@@ -15,13 +15,13 @@
      "en": "Hello",
      "t": "こんにちは",
      "r": "konnichiwa",
-     "tip": "こんにちは: the last は is said “wa”."
+     "tip": "こんにちは (konnichiwa): the last は (ha) is said “wa”."
     },
     {
      "en": "Good morning",
      "t": "おはようございます",
      "r": "ohayō gozaimasu",
-     "tip": "おはよう ≈ “Ohio” 🌅."
+     "tip": "おはよう (ohayō) ≈ “Ohio” 🌅."
     },
     {
      "en": "Good afternoon",
@@ -62,7 +62,7 @@
      "en": "Thank you",
      "t": "ありがとうございます",
      "r": "arigatō gozaimasu",
-     "tip": "ありがとう ≈ “alligator” said fast 🐊."
+     "tip": "ありがとう (arigatō) ≈ “alligator” said fast 🐊."
     },
     {
      "en": "You're welcome",
@@ -78,7 +78,7 @@
      "en": "Excuse me",
      "t": "すみません",
      "r": "sumimasen",
-     "tip": "すみません = excuse me, sorry, AND calling a waiter."
+     "tip": "すみません (sumimasen) = excuse me, sorry, AND calling a waiter."
     },
     {
      "en": "Sorry",
@@ -186,7 +186,7 @@
      "en": "Four",
      "t": "四（よん）",
      "r": "yon",
-     "tip": "四 can be よん or し. し sounds like 死 (death), so people usually say よん."
+     "tip": "四 can be よん (yon) or し (shi). し (shi) sounds like 死 (shi, death), so people usually say よん (yon)."
     },
     {
      "en": "Five",
@@ -202,7 +202,7 @@
      "en": "Seven",
      "t": "七（なな）",
      "r": "nana",
-     "tip": "七 can be なな or しち. なな is easier to tell apart from いち (1)."
+     "tip": "七 can be なな (nana) or しち (shichi). なな (nana) is easier to tell apart from いち (ichi, 1)."
     },
     {
      "en": "Eight",
@@ -476,7 +476,7 @@
      "en": "Red",
      "t": "赤（あか）",
      "r": "aka",
-     "tip": "赤 (aka) is also in 赤ちゃん (baby)."
+     "tip": "赤 (aka) is also in 赤ちゃん (akachan, baby)."
     },
     {
      "en": "Blue",
@@ -703,7 +703,7 @@
      "en": "Baby",
      "t": "赤ちゃん（あかちゃん）",
      "r": "akachan",
-     "tip": "赤ちゃん = “little red one”, since newborns look reddish (赤 = red)!"
+     "tip": "赤ちゃん (akachan) = “little red one”, since newborns look reddish (赤 aka = red)!"
     },
     {
      "en": "Friend",

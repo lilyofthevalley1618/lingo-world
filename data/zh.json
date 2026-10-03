@@ -15,14 +15,14 @@
      "en": "Hello",
      "t": "你好",
      "r": "nǐ hǎo",
-     "tip": "你好 = “you good”. Two 3rd tones in a row: the first becomes 2nd tone, so it sounds like ní hǎo.",
+     "tip": "你好 (nǐ hǎo) = “you good”. Two 3rd tones in a row: the first becomes 2nd tone, so it sounds like ní hǎo.",
      "z": "ㄋㄧˇ ㄏㄠˇ"
     },
     {
      "en": "Good morning",
      "t": "早安",
      "r": "zǎo'ān",
-     "tip": "In Taiwan people say 早安 (or just 早!). 早上好 sounds more mainland.",
+     "tip": "In Taiwan people say 早安 (zǎo'ān) or just 早 (zǎo)! 早上好 (zǎoshang hǎo) sounds more mainland.",
      "z": "ㄗㄠˇ ㄢ"
     },
     {
@@ -66,21 +66,21 @@
      "en": "I'm fine",
      "t": "我很好",
      "r": "wǒ hěn hǎo",
-     "tip": "好 = 女 (woman) + 子 (child) → “good”.",
+     "tip": "好 (hǎo) = 女 (nǚ, woman) + 子 (zǐ, child) → “good”.",
      "z": "ㄨㄛˇ ㄏㄣˇ ㄏㄠˇ"
     },
     {
      "en": "Thank you",
      "t": "謝謝",
      "r": "xièxie",
-     "tip": "謝謝: the second 謝 is light and short: “shyeh-shyeh”.",
+     "tip": "謝謝 (xièxie): the second 謝 (xie) is light and short: “shyeh-shyeh”.",
      "z": "ㄒㄧㄝˋ ˙ㄒㄧㄝ"
     },
     {
      "en": "You're welcome",
      "t": "不客氣",
      "r": "bú kèqì",
-     "tip": "In Taiwan 氣 keeps its 4th tone: bú kèqì.",
+     "tip": "In Taiwan 氣 (qì) keeps its 4th tone: bú kèqì.",
      "z": "ㄅㄨˊ ㄎㄜˋ ㄑㄧˋ"
     },
     {
@@ -93,7 +93,7 @@
      "en": "Excuse me",
      "t": "不好意思",
      "r": "bù hǎoyìsi",
-     "tip": "不好意思 is the super-common Taiwan “excuse me / sorry to bother you”.",
+     "tip": "不好意思 (bù hǎoyìsi) is the super-common Taiwan “excuse me / sorry to bother you”.",
      "z": "ㄅㄨˋ ㄏㄠˇ ㄧˋ ˙ㄙ"
     },
     {
@@ -372,7 +372,7 @@
      "en": "Water",
      "t": "水",
      "r": "shuǐ",
-     "tip": "水 looks like a stream with splashes on both sides 💧.",
+     "tip": "水 (shuǐ) looks like a stream with splashes on both sides 💧.",
      "z": "ㄕㄨㄟˇ"
     },
     {
@@ -385,7 +385,7 @@
      "en": "Rice",
      "t": "白飯",
      "r": "báifàn",
-     "tip": "In Taiwan a bowl of plain rice is 白飯 (“white rice”).",
+     "tip": "In Taiwan a bowl of plain rice is 白飯 (báifàn, “white rice”).",
      "z": "ㄅㄞˊ ㄈㄢˋ"
     },
     {
@@ -446,14 +446,14 @@
      "en": "Vegetables",
      "t": "青菜",
      "r": "qīngcài",
-     "tip": "At Taiwanese restaurants you order “a plate of 青菜” (greens).",
+     "tip": "At Taiwanese restaurants you order “a plate of 青菜 (qīngcài)” (greens).",
      "z": "ㄑㄧㄥ ㄘㄞˋ"
     },
     {
      "en": "Cheese",
      "t": "起司",
      "r": "qǐsī",
-     "tip": "起司 comes from the English word “cheese”!",
+     "tip": "起司 (qǐsī) comes from the English word “cheese”!",
      "z": "ㄑㄧˇ ㄙ"
     },
     {
@@ -472,14 +472,14 @@
      "en": "Potato",
      "t": "馬鈴薯",
      "r": "mǎlíngshǔ",
-     "tip": "Careful: in Taiwan 土豆 means peanut, not potato! 🥜",
+     "tip": "Careful: in Taiwan 土豆 (tǔdòu) means peanut, not potato! 🥜",
      "z": "ㄇㄚˇ ㄌㄧㄥˊ ㄕㄨˇ"
     },
     {
      "en": "Bubble tea",
      "t": "珍珠奶茶",
      "r": "zhēnzhū nǎichá",
-     "tip": "Invented in Taiwan! 珍珠 = pearls. Order 半糖 (bàn táng) for half sugar. 🧋",
+     "tip": "Invented in Taiwan! 珍珠 (zhēnzhū) = pearls. Order 半糖 (bàn táng) for half sugar. 🧋",
      "z": "ㄓㄣ ㄓㄨ ㄋㄞˇ ㄔㄚˊ"
     }
    ],
@@ -563,7 +563,7 @@
      "en": "Red",
      "t": "紅色",
      "r": "hóngsè",
-     "tip": "紅 is the color of luck: red envelopes 🧧!",
+     "tip": "紅 (hóng) is the color of luck: red envelopes, 紅包 (hóngbāo) 🧧!",
      "z": "ㄏㄨㄥˊ ㄙㄜˋ"
     },
     {
@@ -588,7 +588,7 @@
      "en": "Orange",
      "t": "橘色",
      "r": "júsè",
-     "tip": "Taiwan says 橘色 (tangerine color) for orange.",
+     "tip": "Taiwan says 橘色 (júsè, tangerine color) for orange.",
      "z": "ㄐㄩˊ ㄙㄜˋ"
     },
     {
@@ -625,7 +625,7 @@
      "en": "Brown",
      "t": "咖啡色",
      "r": "kāfēisè",
-     "tip": "Brown in Taiwan is 咖啡色: literally “coffee color” ☕.",
+     "tip": "Brown in Taiwan is 咖啡色 (kāfēisè): literally “coffee color” ☕.",
      "z": "ㄎㄚ ㄈㄟ ㄙㄜˋ"
     },
     {
@@ -745,7 +745,7 @@
      "en": "Mother",
      "t": "媽媽",
      "r": "māma",
-     "tip": "媽 = 女 (woman) + 馬 (horse, gives the “ma” sound).",
+     "tip": "媽 (mā) = 女 (nǚ, woman) + 馬 (mǎ, horse, gives the “ma” sound).",
      "z": "ㄇㄚ ˙ㄇㄚ"
     },
     {
@@ -776,7 +776,7 @@
      "en": "Older sister",
      "t": "姊姊",
      "r": "jiějie",
-     "tip": "Taiwan writes 姊姊; you may also see 姐姐.",
+     "tip": "Taiwan writes 姊姊 (jiějie); you may also see 姐姐 (jiějie).",
      "z": "ㄐㄧㄝˇ ˙ㄐㄧㄝ"
     },
     {
@@ -789,7 +789,7 @@
      "en": "Grandmother",
      "t": "奶奶",
      "r": "nǎinai",
-     "tip": "奶奶 is dad's mom. Mom's mom is 外婆 (wàipó).",
+     "tip": "奶奶 (nǎinai) is dad's mom. Mom's mom is 外婆 (wàipó).",
      "z": "ㄋㄞˇ ˙ㄋㄞ"
     },
     {
@@ -923,7 +923,7 @@
      "en": "Yes",
      "t": "對",
      "r": "duì",
-     "tip": "For “yes / right” Taiwan speakers usually say 對 or 對啊.",
+     "tip": "For “yes / right” Taiwan speakers usually say 對 (duì) or 對啊 (duì a).",
      "z": "ㄉㄨㄟˋ"
     },
     {
@@ -984,7 +984,7 @@
      "en": "It's delicious!",
      "t": "好好吃！",
      "r": "hǎo hǎochī!",
-     "tip": "好好吃 (“so yummy!”) is how you hype food in Taiwan.",
+     "tip": "好好吃 (hǎo hǎochī, “so yummy!”) is how you hype food in Taiwan.",
      "z": "ㄏㄠˇ ㄏㄠˇ ㄔ!"
     },
     {
@@ -1015,28 +1015,28 @@
      "en": "Taxi",
      "t": "計程車",
      "r": "jìchéngchē",
-     "tip": "Mainland says 出租车; Taiwan says 計程車 (“meter car”).",
+     "tip": "Mainland says 出租车 (chūzūchē); Taiwan says 計程車 (jìchéngchē, “meter car”).",
      "z": "ㄐㄧˋ ㄔㄥˊ ㄔㄜ"
     },
     {
      "en": "MRT (metro)",
      "t": "捷運",
      "r": "jiéyùn",
-     "tip": "捷運 is the MRT in Taipei and Kaohsiung. Mainland says 地铁.",
+     "tip": "捷運 (jiéyùn) is the MRT in Taipei and Kaohsiung. Mainland says 地铁 (dìtiě).",
      "z": "ㄐㄧㄝˊ ㄩㄣˋ"
     },
     {
      "en": "Bicycle",
      "t": "腳踏車",
      "r": "jiǎotàchē",
-     "tip": "腳踏車 = “foot-pedal car”. Rent a YouBike in Taiwan! 🚲",
+     "tip": "腳踏車 (jiǎotàchē) = “foot-pedal car”. Rent a YouBike in Taiwan! 🚲",
      "z": "ㄐㄧㄠˇ ㄊㄚˋ ㄔㄜ"
     },
     {
      "en": "Trash",
      "t": "垃圾",
      "r": "lèsè",
-     "tip": "In Taiwan 垃圾 is read lèsè (mainland: lājī). Trash trucks there play Für Elise! 🎶",
+     "tip": "In Taiwan 垃圾 (lèsè) is read lèsè (mainland: lājī). Trash trucks there play Für Elise! 🎶",
      "z": "ㄌㄜˋ ㄙㄜˋ"
     }
    ],

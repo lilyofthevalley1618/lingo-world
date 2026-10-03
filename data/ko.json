@@ -15,7 +15,7 @@
      "en": "Hello",
      "t": "안녕하세요",
      "r": "annyeonghaseyo",
-     "tip": "안녕하세요 = “Are you at peace?” (안녕 = peace)."
+     "tip": "안녕하세요 (annyeonghaseyo) = “Are you at peace?” (안녕 annyeong = peace)."
     },
     {
      "en": "Good morning",
@@ -61,7 +61,7 @@
      "en": "Thank you",
      "t": "감사합니다",
      "r": "gamsahamnida",
-     "tip": "감사합니다 ≈ “come-sah-ham-nee-da”."
+     "tip": "감사합니다 (gamsahamnida) ≈ “come-sah-ham-nee-da”."
     },
     {
      "en": "You're welcome",
@@ -170,7 +170,7 @@
      "en": "One",
      "t": "일 / 하나",
      "r": "il / hana",
-     "tip": "Two number systems: 일 for dates & money, 하나 for counting things & age."
+     "tip": "Two number systems: 일 (il) for dates & money, 하나 (hana) for counting things & age."
     },
     {
      "en": "Two",
@@ -332,7 +332,7 @@
      "en": "Rice",
      "t": "밥",
      "r": "bap",
-     "tip": "밥 means cooked rice AND “a meal”: 밥 먹었어요? = “Did you eat?” (a common greeting)."
+     "tip": "밥 (bap) means cooked rice AND “a meal”: 밥 먹었어요? (bap meogeosseoyo?) = “Did you eat?” (a common greeting)."
     },
     {
      "en": "Apple",
@@ -631,7 +631,7 @@
      "en": "Older brother",
      "t": "오빠 / 형",
      "r": "oppa (girl says) / hyeong (boy says)",
-     "tip": "Girls say 오빠, boys say 형."
+     "tip": "Girls say 오빠 (oppa), boys say 형 (hyeong)."
     },
     {
      "en": "Younger brother",
@@ -642,7 +642,7 @@
      "en": "Older sister",
      "t": "언니 / 누나",
      "r": "eonni (girl says) / nuna (boy says)",
-     "tip": "Girls say 언니, boys say 누나."
+     "tip": "Girls say 언니 (eonni), boys say 누나 (nuna)."
     },
     {
      "en": "Younger sister",

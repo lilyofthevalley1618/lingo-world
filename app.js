@@ -513,7 +513,12 @@ function runSession(L, cfg) {
         const key = s.tiles[s.b];
         const opts0 = [...new Set([...allSent.flatMap(x => x.tiles), ...pool.map(x => split(x.t).main)])].filter(x => x !== key && !s.tiles.includes(x) && !x.includes('…') && !x.includes('/') && nrm(x) !== nrm(key));
         const opts = shuffle([key, ...shuffle(opts0).slice(0, 3)]);
-        frame(ex, 'Fill in the blank', `<div class="prompt-sent"><button class="spk" id="spk">🔊</button><div class="sline">${s.tiles.map((t, j) => j === s.b ? '<span class="blank">____</span>' : esc(t)).join(sep)}</div><small>${esc(s.en)}</small></div>` + choiceList(opts, o => esc(o)));
+        const romMap = {}; // romanization for every tile / word text (pinyin, Jyutping, romaji, romanization)
+        allSent.forEach(x => x.tiles.forEach((t, j) => { if (x.tr && x.tr[j] && !romMap[t]) romMap[t] = x.tr[j]; }));
+        pool.forEach(x => { const m = split(x.t).main; if (x.r && !romMap[m]) romMap[m] = x.r; });
+        const rt = t => romMap[t] ? `<small class="r">${esc(romMap[t])}</small>` : '';
+        const hasRom = !!L.romanLabel;
+        frame(ex, 'Fill in the blank', `<div class="prompt-sent"><button class="spk" id="spk">🔊</button><div class="sline${hasRom ? ' rt' : ''}">${s.tiles.map((t, j) => j === s.b ? '<span class="blank">____</span>' : hasRom ? `<span class="rtile">${esc(t)}${rt(t)}</span>` : esc(t)).join(hasRom ? ' ' : sep)}</div><small>${esc(s.en)}</small></div>` + choiceList(opts, o => `<span class="tw">${esc(o)}</span>${hasRom ? rt(o) : ''}`));
         $('spk').onclick = () => say(s.t);
         const get = wireChoices(opts);
         check = () => ({ ok: get() === key }); break;
@@ -532,7 +537,7 @@ function runSession(L, cfg) {
     const praise = ['Nice!', 'Great job!', 'Awesome!', 'You got it!', 'So good!'][Math.floor(Math.random() * 5)];
     const head = res.free ? 'No problem, skipped for now' : res.msg ? res.msg : ok ? (res.typo ? 'Correct, but watch the spelling:' : res.spoken ? `${praise} Great pronunciation 🎤` : praise)
       : res.skipped ? 'Skipped. Here\'s the answer:' : res.spoken ? 'Almost! Listen and try again later:' : 'Not quite. Correct answer:';
-    const def = ex.ws ? ex.ws.map(x => `${esc(split(x.t).main)} = ${esc(x.en)}`).join(' · ') : ex.s ? defSent(ex.s) : defWord(ex.w);
+    const def = ex.ws ? ex.ws.map(x => `${esc(split(x.t).main)}${x.r ? ' (' + esc(rom(x)) + ')' : ''} = ${esc(x.en)}`).join(' · ') : ex.s ? defSent(ex.s) : defWord(ex.w);
     const cb = $('checkbar');
     cb.className = 'checkbar fb ' + (ok ? 'good' : 'bad');
     cb.innerHTML = `<div class="checkbar-in col"><div class="fb-row"><div class="fb-m">${mascot(ok ? 'cheer' : 'sad', 58)}</div><div class="fb-text"><div class="fb-head">${head}</div>
