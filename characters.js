@@ -83,50 +83,93 @@ const ACCS = {
   wings: { name: 'Angel Wings', slot: 'back', price: 150, back: c => [1, -1].map(s => `<path transform="translate(100 ${c.fy + 10}) scale(${s} 1)" d="M50 0 Q96 -40 98 -6 Q100 20 76 30 Q90 34 70 46 Q60 40 50 30Z" fill="#fff" stroke="#c9d6ff" stroke-width="3"/>`).join('') },
 };
 
-// Funny faces: original simple line-art expressions, drawn around the eye line y (=fy). Replace the default kawaii face.
-const K = 'stroke="#2b2350" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"';
-const blush = y => `<ellipse cx="64" cy="${y + 14}" rx="8" ry="4.5" fill="#ff9fb8" opacity=".6"/><ellipse cx="136" cy="${y + 14}" rx="8" ry="4.5" fill="#ff9fb8" opacity=".6"/>`;
+// Funny faces: hand-drawn rage-comic-style ink line art (original drawings), around the eye line y (=fy). Replace the default kawaii face.
+const INK = '#1d1b26';
+// ink(d, w, fill): a bold stroke plus a thin offset echo stroke, for a sketchy hand-drawn look
+const ink = (d, w = 3, fill = 'none') => `<path d="${d}" fill="${fill}" stroke="${INK}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="${INK}" stroke-width="${(w * .4).toFixed(1)}" stroke-linecap="round" stroke-linejoin="round" transform="translate(.9 .7)" opacity=".5"/>`;
+const dot = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${INK}"/>`;
+const eyeO = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#fff" stroke="${INK}" stroke-width="2.8"/><path d="M${x - r * .9} ${y - r * .45} A${r} ${r} 0 0 1 ${x + r * .7} ${y - r * .75}" fill="none" stroke="${INK}" stroke-width="1.2" transform="translate(.8 -1.2)" opacity=".6"/>`;
+const tear = (x, y) => `<path d="M${x} ${y} Q${x - 4} ${y + 6} ${x} ${y + 9} Q${x + 4} ${y + 6} ${x} ${y}Z" fill="#7fd0ff" stroke="#3aa6e0" stroke-width="1.5"/>`;
+const blush = y => `<ellipse cx="64" cy="${y + 14}" rx="8" ry="4.5" fill="#ff9fb8" opacity=".55"/><ellipse cx="136" cy="${y + 14}" rx="8" ry="4.5" fill="#ff9fb8" opacity=".55"/>`;
 const FACES = {
-  skeptic: { name: 'Side-Eye Skeptic', price: 50, draw: y => `<path d="M66 ${y - 15} L92 ${y - 13}" ${K} fill="none"/><path d="M108 ${y - 13} Q120 ${y - 24} 134 ${y - 17}" ${K} fill="none"/>
-    <ellipse cx="80" cy="${y}" rx="11" ry="7" fill="#fff" ${K}/><circle cx="87" cy="${y + 1}" r="3.5" fill="#2b2350"/><path d="M69 ${y - 2} H91" ${K}/>
-    <ellipse cx="120" cy="${y}" rx="11" ry="7" fill="#fff" ${K}/><circle cx="127" cy="${y + 1}" r="3.5" fill="#2b2350"/><path d="M88 ${y + 20} Q98 ${y + 14} 114 ${y + 18}" ${K} fill="none"/>` },
-  derp: { name: 'Derpy Googly', price: 40, draw: y => `<circle cx="78" cy="${y}" r="13" fill="#fff" ${K}/><circle cx="72" cy="${y + 5}" r="4" fill="#2b2350"/>
-    <circle cx="122" cy="${y - 2}" r="8" fill="#fff" ${K}/><circle cx="126" cy="${y - 6}" r="3" fill="#2b2350"/><path d="M94 ${y + 18} Q100 ${y + 23} 106 ${y + 18}" ${K} fill="none"/>` },
-  smug: { name: 'Smug Smirk', price: 50, draw: y => `<path d="M68 ${y - 11} Q80 ${y - 15} 92 ${y - 11} M108 ${y - 11} Q120 ${y - 15} 132 ${y - 11}" ${K} fill="none"/>
-    <path d="M68 ${y} Q80 ${y + 9} 92 ${y}Z M108 ${y} Q120 ${y + 9} 132 ${y}Z" fill="#fff" ${K}/><circle cx="82" cy="${y + 3}" r="2.8" fill="#2b2350"/><circle cx="122" cy="${y + 3}" r="2.8" fill="#2b2350"/>
-    <path d="M86 ${y + 18} Q102 ${y + 21} 114 ${y + 11}" ${K} fill="none"/>` },
-  heh: { name: 'Toothy Heh', price: 50, draw: y => `<path d="M70 ${y + 2} Q80 ${y - 8} 90 ${y + 2} M110 ${y + 2} Q120 ${y - 8} 130 ${y + 2}" ${K} fill="none"/>
-    <path d="M82 ${y + 12} Q100 ${y + 32} 118 ${y + 12}Z" fill="#fff" ${K}/><path d="M91 ${y + 13} V${y + 20} M100 ${y + 13} V${y + 22} M109 ${y + 13} V${y + 20}" stroke="#2b2350" stroke-width="2"/>` },
-  dude: { name: 'DUDE Stare', price: 60, draw: y => `<circle cx="80" cy="${y - 2}" r="14" fill="#fff" ${K}/><circle cx="120" cy="${y - 2}" r="14" fill="#fff" ${K}/>
-    <circle cx="80" cy="${y - 2}" r="2.5" fill="#2b2350"/><circle cx="120" cy="${y - 2}" r="2.5" fill="#2b2350"/><ellipse cx="100" cy="${y + 21}" rx="6" ry="5" fill="#ffb3c6" ${K}/><ellipse cx="100" cy="${y + 21}" rx="2" ry="1.5" fill="#2b2350"/>` },
-  sob: { name: 'Big Sob', price: 60, draw: y => `<path d="M70 ${y - 6} L88 ${y - 1} L70 ${y + 4} M130 ${y - 6} L112 ${y - 1} L130 ${y + 4}" ${K} fill="none"/>
-    <path d="M74 ${y + 6} Q69 ${y + 26} 74 ${y + 44} M126 ${y + 6} Q131 ${y + 26} 126 ${y + 44}" stroke="#7cc8ff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/>
-    <path d="M84 ${y + 12} Q100 ${y + 42} 116 ${y + 12} Q100 ${y + 18} 84 ${y + 12}Z" fill="#2b2350" ${K}/>` },
-  happytears: { name: 'Happy Tears', price: 60, draw: y => `<path d="M70 ${y + 2} Q80 ${y - 8} 90 ${y + 2} M110 ${y + 2} Q120 ${y - 8} 130 ${y + 2}" ${K} fill="none"/>
-    <path d="M67 ${y + 4} Q61 ${y + 14} 67 ${y + 19} Q73 ${y + 14} 67 ${y + 4}Z M133 ${y + 4} Q127 ${y + 14} 133 ${y + 19} Q139 ${y + 14} 133 ${y + 4}Z" fill="#9ad8ff" stroke="#5fb4ea" stroke-width="2"/>
-    <path d="M86 ${y + 12} Q100 ${y + 30} 114 ${y + 12}Z" fill="#ff8fab" ${K}/>` },
-  shock: { name: 'Shook & Sweaty', price: 60, draw: y => `<path d="M68 ${y - 16} Q80 ${y - 22} 92 ${y - 16} M108 ${y - 16} Q120 ${y - 22} 132 ${y - 16}" ${K} fill="none"/>
-    <circle cx="80" cy="${y}" r="10" fill="#fff" ${K}/><circle cx="120" cy="${y}" r="10" fill="#fff" ${K}/><circle cx="80" cy="${y}" r="3.5" fill="#2b2350"/><circle cx="120" cy="${y}" r="3.5" fill="#2b2350"/>
-    <ellipse cx="100" cy="${y + 21}" rx="7" ry="9" fill="#2b2350"/><path d="M142 ${y - 26} Q134 ${y - 12} 142 ${y - 7} Q150 ${y - 12} 142 ${y - 26}Z" fill="#9ad8ff" stroke="#5fb4ea" stroke-width="2"/>` },
-  thumbs: { name: 'Thumbs-Up Sparkle', price: 70, draw: y => `<ellipse cx="80" cy="${y}" rx="9" ry="11" fill="#2b2350"/><ellipse cx="120" cy="${y}" rx="9" ry="11" fill="#2b2350"/>
-    <circle cx="83" cy="${y - 4}" r="3" fill="#fff"/><circle cx="77" cy="${y + 4}" r="1.6" fill="#fff"/><circle cx="123" cy="${y - 4}" r="3" fill="#fff"/><circle cx="117" cy="${y + 4}" r="1.6" fill="#fff"/>
-    <path d="M86 ${y + 13} Q100 ${y + 28} 114 ${y + 13}" ${K} fill="none"/>${blush(y)}
-    <g transform="translate(150 ${y + 16})"><rect x="-9" y="0" width="18" height="16" rx="5" fill="#fff" ${K}/><path d="M-5 1 V-11 Q-5 -16 0 -16 Q5 -16 5 -11 V1" fill="#fff" ${K}/></g>` },
-  trolly: { name: 'Mischief Grin', price: 80, draw: y => `<path d="M66 ${y - 14} L90 ${y - 6} M134 ${y - 14} L110 ${y - 6}" ${K} fill="none"/>
-    <path d="M70 ${y} Q80 ${y - 5} 90 ${y + 1} M110 ${y + 1} Q120 ${y - 5} 130 ${y}" ${K} fill="none"/><circle cx="84" cy="${y + 2}" r="2.5" fill="#2b2350"/><circle cx="116" cy="${y + 2}" r="2.5" fill="#2b2350"/>
-    <path d="M64 ${y + 8} Q100 ${y + 46} 136 ${y + 8} Q100 ${y + 20} 64 ${y + 8}Z" fill="#fff" ${K}/>
-    <path d="M70 ${y + 16} Q100 ${y + 30} 130 ${y + 16} M80 ${y + 15} V${y + 28} M90 ${y + 17} V${y + 31} M100 ${y + 18} V${y + 33} M110 ${y + 17} V${y + 31} M120 ${y + 15} V${y + 28}" stroke="#2b2350" stroke-width="2" fill="none"/>` },
-  rage: { name: 'RAGE Scream', price: 80, draw: y => `<path d="M64 ${y - 16} L90 ${y - 5} M136 ${y - 16} L110 ${y - 5}" stroke="#2b2350" stroke-width="4.5" stroke-linecap="round"/>
-    <circle cx="82" cy="${y + 1}" r="3.5" fill="#2b2350"/><circle cx="118" cy="${y + 1}" r="3.5" fill="#2b2350"/>
-    <path d="M76 ${y + 10} L124 ${y + 10} L115 ${y + 38} L85 ${y + 38}Z" fill="#2b2350" ${K}/><rect x="79" y="${y + 11}" width="42" height="6" fill="#fff"/><rect x="86" y="${y + 31}" width="28" height="5" fill="#fff"/>
-    <path d="M136 ${y - 30} l7 7 m0 -7 l-7 7" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round"/>` },
-  silly: { name: 'Silly Tongue', price: 40, draw: y => `<path d="M70 ${y + 1} Q80 ${y - 6} 90 ${y + 1}" ${K} fill="none"/><ellipse cx="120" cy="${y}" rx="7" ry="9" fill="#2b2350"/><circle cx="123" cy="${y - 4}" r="2.5" fill="#fff"/>
-    <path d="M86 ${y + 14} Q100 ${y + 22} 114 ${y + 14}" ${K} fill="none"/><path d="M95 ${y + 18} Q95 ${y + 32} 101.5 ${y + 32} Q108 ${y + 32} 108 ${y + 18}" fill="#ff8fab" ${K}/>${blush(y)}` },
-  cat: { name: 'Kitty :3', price: 40, draw: y => `<ellipse cx="80" cy="${y}" rx="5" ry="6" fill="#2b2350"/><ellipse cx="120" cy="${y}" rx="5" ry="6" fill="#2b2350"/>
-    <path d="M97 ${y + 8} L103 ${y + 8} L100 ${y + 11}Z" fill="#2b2350"/><path d="M90 ${y + 14} Q95 ${y + 20} 100 ${y + 13} Q105 ${y + 20} 110 ${y + 14}" ${K} fill="none"/>
-    <path d="M58 ${y + 8} L74 ${y + 11} M58 ${y + 16} L74 ${y + 15} M142 ${y + 8} L126 ${y + 11} M142 ${y + 16} L126 ${y + 15}" stroke="#2b2350" stroke-width="2" stroke-linecap="round"/>${blush(y)}` },
-  hearts: { name: 'Heart Eyes', price: 70, draw: y => [80, 120].map(x => `<path transform="translate(${x} ${y - 1})" d="M0 9 C-16 0 -12 -11 -5 -11 C-2 -11 0 -8 0 -6 C0 -8 2 -11 5 -11 C12 -11 16 0 0 9Z" fill="#ff6f9c" ${K}/>`).join('') +
-    `<path d="M86 ${y + 12} Q100 ${y + 30} 114 ${y + 12}Z" fill="#ff8fab" ${K}/>${blush(y)}` },
+  skeptic: { name: 'Are You Serious', price: 50, draw: y =>
+    `<path d="M66 ${y - 4} L93 ${y - 1} Q88 ${y + 9} 78 ${y + 9} Q67 ${y + 8} 66 ${y - 4}Z" fill="#fff"/>${ink(`M66 ${y - 4} Q67 ${y + 8} 78 ${y + 9} Q88 ${y + 9} 93 ${y - 1}`, 2.8)}<path d="M75 ${y - 2.5} Q81 ${y + 6} 88 ${y - 1}Z" fill="${INK}"/>
+    ${ink(`M62 ${y - 9} L90 ${y - 4} Q96 ${y - 8} 95 ${y - 16}`, 4)}
+    <path d="M108 ${y} L134 ${y + 3} Q130 ${y + 12} 120 ${y + 12} Q109 ${y + 11} 108 ${y}Z" fill="#fff"/>${ink(`M108 ${y} Q109 ${y + 11} 120 ${y + 12} Q130 ${y + 12} 134 ${y + 3}`, 2.8)}<path d="M117 ${y + 1} Q123 ${y + 9} 130 ${y + 2.5}Z" fill="${INK}"/>
+    ${ink(`M105 ${y - 4} L137 ${y + 2} M137 ${y + 2} Q140 ${y - 4} 138 ${y - 9}`, 4)}
+    ${ink(`M84 ${y + 25} Q85 ${y + 21} 90 ${y + 21} L116 ${y + 25} L117 ${y + 30}`, 3.4)}${ink(`M91 ${y + 27} Q103 ${y + 26} 111 ${y + 30}`, 1.8)}
+    ${ink(`M75 ${y + 16} Q70 ${y + 23} 75 ${y + 30} M127 ${y + 27} Q129 ${y + 33} 122 ${y + 37}`, 2.4)}` },
+  derp: { name: 'Derp', price: 40, draw: y =>
+    `${eyeO(78, y + 1, 12)}${dot(70.5, y + 1, 4.5)}${eyeO(121, y - 3, 13)}${dot(124, y - 11, 4.5)}
+    ${ink(`M65 ${y - 9} Q76 ${y - 17} 89 ${y - 9} M108 ${y - 13} Q121 ${y - 22} 134 ${y - 12}`, 1.6)}
+    ${ink(`M95 ${y + 16} Q95 ${y + 26} 103 ${y + 26} Q111 ${y + 26} 111 ${y + 15}`, 3.4)}` },
+  smug: { name: 'Pfft, Sure', price: 50, draw: y =>
+    `<ellipse cx="80" cy="${y}" rx="13" ry="9" fill="#fff" stroke="${INK}" stroke-width="2.8"/><ellipse cx="120" cy="${y}" rx="13" ry="9" fill="#fff" stroke="${INK}" stroke-width="2.8"/>
+    <path d="M83 ${y - 1} Q88 ${y + 7} 93 ${y - 1}Z M123 ${y - 1} Q128 ${y + 7} 133 ${y - 1}Z" fill="${INK}"/>
+    ${ink(`M66 ${y - 1} Q80 ${y - 4} 94 ${y - 1} M106 ${y - 1} Q120 ${y - 4} 134 ${y - 1}`, 3)}
+    ${ink(`M84 ${y + 23} Q101 ${y + 24} 119 ${y + 18}`, 3.2)}` },
+  heh: { name: 'I See What You Did', price: 50, draw: y =>
+    `${ink(`M70 ${y - 12} Q78 ${y - 17} 87 ${y - 13} M113 ${y - 13} Q122 ${y - 17} 130 ${y - 12}`, 3.4)}
+    <path d="M68 ${y} Q80 ${y - 8} 92 ${y - 1} Q80 ${y + 5} 68 ${y}Z M108 ${y - 1} Q120 ${y - 8} 132 ${y} Q120 ${y + 5} 108 ${y - 1}Z" fill="#fff" stroke="${INK}" stroke-width="2.6"/>${dot(86, y - 1, 3.4)}${dot(126, y - 1, 3.4)}
+    <path d="M80 ${y + 14} Q100 ${y + 8} 122 ${y + 13} Q118 ${y + 34} 100 ${y + 34} Q84 ${y + 33} 80 ${y + 14}Z" fill="${INK}"/>
+    <path d="M84 ${y + 15} Q100 ${y + 11} 118 ${y + 14} L117 ${y + 21} Q100 ${y + 18} 85 ${y + 22}Z" fill="#fff"/><path d="M90 ${y + 14} V${y + 21} M96 ${y + 13} V${y + 20} M102 ${y + 13} V${y + 19} M108 ${y + 13} V${y + 19} M113 ${y + 14} V${y + 20}" stroke="${INK}" stroke-width="1.4"/>
+    ${ink(`M80 ${y + 14} Q100 ${y + 8} 122 ${y + 13} Q118 ${y + 34} 100 ${y + 34} Q84 ${y + 33} 80 ${y + 14}Z M75 ${y + 11} l3 4 M125 ${y + 10} l-3 4`, 2.6)}` },
+  dude: { name: 'DUDE', price: 60, draw: y =>
+    `${eyeO(78, y - 2, 14)}${eyeO(121, y - 2, 14)}${dot(82, y - 1, 8)}${dot(125, y - 1, 8)}<circle cx="85" cy="${y - 4}" r="2.5" fill="#fff"/><circle cx="128" cy="${y - 4}" r="2.5" fill="#fff"/>
+    <path d="M96 ${y + 17} Q89 ${y + 21} 95 ${y + 26} Q102 ${y + 30} 105 ${y + 23} Q109 ${y + 17} 100 ${y + 16}Z" fill="#fff"/>${ink(`M96 ${y + 17} Q89 ${y + 21} 95 ${y + 26} Q102 ${y + 30} 105 ${y + 23} Q109 ${y + 17} 100 ${y + 16}Z M96 ${y + 22} Q100 ${y + 20} 103 ${y + 22}`, 2.6)}
+    ${ink(`M64 ${y + 12} Q62 ${y + 20} 69 ${y + 25}`, 2)}` },
+  sob: { name: 'Big Ugly Cry', price: 60, draw: y =>
+    `${ink(`M64 ${y - 15} Q78 ${y - 10} 92 ${y - 17} M108 ${y - 17} Q122 ${y - 10} 136 ${y - 15}`, 3.6)}
+    ${ink(`M66 ${y - 2} Q79 ${y + 5} 92 ${y - 4} M108 ${y - 4} Q121 ${y + 5} 134 ${y - 2} M71 ${y - 9} l5 4 M80 ${y - 11} l2 6 M129 ${y - 9} l-5 4 M120 ${y - 11} l-2 6`, 3)}
+    <path d="M66 ${y + 2} Q59 ${y + 22} 63 ${y + 46} M134 ${y + 2} Q141 ${y + 22} 137 ${y + 46}" stroke="#4fc3f7" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="59" cy="${y - 4}" r="2.5" fill="#4fc3f7"/><circle cx="142" cy="${y - 5}" r="2.5" fill="#4fc3f7"/><circle cx="55" cy="${y + 2}" r="1.8" fill="#4fc3f7"/><circle cx="146" cy="${y + 1}" r="1.8" fill="#4fc3f7"/>
+    <path d="M76 ${y + 10} Q100 ${y + 2} 124 ${y + 10} Q128 ${y + 40} 100 ${y + 42} Q72 ${y + 40} 76 ${y + 10}Z" fill="${INK}"/>
+    <path d="M80 ${y + 11} Q100 ${y + 5} 120 ${y + 11} L118 ${y + 17} Q100 ${y + 12} 82 ${y + 17}Z M87 ${y + 37} Q100 ${y + 33} 113 ${y + 37} L111 ${y + 40} Q100 ${y + 42} 89 ${y + 40}Z" fill="#fff"/>
+    ${ink(`M76 ${y + 10} Q100 ${y + 2} 124 ${y + 10} Q128 ${y + 40} 100 ${y + 42} Q72 ${y + 40} 76 ${y + 10}Z`, 2.6)}` },
+  happytears: { name: 'So Much Win', price: 60, draw: y =>
+    `${ink(`M67 ${y - 17} Q78 ${y - 21} 90 ${y - 14} M110 ${y - 14} Q122 ${y - 21} 133 ${y - 17}`, 3)}
+    ${eyeO(80, y, 12)}${eyeO(120, y, 12)}${dot(80, y + 1, 8.5)}${dot(120, y + 1, 8.5)}<circle cx="83" cy="${y - 3}" r="3.4" fill="#fff"/><circle cx="77" cy="${y + 4}" r="1.6" fill="#fff"/><circle cx="123" cy="${y - 3}" r="3.4" fill="#fff"/><circle cx="117" cy="${y + 4}" r="1.6" fill="#fff"/>
+    ${tear(70, y + 12)}${tear(130, y + 12)}
+    <path d="M78 ${y + 16} Q100 ${y + 18} 124 ${y + 12} Q118 ${y + 37} 98 ${y + 37} Q82 ${y + 35} 78 ${y + 16}Z" fill="#fff"/>
+    ${ink(`M78 ${y + 16} Q100 ${y + 18} 124 ${y + 12} Q118 ${y + 37} 98 ${y + 37} Q82 ${y + 35} 78 ${y + 16}Z`, 2.8)}${ink(`M81 ${y + 25} Q100 ${y + 29} 121 ${y + 22} M87 ${y + 18} V${y + 33} M94 ${y + 18} V${y + 35} M101 ${y + 18} V${y + 36} M108 ${y + 17} V${y + 35} M115 ${y + 15} V${y + 32}`, 1.5)}` },
+  shock: { name: 'Oh Crap', price: 60, draw: y =>
+    `${ink(`M65 ${y - 18} Q78 ${y - 23} 91 ${y - 17} M109 ${y - 17} Q122 ${y - 23} 135 ${y - 18} M97 ${y - 32} l2 8 M103 ${y - 33} l-1 9`, 3)}
+    ${eyeO(79, y, 13)}${eyeO(121, y, 13)}${dot(80, y + 1, 2.6)}${dot(121, y + 1, 2.6)}
+    <path d="M88 ${y + 21} Q100 ${y + 15} 113 ${y + 20} Q109 ${y + 32} 99 ${y + 31} Q90 ${y + 30} 88 ${y + 21}Z" fill="${INK}"/><path d="M91 ${y + 20} l3 5 l3 -6 l3 6 l3 -6 l3 6 l3 -5Z" fill="#fff"/>
+    ${ink(`M88 ${y + 21} Q100 ${y + 15} 113 ${y + 20} Q109 ${y + 32} 99 ${y + 31} Q90 ${y + 30} 88 ${y + 21}Z`, 2.4)}${tear(60, y - 18)}${tear(141, y - 14)}${tear(66, y - 30)}` },
+  thumbs: { name: 'Okay, Nice!', price: 70, draw: y =>
+    `${eyeO(80, y, 10)}${eyeO(120, y, 10)}${dot(80, y, 4)}${dot(120, y, 4)}
+    ${ink(`M78 ${y + 14} Q100 ${y + 34} 123 ${y + 12} M76 ${y + 12} l3 3 M125 ${y + 10} l-3 3`, 3.2)}
+    <g transform="translate(152 ${y + 14})"><path d="M-10 0 h18 a5 5 0 0 1 0 6 a5 5 0 0 1 0 6 a5 5 0 0 1 0 6 h-18Z M-4 0 V-12 Q-4 -18 2 -17 Q5 -16 4 -9 L3 0" fill="#fff"/>${ink('M-10 0 h18 a5 5 0 0 1 0 6 a5 5 0 0 1 0 6 a5 5 0 0 1 0 6 h-18Z M-4 0 V-12 Q-4 -18 2 -17 Q5 -16 4 -9 L3 0', 2.4)}${ink('M-12 -22 l2 5 M-2 -28 v6 M8 -24 l-2 5', 1.8)}</g>` },
+  trolly: { name: 'Mischief Grin', price: 80, draw: y =>
+    `${ink(`M65 ${y - 9} L90 ${y - 4} M110 ${y - 13} Q122 ${y - 23} 135 ${y - 14}`, 4)}
+    ${ink(`M69 ${y + 2} Q80 ${y - 4} 91 ${y + 2}`, 3)}${dot(85, y + 1, 3)}
+    <ellipse cx="121" cy="${y - 2}" rx="11" ry="7" fill="#fff" stroke="${INK}" stroke-width="2.6"/>${dot(126, y - 1, 3.4)}${ink(`M110 ${y - 3} Q121 ${y - 6} 132 ${y - 3}`, 2)}
+    <path d="M84 ${y + 20} Q104 ${y + 25} 126 ${y + 9} Q124 ${y + 25} 109 ${y + 29} Q95 ${y + 29} 84 ${y + 20}Z" fill="#fff"/>
+    ${ink(`M84 ${y + 20} Q104 ${y + 25} 126 ${y + 9} Q124 ${y + 25} 109 ${y + 29} Q95 ${y + 29} 84 ${y + 20}Z M127 ${y + 6} q5 1 3 6`, 2.8)}${ink(`M108 ${y + 22} V${y + 28} M114 ${y + 19} V${y + 27} M119 ${y + 16} V${y + 24}`, 1.5)}` },
+  rage: { name: 'FFFUUU Rage', price: 80, draw: y =>
+    `${ink(`M63 ${y - 18} L92 ${y - 6} M137 ${y - 18} L108 ${y - 6}`, 5)}${ink(`M95 ${y - 36} l4 6 l-3 3 l5 6 M88 ${y - 28} l3 4`, 2)}
+    ${eyeO(80, y + 1, 11)}${eyeO(120, y + 1, 11)}${dot(81, y + 2, 2.4)}${dot(119, y + 2, 2.4)}
+    <path d="M74 ${y + 13} Q100 ${y + 5} 126 ${y + 13} L120 ${y + 45} Q100 ${y + 49} 80 ${y + 45}Z" fill="${INK}"/>
+    <path d="M78 ${y + 14} Q100 ${y + 7} 122 ${y + 14} l-3 6 l-4 -4 l-4 6 l-4 -5 l-4 6 l-3 -6 l-4 6 l-4 -5 l-4 6 l-4 -6 l-3 5Z" fill="#fff"/>
+    <path d="M84 ${y + 44} l3 -6 l4 4 l4 -6 l4 5 l4 -6 l4 5 l4 -6 l4 5 l3 -5 l2 6 Q100 ${y + 47} 84 ${y + 44}Z" fill="#fff"/>
+    ${ink(`M74 ${y + 13} Q100 ${y + 5} 126 ${y + 13} L120 ${y + 45} Q100 ${y + 49} 80 ${y + 45}Z M68 ${y + 14} l4 6 M132 ${y + 14} l-4 6`, 2.6)}` },
+  silly: { name: 'Herp Tongue', price: 40, draw: y =>
+    `${eyeO(79, y, 12)}${eyeO(121, y, 12)}${dot(82, y - 6, 4)}${dot(124, y - 6, 4)}
+    <path d="M94 ${y + 19} Q93 ${y + 33} 99 ${y + 33} Q105 ${y + 33} 104 ${y + 19}" fill="#ff9fb8"/>${ink(`M88 ${y + 18} Q100 ${y + 21} 113 ${y + 16} M94 ${y + 19} Q93 ${y + 33} 99 ${y + 33} Q105 ${y + 33} 104 ${y + 19}`, 2.8)}${ink(`M99 ${y + 22} V${y + 28}`, 1.4)}` },
+  cat: { name: 'Kitty :3', price: 40, draw: y =>
+    `${ink(`M71 ${y + 4} L79 ${y - 7} L87 ${y + 4} M113 ${y + 4} L121 ${y - 7} L129 ${y + 4}`, 3.2)}
+    ${ink(`M87 ${y + 14} Q92 ${y + 25} 100 ${y + 15} Q108 ${y + 25} 113 ${y + 14}`, 3)}${blush(y)}` },
+  hearts: { name: 'Heart Eyes', price: 70, draw: y => [80, 120].map(x => `<g transform="translate(${x} ${y - 1})">${ink('M0 9 C-16 0 -12 -11 -5 -11 C-2 -11 0 -8 0 -6 C0 -8 2 -11 5 -11 C12 -11 16 0 0 9Z', 2.6, '#ff6f9c')}</g>`).join('') +
+    `<path d="M84 ${y + 13} Q100 ${y + 33} 116 ${y + 13}Z" fill="#fff"/>${ink(`M84 ${y + 13} Q100 ${y + 33} 116 ${y + 13}Z M84 ${y + 13} Q100 ${y + 19} 116 ${y + 13}`, 2.6)}${blush(y)}` },
+  okay: { name: 'Okay… (sad)', price: 50, draw: y =>
+    `${ink(`M66 ${y - 10} Q78 ${y - 8} 90 ${y - 14} M110 ${y - 14} Q122 ${y - 8} 134 ${y - 10}`, 3)}
+    <ellipse cx="80" cy="${y + 1}" rx="9" ry="8" fill="#fff" stroke="${INK}" stroke-width="2.6"/><ellipse cx="120" cy="${y + 1}" rx="9" ry="8" fill="#fff" stroke="${INK}" stroke-width="2.6"/>${dot(80, y + 4, 3.4)}${dot(120, y + 4, 3.4)}
+    ${ink(`M71 ${y - 3} Q80 ${y - 7} 89 ${y - 3} M111 ${y - 3} Q120 ${y - 7} 129 ${y - 3}`, 1.6)}${ink(`M93 ${y + 24} Q100 ${y + 20} 107 ${y + 24}`, 3)}` },
+  nervous: { name: 'Uhh… Nervous', price: 50, draw: y =>
+    `${ink(`M66 ${y - 14} Q76 ${y - 18} 89 ${y - 12} M111 ${y - 13} Q124 ${y - 20} 134 ${y - 15}`, 3)}
+    ${eyeO(79, y, 11)}${eyeO(121, y, 12)}${dot(77, y + 1, 3.6)}${dot(119, y + 1, 3.6)}
+    <path d="M84 ${y + 21} Q90 ${y + 16} 96 ${y + 21} Q102 ${y + 26} 108 ${y + 20} Q113 ${y + 16} 117 ${y + 21} L114 ${y + 26} Q100 ${y + 30} 86 ${y + 26}Z" fill="#fff"/>
+    ${ink(`M84 ${y + 21} Q90 ${y + 16} 96 ${y + 21} Q102 ${y + 26} 108 ${y + 20} Q113 ${y + 16} 117 ${y + 21} L114 ${y + 26} Q100 ${y + 30} 86 ${y + 26}Z`, 2.6)}${ink(`M93 ${y + 22} v6 M101 ${y + 23} v6 M109 ${y + 21} v6`, 1.3)}${tear(140, y - 20)}` },
 };
 const SHOP_CATS = { chars: ['Characters', CHARS], colors: ['Colors', COLORS], faces: ['Faces', FACES], outfits: ['Outfits', OUTFITS], accs: ['Accessories', ACCS] };
 
@@ -150,5 +193,5 @@ function charSVG(eq, mood = 'happy', size = 120, cls = '') {
   const backs = ['back'].map(s => A(s) && A(s).back ? A(s).back(c) : '').join('');
   const outfit = eq.outfit && OUTFITS[eq.outfit] ? `<g clip-path="${clip}">${OUTFITS[eq.outfit].draw(c.fy + 26)}</g>` : '';
   const fronts = ['back', 'neck', 'face', 'head'].map(s => A(s) && A(s).draw ? A(s).draw(c, clip) : '').join('');
-  return `<svg class="mascot ${cls}" viewBox="0 -20 200 215" width="${size}" height="${size}" role="img" aria-label="${c.name}"><defs>${defs}</defs>${backs}${c.draw(fill, c)}${outfit}${eq.face && FACES[eq.face] ? FACES[eq.face].draw(c.fy) : face(c.fy, mood)}${fronts}</svg>`;
+  return `<svg class="mascot ${cls}" viewBox="0 -20 200 215" width="${size}" height="${size}" role="img" aria-label="${c.name}"><defs>${defs}</defs>${backs}${c.draw(fill, c)}${outfit}${eq.face && FACES[eq.face] ? `<g transform="translate(100 ${c.fy}) scale(1.15) translate(-100 ${-c.fy})">${FACES[eq.face].draw(c.fy)}</g>` : face(c.fy, mood)}${fronts}</svg>`;
 }

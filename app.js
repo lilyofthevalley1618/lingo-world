@@ -2,10 +2,11 @@
 const LANGS = ['es', 'fr', 'zh', 'yue', 'ja', 'ko'];
 const META = {
   es: ['🇪🇸', 'Spanish', 'Español', '#ffd3b8'], fr: ['🇫🇷', 'French', 'Français', '#bfe0ff'],
-  zh: ['🇨🇳', 'Chinese (Mandarin)', '中文 · 普通话', '#ffcde0'], yue: ['🇭🇰', 'Cantonese', '廣東話', '#ffeaa8'],
+  zh: ['🇹🇼', 'Chinese (Taiwan)', '中文 · 臺灣華語', '#ffcde0'], yue: ['🇭🇰', 'Cantonese', '廣東話', '#ffeaa8'],
   ja: ['🇯🇵', 'Japanese', '日本語', '#ddd2ff'], ko: ['🇰🇷', 'Korean', '한국어', '#c4efe0'] };
 const EMOJI = { Hello: '👋', 'Good morning': '🌅', 'Good afternoon': '☀️', 'Good evening': '🌆', 'Good night': '🌙', Goodbye: '👋', 'See you later': '🙋', 'How are you?': '🙂', "I'm fine": '😊', 'Thank you': '🙏', "You're welcome": '🤗', Please: '🥺', 'Excuse me': '🙋‍♀️', Sorry: '😔', 'Nice to meet you': '🤝',
   Zero: '0️⃣', One: '1️⃣', Two: '2️⃣', Three: '3️⃣', Four: '4️⃣', Five: '5️⃣', Six: '6️⃣', Seven: '7️⃣', Eight: '8️⃣', Nine: '9️⃣', Ten: '🔟', Eleven: '11', Twenty: '20', 'One hundred': '💯', 'One thousand': '1000',
+  'Ice cream': '🍦', Potato: '🥔', 'Bubble tea': '🧋', Taxi: '🚕', 'MRT (metro)': '🚇', Bicycle: '🚲', Trash: '🗑️',
   Water: '💧', Bread: '🍞', Rice: '🍚', Apple: '🍎', Banana: '🍌', Egg: '🥚', Milk: '🥛', Coffee: '☕', Tea: '🍵', Meat: '🥩', Chicken: '🍗', Fish: '🐟', Vegetables: '🥦', Cheese: '🧀', Soup: '🍲',
   Red: '🔴', Blue: '🔵', Green: '🟢', Yellow: '🟡', Orange: '🟠', Purple: '🟣', Pink: '🌸', Black: '⚫', White: '⚪', Gray: '🩶', Brown: '🟤', Gold: '🥇', Silver: '🥈', Color: '🎨', Rainbow: '🌈',
   Family: '👨‍👩‍👧', Mother: '👩', Father: '👨', Parents: '👫', 'Older brother': '👦⬆️', 'Younger brother': '👦⬇️', 'Older sister': '👧⬆️', 'Younger sister': '👧⬇️', Grandmother: '👵', Grandfather: '👴', Son: '👦', Daughter: '👧', Husband: '🤵', Wife: '👰', Baby: '👶', Friend: '🧑‍🤝‍🧑',
@@ -19,6 +20,7 @@ const cache = {};
 const KEY = 'lingoWorld.v1';
 const S = Object.assign({ xp: 0, streak: 0, lastDay: null, known: {}, best: {}, done: {}, srs: {}, blingos: 30, slow: false, owned: {}, equip: {} }, JSON.parse(localStorage.getItem(KEY) || '{}'));
 S.owned = Object.assign({ chars: ['strawberry'], colors: [], outfits: [], accs: [], faces: [] }, S.owned);
+S.lang = S.lang || null;
 S.equip = Object.assign({ char: 'strawberry', color: null, outfit: null, face: null, acc: {} }, S.equip);
 const save = () => localStorage.setItem(KEY, JSON.stringify(S));
 const dayStr = d => d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
@@ -36,7 +38,9 @@ function earn(n, why) { if (!n) return; S.blingos += n; save(); updateStats(); t
 function updateStats() {
   document.getElementById('streak').textContent = liveStreak();
   document.getElementById('xp').textContent = S.xp;
-  document.getElementById('bl').textContent = S.blingos;
+  document.getElementById('bl').textContent = S.blingos >= 100000 ? Math.floor(S.blingos / 1000) + 'k' : S.blingos;
+  document.getElementById('avatar').innerHTML = charSVG(S.equip, 'happy', 40) + `<span class="lv">Lv${Math.floor(S.xp / 100) + 1}</span>`;
+  document.getElementById('tabchar').innerHTML = charSVG(S.equip, 'happy', 30);
 }
 let toastT;
 function toast(html) { const t = document.getElementById('toast'); t.innerHTML = html; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2200); }
@@ -55,6 +59,7 @@ const dueKeys = code => srsKeys(code).filter(k => S.srs[k].due <= Date.now()).so
 /* ---------- helpers ---------- */
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const rom = x => (x.r || '') + (S.zhuyin && x.z ? '\u2002' + x.z : '');
 function split(t) { const m = t.match(/^(.*?)（(.+?)）$/); return m ? { main: m[1], kana: m[2] } : { main: t, kana: '' }; } // "水（みず）"
 const kKey = (code, tid, i) => code + '|' + tid + '|' + i;
 async function load(code) {
@@ -74,7 +79,7 @@ function pickVoice(lang) {
   const l = lang.toLowerCase(), exact = voices.find(v => vnorm(v) === l);
   if (exact) return exact;
   if (l === 'zh-hk') return voices.find(v => /yue|zh-hk|cantonese/i.test(vnorm(v) + ' ' + v.name)); // never fall back to Mandarin
-  if (l === 'zh-cn') return voices.find(v => vnorm(v) === 'zh-tw' || vnorm(v) === 'zh-sg');
+  if (l === 'zh-tw') return voices.find(v => /zh-tw|taiwan/i.test(vnorm(v) + ' ' + v.name)) || voices.find(v => vnorm(v) === 'zh-cn' || vnorm(v) === 'zh-sg' || /^cmn/.test(vnorm(v))); // Mandarin only, never Cantonese
   return voices.find(v => vnorm(v).startsWith(l.slice(0, 2)));
 }
 function speak(text, lang, o = {}) {
@@ -143,71 +148,174 @@ function spokenScore(heard, item) { // 0..1, lenient
 }
 const PASS = 0.6;
 
-/* ---------- views: home ---------- */
+/* ---------- views: language picker ---------- */
 const GREET = ['Ready to practice speaking? 🗣️', 'Say it out loud, it sticks better! ✨', 'A few minutes a day keeps the streak alive 🔥', 'You\'re doing amazing! 💖', 'Let\'s learn something cute today 🌸'];
-function home() {
-  let html = `<section class="hero card"><div class="hero-m">${mascot('happy', 128, 'bob')}</div><div class="hero-t">
-    <div class="bubble">${GREET[Math.floor(Math.random() * GREET.length)]}</div>
-    <div class="row"><a class="btn" href="#/me">👗 My Character</a><a class="btn alt" href="#/shop">🛍️ Shop</a></div></div></section>
-    <h1>Where to today? ✈️</h1><p class="sub">Pick a language. Lessons are mostly speaking & listening.</p><div class="grid">`;
+const level = () => Math.floor(S.xp / 100) + 1;
+function langsView() {
+  let html = `<section class="hero card"><div class="hero-m">${mascot('happy', 120, 'bob')}</div><div class="hero-t">
+    <div class="bubble">${GREET[Math.floor(Math.random() * GREET.length)]}</div><p class="sub" style="margin:0">Pick a language to learn. You can switch any time.</p></div></section><div class="grid">`;
   for (const c of LANGS) {
     const [flag, name, native, color] = META[c];
     const done = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length, due = dueKeys(c).length;
-    html += `<a class="card lang" style="--c:${color}" href="#/${c}"><span class="flag">${flag}</span><span class="nm">${name}</span><span class="nt">${native}</span>
+    html += `<a class="card lang ${S.lang === c ? 'sel' : ''}" style="--c:${color}" href="#/${c}"><span class="flag">${flag}</span><span class="nm">${name}</span><span class="nt">${native}</span>
       <div class="bar"><i style="width:${Math.round(done / 24 * 100)}%"></i></div><span class="nt">${done}/24 lessons${due ? ` · <b>${due} to review</b>` : ''}</span></a>`;
   }
   app.innerHTML = html + '</div>';
 }
 
-/* ---------- views: language path map ---------- */
-const lessonOrder = L => L.topics.flatMap(t => [0, 1, 2, 3].map(k => t.id + '|' + k));
+/* ---------- views: course path (soft wavy trail with lesson cards) ---------- */
+const TOPIC_COLORS = { greetings: '#b7c0ff', numbers: '#a3e6d2', food: '#ffd0b3', colors: '#ffc6dd', family: '#d9ccff', phrases: '#ffe8a6' };
+const LESSON_INFO = {
+  greetings: [['Hello & times of day', '👋'], ['Goodbyes & how are you', '🙋'], ['Polite words', '🙏']],
+  numbers: [['Counting 0–4', '🔢'], ['Counting 5–9', '🖐️'], ['Big numbers', '💯']],
+  food: [['Basics & fruit', '🍎'], ['Breakfast & drinks', '☕'], ['Dinner time', '🍲']],
+  colors: [['Rainbow colors', '🌈'], ['More colors', '🎨'], ['Shiny & special', '✨']],
+  family: [['Parents & brothers', '👨‍👩‍👦'], ['Sisters & grandparents', '👵'], ['Partners & friends', '🧑‍🤝‍🧑']],
+  phrases: [['Yes, no & names', '📛'], ['Getting around', '🗺️'], ['Fun phrases', '🥳']] };
+const lessons = Object.fromEntries(Object.entries(LESSON_INFO).map(([k, v]) => [k, [...v, ['Treasure review', '🎁']]]));
 const isDone = (code, id) => !!S.done[code + '|' + id];
+const lessonOrder = L => L.topics.flatMap(t => [0, 1, 2, 3].map(k => t.id + '|' + k));
 function isUnlocked(L, id) { const o = lessonOrder(L), i = o.indexOf(id); return i === 0 || (i > 0 && isDone(L.code, o[i - 1])); }
+function ring(pct) {
+  const r = 18, c = 2 * Math.PI * r;
+  return `<svg class="ring" viewBox="0 0 48 48" width="54" height="54" aria-label="${pct}% complete"><circle cx="24" cy="24" r="${r}" fill="rgba(255,255,255,.6)" stroke="rgba(255,255,255,.75)" stroke-width="5"/>
+    <circle cx="24" cy="24" r="${r}" fill="none" stroke="#5a64c8" stroke-width="5" stroke-linecap="round" stroke-dasharray="${c * pct / 100} ${c}" transform="rotate(-90 24 24)"/>
+    <text x="24" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#36305c">${pct}%</text></svg>`;
+}
+function chestSVG(open) {
+  return `<svg viewBox="0 0 64 56" width="64" height="56" aria-hidden="true"><rect x="6" y="24" width="52" height="28" rx="6" fill="#f7c08f" stroke="#d99a63" stroke-width="3"/>${open ? '<path d="M8 24 L14 6 L56 10 L56 24Z" fill="#ffd8ae" stroke="#d99a63" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="18" r="4" fill="#ffe08f"/><circle cx="32" cy="16" r="4" fill="#ffe08f"/><circle cx="44" cy="18" r="4" fill="#ffe08f"/>' : '<path d="M6 24 Q6 8 22 8 L42 8 Q58 8 58 24Z" fill="#ffd8ae" stroke="#d99a63" stroke-width="3"/>'}<rect x="6" y="30" width="52" height="6" fill="#ffe08f"/><rect x="27" y="27" width="10" height="12" rx="3" fill="#ffd36e" stroke="#c9932e" stroke-width="2"/></svg>`;
+}
 async function langView(code) {
-  const L = await load(code);
+  const L = await load(code); S.lang = code; save(); setTabs();
   const order = lessonOrder(L), current = order.find(id => !isDone(code, id)), due = dueKeys(code).length;
   const noVoice = synth && voices.length && !pickVoice(L.speech);
-  let html = `<a class="back" href="#/">← All languages</a><h1>${L.flag} ${META[code][1]} <span class="sub">${esc(L.native)}</span></h1>
+  let html = `<div class="course-top"><a class="langchip" href="#/langs">${L.flag} ${META[code][1]} <span>▾</span></a>${code === 'zh' ? `<button class="zychip ${S.zhuyin ? 'on' : ''}" id="zy" title="Show Zhuyin (bopomofo) under pinyin">ㄅㄆㄇ ${S.zhuyin ? 'on' : 'off'}</button>` : ''}${due ? `<a class="duechip" href="#/${code}/practice/review">🔁 ${due} to review</a>` : ''}</div>
     ${noVoice ? `<div class="note">🔈 This device has no ${L.name} voice installed, so audio may be silent or sound wrong. ${code === 'yue' ? 'iPhone: Settings → Accessibility → Spoken Content → Voices → Chinese (Hong Kong). Android: Google Text-to-speech → install Cantonese (Hong Kong).' : 'You can add one in your device\'s text-to-speech settings.'}</div>` : ''}
-    ${!SR ? '<div class="note">🎤 This browser can\'t check your speaking (try Chrome or Safari). You can still say things out loud and self-check.</div>' : ''}
-    <div class="big-actions">${current ? `<a class="btn" href="#/${code}/${current.replace('|', '/lesson/')}">▶ Continue lesson</a>` : '<span class="pill">🏆 Course complete!</span>'}</div>
-    <h2>Practice</h2><div class="practice">
-      <a class="pcard" style="--c:#c4efe0" href="#/${code}/practice/review"><span>🔁</span><b>Review</b><small>${due ? due + ' words due' : 'All caught up'}</small></a>
-      <a class="pcard" style="--c:#ddd2ff" href="#/${code}/practice/shadow"><span>🗣️</span><b>Shadowing</b><small>Hear it, repeat it</small></a>
-      <a class="pcard" style="--c:#ffd3b8" href="#/${code}/practice/fast"><span>⚡</span><b>Say it fast</b><small>Speed recall</small></a>
-      <a class="pcard" style="--c:#bfe0ff" href="#/${code}/all/quiz"><span>🎯</span><b>Quiz</b><small>Mixed topics</small></a></div>`;
-  // Duolingo-style vertical trail: zig-zag nodes, dotted trail line, section banners, chest reviews, mascot by the current node
-  const OFFS = [0, 58, 92, 58, 0, -58, -92, -58];
-  let y = 8, idx = 0, items = '', pts = [];
+    ${!SR ? '<div class="note">🎤 This browser can\'t check your speaking (try Chrome or Safari). You can still say things out loud and self-check.</div>' : ''}`;
+  let y = 0, items = '', pts = [], n = 0;
   L.topics.forEach((t, ti) => {
-    const nDone = [0, 1, 2, 3].filter(k => isDone(code, t.id + '|' + k)).length;
-    items += `<div class="tbanner" style="top:${y}px;--c:${L.color}"><div><div class="unit-n">Unit ${ti + 1} · ${nDone}/${PER_TOPIC} done</div><div class="unit-t">${t.icon} ${t.name}</div></div>
-      <div class="row"><a class="btn small light" href="#/${code}/${t.id}/cards" title="Flashcards">🃏</a><a class="btn small light" href="#/${code}/${t.id}/quiz" title="Quiz">❓</a></div></div>`;
-    y += 112;
+    const col = TOPIC_COLORS[t.id], nDone = [0, 1, 2, 3].filter(k => isDone(code, t.id + '|' + k)).length;
+    items += `<div class="sec-banner" style="top:${y}px;--c:${col}"><div class="sec-l"><div class="sec-n">Section ${ti + 1} · ${META[code][1]}</div><div class="sec-t">${t.icon} ${t.name}</div>
+      <div class="sec-links"><a href="#/${code}/${t.id}/cards">🃏 Flashcards</a><a href="#/${code}/${t.id}/quiz">❓ Quiz</a></div></div>${ring(Math.round(nDone / PER_TOPIC * 100))}</div>`;
+    y += 124;
     for (let k = 0; k < PER_TOPIC; k++) {
-      const id = t.id + '|' + k, done = isDone(code, id), open = isUnlocked(L, id), cur = id === current, chest = k === 3;
-      const x = OFFS[idx++ % OFFS.length]; pts.push([x, y + 36]);
-      const st = done ? 'done' : cur ? 'current' : open ? 'open' : 'locked';
-      const icon = chest ? chestSVG(done) : done ? '★' : cur ? '★' : open ? '★' : '🔒';
-      const inner = `${cur ? '<span class="tstart">START</span>' : ''}<span class="tdot">${icon}</span><span class="tlabel">${chest ? (done ? 'Review ✓' : 'Review chest') : 'Lesson ' + (k + 1)}</span>`;
-      const style = `top:${y}px;left:calc(50% + ${x}px);--c:${L.color}`;
-      items += open ? `<a class="tnode ${st} ${chest ? 'chest' : ''}" style="${style}" href="#/${code}/${t.id}/lesson/${k}" aria-label="${t.name} ${chest ? 'review' : 'lesson ' + (k + 1)}">${inner}</a>`
-        : `<span class="tnode ${st} ${chest ? 'chest' : ''}" style="${style}" title="Finish the step before to unlock">${inner}</span>`;
-      if (cur) items += `<div class="tmascot" style="top:${y - 18}px;left:calc(50% + ${x + (x > 0 ? -150 : 62)}px)">${mascot('happy', 88, 'bob')}</div>`;
-      y += chest ? 118 : 100;
+      const id = t.id + '|' + k, done = isDone(code, id), open = isUnlocked(L, id), cur = id === current, chest = k === 3, side = n++ % 2 ? 'right' : 'left';
+      const [title, icon] = lessons[t.id][k], h = cur ? 128 : 112;
+      pts.push([cur ? 50 : side === 'left' ? 30 : 70, y + h / 2]);
+      const cls = `lcard ${cur ? 'current' : side}${done ? ' done' : ''}${!open ? ' locked' : ''}${chest ? ' chest' : ''}`;
+      const inner = cur ? `<div class="lc-m">${mascot('happy', 82, 'bob')}</div><div class="lc-txt"><div class="lc-start">Start here</div><div class="lc-title">${title}</div></div><span class="timechip">⚡ ${chest ? 2 : 3} MIN</span>`
+        : `<div class="lc-title">${title}</div><div class="lc-ico">${chest ? chestSVG(done) : icon}</div>${done ? '<span class="lc-done">★</span>' : ''}${!open ? '<span class="lc-lock">🔒</span>' : ''}`;
+      const style = `top:${y}px;height:${h}px;--c:${col}`;
+      items += open ? `<a class="${cls}" style="${style}" href="#/${code}/${t.id}/lesson/${k}">${inner}</a>` : `<div class="${cls}" style="${style}" title="Finish the card before to unlock">${inner}</div>`;
+      y += h + 26;
     }
-    y += 6;
+    y += 10;
   });
   let d = `M${pts[0][0]} ${pts[0][1]}`;
   for (let j = 1; j < pts.length; j++) { const [x0, y0] = pts[j - 1], [x1, y1] = pts[j], m = (y0 + y1) / 2; d += ` C${x0} ${m} ${x1} ${m} ${x1} ${y1}`; }
-  html += `<h2>Your path</h2><div class="trail" style="height:${y + 10}px"><svg class="trail-svg" width="1" height="${y}" aria-hidden="true">
-    <path d="${d}" fill="none" stroke="#e6e0fb" stroke-width="16" stroke-linecap="round"/><path d="${d}" fill="none" stroke="#c9bcff" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 15"/></svg>${items}</div>`;
+  html += `<div class="trail2" style="height:${y}px"><svg class="trail2-svg" viewBox="0 0 100 ${y}" preserveAspectRatio="none" width="100%" height="${y}" aria-hidden="true">
+    <path d="${d}" fill="none" stroke="#ece4f8" stroke-width="30" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <path d="${d}" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 16" vector-effect="non-scaling-stroke"/></svg>${items}</div>
+    <a class="talk-fab" href="#/${code}/practice/chat" title="Conversation practice">💬<span>Talk</span></a>`;
   app.innerHTML = html;
-  const cur = app.querySelector('.tnode.current');
-  if (cur && order.indexOf(current) > 2) setTimeout(() => cur.scrollIntoView({ block: 'center', behavior: 'smooth' }), 150);
+  if (document.getElementById('zy')) document.getElementById('zy').onclick = () => { S.zhuyin = !S.zhuyin; save(); langView(code); };
+  const cur = app.querySelector('.lcard.current');
+  if (cur && order.indexOf(current) > 1) setTimeout(() => cur.scrollIntoView({ block: 'center', behavior: 'smooth' }), 150);
 }
-function chestSVG(open) {
-  return `<svg viewBox="0 0 64 56" width="58" height="50" aria-hidden="true"><rect x="6" y="24" width="52" height="28" rx="6" fill="#f7c08f" stroke="#d99a63" stroke-width="3"/>${open ? '<path d="M8 24 L14 6 L56 10 L56 24Z" fill="#ffd8ae" stroke="#d99a63" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="18" r="4" fill="#ffe08f"/><circle cx="32" cy="16" r="4" fill="#ffe08f"/><circle cx="44" cy="18" r="4" fill="#ffe08f"/>' : '<path d="M6 24 Q6 8 22 8 L42 8 Q58 8 58 24Z" fill="#ffd8ae" stroke="#d99a63" stroke-width="3"/>'}<rect x="6" y="30" width="52" height="6" fill="#ffe08f"/><rect x="27" y="27" width="10" height="12" rx="3" fill="#ffd36e" stroke="#c9932e" stroke-width="2"/></svg>`;
+
+/* ---------- practice hub (tab) ---------- */
+async function practiceHub() {
+  const code = S.lang || 'es', L = await load(code), due = dueKeys(code).length;
+  app.innerHTML = `<div class="course-top"><a class="langchip" href="#/langs">${L.flag} ${META[code][1]} <span>▾</span></a></div>
+    <h1>Practice</h1><p class="sub">Speaking first! Pick a way to practice.</p>
+    <div class="practice">
+      <a class="pcard big" style="--c:#ffc6dd" href="#/${code}/practice/chat"><span>💬</span><b>Conversation</b><small>Role-play real chats out loud</small></a>
+      <a class="pcard" style="--c:#d9ccff" href="#/${code}/practice/shadow"><span>🗣️</span><b>Shadowing</b><small>Hear it, repeat it</small></a>
+      <a class="pcard" style="--c:#ffd0b3" href="#/${code}/practice/fast"><span>⚡</span><b>Say it fast</b><small>Speed recall</small></a>
+      <a class="pcard" style="--c:#a3e6d2" href="#/${code}/practice/review"><span>🔁</span><b>Review</b><small>${due ? due + ' words due' : 'All caught up'}</small></a>
+      <a class="pcard" style="--c:#b7c0ff" href="#/${code}/all/quiz"><span>🎯</span><b>Quiz</b><small>Mixed topics</small></a></div>
+    <h2>Flashcards</h2><div class="fc-list">${L.topics.map(t => `<a class="fc" style="--c:${TOPIC_COLORS[t.id]}" href="#/${code}/${t.id}/cards"><span>${t.icon}</span>${t.name}</a>`).join('')}</div>`;
+}
+
+/* ---------- profile (tab) ---------- */
+function profile() {
+  const total = LANGS.reduce((a, c) => a + Object.keys(S.done).filter(k => k.startsWith(c + '|')).length, 0);
+  app.innerHTML = `<div class="stage card">${mascot('cheer', 140, 'bob')}<div><h1>Your profile</h1><div class="lvl">Level ${level()}</div>
+      <div class="bar"><i style="width:${S.xp % 100}%"></i></div><div class="sub">${100 - S.xp % 100} XP to level ${level() + 1}</div></div></div>
+    <div class="res-stats"><div><b>🔥 ${liveStreak()}</b><span>day streak</span></div><div><b>🏆 ${S.xp}</b><span>total XP</span></div><div><b><span class="coin">B</span> ${S.blingos.toLocaleString()}</b><span>Blingos</span></div><div><b>📚 ${total}</b><span>lessons</span></div></div>
+    <h2>Languages</h2><div class="plist">${LANGS.map(c => { const d = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length; return `<a class="prow" href="#/${c}"><span>${META[c][0]} ${META[c][1]}</span><div class="bar"><i style="width:${d / 24 * 100}%"></i></div><small>${d}/24</small></a>`; }).join('')}</div>
+    <h2>Settings</h2><div class="card settings"><label class="chk"><input type="checkbox" id="slowset" ${S.slow ? 'checked' : ''}> 🐢 Slow audio by default</label><label class="chk"><input type="checkbox" id="zyset" ${S.zhuyin ? 'checked' : ''}> ㄅㄆㄇ Show Zhuyin for Chinese (Taiwan)</label>
+      <div class="row"><a class="btn alt small" href="#/me">👗 My Character</a><a class="btn alt small" href="#/shop">🛍️ Shop</a></div></div>
+    <p class="center"><button class="linkbtn" id="redeem">Redeem code</button></p>`;
+  document.getElementById('slowset').onchange = e => { S.slow = e.target.checked; save(); };
+  document.getElementById('zyset').onchange = e => { S.zhuyin = e.target.checked; save(); };
+  document.getElementById('redeem').onclick = redeem;
+}
+
+/* ---------- conversation practice (role-play) ---------- */
+// refs: 'w:topic:index' = word, 's:topic:index' = sentence. 'p' = partner line, 'u' = your reply (spoken).
+const SCENES = [
+  { id: 'meet', title: 'Meeting a new friend', icon: '🤝', partner: 'dumpling', turns: [['p', 'w:greetings:0'], ['u', 'w:greetings:0'], ['p', 'w:phrases:2'], ['u', 's:phrases:0'], ['p', 'w:greetings:14'], ['u', 'w:greetings:14'], ['p', 's:greetings:0'], ['u', 's:greetings:1'], ['p', 's:greetings:2'], ['u', 'w:greetings:5']] },
+  { id: 'snack', title: 'Snack time', icon: '🍜', partner: 'taco', turns: [['p', 'w:phrases:9'], ['u', 'w:phrases:12'], ['p', 's:food:0'], ['u', 's:food:1'], ['p', 's:food:3'], ['u', 'w:phrases:10'], ['p', 'w:phrases:14'], ['u', 'w:phrases:14']] },
+  { id: 'family', title: 'Family photos', icon: '📸', partner: 'peach', turns: [['p', 's:family:0'], ['u', 'w:greetings:14'], ['p', 's:numbers:2'], ['u', 's:family:3'], ['p', 's:family:2'], ['u', 'w:greetings:0']] },
+  { id: 'city', title: 'Out in the city', icon: '🏙️', partner: 'sushi', turns: [['u', 'w:greetings:12'], ['p', 'w:phrases:0'], ['u', 's:phrases:1'], ['p', 'w:phrases:11'], ['u', 'w:greetings:9'], ['p', 'w:greetings:10']] },
+];
+async function chat(code, sceneId) {
+  const L = await load(code), $ = id => document.getElementById(id);
+  if (!sceneId) {
+    app.innerHTML = `<a class="back" href="#/${code}">← ${META[code][1]}</a><h1>💬 Conversation practice</h1><p class="sub">Chat with a mascot friend. Listen to them, then say your reply out loud. +3 Blingos per spoken reply!</p>
+      <div class="scenes">${SCENES.map(s => `<a class="scene card" href="#/${code}/practice/chat/${s.id}">${charSVG({ char: s.partner, acc: {} }, 'happy', 70)}<div><b>${s.icon} ${s.title}</b><small>${s.turns.filter(t => t[0] === 'u').length} replies to say</small></div></a>`).join('')}</div>`;
+    return;
+  }
+  const sc = SCENES.find(s => s.id === sceneId); if (!sc) return go(`#/${code}/practice/chat`);
+  const ref = r => { const [kind, tid, i] = r.split(':'), T = L.topics.find(t => t.id === tid); return kind === 'w' ? { ...T.words[+i], tid, i: +i } : T.sentences[+i]; };
+  const turns = sc.turns.map(([who, r]) => ({ who, item: ref(r) })), partner = { char: sc.partner, acc: {} }, said = [];
+  let ti = 0, spoke = 0;
+  app.innerHTML = `<div class="lesson chatwrap"><div class="lbar"><a class="x" href="#/${code}/practice/chat" aria-label="Quit">✕</a><div class="progress"><i id="cprog" style="width:0%"></i></div><span class="hearts">💬</span></div>
+    <div class="pill-label">${sc.icon} ${sc.title}</div><div class="chat" id="chat"></div></div><div class="checkbar" id="reply"></div>`;
+  const chatEl = $('chat');
+  chatEl.onclick = e => { const b = e.target.closest('[data-i]'); if (b) speak(said[+b.dataset.i], L.speech); };
+  const bubble = (who, it, extra = '') => {
+    const s = split(it.t); said.push(it.t);
+    chatEl.insertAdjacentHTML('beforeend', `<div class="msg ${who}">${who === 'them' ? `<div class="av">${charSVG(partner, 'happy', 44)}</div>` : ''}<div class="bub"><div class="bt">${esc(s.main)}</div>${it.r ? `<div class="br">${esc(rom(it))}</div>` : ''}<div class="be">${esc(it.en)}</div>
+      <button class="mini" data-i="${said.length - 1}" aria-label="Play">🔊</button>${extra}</div>${who === 'me' ? `<div class="av">${mascot('happy', 44)}</div>` : ''}</div>`);
+    chatEl.lastElementChild.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  };
+  const step = () => {
+    $('cprog').style.width = (ti / turns.length * 100) + '%';
+    if (ti >= turns.length) return end();
+    const { who, item } = turns[ti];
+    if (who === 'p') {
+      $('reply').innerHTML = '<div class="checkbar-in"><div class="typing">💬 typing…</div></div>';
+      bubble('them', item);
+      let moved = false; const adv = () => { if (moved) return; moved = true; ti++; setTimeout(step, 350); };
+      speak(item.t, L.speech, { onend: adv }); setTimeout(adv, 2200 + item.t.length * 90);
+      return;
+    }
+    const s = split(item.t);
+    $('reply').innerHTML = `<div class="checkbar-in col"><div class="yourturn"><div class="pill-label">Your turn · say:</div><div class="yt-t">${esc(s.main)}</div>${item.r ? `<div class="br">${esc(rom(item))}</div>` : ''}<div class="be">${esc(item.en)}</div><div id="heard" class="sub"></div></div>
+      <div class="row center-row"><button class="spk" id="hear" title="Hear it">🔊</button>${SR ? '<button class="mic sm" id="mic">🎤</button>' : '<button class="bigbtn" id="self">I SAID IT ✓</button>'}<button class="roundbtn" id="skipc" title="Skip">⏭</button></div></div>`;
+    $('hear').onclick = () => speak(item.t, L.speech);
+    const ok = (pct) => { bubble('me', item, pct != null ? `<span class="okchip">✓ ${pct}%</span>` : ''); ti++; step(); };
+    $('skipc').onclick = () => ok(null);
+    if ($('self')) $('self').onclick = () => { earn(1, '💬 practice'); ok(null); };
+    if ($('mic')) $('mic').onclick = () => {
+      if (synth) synth.cancel();
+      $('mic').classList.add('on'); $('heard').textContent = 'Listening…';
+      listen(L.speech, {
+        onResult: heard => { const sc2 = spokenScore(heard, item); if (sc2 >= PASS) { spoke++; activity(2); earn(3, '💬 spoken reply'); ok(Math.round(sc2 * 100)); } else $('heard').textContent = `I heard “${heard[0]}”. Try again!`; },
+        onError: err => { if ($('heard')) $('heard').textContent = micMsg(err); },
+        onEnd: () => { if ($('mic')) $('mic').classList.remove('on'); },
+      });
+    };
+  };
+  const end = () => {
+    earn(5, 'conversation done'); activity(5);
+    $('reply').innerHTML = `<div class="checkbar-in col"><div class="fb-row"><div class="fb-m">${mascot('cheer', 58)}</div><div class="fb-text"><div class="fb-head">Great chat! 🎉</div><div class="fb-def">You said ${spoke} of ${turns.filter(t => t.who === 'u').length} replies out loud.</div></div></div>
+      <div class="row"><a class="bigbtn" href="#/${code}/practice/chat">MORE CHATS</a></div></div>`;
+  };
+  routeCleanup = () => { if (synth) synth.cancel(); };
+  step();
 }
 
 /* ---------- lesson plans (speaking-first: 7 of 12 are speak/listen) ---------- */
@@ -242,9 +350,9 @@ function runSession(L, cfg) {
   let pos = 0, hearts = 5, solved = 0, firstTry = 0, mistakes = 0, spoke = 0;
   const say = (t, o) => speak(t, L.speech, o);
   const $ = id => document.getElementById(id);
-  const wordHtml = w => { const s = split(w.t); return `<span class="tw">${esc(s.main)}</span>${s.kana ? `<small>${esc(s.kana)}</small>` : ''}${w.r ? `<small class="r">${esc(w.r)}</small>` : ''}`; };
-  const defWord = w => { const s = split(w.t); return `<b>${esc(s.main)}</b>${s.kana ? ' (' + esc(s.kana) + ')' : ''}${w.r ? ' · <i>' + esc(w.r) + '</i>' : ''} = ${esc(w.en)}${w.tip ? `<div class="tip">💡 ${esc(w.tip)}</div>` : ''}`; };
-  const defSent = s => `<b>${esc(s.t)}</b>${s.r ? '<br><i>' + esc(s.r) + '</i>' : ''}<br>= ${esc(s.en)}`;
+  const wordHtml = w => { const s = split(w.t); return `<span class="tw">${esc(s.main)}</span>${s.kana ? `<small>${esc(s.kana)}</small>` : ''}${w.r ? `<small class="r">${esc(rom(w))}</small>` : ''}`; };
+  const defWord = w => { const s = split(w.t); return `<b>${esc(s.main)}</b>${s.kana ? ' (' + esc(s.kana) + ')' : ''}${w.r ? ' · <i>' + esc(rom(w)) + '</i>' : ''} = ${esc(w.en)}${w.tip ? `<div class="tip">💡 ${esc(w.tip)}</div>` : ''}`; };
+  const defSent = s => `<b>${esc(s.t)}</b>${s.r ? '<br><i>' + esc(rom(s)) + '</i>' : ''}<br>= ${esc(s.en)}`;
   const pick = (w, n) => { const out = []; for (const d of shuffle(pool)) { if (out.length >= n) break; if (d.t === w.t || d.en === w.en || out.some(o => o.t === d.t || o.en === d.en)) continue; out.push(d); } return out; };
   const slowBtn = () => `<button class="spk ${S.slow ? 'on' : ''}" id="slow" title="Slow audio">🐢</button>`;
   const audioRow = () => `<div class="row center-row"><button class="spk" id="spk">🔊</button>${slowBtn()}</div>`;
@@ -253,10 +361,10 @@ function runSession(L, cfg) {
   function frame(ex, title, body, speakEx) {
     app.innerHTML = `<div class="lesson"><div class="lbar"><a class="x" href="#/${code}" aria-label="Quit">✕</a>
       <div class="progress"><i style="width:${solved / unique * 100}%"></i></div><span class="hearts">❤️ ${hearts}</span></div>
-      ${ex.retry ? '<div class="retry-tag">🔁 Let\'s fix this one</div>' : ''}${speakEx ? '<div class="speak-tag">🎤 Speaking · +3 bonus Blingos</div>' : ''}
+      ${ex.retry ? '<span class="pill-label warm">🔁 Let\'s fix this one</span>' : ''}${speakEx ? '<span class="pill-label">🎤 Speaking · +3 Blingos</span>' : ''}
       <h2 class="ex-title">${title}</h2><div class="ex-body">${body}</div></div>
-      <div class="checkbar" id="checkbar"><div class="checkbar-in"><button class="btn alt" id="skip">${speakEx ? "Can't speak now" : 'Skip'}</button>
-      ${speakEx && !SR ? '<button class="btn ok" id="selfok">I said it ✓</button>' : `<button class="btn ok" id="check" ${speakEx ? 'style="display:none"' : ''} disabled>Check</button>`}</div></div>`;
+      <div class="checkbar" id="checkbar"><div class="checkbar-in">${speakEx ? `<button class="bigbtn alt" id="skip">CAN'T SPEAK NOW</button>${!SR ? '<button class="bigbtn" id="selfok">I SAID IT ✓</button>' : ''}`
+        : '<button class="roundbtn" id="skip" title="Skip" aria-label="Skip">⏭</button><button class="bigbtn" id="check" disabled>CHECK</button>'}</div></div>`;
     if ($('slow')) $('slow').onclick = () => { S.slow = !S.slow; save(); $('slow').classList.toggle('on', S.slow); };
   }
   const setReady = r => { if ($('check')) $('check').disabled = !r; };
@@ -343,7 +451,7 @@ function runSession(L, cfg) {
         return;
       case 'shadow': case 'speak_read':
         return speakExercise(ex, ex.type === 'shadow' ? 'Shadow it: listen, then repeat right away' : 'Read this out loud',
-          `<div class="prompt-sent">${audioRow()}${esc(s.t)}${s.r ? `<small>${esc(s.r)}</small>` : ''}<small>${esc(s.en)}</small></div>`, s, ex.type === 'shadow');
+          `<div class="prompt-sent">${audioRow()}${esc(s.t)}${s.r ? `<small>${esc(rom(s))}</small>` : ''}<small>${esc(s.en)}</small></div>`, s, ex.type === 'shadow');
       case 'type_en': {
         frame(ex, 'Type this in English', `<div class="prompt-word"><button class="spk" id="spk">🔊</button>${wordHtml(w)}</div><input class="typein" id="inp" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type in English">`);
         $('spk').onclick = () => say(w.t); say(w.t);
@@ -383,9 +491,9 @@ function runSession(L, cfg) {
     const def = ex.ws ? ex.ws.map(x => `${esc(split(x.t).main)} = ${esc(x.en)}`).join(' · ') : ex.s ? defSent(ex.s) : defWord(ex.w);
     const cb = $('checkbar');
     cb.className = 'checkbar fb ' + (ok ? 'good' : 'bad');
-    cb.innerHTML = `<div class="checkbar-in"><div class="fb-m">${mascot(ok ? 'cheer' : 'sad', 58)}</div><div class="fb-text"><div class="fb-head">${head}</div>
-      ${res.heard ? `<div class="fb-def">You said: “${esc(res.heard)}” · ${Math.round(res.score * 100)}% match</div>` : ''}<div class="fb-def">${def}</div></div>
-      <div class="fb-btns">${item ? '<button class="spk" id="fbspk">🔊</button>' : ''}<button class="btn ${ok ? 'ok' : 'pink'}" id="cont">Continue</button></div></div>`;
+    cb.innerHTML = `<div class="checkbar-in col"><div class="fb-row"><div class="fb-m">${mascot(ok ? 'cheer' : 'sad', 58)}</div><div class="fb-text"><div class="fb-head">${head}</div>
+      ${res.heard ? `<div class="fb-def">You said: “${esc(res.heard)}” · ${Math.round(res.score * 100)}% match</div>` : ''}<div class="fb-def">${def}</div></div>${item ? '<button class="spk" id="fbspk">🔊</button>' : ''}</div>
+      <button class="bigbtn ${ok ? '' : 'pinkbtn'}" id="cont">${pos + 1 >= queue.length && ok ? 'FINISH' : 'NEXT'}</button></div>`;
     app.querySelectorAll('.choice,.tile,.typein,.mt,#mic').forEach(e => e.disabled = true);
     if ($('fbspk')) $('fbspk').onclick = () => say(item.t);
     if (!ok && item) say(item.t);
@@ -457,7 +565,7 @@ async function shadowing(code) {
     const it = items[i], s = split(it.t), $ = id => document.getElementById(id);
     app.innerHTML = `<a class="back" href="#/${code}">← ${L.name}</a><h1>🗣️ Shadowing</h1><p class="sub">Listen, then repeat <b>right away</b>, copying the rhythm and melody. ${SR ? '' : '(This browser can\'t check speech, so just repeat out loud.)'}</p>
       <div class="card shadow-card" style="--c:${L.color}"><div class="sub">${esc(it.topic)} · ${i + 1}/${items.length}</div>
-        <div class="tgt">${esc(s.main)}</div>${s.kana ? `<div class="kana">${esc(s.kana)}</div>` : ''}${it.r ? `<div class="rom">${esc(it.r)}</div>` : ''}<div class="en">${esc(it.en)}</div>
+        <div class="tgt">${esc(s.main)}</div>${s.kana ? `<div class="kana">${esc(s.kana)}</div>` : ''}${it.r ? `<div class="rom">${esc(rom(it))}</div>` : ''}<div class="en">${esc(it.en)}</div>
         ${it.tip ? `<div class="tip">💡 ${esc(it.tip)}</div>` : ''}
         <div class="row center-row"><button class="btn" id="play">▶ Play</button><button class="btn alt ${S.slow ? 'on' : ''}" id="slow">🐢 Slow: ${S.slow ? 'on' : 'off'}</button>
         ${SR ? '<button class="btn pink" id="rep">🎤 Repeat</button>' : ''}</div>
@@ -508,7 +616,7 @@ async function sayFast(code) {
     app.innerHTML = `<div class="lesson"><div class="lbar"><a class="x" href="#/${code}">✕</a><div class="progress"><i style="width:${r / rounds.length * 100}%"></i></div><span class="hearts">⚡ ${hits}</span></div>
       <div class="fast-card card"><span class="em huge">${EMOJI[w.en] || '💬'}</span><div class="tw">${esc(w.en)}</div><div class="timer"><i id="tbar" style="width:100%"></i></div>
       <div id="fres" class="sub">${SR ? '🎤 Listening… say it!' : 'Say it out loud!'}</div><div id="fbtn" class="ctrls"></div></div></div>`;
-    const answer = `<b>${esc(s.main)}</b>${w.r ? ' · <i>' + esc(w.r) + '</i>' : ''}${w.tip ? `<div class="tip">💡 ${esc(w.tip)}</div>` : ''}`;
+    const answer = `<b>${esc(s.main)}</b>${w.r ? ' · <i>' + esc(rom(w)) + '</i>' : ''}${w.tip ? `<div class="tip">💡 ${esc(w.tip)}</div>` : ''}`;
     const next = () => { r++; round(); };
     const settle = (ok, heard) => {
       if (settled) return; settled = true; stop();
@@ -554,7 +662,7 @@ async function cards(code, tid) {
       ${T.note ? `<div class="note">💡 ${esc(T.note)}</div>` : ''}
       <div class="flash-wrap" style="--c:${L.color}"><div class="flash" id="flash">
         <div class="face">${known ? '<span class="known-tag">✓ learned</span>' : ''}<button class="speak" id="say" aria-label="Pronounce">🔊</button>
-          <div class="tgt">${esc(s.main)}</div>${s.kana ? `<div class="kana">${esc(s.kana)}</div>` : ''}${w.r ? `<div class="rom">${esc(w.r)}</div>` : ''}<span class="hint">tap to see meaning</span></div>
+          <div class="tgt">${esc(s.main)}</div>${s.kana ? `<div class="kana">${esc(s.kana)}</div>` : ''}${w.r ? `<div class="rom">${esc(rom(w))}</div>` : ''}<span class="hint">tap to see meaning</span></div>
         <div class="face back-f"><span class="em big">${EMOJI[w.en] || ''}</span><div class="en">${esc(w.en)}</div>${w.tip ? `<div class="tip">💡 ${esc(w.tip)}</div>` : ''}<span class="hint">tap to flip back</span></div>
       </div></div>
       <div class="counter">${i + 1} / ${T.words.length}</div>
@@ -579,7 +687,7 @@ async function quiz(code, tid) {
   const pool = topics.flatMap(t => t.words.map((w, i) => ({ ...w, tid: t.id, i }))), qs = shuffle(pool).slice(0, QUIZ_LEN);
   const title = tid === 'all' ? '🎯 Mixed quiz' : topics[0].icon + ' ' + topics[0].name + ' quiz';
   let n = 0, score = 0;
-  const label = w => { const s = split(w.t); return esc(s.main) + (w.r ? `<small>${esc(w.r)}</small>` : ''); };
+  const label = w => { const s = split(w.t); return esc(s.main) + (w.r ? `<small>${esc(rom(w))}</small>` : ''); };
   const render = () => {
     if (n >= qs.length) return finish();
     const a = qs[n], toEn = Math.random() < 0.5, distract = [];
@@ -587,7 +695,7 @@ async function quiz(code, tid) {
     const opts = shuffle([a, ...distract]), s = split(a.t);
     app.innerHTML = `<a class="back" href="#/${code}">← ${L.name}</a><h1>${title}</h1><div class="progress"><i style="width:${n / qs.length * 100}%"></i></div>
       <div class="q"><div class="sub">${toEn ? 'What does this mean?' : 'How do you say this in ' + L.name + '?'}</div>
-        <div class="prompt">${toEn ? esc(s.main) : (EMOJI[a.en] || '') + ' ' + esc(a.en)}</div>${toEn && a.r ? `<div class="rom">${esc(a.r)}</div>` : ''}
+        <div class="prompt">${toEn ? esc(s.main) : (EMOJI[a.en] || '') + ' ' + esc(a.en)}</div>${toEn && a.r ? `<div class="rom">${esc(rom(a))}</div>` : ''}
         ${toEn ? '<button class="btn alt small" id="say">🔊 Listen</button>' : ''}</div>
       <div class="opts">${opts.map((o, k) => `<button class="opt" data-k="${k}">${toEn ? esc(o.en) : label(o)}</button>`).join('')}</div>
       <p class="counter">Question ${n + 1} of ${qs.length} · Score ${score}</p>`;
@@ -686,18 +794,30 @@ async function redeem() {
   if (location.hash === '#/me' || location.hash === '#/shop') charScreen(location.hash.slice(2));
 }
 
-/* ---------- router ---------- */
+/* ---------- router + tab bar ---------- */
 function go(h) { location.hash = h; }
+function setTabs(active) {
+  const c = S.lang || 'es', tb = document.getElementById('tabbar');
+  tb.querySelector('[data-tab="review"]').href = `#/${c}/practice/review`;
+  if (active) tb.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.dataset.tab === active));
+}
 function route() {
   if (synth) synth.cancel();
   if (routeCleanup) { routeCleanup(); routeCleanup = null; }
   keyHandler = null;
   const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/'), [code, tid, mode] = parts;
   window.scrollTo(0, 0);
+  const focus = mode === 'lesson' || (tid === 'practice' && (mode === 'review' || mode === 'fast' || (mode === 'chat' && parts[3])));
+  document.body.classList.toggle('focus', focus);
+  setTabs(code === 'me' || code === 'shop' ? 'char' : code === 'profile' ? 'profile' : code === 'practice' || mode === 'cards' || mode === 'quiz' || (tid === 'practice' && mode !== 'review') ? 'practice' : mode === 'review' ? 'review' : 'home');
   if (code === 'me' || code === 'shop') { tryOn = null; return charScreen(code); }
-  if (!code || !LANGS.includes(code)) return home();
+  if (code === 'profile') return profile();
+  if (code === 'practice') return practiceHub();
+  if (code === 'langs') return langsView();
+  if (!code) return S.lang ? langView(S.lang) : langsView();
+  if (!LANGS.includes(code)) return langsView();
   if (!tid) return langView(code);
-  if (tid === 'practice') return mode === 'review' ? review(code) : mode === 'shadow' ? shadowing(code) : mode === 'fast' ? sayFast(code) : langView(code);
+  if (tid === 'practice') return mode === 'review' ? review(code) : mode === 'shadow' ? shadowing(code) : mode === 'fast' ? sayFast(code) : mode === 'chat' ? chat(code, parts[3]) : practiceHub();
   if (mode === 'lesson') return lesson(code, tid, parts[3]);
   return mode === 'quiz' ? quiz(code, tid) : cards(code, tid);
 }

@@ -1,6 +1,6 @@
 # 🌍 Lingo World
 
-A cute, **speaking-first** app for learning beginner **Spanish, French, Mandarin Chinese, Cantonese, Japanese and Korean**.
+A cute, **speaking-first** app for learning beginner **Spanish, French, Chinese (Taiwan Mandarin, traditional characters + pinyin/Zhuyin), Cantonese, Japanese and Korean**.
 
 **Try it:** https://lilyofthevalley1618.github.io/lingo-world/ (works on phone & laptop, and you can "Add to Home Screen" to install it like an app)
 

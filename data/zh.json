@@ -1,9 +1,9 @@
 {
  "code": "zh",
- "name": "Chinese",
- "native": "中文 (普通话)",
- "flag": "🇨🇳",
- "speech": "zh-CN",
+ "name": "Chinese (Taiwan)",
+ "native": "中文 (臺灣華語)",
+ "flag": "🇹🇼",
+ "speech": "zh-TW",
  "romanLabel": "pinyin",
  "topics": [
   {
@@ -15,90 +15,109 @@
      "en": "Hello",
      "t": "你好",
      "r": "nǐ hǎo",
-     "tip": "你好 = “you good”. Two 3rd tones in a row: the first becomes 2nd tone, so it sounds like ní hǎo."
+     "tip": "你好 = “you good”. Two 3rd tones in a row: the first becomes 2nd tone, so it sounds like ní hǎo.",
+     "z": "ㄋㄧˇ ㄏㄠˇ"
     },
     {
      "en": "Good morning",
-     "t": "早上好",
-     "r": "zǎoshang hǎo"
+     "t": "早安",
+     "r": "zǎo'ān",
+     "tip": "In Taiwan people say 早安 (or just 早!). 早上好 sounds more mainland.",
+     "z": "ㄗㄠˇ ㄢ"
     },
     {
      "en": "Good afternoon",
-     "t": "下午好",
-     "r": "xiàwǔ hǎo"
+     "t": "午安",
+     "r": "wǔ'ān",
+     "z": "ㄨˇ ㄢ"
     },
     {
      "en": "Good evening",
      "t": "晚上好",
-     "r": "wǎnshang hǎo"
+     "r": "wǎnshàng hǎo",
+     "z": "ㄨㄢˇ ㄕㄤˋ ㄏㄠˇ"
     },
     {
      "en": "Good night",
      "t": "晚安",
-     "r": "wǎn'ān"
+     "r": "wǎn'ān",
+     "z": "ㄨㄢˇ ㄢ"
     },
     {
      "en": "Goodbye",
-     "t": "再见",
-     "r": "zàijiàn"
+     "t": "再見",
+     "r": "zàijiàn",
+     "tip": "Friends in Taiwan also just say 掰掰 (bāibāi), from “bye-bye”!",
+     "z": "ㄗㄞˋ ㄐㄧㄢˋ"
     },
     {
      "en": "See you later",
-     "t": "回头见",
-     "r": "huítóu jiàn"
+     "t": "待會見",
+     "r": "dāihuǐ jiàn",
+     "z": "ㄉㄞ ㄏㄨㄟˇ ㄐㄧㄢˋ"
     },
     {
      "en": "How are you?",
-     "t": "你好吗？",
-     "r": "nǐ hǎo ma?"
+     "t": "你好嗎？",
+     "r": "nǐ hǎo ma?",
+     "z": "ㄋㄧˇ ㄏㄠˇ ˙ㄇㄚ?"
     },
     {
      "en": "I'm fine",
      "t": "我很好",
      "r": "wǒ hěn hǎo",
-     "tip": "好 = 女 (woman) + 子 (child) → “good”."
+     "tip": "好 = 女 (woman) + 子 (child) → “good”.",
+     "z": "ㄨㄛˇ ㄏㄣˇ ㄏㄠˇ"
     },
     {
      "en": "Thank you",
-     "t": "谢谢",
+     "t": "謝謝",
      "r": "xièxie",
-     "tip": "谢谢: the second 谢 is light and short: “shyeh-shyeh”."
+     "tip": "謝謝: the second 謝 is light and short: “shyeh-shyeh”.",
+     "z": "ㄒㄧㄝˋ ˙ㄒㄧㄝ"
     },
     {
      "en": "You're welcome",
-     "t": "不客气",
-     "r": "bú kèqi"
+     "t": "不客氣",
+     "r": "bú kèqì",
+     "tip": "In Taiwan 氣 keeps its 4th tone: bú kèqì.",
+     "z": "ㄅㄨˊ ㄎㄜˋ ㄑㄧˋ"
     },
     {
      "en": "Please",
-     "t": "请",
-     "r": "qǐng"
+     "t": "請",
+     "r": "qǐng",
+     "z": "ㄑㄧㄥˇ"
     },
     {
      "en": "Excuse me",
-     "t": "打扰一下",
-     "r": "dǎrǎo yíxià"
+     "t": "不好意思",
+     "r": "bù hǎoyìsi",
+     "tip": "不好意思 is the super-common Taiwan “excuse me / sorry to bother you”.",
+     "z": "ㄅㄨˋ ㄏㄠˇ ㄧˋ ˙ㄙ"
     },
     {
      "en": "Sorry",
-     "t": "对不起",
-     "r": "duìbuqǐ"
+     "t": "對不起",
+     "r": "duìbùqǐ",
+     "z": "ㄉㄨㄟˋ ㄅㄨˋ ㄑㄧˇ"
     },
     {
      "en": "Nice to meet you",
-     "t": "很高兴认识你",
-     "r": "hěn gāoxìng rènshi nǐ"
+     "t": "很高興認識你",
+     "r": "hěn gāoxìng rènshì nǐ",
+     "z": "ㄏㄣˇ ㄍㄠ ㄒㄧㄥˋ ㄖㄣˋ ㄕˋ ㄋㄧˇ"
     }
    ],
    "sentences": [
     {
      "en": "Hello, how are you?",
-     "t": "你好！你好吗？",
+     "t": "你好！你好嗎？",
      "tiles": [
       "你好",
       "你",
       "好",
-      "吗"
+      "嗎"
      ],
      "tr": [
       "nǐ hǎo",
@@ -107,16 +126,17 @@
       "ma"
      ],
      "r": "nǐ hǎo nǐ hǎo ma",
-     "b": 0
+     "b": 0,
+     "z": "ㄋㄧˇ ㄏㄠˇ ㄋㄧˇ ㄏㄠˇ ˙ㄇㄚ"
     },
     {
      "en": "I'm fine, thank you.",
-     "t": "我很好，谢谢。",
+     "t": "我很好，謝謝。",
      "tiles": [
       "我",
       "很",
       "好",
-      "谢谢"
+      "謝謝"
      ],
      "tr": [
       "wǒ",
@@ -125,37 +145,40 @@
       "xièxie"
      ],
      "r": "wǒ hěn hǎo xièxie",
-     "b": 3
+     "b": 3,
+     "z": "ㄨㄛˇ ㄏㄣˇ ㄏㄠˇ ㄒㄧㄝˋ ˙ㄒㄧㄝ"
     },
     {
      "en": "Goodbye, see you later!",
-     "t": "再见，回头见！",
+     "t": "再見，待會見！",
      "tiles": [
-      "再见",
-      "回头",
-      "见"
+      "再見",
+      "待會",
+      "見"
      ],
      "tr": [
       "zàijiàn",
-      "huítóu",
+      "dāihuǐ",
       "jiàn"
      ],
-     "r": "zàijiàn huítóu jiàn",
-     "b": 0
+     "r": "zàijiàn dāihuǐ jiàn",
+     "b": 0,
+     "z": "ㄗㄞˋ ㄐㄧㄢˋ ㄉㄞ ㄏㄨㄟˇ ㄐㄧㄢˋ"
     },
     {
      "en": "Thank you very much.",
-     "t": "非常感谢！",
+     "t": "非常感謝！",
      "tiles": [
       "非常",
-      "感谢"
+      "感謝"
      ],
      "tr": [
       "fēicháng",
       "gǎnxiè"
      ],
      "r": "fēicháng gǎnxiè",
-     "b": 1
+     "b": 1,
+     "z": "ㄈㄟ ㄔㄤˊ ㄍㄢˇ ㄒㄧㄝˋ"
     }
    ]
   },
@@ -167,89 +190,104 @@
     {
      "en": "Zero",
      "t": "零",
-     "r": "líng"
+     "r": "líng",
+     "z": "ㄌㄧㄥˊ"
     },
     {
      "en": "One",
      "t": "一",
-     "r": "yī"
+     "r": "yī",
+     "z": "ㄧ"
     },
     {
      "en": "Two",
      "t": "二",
-     "r": "èr"
+     "r": "èr",
+     "z": "ㄦˋ"
     },
     {
      "en": "Three",
      "t": "三",
-     "r": "sān"
+     "r": "sān",
+     "z": "ㄙㄢ"
     },
     {
      "en": "Four",
      "t": "四",
      "r": "sì",
-     "tip": "四 (sì) sounds like 死 (sǐ, death), so 4 is an unlucky number."
+     "tip": "四 (sì) sounds like 死 (sǐ, death), so 4 is an unlucky number. Many buildings in Taiwan skip the 4th floor!",
+     "z": "ㄙˋ"
     },
     {
      "en": "Five",
      "t": "五",
-     "r": "wǔ"
+     "r": "wǔ",
+     "z": "ㄨˇ"
     },
     {
      "en": "Six",
      "t": "六",
-     "r": "liù"
+     "r": "liù",
+     "z": "ㄌㄧㄡˋ"
     },
     {
      "en": "Seven",
      "t": "七",
-     "r": "qī"
+     "r": "qī",
+     "z": "ㄑㄧ"
     },
     {
      "en": "Eight",
      "t": "八",
      "r": "bā",
-     "tip": "八 (bā) sounds like 发 (fā, get rich): a lucky number! 🍀"
+     "tip": "八 (bā) sounds like 發 (fā, get rich): a lucky number! 🍀",
+     "z": "ㄅㄚ"
     },
     {
      "en": "Nine",
      "t": "九",
-     "r": "jiǔ"
+     "r": "jiǔ",
+     "z": "ㄐㄧㄡˇ"
     },
     {
      "en": "Ten",
      "t": "十",
-     "r": "shí"
+     "r": "shí",
+     "z": "ㄕˊ"
     },
     {
      "en": "Eleven",
      "t": "十一",
-     "r": "shíyī"
+     "r": "shíyī",
+     "z": "ㄕˊ ㄧ"
     },
     {
      "en": "Twenty",
      "t": "二十",
-     "r": "èrshí"
+     "r": "èrshí",
+     "z": "ㄦˋ ㄕˊ"
     },
     {
      "en": "One hundred",
      "t": "一百",
-     "r": "yìbǎi"
+     "r": "yìbǎi",
+     "z": "ㄧˋ ㄅㄞˇ"
     },
     {
      "en": "One thousand",
      "t": "一千",
-     "r": "yìqiān"
+     "r": "yìqiān",
+     "z": "ㄧˋ ㄑㄧㄢ"
     }
    ],
    "sentences": [
     {
      "en": "I am sixteen years old.",
-     "t": "我十六岁。",
+     "t": "我十六歲。",
      "tiles": [
       "我",
       "十六",
-      "岁"
+      "歲"
      ],
      "tr": [
       "wǒ",
@@ -257,14 +295,15 @@
       "suì"
      ],
      "r": "wǒ shíliù suì",
-     "b": 1
+     "b": 1,
+     "z": "ㄨㄛˇ ㄕˊ ㄌㄧㄡˋ ㄙㄨㄟˋ"
     },
     {
      "en": "One coffee, please.",
-     "t": "请给我一杯咖啡。",
+     "t": "請給我一杯咖啡。",
      "tiles": [
-      "请",
-      "给",
+      "請",
+      "給",
       "我",
       "一",
       "杯",
@@ -279,16 +318,17 @@
       "kāfēi"
      ],
      "r": "qǐng gěi wǒ yì bēi kāfēi",
-     "b": 3
+     "b": 3,
+     "z": "ㄑㄧㄥˇ ㄍㄟˇ ㄨㄛˇ ㄧˋ ㄅㄟ ㄎㄚ ㄈㄟ"
     },
     {
      "en": "I have two brothers.",
-     "t": "我有两个兄弟。",
+     "t": "我有兩個兄弟。",
      "tiles": [
       "我",
       "有",
-      "两",
-      "个",
+      "兩",
+      "個",
       "兄弟"
      ],
      "tr": [
@@ -299,16 +339,17 @@
       "xiōngdì"
      ],
      "r": "wǒ yǒu liǎng ge xiōngdì",
-     "b": 2
+     "b": 2,
+     "z": "ㄨㄛˇ ㄧㄡˇ ㄌㄧㄤˇ ˙ㄍㄜ ㄒㄩㄥ ㄉㄧˋ"
     },
     {
      "en": "There are three apples.",
-     "t": "有三个苹果。",
+     "t": "有三個蘋果。",
      "tiles": [
       "有",
       "三",
-      "个",
-      "苹果"
+      "個",
+      "蘋果"
      ],
      "tr": [
       "yǒu",
@@ -317,7 +358,8 @@
       "píngguǒ"
      ],
      "r": "yǒu sān ge píngguǒ",
-     "b": 1
+     "b": 1,
+     "z": "ㄧㄡˇ ㄙㄢ ˙ㄍㄜ ㄆㄧㄥˊ ㄍㄨㄛˇ"
     }
    ]
   },
@@ -330,95 +372,134 @@
      "en": "Water",
      "t": "水",
      "r": "shuǐ",
-     "tip": "水 looks like a stream with splashes on both sides 💧."
+     "tip": "水 looks like a stream with splashes on both sides 💧.",
+     "z": "ㄕㄨㄟˇ"
     },
     {
      "en": "Bread",
-     "t": "面包",
-     "r": "miànbāo"
+     "t": "麵包",
+     "r": "miànbāo",
+     "z": "ㄇㄧㄢˋ ㄅㄠ"
     },
     {
      "en": "Rice",
-     "t": "米饭",
-     "r": "mǐfàn"
+     "t": "白飯",
+     "r": "báifàn",
+     "tip": "In Taiwan a bowl of plain rice is 白飯 (“white rice”).",
+     "z": "ㄅㄞˊ ㄈㄢˋ"
     },
     {
      "en": "Apple",
-     "t": "苹果",
-     "r": "píngguǒ"
+     "t": "蘋果",
+     "r": "píngguǒ",
+     "z": "ㄆㄧㄥˊ ㄍㄨㄛˇ"
     },
     {
      "en": "Banana",
      "t": "香蕉",
-     "r": "xiāngjiāo"
+     "r": "xiāngjiāo",
+     "z": "ㄒㄧㄤ ㄐㄧㄠ"
     },
     {
      "en": "Egg",
-     "t": "鸡蛋",
-     "r": "jīdàn"
+     "t": "雞蛋",
+     "r": "jīdàn",
+     "z": "ㄐㄧ ㄉㄢˋ"
     },
     {
      "en": "Milk",
      "t": "牛奶",
-     "r": "niúnǎi"
+     "r": "niúnǎi",
+     "z": "ㄋㄧㄡˊ ㄋㄞˇ"
     },
     {
      "en": "Coffee",
      "t": "咖啡",
-     "r": "kāfēi"
+     "r": "kāfēi",
+     "z": "ㄎㄚ ㄈㄟ"
     },
     {
      "en": "Tea",
      "t": "茶",
-     "r": "chá"
+     "r": "chá",
+     "z": "ㄔㄚˊ"
     },
     {
      "en": "Meat",
      "t": "肉",
-     "r": "ròu"
+     "r": "ròu",
+     "z": "ㄖㄡˋ"
     },
     {
      "en": "Chicken",
-     "t": "鸡肉",
-     "r": "jīròu"
+     "t": "雞肉",
+     "r": "jīròu",
+     "z": "ㄐㄧ ㄖㄡˋ"
     },
     {
      "en": "Fish",
-     "t": "鱼",
-     "r": "yú"
+     "t": "魚",
+     "r": "yú",
+     "z": "ㄩˊ"
     },
     {
      "en": "Vegetables",
-     "t": "蔬菜",
-     "r": "shūcài"
+     "t": "青菜",
+     "r": "qīngcài",
+     "tip": "At Taiwanese restaurants you order “a plate of 青菜” (greens).",
+     "z": "ㄑㄧㄥ ㄘㄞˋ"
     },
     {
      "en": "Cheese",
-     "t": "奶酪",
-     "r": "nǎilào"
+     "t": "起司",
+     "r": "qǐsī",
+     "tip": "起司 comes from the English word “cheese”!",
+     "z": "ㄑㄧˇ ㄙ"
     },
     {
      "en": "Soup",
-     "t": "汤",
-     "r": "tāng"
+     "t": "湯",
+     "r": "tāng",
+     "z": "ㄊㄤ"
+    },
+    {
+     "en": "Ice cream",
+     "t": "冰淇淋",
+     "r": "bīngqílín",
+     "z": "ㄅㄧㄥ ㄑㄧˊ ㄌㄧㄣˊ"
+    },
+    {
+     "en": "Potato",
+     "t": "馬鈴薯",
+     "r": "mǎlíngshǔ",
+     "tip": "Careful: in Taiwan 土豆 means peanut, not potato! 🥜",
+     "z": "ㄇㄚˇ ㄌㄧㄥˊ ㄕㄨˇ"
+    },
+    {
+     "en": "Bubble tea",
+     "t": "珍珠奶茶",
+     "r": "zhēnzhū nǎichá",
+     "tip": "Invented in Taiwan! 珍珠 = pearls. Order 半糖 (bàn táng) for half sugar. 🧋",
+     "z": "ㄓㄣ ㄓㄨ ㄋㄞˇ ㄔㄚˊ"
     }
    ],
    "sentences": [
     {
      "en": "I like coffee.",
-     "t": "我喜欢咖啡。",
+     "t": "我喜歡咖啡。",
      "tiles": [
       "我",
-      "喜欢",
+      "喜歡",
       "咖啡"
      ],
      "tr": [
       "wǒ",
-      "xǐhuan",
+      "xǐhuān",
       "kāfēi"
      ],
-     "r": "wǒ xǐhuan kāfēi",
-     "b": 2
+     "r": "wǒ xǐhuān kāfēi",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄒㄧˇ ㄏㄨㄢ ㄎㄚ ㄈㄟ"
     },
     {
      "en": "I drink water.",
@@ -434,29 +515,31 @@
       "shuǐ"
      ],
      "r": "wǒ hē shuǐ",
-     "b": 2
+     "b": 2,
+     "z": "ㄨㄛˇ ㄏㄜ ㄕㄨㄟˇ"
     },
     {
      "en": "I eat rice.",
-     "t": "我吃米饭。",
+     "t": "我吃白飯。",
      "tiles": [
       "我",
       "吃",
-      "米饭"
+      "白飯"
      ],
      "tr": [
       "wǒ",
       "chī",
-      "mǐfàn"
+      "báifàn"
      ],
-     "r": "wǒ chī mǐfàn",
-     "b": 2
+     "r": "wǒ chī báifàn",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄔ ㄅㄞˊ ㄈㄢˋ"
     },
     {
      "en": "The soup is delicious.",
-     "t": "汤很好喝。",
+     "t": "湯很好喝。",
      "tiles": [
-      "汤",
+      "湯",
       "很",
       "好喝"
      ],
@@ -466,7 +549,8 @@
       "hǎohē"
      ],
      "r": "tāng hěn hǎohē",
-     "b": 0
+     "b": 0,
+     "z": "ㄊㄤ ㄏㄣˇ ㄏㄠˇ ㄏㄜ"
     }
    ]
   },
@@ -477,89 +561,106 @@
    "words": [
     {
      "en": "Red",
-     "t": "红色",
+     "t": "紅色",
      "r": "hóngsè",
-     "tip": "红 is the color of luck: red envelopes 🧧!"
+     "tip": "紅 is the color of luck: red envelopes 🧧!",
+     "z": "ㄏㄨㄥˊ ㄙㄜˋ"
     },
     {
      "en": "Blue",
-     "t": "蓝色",
-     "r": "lánsè"
+     "t": "藍色",
+     "r": "lánsè",
+     "z": "ㄌㄢˊ ㄙㄜˋ"
     },
     {
      "en": "Green",
-     "t": "绿色",
-     "r": "lǜsè"
+     "t": "綠色",
+     "r": "lǜsè",
+     "z": "ㄌㄩˋ ㄙㄜˋ"
     },
     {
      "en": "Yellow",
-     "t": "黄色",
-     "r": "huángsè"
+     "t": "黃色",
+     "r": "huángsè",
+     "z": "ㄏㄨㄤˊ ㄙㄜˋ"
     },
     {
      "en": "Orange",
-     "t": "橙色",
-     "r": "chéngsè"
+     "t": "橘色",
+     "r": "júsè",
+     "tip": "Taiwan says 橘色 (tangerine color) for orange.",
+     "z": "ㄐㄩˊ ㄙㄜˋ"
     },
     {
      "en": "Purple",
      "t": "紫色",
-     "r": "zǐsè"
+     "r": "zǐsè",
+     "z": "ㄗˇ ㄙㄜˋ"
     },
     {
      "en": "Pink",
-     "t": "粉色",
-     "r": "fěnsè"
+     "t": "粉紅色",
+     "r": "fěnhóngsè",
+     "z": "ㄈㄣˇ ㄏㄨㄥˊ ㄙㄜˋ"
     },
     {
      "en": "Black",
      "t": "黑色",
-     "r": "hēisè"
+     "r": "hēisè",
+     "z": "ㄏㄟ ㄙㄜˋ"
     },
     {
      "en": "White",
      "t": "白色",
-     "r": "báisè"
+     "r": "báisè",
+     "z": "ㄅㄞˊ ㄙㄜˋ"
     },
     {
      "en": "Gray",
      "t": "灰色",
-     "r": "huīsè"
+     "r": "huīsè",
+     "z": "ㄏㄨㄟ ㄙㄜˋ"
     },
     {
      "en": "Brown",
-     "t": "棕色",
-     "r": "zōngsè"
+     "t": "咖啡色",
+     "r": "kāfēisè",
+     "tip": "Brown in Taiwan is 咖啡色: literally “coffee color” ☕.",
+     "z": "ㄎㄚ ㄈㄟ ㄙㄜˋ"
     },
     {
      "en": "Gold",
      "t": "金色",
-     "r": "jīnsè"
+     "r": "jīnsè",
+     "z": "ㄐㄧㄣ ㄙㄜˋ"
     },
     {
      "en": "Silver",
-     "t": "银色",
-     "r": "yínsè"
+     "t": "銀色",
+     "r": "yínsè",
+     "z": "ㄧㄣˊ ㄙㄜˋ"
     },
     {
      "en": "Color",
-     "t": "颜色",
-     "r": "yánsè"
+     "t": "顏色",
+     "r": "yánsè",
+     "z": "ㄧㄢˊ ㄙㄜˋ"
     },
     {
      "en": "Rainbow",
      "t": "彩虹",
-     "r": "cǎihóng"
+     "r": "cǎihóng",
+     "z": "ㄘㄞˇ ㄏㄨㄥˊ"
     }
    ],
    "sentences": [
     {
      "en": "The apple is red.",
-     "t": "苹果是红色的。",
+     "t": "蘋果是紅色的。",
      "tiles": [
-      "苹果",
+      "蘋果",
       "是",
-      "红色",
+      "紅色",
       "的"
      ],
      "tr": [
@@ -569,31 +670,33 @@
       "de"
      ],
      "r": "píngguǒ shì hóngsè de",
-     "b": 2
+     "b": 2,
+     "z": "ㄆㄧㄥˊ ㄍㄨㄛˇ ㄕˋ ㄏㄨㄥˊ ㄙㄜˋ ˙ㄉㄜ"
     },
     {
      "en": "I like blue.",
-     "t": "我喜欢蓝色。",
+     "t": "我喜歡藍色。",
      "tiles": [
       "我",
-      "喜欢",
-      "蓝色"
+      "喜歡",
+      "藍色"
      ],
      "tr": [
       "wǒ",
-      "xǐhuan",
+      "xǐhuān",
       "lánsè"
      ],
-     "r": "wǒ xǐhuan lánsè",
-     "b": 2
+     "r": "wǒ xǐhuān lánsè",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄒㄧˇ ㄏㄨㄢ ㄌㄢˊ ㄙㄜˋ"
     },
     {
      "en": "The banana is yellow.",
-     "t": "香蕉是黄色的。",
+     "t": "香蕉是黃色的。",
      "tiles": [
       "香蕉",
       "是",
-      "黄色",
+      "黃色",
       "的"
      ],
      "tr": [
@@ -603,7 +706,8 @@
       "de"
      ],
      "r": "xiāngjiāo shì huángsè de",
-     "b": 2
+     "b": 2,
+     "z": "ㄒㄧㄤ ㄐㄧㄠ ㄕˋ ㄏㄨㄤˊ ㄙㄜˋ ˙ㄉㄜ"
     },
     {
      "en": "The milk is white.",
@@ -621,7 +725,8 @@
       "de"
      ],
      "r": "niúnǎi shì báisè de",
-     "b": 2
+     "b": 2,
+     "z": "ㄋㄧㄡˊ ㄋㄞˇ ㄕˋ ㄅㄞˊ ㄙㄜˋ ˙ㄉㄜ"
     }
    ]
   },
@@ -633,95 +738,112 @@
     {
      "en": "Family",
      "t": "家人",
-     "r": "jiārén"
+     "r": "jiārén",
+     "z": "ㄐㄧㄚ ㄖㄣˊ"
     },
     {
      "en": "Mother",
-     "t": "妈妈",
+     "t": "媽媽",
      "r": "māma",
-     "tip": "妈 = 女 (woman) + 马 (horse, gives the “ma” sound)."
+     "tip": "媽 = 女 (woman) + 馬 (horse, gives the “ma” sound).",
+     "z": "ㄇㄚ ˙ㄇㄚ"
     },
     {
      "en": "Father",
      "t": "爸爸",
-     "r": "bàba"
+     "r": "bàba",
+     "z": "ㄅㄚˋ ˙ㄅㄚ"
     },
     {
      "en": "Parents",
      "t": "父母",
-     "r": "fùmǔ"
+     "r": "fùmǔ",
+     "z": "ㄈㄨˋ ㄇㄨˇ"
     },
     {
      "en": "Older brother",
      "t": "哥哥",
-     "r": "gēge"
+     "r": "gēge",
+     "z": "ㄍㄜ ˙ㄍㄜ"
     },
     {
      "en": "Younger brother",
      "t": "弟弟",
-     "r": "dìdi"
+     "r": "dìdi",
+     "z": "ㄉㄧˋ ˙ㄉㄧ"
     },
     {
      "en": "Older sister",
-     "t": "姐姐",
-     "r": "jiějie"
+     "t": "姊姊",
+     "r": "jiějie",
+     "tip": "Taiwan writes 姊姊; you may also see 姐姐.",
+     "z": "ㄐㄧㄝˇ ˙ㄐㄧㄝ"
     },
     {
      "en": "Younger sister",
      "t": "妹妹",
-     "r": "mèimei"
+     "r": "mèimei",
+     "z": "ㄇㄟˋ ˙ㄇㄟ"
     },
     {
      "en": "Grandmother",
      "t": "奶奶",
-     "r": "nǎinai"
+     "r": "nǎinai",
+     "tip": "奶奶 is dad's mom. Mom's mom is 外婆 (wàipó).",
+     "z": "ㄋㄞˇ ˙ㄋㄞ"
     },
     {
      "en": "Grandfather",
-     "t": "爷爷",
-     "r": "yéye"
+     "t": "爺爺",
+     "r": "yéye",
+     "z": "ㄧㄝˊ ˙ㄧㄝ"
     },
     {
      "en": "Son",
-     "t": "儿子",
-     "r": "érzi"
+     "t": "兒子",
+     "r": "érzi",
+     "z": "ㄦˊ ˙ㄗ"
     },
     {
      "en": "Daughter",
-     "t": "女儿",
-     "r": "nǚ'ér"
+     "t": "女兒",
+     "r": "nǚ'ér",
+     "z": "ㄋㄩˇ ㄦˊ"
     },
     {
      "en": "Husband",
-     "t": "丈夫",
-     "r": "zhàngfu"
+     "t": "老公",
+     "r": "lǎogōng",
+     "z": "ㄌㄠˇ ㄍㄨㄥ"
     },
     {
      "en": "Wife",
-     "t": "妻子",
-     "r": "qīzi"
+     "t": "老婆",
+     "r": "lǎopó",
+     "z": "ㄌㄠˇ ㄆㄛˊ"
     },
     {
      "en": "Baby",
-     "t": "宝宝",
-     "r": "bǎobao"
+     "t": "寶寶",
+     "r": "bǎobao",
+     "z": "ㄅㄠˇ ˙ㄅㄠ"
     },
     {
      "en": "Friend",
      "t": "朋友",
-     "r": "péngyou"
+     "r": "péngyǒu",
+     "z": "ㄆㄥˊ ㄧㄡˇ"
     }
    ],
-   "note": "奶奶/爷爷 are your dad's parents; mom's parents are 外婆/外公 (wàipó/wàigōng).",
    "sentences": [
     {
      "en": "This is my mother.",
-     "t": "这是我妈妈。",
+     "t": "這是我媽媽。",
      "tiles": [
-      "这",
+      "這",
       "是",
       "我",
-      "妈妈"
+      "媽媽"
      ],
      "tr": [
       "zhè",
@@ -730,14 +852,15 @@
       "māma"
      ],
      "r": "zhè shì wǒ māma",
-     "b": 3
+     "b": 3,
+     "z": "ㄓㄜˋ ㄕˋ ㄨㄛˇ ㄇㄚ ˙ㄇㄚ"
     },
     {
      "en": "I love my family.",
-     "t": "我爱我的家人。",
+     "t": "我愛我的家人。",
      "tiles": [
       "我",
-      "爱",
+      "愛",
       "我的",
       "家人"
      ],
@@ -748,13 +871,14 @@
       "jiārén"
      ],
      "r": "wǒ ài wǒ de jiārén",
-     "b": 3
+     "b": 3,
+     "z": "ㄨㄛˇ ㄞˋ ㄨㄛˇ ˙ㄉㄜ ㄐㄧㄚ ㄖㄣˊ"
     },
     {
      "en": "This is my friend.",
-     "t": "这是我的朋友。",
+     "t": "這是我的朋友。",
      "tiles": [
-      "这",
+      "這",
       "是",
       "我的",
       "朋友"
@@ -763,18 +887,19 @@
       "zhè",
       "shì",
       "wǒ de",
-      "péngyou"
+      "péngyǒu"
      ],
-     "r": "zhè shì wǒ de péngyou",
-     "b": 3
+     "r": "zhè shì wǒ de péngyǒu",
+     "b": 3,
+     "z": "ㄓㄜˋ ㄕˋ ㄨㄛˇ ˙ㄉㄜ ㄆㄥˊ ㄧㄡˇ"
     },
     {
      "en": "I have a younger sister.",
-     "t": "我有一个妹妹。",
+     "t": "我有一個妹妹。",
      "tiles": [
       "我",
       "有",
-      "一个",
+      "一個",
       "妹妹"
      ],
      "tr": [
@@ -784,7 +909,8 @@
       "mèimei"
      ],
      "r": "wǒ yǒu yí ge mèimei",
-     "b": 3
+     "b": 3,
+     "z": "ㄨㄛˇ ㄧㄡˇ ㄧˊ ˙ㄍㄜ ㄇㄟˋ ˙ㄇㄟ"
     }
    ]
   },
@@ -795,78 +921,123 @@
    "words": [
     {
      "en": "Yes",
-     "t": "是的",
-     "r": "shì de"
+     "t": "對",
+     "r": "duì",
+     "tip": "For “yes / right” Taiwan speakers usually say 對 or 對啊.",
+     "z": "ㄉㄨㄟˋ"
     },
     {
      "en": "No",
      "t": "不是",
-     "r": "bú shì"
+     "r": "bú shì",
+     "z": "ㄅㄨˊ ㄕˋ"
     },
     {
      "en": "What's your name?",
-     "t": "你叫什么名字？",
-     "r": "nǐ jiào shénme míngzi?"
+     "t": "你叫什麼名字？",
+     "r": "nǐ jiào shénme míngzi?",
+     "z": "ㄋㄧˇ ㄐㄧㄠˋ ㄕㄣˊ ˙ㄇㄜ ㄇㄧㄥˊ ˙ㄗ?"
     },
     {
      "en": "My name is …",
      "t": "我叫…",
-     "r": "wǒ jiào …"
+     "r": "wǒ jiào …",
+     "z": "ㄨㄛˇ ㄐㄧㄠˋ …"
     },
     {
      "en": "I don't understand",
-     "t": "我听不懂",
-     "r": "wǒ tīng bu dǒng"
+     "t": "我聽不懂",
+     "r": "wǒ tīng bù dǒng",
+     "z": "ㄨㄛˇ ㄊㄧㄥ ㄅㄨˋ ㄉㄨㄥˇ"
     },
     {
      "en": "Please speak slowly",
-     "t": "请说慢一点",
-     "r": "qǐng shuō màn yìdiǎn"
+     "t": "請說慢一點",
+     "r": "qǐng shuō màn yìdiǎn",
+     "z": "ㄑㄧㄥˇ ㄕㄨㄛ ㄇㄢˋ ㄧˋ ㄉㄧㄢˇ"
     },
     {
      "en": "Do you speak English?",
-     "t": "你会说英语吗？",
-     "r": "nǐ huì shuō Yīngyǔ ma?"
+     "t": "你會說英文嗎？",
+     "r": "nǐ huì shuō Yīngwén ma?",
+     "z": "ㄋㄧˇ ㄏㄨㄟˋ ㄕㄨㄛ ㄧㄥ ㄨㄣˊ ˙ㄇㄚ?"
     },
     {
      "en": "Where is the bathroom?",
-     "t": "洗手间在哪里？",
-     "r": "xǐshǒujiān zài nǎlǐ?"
+     "t": "洗手間在哪裡？",
+     "r": "xǐshǒujiān zài nǎlǐ?",
+     "z": "ㄒㄧˇ ㄕㄡˇ ㄐㄧㄢ ㄗㄞˋ ㄋㄚˇ ㄌㄧˇ?"
     },
     {
      "en": "How much is this?",
-     "t": "这个多少钱？",
-     "r": "zhège duōshao qián?"
+     "t": "這個多少錢？",
+     "r": "zhège duōshǎo qián?",
+     "z": "ㄓㄜˋ ˙ㄍㄜ ㄉㄨㄛ ㄕㄠˇ ㄑㄧㄢˊ?"
     },
     {
      "en": "I'm hungry",
-     "t": "我饿了",
-     "r": "wǒ è le"
+     "t": "我餓了",
+     "r": "wǒ è le",
+     "z": "ㄨㄛˇ ㄜˋ ˙ㄌㄜ"
     },
     {
      "en": "It's delicious!",
-     "t": "很好吃！",
-     "r": "hěn hǎochī!"
+     "t": "好好吃！",
+     "r": "hǎo hǎochī!",
+     "tip": "好好吃 (“so yummy!”) is how you hype food in Taiwan.",
+     "z": "ㄏㄠˇ ㄏㄠˇ ㄔ!"
     },
     {
      "en": "I don't know",
      "t": "我不知道",
-     "r": "wǒ bù zhīdào"
+     "r": "wǒ bù zhīdào",
+     "z": "ㄨㄛˇ ㄅㄨˋ ㄓ ㄉㄠˋ"
     },
     {
      "en": "Let's go!",
-     "t": "我们走吧！",
-     "r": "wǒmen zǒu ba!"
+     "t": "走吧！",
+     "r": "zǒu ba!",
+     "z": "ㄗㄡˇ ˙ㄅㄚ!"
     },
     {
      "en": "Good luck!",
-     "t": "祝你好运！",
-     "r": "zhù nǐ hǎoyùn!"
+     "t": "祝你好運！",
+     "r": "zhù nǐ hǎoyùn!",
+     "z": "ㄓㄨˋ ㄋㄧˇ ㄏㄠˇ ㄩㄣˋ!"
     },
     {
      "en": "Cheers!",
-     "t": "干杯！",
-     "r": "gānbēi!"
+     "t": "乾杯！",
+     "r": "gānbēi!",
+     "z": "ㄍㄢ ㄅㄟ!"
+    },
+    {
+     "en": "Taxi",
+     "t": "計程車",
+     "r": "jìchéngchē",
+     "tip": "Mainland says 出租车; Taiwan says 計程車 (“meter car”).",
+     "z": "ㄐㄧˋ ㄔㄥˊ ㄔㄜ"
+    },
+    {
+     "en": "MRT (metro)",
+     "t": "捷運",
+     "r": "jiéyùn",
+     "tip": "捷運 is the MRT in Taipei and Kaohsiung. Mainland says 地铁.",
+     "z": "ㄐㄧㄝˊ ㄩㄣˋ"
+    },
+    {
+     "en": "Bicycle",
+     "t": "腳踏車",
+     "r": "jiǎotàchē",
+     "tip": "腳踏車 = “foot-pedal car”. Rent a YouBike in Taiwan! 🚲",
+     "z": "ㄐㄧㄠˇ ㄊㄚˋ ㄔㄜ"
+    },
+    {
+     "en": "Trash",
+     "t": "垃圾",
+     "r": "lèsè",
+     "tip": "In Taiwan 垃圾 is read lèsè (mainland: lājī). Trash trucks there play Für Elise! 🎶",
+     "z": "ㄌㄜˋ ㄙㄜˋ"
     }
    ],
    "sentences": [
@@ -884,15 +1055,16 @@
       "Lìlì"
      ],
      "r": "wǒ jiào Lìlì",
-     "b": 1
+     "b": 1,
+     "z": "ㄨㄛˇ ㄐㄧㄠˋ ㄌㄧˋ ㄌㄧˋ"
     },
     {
      "en": "Where is the bathroom?",
-     "t": "洗手间在哪里？",
+     "t": "洗手間在哪裡？",
      "tiles": [
-      "洗手间",
+      "洗手間",
       "在",
-      "哪里"
+      "哪裡"
      ],
      "tr": [
       "xǐshǒujiān",
@@ -900,41 +1072,42 @@
       "nǎlǐ"
      ],
      "r": "xǐshǒujiān zài nǎlǐ",
-     "b": 2
+     "b": 2,
+     "z": "ㄒㄧˇ ㄕㄡˇ ㄐㄧㄢ ㄗㄞˋ ㄋㄚˇ ㄌㄧˇ"
     },
     {
      "en": "How much is this?",
-     "t": "这个多少钱？",
+     "t": "這個多少錢？",
      "tiles": [
-      "这个",
+      "這個",
       "多少",
-      "钱"
+      "錢"
      ],
      "tr": [
       "zhège",
-      "duōshao",
+      "duōshǎo",
       "qián"
      ],
-     "r": "zhège duōshao qián",
-     "b": 1
+     "r": "zhège duōshǎo qián",
+     "b": 1,
+     "z": "ㄓㄜˋ ˙ㄍㄜ ㄉㄨㄛ ㄕㄠˇ ㄑㄧㄢˊ"
     },
     {
      "en": "Sorry, I don't understand.",
-     "t": "对不起，我不懂。",
+     "t": "不好意思，我聽不懂。",
      "tiles": [
-      "对不起",
+      "不好意思",
       "我",
-      "不",
-      "懂"
+      "聽不懂"
      ],
      "tr": [
-      "duìbuqǐ",
+      "bù hǎoyìsi",
       "wǒ",
-      "bù",
-      "dǒng"
+      "tīng bù dǒng"
      ],
-     "r": "duìbuqǐ wǒ bù dǒng",
-     "b": 0
+     "r": "bù hǎoyìsi wǒ tīng bù dǒng",
+     "b": 0,
+     "z": "ㄅㄨˋ ㄏㄠˇ ㄧˋ ˙ㄙ ㄨㄛˇ ㄊㄧㄥ ㄅㄨˋ ㄉㄨㄥˇ"
     }
    ]
   }

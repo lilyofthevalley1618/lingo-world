@@ -1,7 +1,7 @@
 {
   "name": "Lingo World",
   "short_name": "Lingo World",
-  "description": "Speaking-first app for Spanish, French, Mandarin, Cantonese, Japanese and Korean.",
+  "description": "Speaking-first app for Spanish, French, Taiwan Mandarin, Cantonese, Japanese and Korean.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
