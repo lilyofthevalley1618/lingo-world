@@ -236,3 +236,6 @@ a.card,.pcard,.item,.lcard,.fc{transition:transform .15s}a.card:hover,.pcard:hov
 .heardnow{margin-top:6px;font-weight:700;color:#36305c}
 .heardnow small{font-weight:500;color:var(--muted,#8a8aa0)}
 .lvltip{margin-top:6px;font-size:.9em;color:#a0527a;background:#fff0f5;border-radius:12px;padding:6px 10px}
+/* mic test */
+.mtout{background:#f6f3ff;border-radius:14px;padding:10px 12px;font-size:.82em;line-height:1.45;white-space:pre-wrap;max-height:220px;overflow:auto;color:#36305c;margin:10px 0}
+.errcode{display:inline-block;font-size:.75em;color:#9a8fb5;margin-left:4px}

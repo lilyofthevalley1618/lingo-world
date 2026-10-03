@@ -143,115 +143,115 @@ function speak(text, lang, o = {}) {
 
 /* ---------- speech in (recognition) ---------- */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-// Robust recognition: continuous + interim + 5 alternatives, silence auto-stop, one auto-restart, language fallbacks.
+// Simple, proven recognition flow: one-shot (continuous=false), interim results, 5 alternatives.
+// Any interim or final transcript counts as the answer. Auto-retry once on no-speech. No getUserMedia while listening.
 const SR_FALLBACK = { 'es-ES': ['es-ES', 'es-MX', 'es-US'], 'fr-FR': ['fr-FR', 'fr-CA'], 'zh-TW': ['zh-TW', 'cmn-Hant-TW', 'zh-CN'], 'zh-HK': ['zh-HK', 'yue-Hant-HK', 'zh-yue'], 'ja-JP': ['ja-JP'], 'ko-KR': ['ko-KR'] };
 const srWorking = {}; // remembers a recognition code that worked, per app language
-function listen(lang, { onInterim, onResult, onError, onEnd, maxMs = 8000, silenceMs = 2000 } = {}) {
+function listen(lang, { onInterim, onResult, onError, onEnd, maxMs = 10000 } = {}) {
   if (!SR) { if (onError) onError('unsupported'); if (onEnd) onEnd(); return null; }
   if (synth) synth.cancel(); // never let our own audio overlap the mic
   const codes = SR_FALLBACK[lang] || [lang];
   let ci = Math.max(0, codes.indexOf(srWorking[lang] || codes[0]));
-  let rec = null, prev = [], sess = [], interim = [], got = false, restarted = false, retry = false, done = false, stopped = false, lastErr = null, silT = null;
-  const t0 = Date.now();
-  const alts = () => {
-    const parts = [...prev, ...sess, ...(interim.length ? [interim] : [])]; if (!parts.length) return [];
-    const out = [parts.map(p => p[0]).join(' ')];
-    parts.forEach((p, i) => p.forEach(a => { out.push(a); if (parts.length > 1) out.push(parts.map((q, j) => j === i ? a : q[0]).join(' ')); }));
-    return [...new Set(out.map(x => x.trim()).filter(Boolean))];
-  };
-  const clear = () => { clearTimeout(silT); clearTimeout(maxT); };
+  let rec = null, best = [], retried = false, done = false, stopped = false, lastErr = null, maxT = null;
   const finish = () => {
-    if (done) return; done = true; clear(); try { rec && rec.stop(); } catch (_) {}
-    const a = alts();
-    if (a.length) { if (onResult) onResult(a); } else if (onError) onError(lastErr || 'no-speech');
+    if (done) return; done = true; clearTimeout(maxT);
+    try { rec && rec.abort(); } catch (_) {}
+    if (best.length) { if (onResult) onResult(best); } else if (onError) onError(lastErr || 'no-speech');
     if (onEnd) onEnd();
   };
   const start = () => {
-    rec = new SR(); rec.lang = codes[ci]; rec.continuous = true; rec.interimResults = true; rec.maxAlternatives = 5;
-    sess = []; interim = [];
+    lastErr = null;
+    rec = new SR(); rec.lang = codes[ci]; rec.continuous = false; rec.interimResults = true; rec.maxAlternatives = 5;
     rec.onresult = e => {
-      got = true; sess = []; interim = [];
-      for (let i = 0; i < e.results.length; i++) { const r = e.results[i], list = [...r].map(x => x.transcript).filter(Boolean); if (!list.length) continue; if (r.isFinal) sess.push(list); else interim = list; }
-      srWorking[lang] = codes[ci];
-      const a = alts(); if (a.length && onInterim) onInterim(a);
-      clearTimeout(silT); silT = setTimeout(() => { stopped = true; finish(); }, silenceMs);
+      let joined = '';
+      for (let i = 0; i < e.results.length; i++) joined += e.results[i][0].transcript;
+      const last = e.results[e.results.length - 1];
+      const alts = [...new Set([joined, ...[...last].map(a => a.transcript)].map(x => (x || '').trim()).filter(Boolean))];
+      if (alts.length) { best = alts; srWorking[lang] = codes[ci]; if (onInterim) onInterim(alts); }
+      if (last.isFinal && best.length) finish();
     };
-    rec.onerror = e => {
-      const err = e.error;
-      if (err === 'language-not-supported' && ci < codes.length - 1) { ci++; retry = true; return; }
-      if ((err === 'no-speech' || err === 'aborted' || err === 'network') && !got && !restarted && !stopped) { restarted = true; retry = true; return; }
-      if (!got) lastErr = err;
-    };
+    rec.onerror = e => { lastErr = e.error || 'unknown'; };
     rec.onend = () => {
       if (done) return;
-      if (retry) { retry = false; prev = prev.concat(sess); return start(); }
-      if (!got && !lastErr && !restarted && !stopped && Date.now() - t0 < maxMs - 1500) { restarted = true; return start(); } // ended too early
-      if (got && !stopped && Date.now() - t0 < maxMs - 800) { prev = prev.concat(sess); sess = []; return start(); } // keep listening through short pauses
+      if (best.length || stopped) return finish();
+      if (lastErr === 'language-not-supported' && ci < codes.length - 1) { ci++; return start(); }
+      if ((lastErr === 'no-speech' || !lastErr) && !retried) { retried = true; return start(); } // one quiet auto-retry
       finish();
     };
-    try { rec.start(); } catch (_) { lastErr = lastErr || 'busy'; setTimeout(finish, 50); }
+    try { rec.start(); } catch (err) { lastErr = 'start-failed:' + ((err && err.name) || err); setTimeout(finish, 0); }
   };
-  const maxT = setTimeout(() => { stopped = true; finish(); }, maxMs);
+  maxT = setTimeout(() => { stopped = true; try { rec.stop(); } catch (_) {} setTimeout(finish, 700); }, maxMs);
   start();
-  return { stop: () => { stopped = true; finish(); }, abort: () => { done = true; clear(); try { rec && rec.abort(); } catch (_) {} } };
+  return {
+    stop: () => { stopped = true; try { rec.stop(); } catch (_) {} setTimeout(finish, 900); }, // let a final result arrive first
+    abort: () => { done = true; clearTimeout(maxT); try { rec && rec.abort(); } catch (_) {} },
+  };
 }
 const micMsg = err => ({
   'not-allowed': '🎤 Microphone access is blocked. Allow the mic for this site (iPhone: Settings → Safari → Microphone · Chrome: tap 🔒 next to the address → Microphone → Allow), then try again.',
-  'service-not-allowed': '🎤 Speech recognition is turned off. iPhone: Settings → General → Keyboard → Enable Dictation, then try again.',
-  'no-speech': 'I didn\'t hear anything. Hold the phone a little closer and speak up a bit.',
-  network: '📶 Speech recognition needs internet. Check your connection and try again.',
-  'audio-capture': 'No microphone found. Make sure no other app is using it.',
+  'service-not-allowed': '🎤 Speech recognition is turned off or blocked. iPhone: Settings → General → Keyboard → Enable Dictation. Chrome: check the site\'s mic permission.',
+  'no-speech': 'I didn\'t hear anything. Try speaking right after you tap 🎤, or run Profile → Mic test.',
+  network: '📶 Speech recognition needs internet (Chrome sends audio to Google). Check your connection and try again.',
+  'audio-capture': 'No microphone found, or another app is using it. Check your input device in system settings.',
   'language-not-supported': 'This browser can\'t recognize this language yet. Try Chrome, or skip for now.',
   unsupported: 'This browser can\'t check speech. Try Chrome or Safari, or say it out loud and skip.',
 })[err] || 'Didn\'t catch that. Try again!';
-// Mic level meter (getUserMedia + AnalyserNode). Skipped on Android, where holding the mic can starve SpeechRecognition.
-let meterOff = /Android/i.test(navigator.userAgent);
-function micMeter(el) {
-  const AC = window.AudioContext || window.webkitAudioContext;
-  if (meterOff || !AC || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return null;
-  let stream = null, ctx = null, raf = 0, stopped = false, quietSince = Date.now();
-  const t0 = setTimeout(() => navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } }).then(st => {
-    if (stopped) { st.getTracks().forEach(t => t.stop()); return; }
-    stream = st; ctx = new AC();
-    const an = ctx.createAnalyser(); an.fftSize = 512; ctx.createMediaStreamSource(st).connect(an);
-    const buf = new Uint8Array(an.fftSize);
-    const tick = () => {
-      if (stopped) return;
-      an.getByteTimeDomainData(buf); let sum = 0; for (let i = 0; i < buf.length; i++) { const x = (buf[i] - 128) / 128; sum += x * x; }
-      const lvl = Math.min(1, Math.sqrt(sum / buf.length) * 7), bar = el.querySelector('.lvl i'), tip = el.querySelector('.lvltip');
-      if (bar) bar.style.width = Math.max(4, Math.round(lvl * 100)) + '%';
-      if (lvl > 0.07) quietSince = Date.now();
-      if (tip) tip.hidden = Date.now() - quietSince < 3000;
-      raf = requestAnimationFrame(tick);
-    };
-    tick();
-  }).catch(() => { const m = el.querySelector('.lvl'); if (m) m.remove(); }), 250); // let recognition grab the mic first
-  return () => { stopped = true; clearTimeout(t0); cancelAnimationFrame(raf); if (stream) stream.getTracks().forEach(t => t.stop()); if (ctx && ctx.close) ctx.close().catch(() => {}); };
-}
+const errCode = err => `<small class="errcode">(error: ${esc(String(err))})</small>`;
 // Shared mic button + live status. Tap the mic again to stop early.
 function micRun({ lang, btn, out, onAlts, onStart }) {
-  let ctrl = null, meterStop = null, retriedNoMeter = false;
-  const endMeter = () => { if (meterStop) { meterStop(); meterStop = null; } };
+  let ctrl = null;
   const begin = () => {
     if (ctrl) { ctrl.stop(); return; }
     btn.classList.add('on'); if (onStart) onStart();
-    out.innerHTML = `<div class="live"><i class="dotlive"></i> Listening… <span class="lvl" aria-hidden="true"><i></i></span></div><div class="heardnow"><small>Say it! Tap 🎤 again when you're done.</small></div>
-      <div class="lvltip" hidden>🔇 I can't hear much. Check your mic isn't muted, hold the phone closer, and speak up a little.</div>`;
-    meterStop = micMeter(out);
+    out.innerHTML = '<div class="live"><i class="dotlive"></i> Listening… say it now!</div><div class="heardnow"><small>Tap 🎤 again when you\'re done.</small></div>';
     ctrl = listen(lang, {
       onInterim: a => { const h = out.querySelector('.heardnow'); if (h) h.innerHTML = `“${esc(a[0])}”`; },
-      onResult: a => { endMeter(); onAlts(a); },
-      onError: err => {
-        const hadMeter = !!meterStop; endMeter();
-        if (err === 'audio-capture' && hadMeter && !retriedNoMeter) { meterOff = true; retriedNoMeter = true; ctrl = null; return setTimeout(begin, 200); } // meter fought for the mic: retry without it
-        if (!out.isConnected) return;
-        out.innerHTML = `<span class="micerr">${esc(micMsg(err))}</span> <button class="btn small alt tryagain">🎤 Try again</button>`; out.querySelector('.tryagain').onclick = begin;
-      },
-      onEnd: () => { endMeter(); ctrl = null; btn.classList.remove('on'); },
+      onResult: a => onAlts(a),
+      onError: err => { if (!out.isConnected) return; out.innerHTML = `<span class="micerr">${esc(micMsg(err))}</span> ${errCode(err)} <button class="btn small alt tryagain">🎤 Try again</button>`; out.querySelector('.tryagain').onclick = begin; },
+      onEnd: () => { ctrl = null; btn.classList.remove('on'); },
     });
   };
   btn.onclick = begin;
-  return { begin, stop: () => { endMeter(); if (ctrl) ctrl.abort(); ctrl = null; btn.classList.remove('on'); } };
+  return { begin, stop: () => { if (ctrl) ctrl.abort(); ctrl = null; btn.classList.remove('on'); } };
+}
+// Optional mic level check (Profile, off by default). Opens getUserMedia for a few seconds, then releases it; never runs during recognition.
+let levelBusy = false;
+function levelCheck(el, secs = 4) {
+  if (levelBusy) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { el.textContent = 'Level check not supported in this browser.'; return; }
+  el.innerHTML = '🎚️ Say something… <span class="lvl"><i></i></span> <small class="lvlpeak"></small>';
+  levelBusy = true;
+  navigator.mediaDevices.getUserMedia({ audio: true }).then(st => {
+    const ctx = new AC(), an = ctx.createAnalyser(); an.fftSize = 512; ctx.createMediaStreamSource(st).connect(an);
+    const buf = new Uint8Array(an.fftSize), t0 = Date.now(); let peak = 0;
+    const tick = () => {
+      an.getByteTimeDomainData(buf); let sum = 0; for (let i = 0; i < buf.length; i++) { const x = (buf[i] - 128) / 128; sum += x * x; }
+      const lvl = Math.min(1, Math.sqrt(sum / buf.length) * 7); peak = Math.max(peak, lvl);
+      const bar = el.querySelector('.lvl i'); if (bar) bar.style.width = Math.max(4, Math.round(lvl * 100)) + '%';
+      if (Date.now() - t0 < secs * 1000) return requestAnimationFrame(tick);
+      st.getTracks().forEach(t => t.stop()); if (ctx.close) ctx.close().catch(() => {}); levelBusy = false;
+      el.innerHTML = `🎚️ Peak level: <b>${Math.round(peak * 100)}%</b> ${peak < 0.08 ? '🔇 Very quiet: check the input device / mute switch in system settings.' : '✅ Your mic is picking you up.'} (mic released)`;
+    };
+    tick();
+  }).catch(e => { levelBusy = false; el.innerHTML = `Couldn't open the mic. ${errCode((e && e.name) || e)}`; });
+}
+// Profile → Mic test: raw recognition events so problems can be diagnosed.
+function micTest(lang, out) {
+  if (!SR) { out.textContent = 'SpeechRecognition: not available in this browser.\n' + navigator.userAgent; return; }
+  if (levelBusy) { out.textContent = 'Wait for the level check to finish (it releases the mic), then test again.'; return; }
+  if (synth) synth.cancel();
+  const t0 = Date.now(), log = m => { out.textContent += `[${((Date.now() - t0) / 1000).toFixed(1)}s] ${m}\n`; out.scrollTop = out.scrollHeight; };
+  out.textContent = '';
+  log(`start lang=${lang} continuous=false interimResults=true maxAlternatives=5`);
+  const rec = new SR(); rec.lang = lang; rec.continuous = false; rec.interimResults = true; rec.maxAlternatives = 5;
+  let heard = '';
+  ['audiostart', 'soundstart', 'speechstart', 'speechend', 'soundend', 'audioend'].forEach(ev => { rec['on' + ev] = () => log(ev); });
+  rec.onresult = e => { const r = e.results[e.results.length - 1]; heard = [...r].map(a => a.transcript).join(' | '); log(`${r.isFinal ? 'FINAL' : 'interim'}: ${heard}${r[0].confidence ? ` (conf ${r[0].confidence.toFixed(2)})` : ''}`); };
+  rec.onerror = e => log(`ERROR code: ${e.error}${e.message ? ' · ' + e.message : ''}`);
+  rec.onend = () => log(`end · heard: ${heard ? '“' + heard + '”' : '(nothing)'}`);
+  try { rec.start(); } catch (e) { log('start() threw: ' + ((e && e.name) || e)); }
+  if (navigator.permissions && navigator.permissions.query) navigator.permissions.query({ name: 'microphone' }).then(p => log('mic permission: ' + p.state)).catch(() => {});
 }
 const retryMsg = (heard, sc) => `I heard “${esc(heard)}” (${Math.round(sc * 100)}%). So close! <button class="btn small alt tryagain">🎤 Try again</button>`;
 
@@ -464,6 +464,10 @@ function profile() {
     <h2>Languages</h2><div class="plist">${LANGS.map(c => { const d = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length; return `<a class="prow" href="#/${c}"><span>${META[c][0]} ${META[c][1]}</span><div class="bar"><i style="width:${d / COURSE_LESSONS * 100}%"></i></div><small>${d}/${COURSE_LESSONS}</small></a>`; }).join('')}</div>
     <h2>Settings</h2><div class="card settings"><label class="chk"><input type="checkbox" id="slowset" ${S.slow ? 'checked' : ''}> 🐢 Slow audio by default</label><label class="chk"><input type="checkbox" id="zyset" ${S.zhuyin ? 'checked' : ''}> ㄅㄆㄇ Show Zhuyin for Chinese (Taiwan)</label>
       <div class="row"><a class="btn alt small" href="#/me">👗 My Character</a><a class="btn alt small" href="#/shop">🛍️ Shop</a></div></div>
+    <h2>🎤 Mic test</h2><div class="card settings" id="mictest"><p class="sub">Tap a test, then say something (e.g. “hello, testing”). It shows exactly what the browser heard and any raw error code.</p>
+      <div class="row"><button class="btn small" id="mt-en">Test English (en-US)</button><button class="btn small pink" id="mt-cur">Test ${META[S.lang || 'es'][1]} (${SPEECH[S.lang || 'es']})</button>${S.micMeter ? '<button class="btn small alt" id="mt-lvl">🎚️ Level check</button>' : ''}</div>
+      <pre class="mtout" id="mt-out">${SR ? 'Ready.' : 'SpeechRecognition is not available in this browser.'}</pre><div class="sub" id="mt-lvlout"></div>
+      <label class="chk"><input type="checkbox" id="meterset" ${S.micMeter ? 'checked' : ''}> 🎚️ Mic level check (off by default · only runs here, never while listening)</label></div>
     <h2>🔈 Voices</h2><div class="card settings" id="voices"></div>
     <div class="note">💡 <b>Want nicer voices?</b> iPhone/iPad: Settings → Accessibility → Spoken Content → Voices → pick the language → download an <b>Enhanced</b> or <b>Premium</b> voice (Siri voices sound best). Android: Settings → Google Text-to-speech (Speech Services by Google) → ⚙️ → Install voice data → download the language and choose a voice. On a computer, Chrome's “Google …” and Edge's “… Natural” voices sound great. Then come back here and pick it.</div>
     <p class="center"><button class="linkbtn" id="redeem">Redeem code</button></p>`;
@@ -471,6 +475,11 @@ function profile() {
   document.getElementById('slowset').onchange = e => { S.slow = e.target.checked; save(); };
   document.getElementById('zyset').onchange = e => { S.zhuyin = e.target.checked; save(); };
   document.getElementById('redeem').onclick = redeem;
+  const mo = document.getElementById('mt-out');
+  document.getElementById('mt-en').onclick = () => micTest('en-US', mo);
+  document.getElementById('mt-cur').onclick = () => micTest(SPEECH[S.lang || 'es'], mo);
+  if (document.getElementById('mt-lvl')) document.getElementById('mt-lvl').onclick = () => levelCheck(document.getElementById('mt-lvlout'));
+  document.getElementById('meterset').onchange = e => { S.micMeter = e.target.checked; save(); profile(); };
 }
 
 const VOICE_SAMPLE = { es: 'Hola, ¿cómo estás? Me llamo Lily.', fr: 'Bonjour, comment ça va ? Je m\'appelle Lily.', zh: '你好！很高興認識你。', yue: '你好！好高興識到你。', ja: 'こんにちは！はじめまして。', ko: '안녕하세요! 만나서 반가워요.' };
@@ -865,10 +874,10 @@ async function sayFast(code) {
     const self = ok => { if (ok) { hits++; earn(1, '⚡ fast recall'); activity(2); } srsMark(code, w, ok); next(); };
     if (SR) {
       const check = a => { heardAny = a[0]; if (spokenScore(a, w, L) > PASS) settle(true, a[0]); };
-      const start = () => { rec = listen(L.speech, { maxMs: Math.max(1500, left * 100), silenceMs: 1600,
+      const start = () => { rec = listen(L.speech, { maxMs: Math.max(1500, left * 100),
         onInterim: a => { if (settled) return; check(a); if (!settled && $('fres')) $('fres').innerHTML = `<span class="live"><i class="dotlive"></i> “${esc(a[0])}”</span>`; },
         onResult: a => { if (!settled) { check(a); if (!settled && left > 12) start(); } },
-        onError: err => { if (settled) return; if ((err === 'no-speech' || err === 'aborted') && left > 12) start(); else if (err !== 'no-speech' && err !== 'aborted' && $('fres')) $('fres').textContent = micMsg(err); } }); };
+        onError: err => { if (settled) return; if ((err === 'no-speech' || err === 'aborted') && left > 12) start(); else if (err !== 'no-speech' && err !== 'aborted' && $('fres')) $('fres').innerHTML = esc(micMsg(err)) + ' ' + errCode(err); } }); };
       start();
     }
     timer = setInterval(() => {
