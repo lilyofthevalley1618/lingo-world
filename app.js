@@ -489,8 +489,8 @@ function runSession(L, cfg) {
       case 'speak_repeat':
         return speakExercise(ex, 'Listen and repeat', `<div class="prompt-word">${audioRow()}${wordHtml(w)}<small>${esc(w.en)}</small></div>`, w, true);
       case 'speak_recall':
-        speakExercise(ex, `Say it in ${L.name}`, `<div class="prompt-word"><span class="em big">${EMOJI[w.en] || '💬'}</span><span class="tw">${esc(w.en)}</span>
-          <button class="btn small alt" id="hint">👀 Hint</button><div id="hintbox" hidden>${wordHtml(w)}</div></div>`, w, false);
+        speakExercise(ex, `Say it in ${L.name}`, `<div class="prompt-word"><span class="em big">${EMOJI[w.en] || '💬'}</span><span class="tw">${esc(w.en)}</span>${w.r ? `<small class="r">${esc(rom(w))}</small>` : ''}
+          <button class="btn small alt" id="hint">👀 Hint</button><div id="hintbox" hidden><span class="tw">${esc(split(w.t).main)}</span>${split(w.t).kana ? `<small>${esc(split(w.t).kana)}</small>` : ''}</div></div>`, w, false);
         $('hint').onclick = () => { $('hintbox').hidden = false; $('hint').remove(); say(w.t); };
         return;
       case 'shadow': case 'speak_read':
