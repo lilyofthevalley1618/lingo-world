@@ -4,7 +4,6 @@
  "native": "日本語",
  "flag": "🇯🇵",
  "speech": "ja-JP",
- "color": "#ff5fa2",
  "romanLabel": "romaji",
  "topics": [
   {
@@ -15,12 +14,14 @@
     {
      "en": "Hello",
      "t": "こんにちは",
-     "r": "konnichiwa"
+     "r": "konnichiwa",
+     "tip": "こんにちは: the last は is said “wa”."
     },
     {
      "en": "Good morning",
      "t": "おはようございます",
-     "r": "ohayō gozaimasu"
+     "r": "ohayō gozaimasu",
+     "tip": "おはよう ≈ “Ohio” 🌅."
     },
     {
      "en": "Good afternoon",
@@ -60,7 +61,8 @@
     {
      "en": "Thank you",
      "t": "ありがとうございます",
-     "r": "arigatō gozaimasu"
+     "r": "arigatō gozaimasu",
+     "tip": "ありがとう ≈ “alligator” said fast 🐊."
     },
     {
      "en": "You're welcome",
@@ -75,7 +77,8 @@
     {
      "en": "Excuse me",
      "t": "すみません",
-     "r": "sumimasen"
+     "r": "sumimasen",
+     "tip": "すみません = excuse me, sorry, AND calling a waiter."
     },
     {
      "en": "Sorry",
@@ -88,7 +91,71 @@
      "r": "hajimemashite"
     }
    ],
-   "note": "こんにちは is used for both “hello” and “good afternoon”."
+   "note": "こんにちは is used for both “hello” and “good afternoon”.",
+   "sentences": [
+    {
+     "en": "Hello, how are you?",
+     "t": "こんにちは、お元気ですか？",
+     "tiles": [
+      "こんにちは",
+      "お元気",
+      "ですか"
+     ],
+     "tr": [
+      "konnichiwa",
+      "o-genki",
+      "desu ka"
+     ],
+     "r": "konnichiwa o-genki desu ka",
+     "b": 1
+    },
+    {
+     "en": "I'm fine, thank you.",
+     "t": "元気です、ありがとう。",
+     "tiles": [
+      "元気",
+      "です",
+      "ありがとう"
+     ],
+     "tr": [
+      "genki",
+      "desu",
+      "arigatō"
+     ],
+     "r": "genki desu arigatō",
+     "b": 2
+    },
+    {
+     "en": "Goodbye, see you later!",
+     "t": "さようなら、またね！",
+     "tiles": [
+      "さようなら",
+      "またね"
+     ],
+     "tr": [
+      "sayōnara",
+      "mata ne"
+     ],
+     "r": "sayōnara mata ne",
+     "b": 1
+    },
+    {
+     "en": "Thank you very much.",
+     "t": "どうもありがとうございます。",
+     "tiles": [
+      "どうも",
+      "ありがとう",
+      "ございます"
+     ],
+     "tr": [
+      "dōmo",
+      "arigatō",
+      "gozaimasu"
+     ],
+     "r": "dōmo arigatō gozaimasu",
+     "b": 1
+    }
+   ]
   },
   {
    "id": "numbers",
@@ -118,7 +185,8 @@
     {
      "en": "Four",
      "t": "四（よん）",
-     "r": "yon"
+     "r": "yon",
+     "tip": "四 can be よん or し. し sounds like 死 (death), so people usually say よん."
     },
     {
      "en": "Five",
@@ -133,7 +201,8 @@
     {
      "en": "Seven",
      "t": "七（なな）",
-     "r": "nana"
+     "r": "nana",
+     "tip": "七 can be なな or しち. なな is easier to tell apart from いち (1)."
     },
     {
      "en": "Eight",
@@ -169,6 +238,80 @@
      "en": "One thousand",
      "t": "千（せん）",
      "r": "sen"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I am sixteen years old.",
+     "t": "わたしは十六歳です。",
+     "tiles": [
+      "わたし",
+      "は",
+      "十六歳",
+      "です"
+     ],
+     "tr": [
+      "watashi",
+      "wa",
+      "jūroku-sai",
+      "desu"
+     ],
+     "r": "watashi wa jūroku-sai desu",
+     "b": 2
+    },
+    {
+     "en": "One coffee, please.",
+     "t": "コーヒーを一つください。",
+     "tiles": [
+      "コーヒー",
+      "を",
+      "一つ",
+      "ください"
+     ],
+     "tr": [
+      "kōhī",
+      "o",
+      "hitotsu",
+      "kudasai"
+     ],
+     "r": "kōhī o hitotsu kudasai",
+     "b": 2
+    },
+    {
+     "en": "I have two brothers.",
+     "t": "兄弟が二人います。",
+     "tiles": [
+      "兄弟",
+      "が",
+      "二人",
+      "います"
+     ],
+     "tr": [
+      "kyōdai",
+      "ga",
+      "futari",
+      "imasu"
+     ],
+     "r": "kyōdai ga futari imasu",
+     "b": 2
+    },
+    {
+     "en": "There are three apples.",
+     "t": "りんごが三つあります。",
+     "tiles": [
+      "りんご",
+      "が",
+      "三つ",
+      "あります"
+     ],
+     "tr": [
+      "ringo",
+      "ga",
+      "mittsu",
+      "arimasu"
+     ],
+     "r": "ringo ga mittsu arimasu",
+     "b": 2
     }
    ]
   },
@@ -252,6 +395,76 @@
      "t": "スープ",
      "r": "sūpu"
     }
+   ],
+   "sentences": [
+    {
+     "en": "I like coffee.",
+     "t": "コーヒーが好きです。",
+     "tiles": [
+      "コーヒー",
+      "が",
+      "好き",
+      "です"
+     ],
+     "tr": [
+      "kōhī",
+      "ga",
+      "suki",
+      "desu"
+     ],
+     "r": "kōhī ga suki desu",
+     "b": 0
+    },
+    {
+     "en": "I drink water.",
+     "t": "水を飲みます。",
+     "tiles": [
+      "水",
+      "を",
+      "飲みます"
+     ],
+     "tr": [
+      "mizu",
+      "o",
+      "nomimasu"
+     ],
+     "r": "mizu o nomimasu",
+     "b": 0
+    },
+    {
+     "en": "I eat rice.",
+     "t": "ご飯を食べます。",
+     "tiles": [
+      "ご飯",
+      "を",
+      "食べます"
+     ],
+     "tr": [
+      "gohan",
+      "o",
+      "tabemasu"
+     ],
+     "r": "gohan o tabemasu",
+     "b": 0
+    },
+    {
+     "en": "The soup is delicious.",
+     "t": "スープがおいしいです。",
+     "tiles": [
+      "スープ",
+      "が",
+      "おいしい",
+      "です"
+     ],
+     "tr": [
+      "sūpu",
+      "ga",
+      "oishii",
+      "desu"
+     ],
+     "r": "sūpu ga oishii desu",
+     "b": 2
+    }
    ]
   },
   {
@@ -262,7 +475,8 @@
     {
      "en": "Red",
      "t": "赤（あか）",
-     "r": "aka"
+     "r": "aka",
+     "tip": "赤 (aka) is also in 赤ちゃん (baby)."
     },
     {
      "en": "Blue",
@@ -333,6 +547,80 @@
      "en": "Rainbow",
      "t": "虹（にじ）",
      "r": "niji"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "The apple is red.",
+     "t": "りんごは赤いです。",
+     "tiles": [
+      "りんご",
+      "は",
+      "赤い",
+      "です"
+     ],
+     "tr": [
+      "ringo",
+      "wa",
+      "akai",
+      "desu"
+     ],
+     "r": "ringo wa akai desu",
+     "b": 2
+    },
+    {
+     "en": "I like blue.",
+     "t": "青が好きです。",
+     "tiles": [
+      "青",
+      "が",
+      "好き",
+      "です"
+     ],
+     "tr": [
+      "ao",
+      "ga",
+      "suki",
+      "desu"
+     ],
+     "r": "ao ga suki desu",
+     "b": 0
+    },
+    {
+     "en": "The banana is yellow.",
+     "t": "バナナは黄色いです。",
+     "tiles": [
+      "バナナ",
+      "は",
+      "黄色い",
+      "です"
+     ],
+     "tr": [
+      "banana",
+      "wa",
+      "kiiroi",
+      "desu"
+     ],
+     "r": "banana wa kiiroi desu",
+     "b": 2
+    },
+    {
+     "en": "The milk is white.",
+     "t": "牛乳は白いです。",
+     "tiles": [
+      "牛乳",
+      "は",
+      "白い",
+      "です"
+     ],
+     "tr": [
+      "gyūnyū",
+      "wa",
+      "shiroi",
+      "desu"
+     ],
+     "r": "gyūnyū wa shiroi desu",
+     "b": 2
     }
    ]
   },
@@ -414,12 +702,85 @@
     {
      "en": "Baby",
      "t": "赤ちゃん（あかちゃん）",
-     "r": "akachan"
+     "r": "akachan",
+     "tip": "赤ちゃん = “little red one”, since newborns look reddish (赤 = red)!"
     },
     {
      "en": "Friend",
      "t": "友達（ともだち）",
      "r": "tomodachi"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my mother.",
+     "t": "こちらは母です。",
+     "tiles": [
+      "こちら",
+      "は",
+      "母",
+      "です"
+     ],
+     "tr": [
+      "kochira",
+      "wa",
+      "haha",
+      "desu"
+     ],
+     "r": "kochira wa haha desu",
+     "b": 2
+    },
+    {
+     "en": "I love my family.",
+     "t": "家族が大好きです。",
+     "tiles": [
+      "家族",
+      "が",
+      "大好き",
+      "です"
+     ],
+     "tr": [
+      "kazoku",
+      "ga",
+      "daisuki",
+      "desu"
+     ],
+     "r": "kazoku ga daisuki desu",
+     "b": 0
+    },
+    {
+     "en": "This is my friend.",
+     "t": "こちらは友達です。",
+     "tiles": [
+      "こちら",
+      "は",
+      "友達",
+      "です"
+     ],
+     "tr": [
+      "kochira",
+      "wa",
+      "tomodachi",
+      "desu"
+     ],
+     "r": "kochira wa tomodachi desu",
+     "b": 2
+    },
+    {
+     "en": "I have a younger sister.",
+     "t": "妹がいます。",
+     "tiles": [
+      "妹",
+      "が",
+      "います"
+     ],
+     "tr": [
+      "imōto",
+      "ga",
+      "imasu"
+     ],
+     "r": "imōto ga imasu",
+     "b": 0
     }
    ]
   },
@@ -502,6 +863,76 @@
      "en": "Cheers!",
      "t": "乾杯！（かんぱい）",
      "r": "kanpai!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "My name is Lily.",
+     "t": "わたしはリリーです。",
+     "tiles": [
+      "わたし",
+      "は",
+      "リリー",
+      "です"
+     ],
+     "tr": [
+      "watashi",
+      "wa",
+      "Rirī",
+      "desu"
+     ],
+     "r": "watashi wa Rirī desu",
+     "b": 2
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "トイレはどこですか？",
+     "tiles": [
+      "トイレ",
+      "は",
+      "どこ",
+      "ですか"
+     ],
+     "tr": [
+      "toire",
+      "wa",
+      "doko",
+      "desu ka"
+     ],
+     "r": "toire wa doko desu ka",
+     "b": 2
+    },
+    {
+     "en": "How much is this?",
+     "t": "これはいくらですか？",
+     "tiles": [
+      "これ",
+      "は",
+      "いくら",
+      "ですか"
+     ],
+     "tr": [
+      "kore",
+      "wa",
+      "ikura",
+      "desu ka"
+     ],
+     "r": "kore wa ikura desu ka",
+     "b": 2
+    },
+    {
+     "en": "Sorry, I don't understand.",
+     "t": "すみません、わかりません。",
+     "tiles": [
+      "すみません",
+      "わかりません"
+     ],
+     "tr": [
+      "sumimasen",
+      "wakarimasen"
+     ],
+     "r": "sumimasen wakarimasen",
+     "b": 1
     }
    ]
   }

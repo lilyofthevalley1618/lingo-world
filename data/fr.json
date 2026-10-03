@@ -4,7 +4,6 @@
  "native": "Français",
  "flag": "🇫🇷",
  "speech": "fr-FR",
- "color": "#4a7bff",
  "romanLabel": null,
  "topics": [
   {
@@ -18,7 +17,8 @@
     },
     {
      "en": "Good morning",
-     "t": "Bonjour"
+     "t": "Bonjour",
+     "tip": "Bonjour = bon (good) + jour (day)."
     },
     {
      "en": "Good afternoon",
@@ -26,7 +26,8 @@
     },
     {
      "en": "Good evening",
-     "t": "Bonsoir"
+     "t": "Bonsoir",
+     "tip": "Bonsoir = bon (good) + soir (evening)."
     },
     {
      "en": "Good night",
@@ -50,7 +51,8 @@
     },
     {
      "en": "Thank you",
-     "t": "Merci"
+     "t": "Merci",
+     "tip": "Merci ≈ “mercy”."
     },
     {
      "en": "You're welcome",
@@ -71,6 +73,51 @@
     {
      "en": "Nice to meet you",
      "t": "Enchanté(e)"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Hello, how are you?",
+     "t": "Salut, comment ça va ?",
+     "tiles": [
+      "Salut",
+      "comment",
+      "ça",
+      "va"
+     ],
+     "b": 1
+    },
+    {
+     "en": "I'm fine, thank you.",
+     "t": "Je vais bien, merci.",
+     "tiles": [
+      "Je",
+      "vais",
+      "bien",
+      "merci"
+     ],
+     "b": 2
+    },
+    {
+     "en": "Goodbye, see you later!",
+     "t": "Au revoir, à plus tard !",
+     "tiles": [
+      "Au",
+      "revoir",
+      "à",
+      "plus",
+      "tard"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Thank you very much.",
+     "t": "Merci beaucoup.",
+     "tiles": [
+      "Merci",
+      "beaucoup"
+     ],
+     "b": 1
     }
    ]
   },
@@ -129,7 +176,8 @@
     },
     {
      "en": "Twenty",
-     "t": "vingt"
+     "t": "vingt",
+     "tip": "vingt: the “gt” is silent, it sounds like “van”."
     },
     {
      "en": "One hundred",
@@ -138,6 +186,52 @@
     {
      "en": "One thousand",
      "t": "mille"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I am sixteen years old.",
+     "t": "J'ai seize ans.",
+     "tiles": [
+      "J'ai",
+      "seize",
+      "ans"
+     ],
+     "b": 1
+    },
+    {
+     "en": "One coffee, please.",
+     "t": "Un café, s'il vous plaît.",
+     "tiles": [
+      "Un",
+      "café",
+      "s'il",
+      "vous",
+      "plaît"
+     ],
+     "b": 0
+    },
+    {
+     "en": "I have two brothers.",
+     "t": "J'ai deux frères.",
+     "tiles": [
+      "J'ai",
+      "deux",
+      "frères"
+     ],
+     "b": 1
+    },
+    {
+     "en": "There are three apples.",
+     "t": "Il y a trois pommes.",
+     "tiles": [
+      "Il",
+      "y",
+      "a",
+      "trois",
+      "pommes"
+     ],
+     "b": 3
     }
    ]
   },
@@ -168,7 +262,8 @@
     },
     {
      "en": "Egg",
-     "t": "l'œuf"
+     "t": "l'œuf",
+     "tip": "l'œuf: say “luhf”. Plural œufs drops the f sound: “uh”!"
     },
     {
      "en": "Milk",
@@ -205,6 +300,51 @@
     {
      "en": "Soup",
      "t": "la soupe"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I like coffee.",
+     "t": "J'aime le café.",
+     "tiles": [
+      "J'aime",
+      "le",
+      "café"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I drink water.",
+     "t": "Je bois de l'eau.",
+     "tiles": [
+      "Je",
+      "bois",
+      "de",
+      "l'eau"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I eat rice.",
+     "t": "Je mange du riz.",
+     "tiles": [
+      "Je",
+      "mange",
+      "du",
+      "riz"
+     ],
+     "b": 3
+    },
+    {
+     "en": "The soup is delicious.",
+     "t": "La soupe est délicieuse.",
+     "tiles": [
+      "La",
+      "soupe",
+      "est",
+      "délicieuse"
+     ],
+     "b": 1
     }
    ]
   },
@@ -273,6 +413,51 @@
      "en": "Rainbow",
      "t": "l'arc-en-ciel"
     }
+   ],
+   "sentences": [
+    {
+     "en": "The apple is red.",
+     "t": "La pomme est rouge.",
+     "tiles": [
+      "La",
+      "pomme",
+      "est",
+      "rouge"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I like blue.",
+     "t": "J'aime le bleu.",
+     "tiles": [
+      "J'aime",
+      "le",
+      "bleu"
+     ],
+     "b": 2
+    },
+    {
+     "en": "The banana is yellow.",
+     "t": "La banane est jaune.",
+     "tiles": [
+      "La",
+      "banane",
+      "est",
+      "jaune"
+     ],
+     "b": 3
+    },
+    {
+     "en": "The milk is white.",
+     "t": "Le lait est blanc.",
+     "tiles": [
+      "Le",
+      "lait",
+      "est",
+      "blanc"
+     ],
+     "b": 3
+    }
    ]
   },
   {
@@ -334,7 +519,8 @@
     },
     {
      "en": "Wife",
-     "t": "la femme"
+     "t": "la femme",
+     "tip": "la femme means both “woman” and “wife”."
     },
     {
      "en": "Baby",
@@ -343,6 +529,49 @@
     {
      "en": "Friend",
      "t": "l'ami / l'amie"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my mother.",
+     "t": "C'est ma mère.",
+     "tiles": [
+      "C'est",
+      "ma",
+      "mère"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I love my family.",
+     "t": "J'aime ma famille.",
+     "tiles": [
+      "J'aime",
+      "ma",
+      "famille"
+     ],
+     "b": 2
+    },
+    {
+     "en": "This is my friend.",
+     "t": "C'est mon ami.",
+     "tiles": [
+      "C'est",
+      "mon",
+      "ami"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I have a younger sister.",
+     "t": "J'ai une petite sœur.",
+     "tiles": [
+      "J'ai",
+      "une",
+      "petite",
+      "sœur"
+     ],
+     "b": 3
     }
    ]
   },
@@ -389,7 +618,8 @@
     },
     {
      "en": "I'm hungry",
-     "t": "J'ai faim"
+     "t": "J'ai faim",
+     "tip": "French says “I have hunger”: J'ai faim (sounds like “fan”)."
     },
     {
      "en": "It's delicious!",
@@ -409,7 +639,52 @@
     },
     {
      "en": "Cheers!",
-     "t": "Santé !"
+     "t": "Santé !",
+     "tip": "Santé = health (like “sanitary”)."
+    }
+   ],
+   "sentences": [
+    {
+     "en": "My name is Lily.",
+     "t": "Je m'appelle Lily.",
+     "tiles": [
+      "Je",
+      "m'appelle",
+      "Lily"
+     ],
+     "b": 2
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "Où sont les toilettes ?",
+     "tiles": [
+      "Où",
+      "sont",
+      "les",
+      "toilettes"
+     ],
+     "b": 3
+    },
+    {
+     "en": "How much is this?",
+     "t": "C'est combien ?",
+     "tiles": [
+      "C'est",
+      "combien"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Sorry, I don't understand.",
+     "t": "Désolé, je ne comprends pas.",
+     "tiles": [
+      "Désolé",
+      "je",
+      "ne",
+      "comprends",
+      "pas"
+     ],
+     "b": 3
     }
    ]
   }

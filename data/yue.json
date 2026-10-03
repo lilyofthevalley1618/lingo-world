@@ -1,0 +1,949 @@
+{
+ "code": "yue",
+ "name": "Cantonese",
+ "native": "廣東話",
+ "flag": "🇭🇰",
+ "speech": "zh-HK",
+ "romanLabel": "Jyutping",
+ "topics": [
+  {
+   "id": "greetings",
+   "name": "Greetings",
+   "icon": "👋",
+   "words": [
+    {
+     "en": "Hello",
+     "t": "你好",
+     "r": "nei5 hou2"
+    },
+    {
+     "en": "Good morning",
+     "t": "早晨",
+     "r": "zou2 san4"
+    },
+    {
+     "en": "Good afternoon",
+     "t": "午安",
+     "r": "ng5 on1"
+    },
+    {
+     "en": "Good evening",
+     "t": "晚安",
+     "r": "maan5 on1"
+    },
+    {
+     "en": "Good night",
+     "t": "早唞",
+     "r": "zou2 tau2",
+     "tip": "早唞 = “rest early”."
+    },
+    {
+     "en": "Goodbye",
+     "t": "再見",
+     "r": "zoi3 gin3"
+    },
+    {
+     "en": "See you later",
+     "t": "遲啲見",
+     "r": "ci4 di1 gin3"
+    },
+    {
+     "en": "How are you?",
+     "t": "你好嗎？",
+     "r": "nei5 hou2 maa3?"
+    },
+    {
+     "en": "I'm fine",
+     "t": "我幾好",
+     "r": "ngo5 gei2 hou2"
+    },
+    {
+     "en": "Thank you",
+     "t": "多謝",
+     "r": "do1 ze6",
+     "tip": "多謝 is for gifts & compliments. For a service (someone holds the door), say 唔該."
+    },
+    {
+     "en": "You're welcome",
+     "t": "唔使客氣",
+     "r": "m4 sai2 haak3 hei3"
+    },
+    {
+     "en": "Please",
+     "t": "唔該",
+     "r": "m4 goi1",
+     "tip": "唔該 is super useful: please, excuse me, AND thanks for a service."
+    },
+    {
+     "en": "Excuse me",
+     "t": "唔好意思",
+     "r": "m4 hou2 ji3 si1"
+    },
+    {
+     "en": "Sorry",
+     "t": "對唔住",
+     "r": "deoi3 m4 zyu6"
+    },
+    {
+     "en": "Nice to meet you",
+     "t": "好高興認識你",
+     "r": "hou2 gou1 hing3 jing6 sik1 nei5"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Hello, how are you?",
+     "t": "你好！你好嗎？",
+     "tiles": [
+      "你好",
+      "你",
+      "好",
+      "嗎"
+     ],
+     "tr": [
+      "nei5 hou2",
+      "nei5",
+      "hou2",
+      "maa3"
+     ],
+     "r": "nei5 hou2 nei5 hou2 maa3",
+     "b": 0
+    },
+    {
+     "en": "I'm fine, thank you.",
+     "t": "我幾好，多謝。",
+     "tiles": [
+      "我",
+      "幾",
+      "好",
+      "多謝"
+     ],
+     "tr": [
+      "ngo5",
+      "gei2",
+      "hou2",
+      "do1 ze6"
+     ],
+     "r": "ngo5 gei2 hou2 do1 ze6",
+     "b": 3
+    },
+    {
+     "en": "Goodbye, see you later!",
+     "t": "再見，遲啲見！",
+     "tiles": [
+      "再見",
+      "遲啲",
+      "見"
+     ],
+     "tr": [
+      "zoi3 gin3",
+      "ci4 di1",
+      "gin3"
+     ],
+     "r": "zoi3 gin3 ci4 di1 gin3",
+     "b": 0
+    },
+    {
+     "en": "Thank you very much.",
+     "t": "多謝晒！",
+     "tiles": [
+      "多謝",
+      "晒"
+     ],
+     "tr": [
+      "do1 ze6",
+      "saai3"
+     ],
+     "r": "do1 ze6 saai3",
+     "b": 0
+    }
+   ],
+   "note": "唔該 (m4 goi1) = please / thanks for a service; 多謝 (do1 ze6) = thanks for a gift. 早唞 is a casual “good night”; 午安 is formal, most people just say 你好."
+  },
+  {
+   "id": "numbers",
+   "name": "Numbers",
+   "icon": "🔢",
+   "words": [
+    {
+     "en": "Zero",
+     "t": "零",
+     "r": "ling4"
+    },
+    {
+     "en": "One",
+     "t": "一",
+     "r": "jat1"
+    },
+    {
+     "en": "Two",
+     "t": "二",
+     "r": "ji6"
+    },
+    {
+     "en": "Three",
+     "t": "三",
+     "r": "saam1"
+    },
+    {
+     "en": "Four",
+     "t": "四",
+     "r": "sei3",
+     "tip": "四 (sei3) sounds like 死 (sei2, death), so 4 is unlucky."
+    },
+    {
+     "en": "Five",
+     "t": "五",
+     "r": "ng5"
+    },
+    {
+     "en": "Six",
+     "t": "六",
+     "r": "luk6"
+    },
+    {
+     "en": "Seven",
+     "t": "七",
+     "r": "cat1"
+    },
+    {
+     "en": "Eight",
+     "t": "八",
+     "r": "baat3",
+     "tip": "八 (baat3) rhymes with 發 (faat3, prosper): lucky! 🍀"
+    },
+    {
+     "en": "Nine",
+     "t": "九",
+     "r": "gau2"
+    },
+    {
+     "en": "Ten",
+     "t": "十",
+     "r": "sap6"
+    },
+    {
+     "en": "Eleven",
+     "t": "十一",
+     "r": "sap6 jat1"
+    },
+    {
+     "en": "Twenty",
+     "t": "二十",
+     "r": "ji6 sap6"
+    },
+    {
+     "en": "One hundred",
+     "t": "一百",
+     "r": "jat1 baak3"
+    },
+    {
+     "en": "One thousand",
+     "t": "一千",
+     "r": "jat1 cin1"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I am sixteen years old.",
+     "t": "我十六歲。",
+     "tiles": [
+      "我",
+      "十六",
+      "歲"
+     ],
+     "tr": [
+      "ngo5",
+      "sap6 luk6",
+      "seoi3"
+     ],
+     "r": "ngo5 sap6 luk6 seoi3",
+     "b": 1
+    },
+    {
+     "en": "One coffee, please.",
+     "t": "唔該一杯咖啡。",
+     "tiles": [
+      "唔該",
+      "一",
+      "杯",
+      "咖啡"
+     ],
+     "tr": [
+      "m4 goi1",
+      "jat1",
+      "bui1",
+      "gaa3 fe1"
+     ],
+     "r": "m4 goi1 jat1 bui1 gaa3 fe1",
+     "b": 1
+    },
+    {
+     "en": "I have two brothers.",
+     "t": "我有兩個兄弟。",
+     "tiles": [
+      "我",
+      "有",
+      "兩",
+      "個",
+      "兄弟"
+     ],
+     "tr": [
+      "ngo5",
+      "jau5",
+      "loeng5",
+      "go3",
+      "hing1 dai6"
+     ],
+     "r": "ngo5 jau5 loeng5 go3 hing1 dai6",
+     "b": 2
+    },
+    {
+     "en": "There are three apples.",
+     "t": "有三個蘋果。",
+     "tiles": [
+      "有",
+      "三",
+      "個",
+      "蘋果"
+     ],
+     "tr": [
+      "jau5",
+      "saam1",
+      "go3",
+      "ping4 gwo2"
+     ],
+     "r": "jau5 saam1 go3 ping4 gwo2",
+     "b": 1
+    }
+   ],
+   "note": "Jyutping numbers 1–6 are tones: 1 high, 2 rising, 3 mid, 4 low falling, 5 low rising, 6 low."
+  },
+  {
+   "id": "food",
+   "name": "Food & Drinks",
+   "icon": "🍜",
+   "words": [
+    {
+     "en": "Water",
+     "t": "水",
+     "r": "seoi2"
+    },
+    {
+     "en": "Bread",
+     "t": "麵包",
+     "r": "min6 baau1"
+    },
+    {
+     "en": "Rice",
+     "t": "飯",
+     "r": "faan6"
+    },
+    {
+     "en": "Apple",
+     "t": "蘋果",
+     "r": "ping4 gwo2"
+    },
+    {
+     "en": "Banana",
+     "t": "香蕉",
+     "r": "hoeng1 ziu1"
+    },
+    {
+     "en": "Egg",
+     "t": "雞蛋",
+     "r": "gai1 daan2"
+    },
+    {
+     "en": "Milk",
+     "t": "牛奶",
+     "r": "ngau4 naai5"
+    },
+    {
+     "en": "Coffee",
+     "t": "咖啡",
+     "r": "gaa3 fe1"
+    },
+    {
+     "en": "Tea",
+     "t": "茶",
+     "r": "caa4"
+    },
+    {
+     "en": "Meat",
+     "t": "肉",
+     "r": "juk6"
+    },
+    {
+     "en": "Chicken",
+     "t": "雞肉",
+     "r": "gai1 juk6"
+    },
+    {
+     "en": "Fish",
+     "t": "魚",
+     "r": "jyu2"
+    },
+    {
+     "en": "Vegetables",
+     "t": "蔬菜",
+     "r": "so1 coi3"
+    },
+    {
+     "en": "Cheese",
+     "t": "芝士",
+     "r": "zi1 si2",
+     "tip": "芝士 (zi1 si2) comes from the English word “cheese” 🧀."
+    },
+    {
+     "en": "Soup",
+     "t": "湯",
+     "r": "tong1"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I like coffee.",
+     "t": "我鍾意咖啡。",
+     "tiles": [
+      "我",
+      "鍾意",
+      "咖啡"
+     ],
+     "tr": [
+      "ngo5",
+      "zung1 ji3",
+      "gaa3 fe1"
+     ],
+     "r": "ngo5 zung1 ji3 gaa3 fe1",
+     "b": 2
+    },
+    {
+     "en": "I drink water.",
+     "t": "我飲水。",
+     "tiles": [
+      "我",
+      "飲",
+      "水"
+     ],
+     "tr": [
+      "ngo5",
+      "jam2",
+      "seoi2"
+     ],
+     "r": "ngo5 jam2 seoi2",
+     "b": 2
+    },
+    {
+     "en": "I eat rice.",
+     "t": "我食飯。",
+     "tiles": [
+      "我",
+      "食",
+      "飯"
+     ],
+     "tr": [
+      "ngo5",
+      "sik6",
+      "faan6"
+     ],
+     "r": "ngo5 sik6 faan6",
+     "b": 2
+    },
+    {
+     "en": "The soup is delicious.",
+     "t": "啲湯好好飲。",
+     "tiles": [
+      "啲",
+      "湯",
+      "好",
+      "好飲"
+     ],
+     "tr": [
+      "di1",
+      "tong1",
+      "hou2",
+      "hou2 jam2"
+     ],
+     "r": "di1 tong1 hou2 hou2 jam2",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "name": "Colors",
+   "icon": "🎨",
+   "words": [
+    {
+     "en": "Red",
+     "t": "紅色",
+     "r": "hung4 sik1"
+    },
+    {
+     "en": "Blue",
+     "t": "藍色",
+     "r": "laam4 sik1"
+    },
+    {
+     "en": "Green",
+     "t": "綠色",
+     "r": "luk6 sik1"
+    },
+    {
+     "en": "Yellow",
+     "t": "黃色",
+     "r": "wong4 sik1"
+    },
+    {
+     "en": "Orange",
+     "t": "橙色",
+     "r": "caang2 sik1"
+    },
+    {
+     "en": "Purple",
+     "t": "紫色",
+     "r": "zi2 sik1"
+    },
+    {
+     "en": "Pink",
+     "t": "粉紅色",
+     "r": "fan2 hung4 sik1"
+    },
+    {
+     "en": "Black",
+     "t": "黑色",
+     "r": "hak1 sik1"
+    },
+    {
+     "en": "White",
+     "t": "白色",
+     "r": "baak6 sik1"
+    },
+    {
+     "en": "Gray",
+     "t": "灰色",
+     "r": "fui1 sik1"
+    },
+    {
+     "en": "Brown",
+     "t": "啡色",
+     "r": "fe1 sik1",
+     "tip": "啡色 = coffee (咖啡) color ☕."
+    },
+    {
+     "en": "Gold",
+     "t": "金色",
+     "r": "gam1 sik1"
+    },
+    {
+     "en": "Silver",
+     "t": "銀色",
+     "r": "ngan4 sik1"
+    },
+    {
+     "en": "Color",
+     "t": "顏色",
+     "r": "ngaan4 sik1"
+    },
+    {
+     "en": "Rainbow",
+     "t": "彩虹",
+     "r": "coi2 hung4"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "The apple is red.",
+     "t": "個蘋果係紅色嘅。",
+     "tiles": [
+      "個",
+      "蘋果",
+      "係",
+      "紅色",
+      "嘅"
+     ],
+     "tr": [
+      "go3",
+      "ping4 gwo2",
+      "hai6",
+      "hung4 sik1",
+      "ge3"
+     ],
+     "r": "go3 ping4 gwo2 hai6 hung4 sik1 ge3",
+     "b": 3
+    },
+    {
+     "en": "I like blue.",
+     "t": "我鍾意藍色。",
+     "tiles": [
+      "我",
+      "鍾意",
+      "藍色"
+     ],
+     "tr": [
+      "ngo5",
+      "zung1 ji3",
+      "laam4 sik1"
+     ],
+     "r": "ngo5 zung1 ji3 laam4 sik1",
+     "b": 2
+    },
+    {
+     "en": "The banana is yellow.",
+     "t": "條香蕉係黃色嘅。",
+     "tiles": [
+      "條",
+      "香蕉",
+      "係",
+      "黃色",
+      "嘅"
+     ],
+     "tr": [
+      "tiu4",
+      "hoeng1 ziu1",
+      "hai6",
+      "wong4 sik1",
+      "ge3"
+     ],
+     "r": "tiu4 hoeng1 ziu1 hai6 wong4 sik1 ge3",
+     "b": 3
+    },
+    {
+     "en": "The milk is white.",
+     "t": "啲牛奶係白色嘅。",
+     "tiles": [
+      "啲",
+      "牛奶",
+      "係",
+      "白色",
+      "嘅"
+     ],
+     "tr": [
+      "di1",
+      "ngau4 naai5",
+      "hai6",
+      "baak6 sik1",
+      "ge3"
+     ],
+     "r": "di1 ngau4 naai5 hai6 baak6 sik1 ge3",
+     "b": 3
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family & Friends",
+   "icon": "👨‍👩‍👧",
+   "words": [
+    {
+     "en": "Family",
+     "t": "屋企人",
+     "r": "uk1 kei2 jan4"
+    },
+    {
+     "en": "Mother",
+     "t": "媽媽",
+     "r": "maa4 maa1"
+    },
+    {
+     "en": "Father",
+     "t": "爸爸",
+     "r": "baa4 baa1"
+    },
+    {
+     "en": "Parents",
+     "t": "父母",
+     "r": "fu6 mou5"
+    },
+    {
+     "en": "Older brother",
+     "t": "哥哥",
+     "r": "go4 go1"
+    },
+    {
+     "en": "Younger brother",
+     "t": "細佬",
+     "r": "sai3 lou2",
+     "tip": "細佬 literally means “little guy”."
+    },
+    {
+     "en": "Older sister",
+     "t": "家姐",
+     "r": "gaa1 ze1"
+    },
+    {
+     "en": "Younger sister",
+     "t": "妹妹",
+     "r": "mui6 mui2"
+    },
+    {
+     "en": "Grandmother",
+     "t": "嫲嫲",
+     "r": "maa4 maa4"
+    },
+    {
+     "en": "Grandfather",
+     "t": "爺爺",
+     "r": "je4 je2"
+    },
+    {
+     "en": "Son",
+     "t": "仔",
+     "r": "zai2"
+    },
+    {
+     "en": "Daughter",
+     "t": "女",
+     "r": "neoi2"
+    },
+    {
+     "en": "Husband",
+     "t": "老公",
+     "r": "lou5 gung1"
+    },
+    {
+     "en": "Wife",
+     "t": "老婆",
+     "r": "lou5 po4"
+    },
+    {
+     "en": "Baby",
+     "t": "嬰兒",
+     "r": "jing1 ji4"
+    },
+    {
+     "en": "Friend",
+     "t": "朋友",
+     "r": "pang4 jau5"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my mother.",
+     "t": "呢個係我媽媽。",
+     "tiles": [
+      "呢個",
+      "係",
+      "我",
+      "媽媽"
+     ],
+     "tr": [
+      "ni1 go3",
+      "hai6",
+      "ngo5",
+      "maa4 maa1"
+     ],
+     "r": "ni1 go3 hai6 ngo5 maa4 maa1",
+     "b": 3
+    },
+    {
+     "en": "I love my family.",
+     "t": "我愛我屋企人。",
+     "tiles": [
+      "我",
+      "愛",
+      "我",
+      "屋企人"
+     ],
+     "tr": [
+      "ngo5",
+      "oi3",
+      "ngo5",
+      "uk1 kei2 jan4"
+     ],
+     "r": "ngo5 oi3 ngo5 uk1 kei2 jan4",
+     "b": 3
+    },
+    {
+     "en": "This is my friend.",
+     "t": "呢個係我朋友。",
+     "tiles": [
+      "呢個",
+      "係",
+      "我",
+      "朋友"
+     ],
+     "tr": [
+      "ni1 go3",
+      "hai6",
+      "ngo5",
+      "pang4 jau5"
+     ],
+     "r": "ni1 go3 hai6 ngo5 pang4 jau5",
+     "b": 3
+    },
+    {
+     "en": "I have a younger sister.",
+     "t": "我有個妹妹。",
+     "tiles": [
+      "我",
+      "有",
+      "個",
+      "妹妹"
+     ],
+     "tr": [
+      "ngo5",
+      "jau5",
+      "go3",
+      "mui6 mui2"
+     ],
+     "r": "ngo5 jau5 go3 mui6 mui2",
+     "b": 3
+    }
+   ],
+   "note": "嫲嫲/爺爺 are your dad's parents; mom's parents are 婆婆/公公 (po4 po2 / gung4 gung1)."
+  },
+  {
+   "id": "phrases",
+   "name": "Common Phrases",
+   "icon": "💬",
+   "words": [
+    {
+     "en": "Yes",
+     "t": "係",
+     "r": "hai6",
+     "tip": "係 (hai6) = “is / yes”. Add 唔 (m4) for “not”: 唔係 = no."
+    },
+    {
+     "en": "No",
+     "t": "唔係",
+     "r": "m4 hai6"
+    },
+    {
+     "en": "What's your name?",
+     "t": "你叫咩名呀？",
+     "r": "nei5 giu3 me1 meng2 aa3?"
+    },
+    {
+     "en": "My name is …",
+     "t": "我叫…",
+     "r": "ngo5 giu3 …"
+    },
+    {
+     "en": "I don't understand",
+     "t": "我唔明",
+     "r": "ngo5 m4 ming4"
+    },
+    {
+     "en": "Please speak slowly",
+     "t": "唔該講慢啲",
+     "r": "m4 goi1 gong2 maan6 di1"
+    },
+    {
+     "en": "Do you speak English?",
+     "t": "你識唔識講英文？",
+     "r": "nei5 sik1 m4 sik1 gong2 jing1 man2?"
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "洗手間喺邊度？",
+     "r": "sai2 sau2 gaan1 hai2 bin1 dou6?"
+    },
+    {
+     "en": "How much is this?",
+     "t": "呢個幾多錢？",
+     "r": "ni1 go3 gei2 do1 cin2?"
+    },
+    {
+     "en": "I'm hungry",
+     "t": "我肚餓",
+     "r": "ngo5 tou5 ngo6"
+    },
+    {
+     "en": "It's delicious!",
+     "t": "好好食！",
+     "r": "hou2 hou2 sik6!"
+    },
+    {
+     "en": "I don't know",
+     "t": "我唔知",
+     "r": "ngo5 m4 zi1"
+    },
+    {
+     "en": "Let's go!",
+     "t": "走啦！",
+     "r": "zau2 laa1!"
+    },
+    {
+     "en": "Good luck!",
+     "t": "祝你好運！",
+     "r": "zuk1 nei5 hou2 wan6!"
+    },
+    {
+     "en": "Cheers!",
+     "t": "飲杯！",
+     "r": "jam2 bui1!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "My name is Lily.",
+     "t": "我叫Lily。",
+     "tiles": [
+      "我",
+      "叫",
+      "Lily"
+     ],
+     "tr": [
+      "ngo5",
+      "giu3",
+      "Lily"
+     ],
+     "r": "ngo5 giu3 Lily",
+     "b": 1
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "洗手間喺邊度？",
+     "tiles": [
+      "洗手間",
+      "喺",
+      "邊度"
+     ],
+     "tr": [
+      "sai2 sau2 gaan1",
+      "hai2",
+      "bin1 dou6"
+     ],
+     "r": "sai2 sau2 gaan1 hai2 bin1 dou6",
+     "b": 2
+    },
+    {
+     "en": "How much is this?",
+     "t": "呢個幾多錢？",
+     "tiles": [
+      "呢個",
+      "幾多",
+      "錢"
+     ],
+     "tr": [
+      "ni1 go3",
+      "gei2 do1",
+      "cin2"
+     ],
+     "r": "ni1 go3 gei2 do1 cin2",
+     "b": 1
+    },
+    {
+     "en": "Sorry, I don't understand.",
+     "t": "對唔住，我唔明。",
+     "tiles": [
+      "對唔住",
+      "我",
+      "唔",
+      "明"
+     ],
+     "tr": [
+      "deoi3 m4 zyu6",
+      "ngo5",
+      "m4",
+      "ming4"
+     ],
+     "r": "deoi3 m4 zyu6 ngo5 m4 ming4",
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

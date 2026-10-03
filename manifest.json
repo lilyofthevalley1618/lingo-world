@@ -1,12 +1,12 @@
 {
   "name": "Lingo World",
   "short_name": "Lingo World",
-  "description": "Learn Spanish, French, Chinese, Japanese and Korean.",
+  "description": "Speaking-first app for Spanish, French, Mandarin, Cantonese, Japanese and Korean.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f3ff",
-  "theme_color": "#6c4cff",
+  "background_color": "#f7f5ff",
+  "theme_color": "#a7b2ff",
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },

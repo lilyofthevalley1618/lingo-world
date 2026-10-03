@@ -4,7 +4,6 @@
  "native": "Español",
  "flag": "🇪🇸",
  "speech": "es-ES",
- "color": "#ff6b4a",
  "romanLabel": null,
  "topics": [
   {
@@ -30,7 +29,8 @@
     },
     {
      "en": "Good night",
-     "t": "Buenas noches"
+     "t": "Buenas noches",
+     "tip": "Buenas noches works for both “good evening” and “good night”."
     },
     {
      "en": "Goodbye",
@@ -50,7 +50,8 @@
     },
     {
      "en": "Thank you",
-     "t": "Gracias"
+     "t": "Gracias",
+     "tip": "Gracias ≈ “grace-ias”: saying thanks is graceful."
     },
     {
      "en": "You're welcome",
@@ -58,7 +59,8 @@
     },
     {
      "en": "Please",
-     "t": "Por favor"
+     "t": "Por favor",
+     "tip": "Por favor = literally “for a favor”."
     },
     {
      "en": "Excuse me",
@@ -70,10 +72,52 @@
     },
     {
      "en": "Nice to meet you",
-     "t": "Mucho gusto"
+     "t": "Mucho gusto",
+     "tip": "Mucho gusto = “much pleasure”."
     }
    ],
-   "note": "Buenas noches means both “good evening” and “good night”."
+   "note": "Buenas noches means both “good evening” and “good night”.",
+   "sentences": [
+    {
+     "en": "Hello, how are you?",
+     "t": "Hola, ¿cómo estás?",
+     "tiles": [
+      "Hola",
+      "cómo",
+      "estás"
+     ],
+     "b": 1
+    },
+    {
+     "en": "I'm fine, thank you.",
+     "t": "Estoy bien, gracias.",
+     "tiles": [
+      "Estoy",
+      "bien",
+      "gracias"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Goodbye, see you later!",
+     "t": "Adiós, ¡hasta luego!",
+     "tiles": [
+      "Adiós",
+      "hasta",
+      "luego"
+     ],
+     "b": 0
+    },
+    {
+     "en": "Thank you very much.",
+     "t": "Muchas gracias.",
+     "tiles": [
+      "Muchas",
+      "gracias"
+     ],
+     "b": 1
+    }
+   ]
   },
   {
    "id": "numbers",
@@ -130,7 +174,8 @@
     },
     {
      "en": "Twenty",
-     "t": "veinte"
+     "t": "veinte",
+     "tip": "veinte ≈ “vain-tay”: twenty vain tays."
     },
     {
      "en": "One hundred",
@@ -139,6 +184,49 @@
     {
      "en": "One thousand",
      "t": "mil"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I am sixteen years old.",
+     "t": "Tengo dieciséis años.",
+     "tiles": [
+      "Tengo",
+      "dieciséis",
+      "años"
+     ],
+     "b": 1
+    },
+    {
+     "en": "One coffee, please.",
+     "t": "Un café, por favor.",
+     "tiles": [
+      "Un",
+      "café",
+      "por",
+      "favor"
+     ],
+     "b": 0
+    },
+    {
+     "en": "I have two brothers.",
+     "t": "Tengo dos hermanos.",
+     "tiles": [
+      "Tengo",
+      "dos",
+      "hermanos"
+     ],
+     "b": 1
+    },
+    {
+     "en": "There are three apples.",
+     "t": "Hay tres manzanas.",
+     "tiles": [
+      "Hay",
+      "tres",
+      "manzanas"
+     ],
+     "b": 1
     }
    ]
   },
@@ -149,7 +237,8 @@
    "words": [
     {
      "en": "Water",
-     "t": "el agua"
+     "t": "el agua",
+     "tip": "agua is feminine, but uses “el” because it starts with a stressed “a”."
     },
     {
      "en": "Bread",
@@ -207,6 +296,48 @@
      "en": "Soup",
      "t": "la sopa"
     }
+   ],
+   "sentences": [
+    {
+     "en": "I like coffee.",
+     "t": "Me gusta el café.",
+     "tiles": [
+      "Me",
+      "gusta",
+      "el",
+      "café"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I drink water.",
+     "t": "Bebo agua.",
+     "tiles": [
+      "Bebo",
+      "agua"
+     ],
+     "b": 1
+    },
+    {
+     "en": "I eat rice.",
+     "t": "Como arroz.",
+     "tiles": [
+      "Como",
+      "arroz"
+     ],
+     "b": 1
+    },
+    {
+     "en": "The soup is delicious.",
+     "t": "La sopa está deliciosa.",
+     "tiles": [
+      "La",
+      "sopa",
+      "está",
+      "deliciosa"
+     ],
+     "b": 1
+    }
    ]
   },
   {
@@ -236,7 +367,8 @@
     },
     {
      "en": "Purple",
-     "t": "morado"
+     "t": "morado",
+     "tip": "morado → mora = blackberry, a purple fruit 🫐."
     },
     {
      "en": "Pink",
@@ -273,6 +405,52 @@
     {
      "en": "Rainbow",
      "t": "el arcoíris"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "The apple is red.",
+     "t": "La manzana es roja.",
+     "tiles": [
+      "La",
+      "manzana",
+      "es",
+      "roja"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I like blue.",
+     "t": "Me gusta el azul.",
+     "tiles": [
+      "Me",
+      "gusta",
+      "el",
+      "azul"
+     ],
+     "b": 3
+    },
+    {
+     "en": "The banana is yellow.",
+     "t": "El plátano es amarillo.",
+     "tiles": [
+      "El",
+      "plátano",
+      "es",
+      "amarillo"
+     ],
+     "b": 3
+    },
+    {
+     "en": "The milk is white.",
+     "t": "La leche es blanca.",
+     "tiles": [
+      "La",
+      "leche",
+      "es",
+      "blanca"
+     ],
+     "b": 3
     }
    ]
   },
@@ -345,6 +523,52 @@
      "en": "Friend",
      "t": "el amigo / la amiga"
     }
+   ],
+   "sentences": [
+    {
+     "en": "This is my mother.",
+     "t": "Esta es mi madre.",
+     "tiles": [
+      "Esta",
+      "es",
+      "mi",
+      "madre"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I love my family.",
+     "t": "Quiero a mi familia.",
+     "tiles": [
+      "Quiero",
+      "a",
+      "mi",
+      "familia"
+     ],
+     "b": 3
+    },
+    {
+     "en": "This is my friend.",
+     "t": "Este es mi amigo.",
+     "tiles": [
+      "Este",
+      "es",
+      "mi",
+      "amigo"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I have a younger sister.",
+     "t": "Tengo una hermana menor.",
+     "tiles": [
+      "Tengo",
+      "una",
+      "hermana",
+      "menor"
+     ],
+     "b": 2
+    }
    ]
   },
   {
@@ -390,7 +614,8 @@
     },
     {
      "en": "I'm hungry",
-     "t": "Tengo hambre"
+     "t": "Tengo hambre",
+     "tip": "Spanish says “I have hunger”: Tengo hambre. The h is silent!"
     },
     {
      "en": "It's delicious!",
@@ -411,6 +636,50 @@
     {
      "en": "Cheers!",
      "t": "¡Salud!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "My name is Lily.",
+     "t": "Me llamo Lily.",
+     "tiles": [
+      "Me",
+      "llamo",
+      "Lily"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "¿Dónde está el baño?",
+     "tiles": [
+      "Dónde",
+      "está",
+      "el",
+      "baño"
+     ],
+     "b": 3
+    },
+    {
+     "en": "How much is this?",
+     "t": "¿Cuánto cuesta esto?",
+     "tiles": [
+      "Cuánto",
+      "cuesta",
+      "esto"
+     ],
+     "b": 0
+    },
+    {
+     "en": "Sorry, I don't understand.",
+     "t": "Lo siento, no entiendo.",
+     "tiles": [
+      "Lo",
+      "siento",
+      "no",
+      "entiendo"
+     ],
+     "b": 3
     }
    ]
   }

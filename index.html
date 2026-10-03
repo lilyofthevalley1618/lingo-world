@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lingo World</title>
-<meta name="description" content="Learn Spanish, French, Chinese, Japanese and Korean with flashcards, quizzes and pronunciation.">
-<meta name="theme-color" content="#6c4cff">
+<meta name="description" content="Speaking-first app to learn Spanish, French, Mandarin, Cantonese, Japanese and Korean, with cute characters.">
+<meta name="theme-color" content="#a7b2ff">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -16,11 +16,14 @@
   <a href="#/" class="brand"><span class="globe">🌍</span> <span class="bt">Lingo World</span></a>
   <div class="stats">
     <span class="pill" title="Day streak">🔥 <b id="streak">0</b></span>
-    <span class="pill" title="Total XP">⭐ <b id="xp">0</b></span>
+    <span class="pill hide-sm" title="XP">⭐ <b id="xp">0</b></span>
+    <a class="pill" href="#/shop" title="Blingos: tap for the shop"><span class="coin">B</span> <b id="bl">0</b></a>
   </div>
 </header>
 <main id="app" aria-live="polite"></main>
-<footer class="foot">Made with 💜 by Lily · tap 🔊 to hear words</footer>
+<div id="toast" class="toast" role="status"></div>
+<footer class="foot">Made with 💜 by Lily · tap 🔊 to hear, 🎤 to speak</footer>
+<script src="characters.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

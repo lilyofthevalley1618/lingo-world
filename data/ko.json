@@ -4,7 +4,6 @@
  "native": "한국어",
  "flag": "🇰🇷",
  "speech": "ko-KR",
- "color": "#7b5cff",
  "romanLabel": "romanization",
  "topics": [
   {
@@ -15,7 +14,8 @@
     {
      "en": "Hello",
      "t": "안녕하세요",
-     "r": "annyeonghaseyo"
+     "r": "annyeonghaseyo",
+     "tip": "안녕하세요 = “Are you at peace?” (안녕 = peace)."
     },
     {
      "en": "Good morning",
@@ -60,7 +60,8 @@
     {
      "en": "Thank you",
      "t": "감사합니다",
-     "r": "gamsahamnida"
+     "r": "gamsahamnida",
+     "tip": "감사합니다 ≈ “come-sah-ham-nee-da”."
     },
     {
      "en": "You're welcome",
@@ -87,6 +88,72 @@
      "t": "만나서 반가워요",
      "r": "mannaseo bangawoyo"
     }
+   ],
+   "sentences": [
+    {
+     "en": "Hello, how are you?",
+     "t": "안녕하세요, 잘 지내요?",
+     "tiles": [
+      "안녕하세요",
+      "잘",
+      "지내요"
+     ],
+     "tr": [
+      "annyeonghaseyo",
+      "jal",
+      "jinaeyo"
+     ],
+     "r": "annyeonghaseyo jal jinaeyo",
+     "b": 0
+    },
+    {
+     "en": "I'm fine, thank you.",
+     "t": "잘 지내요, 감사합니다.",
+     "tiles": [
+      "잘",
+      "지내요",
+      "감사합니다"
+     ],
+     "tr": [
+      "jal",
+      "jinaeyo",
+      "gamsahamnida"
+     ],
+     "r": "jal jinaeyo gamsahamnida",
+     "b": 2
+    },
+    {
+     "en": "Goodbye, see you later!",
+     "t": "안녕히 가세요, 나중에 봐요!",
+     "tiles": [
+      "안녕히",
+      "가세요",
+      "나중에",
+      "봐요"
+     ],
+     "tr": [
+      "annyeonghi",
+      "gaseyo",
+      "najunge",
+      "bwayo"
+     ],
+     "r": "annyeonghi gaseyo najunge bwayo",
+     "b": 2
+    },
+    {
+     "en": "Thank you very much.",
+     "t": "정말 감사합니다.",
+     "tiles": [
+      "정말",
+      "감사합니다"
+     ],
+     "tr": [
+      "jeongmal",
+      "gamsahamnida"
+     ],
+     "r": "jeongmal gamsahamnida",
+     "b": 1
+    }
    ]
   },
   {
@@ -102,7 +169,8 @@
     {
      "en": "One",
      "t": "일 / 하나",
-     "r": "il / hana"
+     "r": "il / hana",
+     "tip": "Two number systems: 일 for dates & money, 하나 for counting things & age."
     },
     {
      "en": "Two",
@@ -170,7 +238,79 @@
      "r": "cheon"
     }
    ],
-   "note": "Left: Sino-Korean numbers (dates, money). Right: native Korean numbers (counting things, age)."
+   "note": "Left: Sino-Korean numbers (dates, money). Right: native Korean numbers (counting things, age).",
+   "sentences": [
+    {
+     "en": "I am sixteen years old.",
+     "t": "저는 열여섯 살이에요.",
+     "tiles": [
+      "저는",
+      "열여섯",
+      "살이에요"
+     ],
+     "tr": [
+      "jeoneun",
+      "yeollyeoseot",
+      "sarieyo"
+     ],
+     "r": "jeoneun yeollyeoseot sarieyo",
+     "b": 1
+    },
+    {
+     "en": "One coffee, please.",
+     "t": "커피 한 잔 주세요.",
+     "tiles": [
+      "커피",
+      "한",
+      "잔",
+      "주세요"
+     ],
+     "tr": [
+      "keopi",
+      "han",
+      "jan",
+      "juseyo"
+     ],
+     "r": "keopi han jan juseyo",
+     "b": 1
+    },
+    {
+     "en": "I have two brothers.",
+     "t": "형제가 두 명 있어요.",
+     "tiles": [
+      "형제가",
+      "두",
+      "명",
+      "있어요"
+     ],
+     "tr": [
+      "hyeongjega",
+      "du",
+      "myeong",
+      "isseoyo"
+     ],
+     "r": "hyeongjega du myeong isseoyo",
+     "b": 1
+    },
+    {
+     "en": "There are three apples.",
+     "t": "사과가 세 개 있어요.",
+     "tiles": [
+      "사과가",
+      "세",
+      "개",
+      "있어요"
+     ],
+     "tr": [
+      "sagwaga",
+      "se",
+      "gae",
+      "isseoyo"
+     ],
+     "r": "sagwaga se gae isseoyo",
+     "b": 1
+    }
+   ]
   },
   {
    "id": "food",
@@ -180,7 +320,8 @@
     {
      "en": "Water",
      "t": "물",
-     "r": "mul"
+     "r": "mul",
+     "tip": "물 (mul) ≈ “mool”, like a pool of water."
     },
     {
      "en": "Bread",
@@ -190,7 +331,8 @@
     {
      "en": "Rice",
      "t": "밥",
-     "r": "bap"
+     "r": "bap",
+     "tip": "밥 means cooked rice AND “a meal”: 밥 먹었어요? = “Did you eat?” (a common greeting)."
     },
     {
      "en": "Apple",
@@ -251,6 +393,70 @@
      "en": "Soup",
      "t": "국 / 수프",
      "r": "guk / supeu"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I like coffee.",
+     "t": "저는 커피를 좋아해요.",
+     "tiles": [
+      "저는",
+      "커피를",
+      "좋아해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "keopireul",
+      "joahaeyo"
+     ],
+     "r": "jeoneun keopireul joahaeyo",
+     "b": 1
+    },
+    {
+     "en": "I drink water.",
+     "t": "저는 물을 마셔요.",
+     "tiles": [
+      "저는",
+      "물을",
+      "마셔요"
+     ],
+     "tr": [
+      "jeoneun",
+      "mureul",
+      "masyeoyo"
+     ],
+     "r": "jeoneun mureul masyeoyo",
+     "b": 1
+    },
+    {
+     "en": "I eat rice.",
+     "t": "저는 밥을 먹어요.",
+     "tiles": [
+      "저는",
+      "밥을",
+      "먹어요"
+     ],
+     "tr": [
+      "jeoneun",
+      "babeul",
+      "meogeoyo"
+     ],
+     "r": "jeoneun babeul meogeoyo",
+     "b": 1
+    },
+    {
+     "en": "The soup is delicious.",
+     "t": "수프가 맛있어요.",
+     "tiles": [
+      "수프가",
+      "맛있어요"
+     ],
+     "tr": [
+      "supeuga",
+      "masisseoyo"
+     ],
+     "r": "supeuga masisseoyo",
+     "b": 1
     }
    ]
   },
@@ -334,6 +540,66 @@
      "t": "무지개",
      "r": "mujigae"
     }
+   ],
+   "sentences": [
+    {
+     "en": "The apple is red.",
+     "t": "사과는 빨간색이에요.",
+     "tiles": [
+      "사과는",
+      "빨간색이에요"
+     ],
+     "tr": [
+      "sagwaneun",
+      "ppalgansaegieyo"
+     ],
+     "r": "sagwaneun ppalgansaegieyo",
+     "b": 1
+    },
+    {
+     "en": "I like blue.",
+     "t": "저는 파란색을 좋아해요.",
+     "tiles": [
+      "저는",
+      "파란색을",
+      "좋아해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "paransaegeul",
+      "joahaeyo"
+     ],
+     "r": "jeoneun paransaegeul joahaeyo",
+     "b": 1
+    },
+    {
+     "en": "The banana is yellow.",
+     "t": "바나나는 노란색이에요.",
+     "tiles": [
+      "바나나는",
+      "노란색이에요"
+     ],
+     "tr": [
+      "bananeun",
+      "noransaegieyo"
+     ],
+     "r": "bananeun noransaegieyo",
+     "b": 1
+    },
+    {
+     "en": "The milk is white.",
+     "t": "우유는 흰색이에요.",
+     "tiles": [
+      "우유는",
+      "흰색이에요"
+     ],
+     "tr": [
+      "uyuneun",
+      "huinsaegieyo"
+     ],
+     "r": "uyuneun huinsaegieyo",
+     "b": 1
+    }
    ]
   },
   {
@@ -364,7 +630,8 @@
     {
      "en": "Older brother",
      "t": "오빠 / 형",
-     "r": "oppa (girl says) / hyeong (boy says)"
+     "r": "oppa (girl says) / hyeong (boy says)",
+     "tip": "Girls say 오빠, boys say 형."
     },
     {
      "en": "Younger brother",
@@ -374,7 +641,8 @@
     {
      "en": "Older sister",
      "t": "언니 / 누나",
-     "r": "eonni (girl says) / nuna (boy says)"
+     "r": "eonni (girl says) / nuna (boy says)",
+     "tip": "Girls say 언니, boys say 누나."
     },
     {
      "en": "Younger sister",
@@ -421,6 +689,74 @@
      "t": "친구",
      "r": "chingu"
     }
+   ],
+   "sentences": [
+    {
+     "en": "This is my mother.",
+     "t": "이분은 제 어머니예요.",
+     "tiles": [
+      "이분은",
+      "제",
+      "어머니예요"
+     ],
+     "tr": [
+      "ibuneun",
+      "je",
+      "eomeoniyeyo"
+     ],
+     "r": "ibuneun je eomeoniyeyo",
+     "b": 2
+    },
+    {
+     "en": "I love my family.",
+     "t": "저는 가족을 사랑해요.",
+     "tiles": [
+      "저는",
+      "가족을",
+      "사랑해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "gajogeul",
+      "saranghaeyo"
+     ],
+     "r": "jeoneun gajogeul saranghaeyo",
+     "b": 1
+    },
+    {
+     "en": "This is my friend.",
+     "t": "이 사람은 제 친구예요.",
+     "tiles": [
+      "이",
+      "사람은",
+      "제",
+      "친구예요"
+     ],
+     "tr": [
+      "i",
+      "sarameun",
+      "je",
+      "chinguyeyo"
+     ],
+     "r": "i sarameun je chinguyeyo",
+     "b": 3
+    },
+    {
+     "en": "I have a younger sister.",
+     "t": "저는 여동생이 있어요.",
+     "tiles": [
+      "저는",
+      "여동생이",
+      "있어요"
+     ],
+     "tr": [
+      "jeoneun",
+      "yeodongsaengi",
+      "isseoyo"
+     ],
+     "r": "jeoneun yeodongsaengi isseoyo",
+     "b": 1
+    }
    ]
   },
   {
@@ -431,7 +767,8 @@
     {
      "en": "Yes",
      "t": "네",
-     "r": "ne"
+     "r": "ne",
+     "tip": "네 (ne) means YES, even though it sounds like “nay”!"
     },
     {
      "en": "No",
@@ -502,6 +839,70 @@
      "en": "Cheers!",
      "t": "건배!",
      "r": "geonbae!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "My name is Lily.",
+     "t": "제 이름은 릴리예요.",
+     "tiles": [
+      "제",
+      "이름은",
+      "릴리예요"
+     ],
+     "tr": [
+      "je",
+      "ireumeun",
+      "rilliyeyo"
+     ],
+     "r": "je ireumeun rilliyeyo",
+     "b": 1
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "화장실이 어디예요?",
+     "tiles": [
+      "화장실이",
+      "어디예요"
+     ],
+     "tr": [
+      "hwajangsiri",
+      "eodiyeyo"
+     ],
+     "r": "hwajangsiri eodiyeyo",
+     "b": 0
+    },
+    {
+     "en": "How much is this?",
+     "t": "이거 얼마예요?",
+     "tiles": [
+      "이거",
+      "얼마예요"
+     ],
+     "tr": [
+      "igeo",
+      "eolmayeyo"
+     ],
+     "r": "igeo eolmayeyo",
+     "b": 1
+    },
+    {
+     "en": "Sorry, I don't understand.",
+     "t": "죄송해요, 이해가 안 돼요.",
+     "tiles": [
+      "죄송해요",
+      "이해가",
+      "안",
+      "돼요"
+     ],
+     "tr": [
+      "joesonghaeyo",
+      "ihaega",
+      "an",
+      "dwaeyo"
+     ],
+     "r": "joesonghaeyo ihaega an dwaeyo",
+     "b": 0
     }
    ]
   }

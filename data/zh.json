@@ -4,7 +4,6 @@
  "native": "中文 (普通话)",
  "flag": "🇨🇳",
  "speech": "zh-CN",
- "color": "#e63946",
  "romanLabel": "pinyin",
  "topics": [
   {
@@ -15,7 +14,8 @@
     {
      "en": "Hello",
      "t": "你好",
-     "r": "nǐ hǎo"
+     "r": "nǐ hǎo",
+     "tip": "你好 = “you good”. Two 3rd tones in a row: the first becomes 2nd tone, so it sounds like ní hǎo."
     },
     {
      "en": "Good morning",
@@ -55,12 +55,14 @@
     {
      "en": "I'm fine",
      "t": "我很好",
-     "r": "wǒ hěn hǎo"
+     "r": "wǒ hěn hǎo",
+     "tip": "好 = 女 (woman) + 子 (child) → “good”."
     },
     {
      "en": "Thank you",
      "t": "谢谢",
-     "r": "xièxie"
+     "r": "xièxie",
+     "tip": "谢谢: the second 谢 is light and short: “shyeh-shyeh”."
     },
     {
      "en": "You're welcome",
@@ -86,6 +88,74 @@
      "en": "Nice to meet you",
      "t": "很高兴认识你",
      "r": "hěn gāoxìng rènshi nǐ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Hello, how are you?",
+     "t": "你好！你好吗？",
+     "tiles": [
+      "你好",
+      "你",
+      "好",
+      "吗"
+     ],
+     "tr": [
+      "nǐ hǎo",
+      "nǐ",
+      "hǎo",
+      "ma"
+     ],
+     "r": "nǐ hǎo nǐ hǎo ma",
+     "b": 0
+    },
+    {
+     "en": "I'm fine, thank you.",
+     "t": "我很好，谢谢。",
+     "tiles": [
+      "我",
+      "很",
+      "好",
+      "谢谢"
+     ],
+     "tr": [
+      "wǒ",
+      "hěn",
+      "hǎo",
+      "xièxie"
+     ],
+     "r": "wǒ hěn hǎo xièxie",
+     "b": 3
+    },
+    {
+     "en": "Goodbye, see you later!",
+     "t": "再见，回头见！",
+     "tiles": [
+      "再见",
+      "回头",
+      "见"
+     ],
+     "tr": [
+      "zàijiàn",
+      "huítóu",
+      "jiàn"
+     ],
+     "r": "zàijiàn huítóu jiàn",
+     "b": 0
+    },
+    {
+     "en": "Thank you very much.",
+     "t": "非常感谢！",
+     "tiles": [
+      "非常",
+      "感谢"
+     ],
+     "tr": [
+      "fēicháng",
+      "gǎnxiè"
+     ],
+     "r": "fēicháng gǎnxiè",
+     "b": 1
     }
    ]
   },
@@ -117,7 +187,8 @@
     {
      "en": "Four",
      "t": "四",
-     "r": "sì"
+     "r": "sì",
+     "tip": "四 (sì) sounds like 死 (sǐ, death), so 4 is an unlucky number."
     },
     {
      "en": "Five",
@@ -137,7 +208,8 @@
     {
      "en": "Eight",
      "t": "八",
-     "r": "bā"
+     "r": "bā",
+     "tip": "八 (bā) sounds like 发 (fā, get rich): a lucky number! 🍀"
     },
     {
      "en": "Nine",
@@ -169,6 +241,84 @@
      "t": "一千",
      "r": "yìqiān"
     }
+   ],
+   "sentences": [
+    {
+     "en": "I am sixteen years old.",
+     "t": "我十六岁。",
+     "tiles": [
+      "我",
+      "十六",
+      "岁"
+     ],
+     "tr": [
+      "wǒ",
+      "shíliù",
+      "suì"
+     ],
+     "r": "wǒ shíliù suì",
+     "b": 1
+    },
+    {
+     "en": "One coffee, please.",
+     "t": "请给我一杯咖啡。",
+     "tiles": [
+      "请",
+      "给",
+      "我",
+      "一",
+      "杯",
+      "咖啡"
+     ],
+     "tr": [
+      "qǐng",
+      "gěi",
+      "wǒ",
+      "yì",
+      "bēi",
+      "kāfēi"
+     ],
+     "r": "qǐng gěi wǒ yì bēi kāfēi",
+     "b": 3
+    },
+    {
+     "en": "I have two brothers.",
+     "t": "我有两个兄弟。",
+     "tiles": [
+      "我",
+      "有",
+      "两",
+      "个",
+      "兄弟"
+     ],
+     "tr": [
+      "wǒ",
+      "yǒu",
+      "liǎng",
+      "ge",
+      "xiōngdì"
+     ],
+     "r": "wǒ yǒu liǎng ge xiōngdì",
+     "b": 2
+    },
+    {
+     "en": "There are three apples.",
+     "t": "有三个苹果。",
+     "tiles": [
+      "有",
+      "三",
+      "个",
+      "苹果"
+     ],
+     "tr": [
+      "yǒu",
+      "sān",
+      "ge",
+      "píngguǒ"
+     ],
+     "r": "yǒu sān ge píngguǒ",
+     "b": 1
+    }
    ]
   },
   {
@@ -179,7 +329,8 @@
     {
      "en": "Water",
      "t": "水",
-     "r": "shuǐ"
+     "r": "shuǐ",
+     "tip": "水 looks like a stream with splashes on both sides 💧."
     },
     {
      "en": "Bread",
@@ -251,6 +402,72 @@
      "t": "汤",
      "r": "tāng"
     }
+   ],
+   "sentences": [
+    {
+     "en": "I like coffee.",
+     "t": "我喜欢咖啡。",
+     "tiles": [
+      "我",
+      "喜欢",
+      "咖啡"
+     ],
+     "tr": [
+      "wǒ",
+      "xǐhuan",
+      "kāfēi"
+     ],
+     "r": "wǒ xǐhuan kāfēi",
+     "b": 2
+    },
+    {
+     "en": "I drink water.",
+     "t": "我喝水。",
+     "tiles": [
+      "我",
+      "喝",
+      "水"
+     ],
+     "tr": [
+      "wǒ",
+      "hē",
+      "shuǐ"
+     ],
+     "r": "wǒ hē shuǐ",
+     "b": 2
+    },
+    {
+     "en": "I eat rice.",
+     "t": "我吃米饭。",
+     "tiles": [
+      "我",
+      "吃",
+      "米饭"
+     ],
+     "tr": [
+      "wǒ",
+      "chī",
+      "mǐfàn"
+     ],
+     "r": "wǒ chī mǐfàn",
+     "b": 2
+    },
+    {
+     "en": "The soup is delicious.",
+     "t": "汤很好喝。",
+     "tiles": [
+      "汤",
+      "很",
+      "好喝"
+     ],
+     "tr": [
+      "tāng",
+      "hěn",
+      "hǎohē"
+     ],
+     "r": "tāng hěn hǎohē",
+     "b": 0
+    }
    ]
   },
   {
@@ -261,7 +478,8 @@
     {
      "en": "Red",
      "t": "红色",
-     "r": "hóngsè"
+     "r": "hóngsè",
+     "tip": "红 is the color of luck: red envelopes 🧧!"
     },
     {
      "en": "Blue",
@@ -333,6 +551,78 @@
      "t": "彩虹",
      "r": "cǎihóng"
     }
+   ],
+   "sentences": [
+    {
+     "en": "The apple is red.",
+     "t": "苹果是红色的。",
+     "tiles": [
+      "苹果",
+      "是",
+      "红色",
+      "的"
+     ],
+     "tr": [
+      "píngguǒ",
+      "shì",
+      "hóngsè",
+      "de"
+     ],
+     "r": "píngguǒ shì hóngsè de",
+     "b": 2
+    },
+    {
+     "en": "I like blue.",
+     "t": "我喜欢蓝色。",
+     "tiles": [
+      "我",
+      "喜欢",
+      "蓝色"
+     ],
+     "tr": [
+      "wǒ",
+      "xǐhuan",
+      "lánsè"
+     ],
+     "r": "wǒ xǐhuan lánsè",
+     "b": 2
+    },
+    {
+     "en": "The banana is yellow.",
+     "t": "香蕉是黄色的。",
+     "tiles": [
+      "香蕉",
+      "是",
+      "黄色",
+      "的"
+     ],
+     "tr": [
+      "xiāngjiāo",
+      "shì",
+      "huángsè",
+      "de"
+     ],
+     "r": "xiāngjiāo shì huángsè de",
+     "b": 2
+    },
+    {
+     "en": "The milk is white.",
+     "t": "牛奶是白色的。",
+     "tiles": [
+      "牛奶",
+      "是",
+      "白色",
+      "的"
+     ],
+     "tr": [
+      "niúnǎi",
+      "shì",
+      "báisè",
+      "de"
+     ],
+     "r": "niúnǎi shì báisè de",
+     "b": 2
+    }
    ]
   },
   {
@@ -348,7 +638,8 @@
     {
      "en": "Mother",
      "t": "妈妈",
-     "r": "māma"
+     "r": "māma",
+     "tip": "妈 = 女 (woman) + 马 (horse, gives the “ma” sound)."
     },
     {
      "en": "Father",
@@ -421,7 +712,81 @@
      "r": "péngyou"
     }
    ],
-   "note": "奶奶/爷爷 are your dad's parents; mom's parents are 外婆/外公 (wàipó/wàigōng)."
+   "note": "奶奶/爷爷 are your dad's parents; mom's parents are 外婆/外公 (wàipó/wàigōng).",
+   "sentences": [
+    {
+     "en": "This is my mother.",
+     "t": "这是我妈妈。",
+     "tiles": [
+      "这",
+      "是",
+      "我",
+      "妈妈"
+     ],
+     "tr": [
+      "zhè",
+      "shì",
+      "wǒ",
+      "māma"
+     ],
+     "r": "zhè shì wǒ māma",
+     "b": 3
+    },
+    {
+     "en": "I love my family.",
+     "t": "我爱我的家人。",
+     "tiles": [
+      "我",
+      "爱",
+      "我的",
+      "家人"
+     ],
+     "tr": [
+      "wǒ",
+      "ài",
+      "wǒ de",
+      "jiārén"
+     ],
+     "r": "wǒ ài wǒ de jiārén",
+     "b": 3
+    },
+    {
+     "en": "This is my friend.",
+     "t": "这是我的朋友。",
+     "tiles": [
+      "这",
+      "是",
+      "我的",
+      "朋友"
+     ],
+     "tr": [
+      "zhè",
+      "shì",
+      "wǒ de",
+      "péngyou"
+     ],
+     "r": "zhè shì wǒ de péngyou",
+     "b": 3
+    },
+    {
+     "en": "I have a younger sister.",
+     "t": "我有一个妹妹。",
+     "tiles": [
+      "我",
+      "有",
+      "一个",
+      "妹妹"
+     ],
+     "tr": [
+      "wǒ",
+      "yǒu",
+      "yí ge",
+      "mèimei"
+     ],
+     "r": "wǒ yǒu yí ge mèimei",
+     "b": 3
+    }
+   ]
   },
   {
    "id": "phrases",
@@ -502,6 +867,74 @@
      "en": "Cheers!",
      "t": "干杯！",
      "r": "gānbēi!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "My name is Lily.",
+     "t": "我叫莉莉。",
+     "tiles": [
+      "我",
+      "叫",
+      "莉莉"
+     ],
+     "tr": [
+      "wǒ",
+      "jiào",
+      "Lìlì"
+     ],
+     "r": "wǒ jiào Lìlì",
+     "b": 1
+    },
+    {
+     "en": "Where is the bathroom?",
+     "t": "洗手间在哪里？",
+     "tiles": [
+      "洗手间",
+      "在",
+      "哪里"
+     ],
+     "tr": [
+      "xǐshǒujiān",
+      "zài",
+      "nǎlǐ"
+     ],
+     "r": "xǐshǒujiān zài nǎlǐ",
+     "b": 2
+    },
+    {
+     "en": "How much is this?",
+     "t": "这个多少钱？",
+     "tiles": [
+      "这个",
+      "多少",
+      "钱"
+     ],
+     "tr": [
+      "zhège",
+      "duōshao",
+      "qián"
+     ],
+     "r": "zhège duōshao qián",
+     "b": 1
+    },
+    {
+     "en": "Sorry, I don't understand.",
+     "t": "对不起，我不懂。",
+     "tiles": [
+      "对不起",
+      "我",
+      "不",
+      "懂"
+     ],
+     "tr": [
+      "duìbuqǐ",
+      "wǒ",
+      "bù",
+      "dǒng"
+     ],
+     "r": "duìbuqǐ wǒ bù dǒng",
+     "b": 0
     }
    ]
   }
