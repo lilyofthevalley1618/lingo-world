@@ -191,3 +191,5 @@ a.card,.pcard,.item,.lcard,.fc{transition:transform .15s}a.card:hover,.pcard:hov
 .pet{overflow:visible;flex:none}.petbob{animation:petbob 1.8s ease-in-out infinite;transform-origin:50% 100%}
 @keyframes petbob{0%,100%{transform:translateY(0) scale(1,1)}40%{transform:translateY(-5px) scale(.98,1.03)}60%{transform:translateY(-5px)}80%{transform:translateY(0) scale(1.04,.96)}}
 .lbar .pet{margin-right:-4px}
+.vrow{display:grid;grid-template-columns:110px 1fr 48px;gap:8px;align-items:center}.vrow select{font:inherit;font-size:.88rem;padding:9px 10px;border-radius:14px;border:2px solid #ece6da;background:#fff;color:var(--ink);min-width:0;width:100%}.vl{font-weight:800;font-size:.9rem}
+@media(max-width:400px){.vrow{grid-template-columns:1fr 48px}.vl{grid-column:1/-1}}

@@ -82,20 +82,39 @@ const mascot = (mood, size, cls) => withPet(S.equip, charSVG(S.equip, mood, size
 /* ---------- speech out (TTS) ---------- */
 let voices = [];
 const synth = window.speechSynthesis;
-if (synth) { const lv = () => voices = synth.getVoices(); lv(); synth.onvoiceschanged = lv; }
+if (synth) { const lv = () => { voices = synth.getVoices(); if (location.hash === '#/profile' && document.getElementById('voices')) voicePicker(); }; lv(); synth.onvoiceschanged = lv; }
 const vnorm = v => v.lang.replace('_', '-').toLowerCase();
+// Voice quality: rank natural / high-quality voices first, avoid compact / novelty / robotic ones.
+const GOOD_V = /natural|neural|premium|enhanced|google|siri|wavenet|online/i;
+const NICE_V = /m[oó]nica|paulina|jorge|marisol|thomas|am[ée]lie|audrey|aur[ée]lie|mei-?jia|ting-?ting|sinji|kyoko|otoya|o-ren|yuna|sora|denise|helena|hortense|julie|haruka|nanami|heami|sunhi|hiumaan|hiugaai|hsiaochen|hsiaoyu|yunjhe/i;
+const BAD_V = /compact|espeak|eloquence|novelty|\b(robot|whisper|zarvox|trinoids|bahh|bells|boing|bubbles|cellos|organ|jester|superstar|wobble|bad news|good news|albert|fred|junior|ralph|kathy|grandma|grandpa|rocko|shelley|flo|reed|sandy|eddy)\b/i;
+function voiceOK(v, l) {
+  const n = vnorm(v), all = n + ' ' + v.name;
+  if (l === 'zh-hk') return /yue|zh-hk|cantonese|hong kong/i.test(all); // never fall back to Mandarin
+  if (l === 'zh-tw') return /zh-tw|taiwan|^cmn/i.test(all) || ((n === 'zh-cn' || n === 'zh-sg' || n === 'zh') && !/yue|hk|cantonese/i.test(all)); // Mandarin only
+  return n.startsWith(l.slice(0, 2));
+}
+function voiceScore(v, l) {
+  const n = vnorm(v); let sc = 0;
+  if (n === l) sc += 30; else if (l === 'zh-tw' && /zh-tw|taiwan/i.test(n + ' ' + v.name)) sc += 30; else sc += 8;
+  if (GOOD_V.test(v.name)) sc += 25;
+  if (/premium|neural|natural/i.test(v.name)) sc += 10;
+  if (NICE_V.test(v.name)) sc += 15;
+  if (BAD_V.test(v.name)) sc -= 60;
+  if (v.default) sc += 1;
+  return sc;
+}
+const voiceList = lang => { const l = lang.toLowerCase(); return voices.filter(v => voiceOK(v, l)).sort((a, b) => voiceScore(b, l) - voiceScore(a, l)); };
 function pickVoice(lang) {
-  const l = lang.toLowerCase(), exact = voices.find(v => vnorm(v) === l);
-  if (exact) return exact;
-  if (l === 'zh-hk') return voices.find(v => /yue|zh-hk|cantonese/i.test(vnorm(v) + ' ' + v.name)); // never fall back to Mandarin
-  if (l === 'zh-tw') return voices.find(v => /zh-tw|taiwan/i.test(vnorm(v) + ' ' + v.name)) || voices.find(v => vnorm(v) === 'zh-cn' || vnorm(v) === 'zh-sg' || /^cmn/.test(vnorm(v))); // Mandarin only, never Cantonese
-  return voices.find(v => vnorm(v).startsWith(l.slice(0, 2)));
+  const pref = S.voice && S.voice[lang];
+  if (pref) { const v = voices.find(x => x.voiceURI === pref || x.name === pref); if (v) return v; }
+  return voiceList(lang)[0];
 }
 function speak(text, lang, o = {}) {
   if (!synth || !text) { if (o.onend) o.onend(); return; }
   const s = split(text);
   const u = new SpeechSynthesisUtterance((s.kana || s.main).replace(/…/g, '').replace(/\s\/\s/g, ', '));
-  u.lang = lang; u.rate = (o.slow ?? S.slow) ? 0.6 : 0.9;
+  u.lang = lang; u.rate = (o.slow ?? S.slow) ? 0.65 : 0.9; u.pitch = 1;
   const v = pickVoice(lang); if (v) u.voice = v;
   if (o.onend) u.onend = o.onend;
   synth.cancel(); synth.speak(u);
@@ -255,10 +274,26 @@ function profile() {
     <h2>Languages</h2><div class="plist">${LANGS.map(c => { const d = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length; return `<a class="prow" href="#/${c}"><span>${META[c][0]} ${META[c][1]}</span><div class="bar"><i style="width:${d / 24 * 100}%"></i></div><small>${d}/24</small></a>`; }).join('')}</div>
     <h2>Settings</h2><div class="card settings"><label class="chk"><input type="checkbox" id="slowset" ${S.slow ? 'checked' : ''}> 🐢 Slow audio by default</label><label class="chk"><input type="checkbox" id="zyset" ${S.zhuyin ? 'checked' : ''}> ㄅㄆㄇ Show Zhuyin for Chinese (Taiwan)</label>
       <div class="row"><a class="btn alt small" href="#/me">👗 My Character</a><a class="btn alt small" href="#/shop">🛍️ Shop</a></div></div>
+    <h2>🔈 Voices</h2><div class="card settings" id="voices"></div>
+    <div class="note">💡 <b>Want nicer voices?</b> iPhone/iPad: Settings → Accessibility → Spoken Content → Voices → pick the language → download an <b>Enhanced</b> or <b>Premium</b> voice (Siri voices sound best). Android: Settings → Google Text-to-speech (Speech Services by Google) → ⚙️ → Install voice data → download the language and choose a voice. On a computer, Chrome's “Google …” and Edge's “… Natural” voices sound great. Then come back here and pick it.</div>
     <p class="center"><button class="linkbtn" id="redeem">Redeem code</button></p>`;
+  voicePicker();
   document.getElementById('slowset').onchange = e => { S.slow = e.target.checked; save(); };
   document.getElementById('zyset').onchange = e => { S.zhuyin = e.target.checked; save(); };
   document.getElementById('redeem').onclick = redeem;
+}
+
+const VOICE_SAMPLE = { es: 'Hola, ¿cómo estás? Me llamo Lily.', fr: 'Bonjour, comment ça va ? Je m\'appelle Lily.', zh: '你好！很高興認識你。', yue: '你好！好高興識到你。', ja: 'こんにちは！はじめまして。', ko: '안녕하세요! 만나서 반가워요.' };
+const SPEECH = { es: 'es-ES', fr: 'fr-FR', zh: 'zh-TW', yue: 'zh-HK', ja: 'ja-JP', ko: 'ko-KR' };
+function voicePicker() {
+  const box = document.getElementById('voices'); if (!box) return;
+  if (!synth) { box.innerHTML = '<p class="sub">This browser has no text-to-speech.</p>'; return; }
+  if (!voices.length) { box.innerHTML = '<p class="sub">Loading voices… (tap 🔊 anywhere once if they don\'t show up)</p>'; return; }
+  box.innerHTML = LANGS.map(c => { const lang = SPEECH[c], list = voiceList(lang), pref = (S.voice || {})[lang] || '';
+    return `<div class="vrow"><span class="vl">${META[c][0]} ${META[c][1]}</span><select data-lang="${lang}" aria-label="${META[c][1]} voice">${list.length ? `<option value="">✨ Auto (best: ${esc(list[0].name)})</option>` + list.map(v => `<option value="${esc(v.voiceURI)}" ${v.voiceURI === pref ? 'selected' : ''}>${GOOD_V.test(v.name) || NICE_V.test(v.name) ? '★ ' : ''}${esc(v.name)} (${esc(v.lang)})</option>`).join('') : '<option value="">No voice installed</option>'}</select>
+      <button class="spk" data-test="${c}" title="Test voice" ${list.length ? '' : 'disabled'}>🔊</button></div>`; }).join('') + '<p class="sub small-print">★ = natural / high-quality voice. Your choice is saved on this device.</p>';
+  box.querySelectorAll('select').forEach(sel => sel.onchange = () => { S.voice = S.voice || {}; if (sel.value) S.voice[sel.dataset.lang] = sel.value; else delete S.voice[sel.dataset.lang]; save(); speak(VOICE_SAMPLE[LANGS.find(c => SPEECH[c] === sel.dataset.lang)], sel.dataset.lang); });
+  box.querySelectorAll('[data-test]').forEach(b => b.onclick = () => speak(VOICE_SAMPLE[b.dataset.test], SPEECH[b.dataset.test]));
 }
 
 /* ---------- conversation practice (role-play) ---------- */
