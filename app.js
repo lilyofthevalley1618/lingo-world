@@ -174,7 +174,7 @@ function spokenScore(heard, item) { // 0..1, lenient
   if (!item.tiles && NUMVAL[item.en] != null && heard.some(h => h.replace(/\D/g, '') === String(NUMVAL[item.en]))) return 1;
   return Math.min(1, Math.max(0, ...heard.flatMap(h => cands.filter(Boolean).map(c => similar(h, c) + (/\d/.test(h) ? 0.2 : 0)))));
 }
-const PASS = 0.6;
+const PASS = 0.5; // speaking passes when the match score is over 50%
 
 /* ---------- views: language picker ---------- */
 const GREET = ['Ready to practice speaking? 🗣️', 'Say it out loud, it sticks better! ✨', 'A few minutes a day keeps the streak alive 🔥', 'You\'re doing amazing! 💖', 'Let\'s learn something cute today 🌸'];
@@ -347,7 +347,7 @@ async function chat(code, sceneId) {
       if (synth) synth.cancel();
       $('mic').classList.add('on'); $('heard').textContent = 'Listening…';
       listen(L.speech, {
-        onResult: heard => { const sc2 = spokenScore(heard, item); if (sc2 >= PASS) { spoke++; activity(2); earn(3, '💬 spoken reply'); ok(Math.round(sc2 * 100)); } else $('heard').textContent = `I heard “${heard[0]}”. Try again!`; },
+        onResult: heard => { const sc2 = spokenScore(heard, item); if (sc2 > PASS) { spoke++; activity(2); earn(3, '💬 spoken reply'); ok(Math.round(sc2 * 100)); } else $('heard').textContent = `I heard “${heard[0]}”. Try again!`; },
         onError: err => { if ($('heard')) $('heard').textContent = micMsg(err); },
         onEnd: () => { if ($('mic')) $('mic').classList.remove('on'); },
       });
@@ -442,7 +442,7 @@ function runSession(L, cfg) {
       if (synth) synth.cancel();
       $('mic').classList.add('on'); $('heard').textContent = 'Listening…';
       listen(L.speech, {
-        onResult: heard => { const sc = spokenScore(heard, item); $('heard').textContent = `I heard: “${heard[0]}”`; setTimeout(() => feedback({ ok: sc >= PASS, heard: heard[0], score: sc, spoken: true }, ex), 300); },
+        onResult: heard => { const sc = spokenScore(heard, item); $('heard').textContent = `I heard: “${heard[0]}”`; setTimeout(() => feedback({ ok: sc > PASS, heard: heard[0], score: sc, spoken: true }, ex), 300); },
         onError: err => { if ($('heard')) $('heard').textContent = micMsg(err); },
         onEnd: () => { if ($('mic')) $('mic').classList.remove('on'); },
       });
@@ -621,9 +621,9 @@ async function shadowing(code) {
       listen(L.speech, {
         onResult: heard => {
           const sc = spokenScore(heard, it), pct = Math.round(sc * 100);
-          $('meter').innerHTML = `<div class="bar big"><i style="width:${pct}%"></i></div><b>${pct}% match</b> ${sc >= PASS ? '🎉' : '· try again!'}<div class="sub">I heard: “${esc(heard[0])}”</div>`;
-          if (it.tid != null) srsMark(code, it, sc >= PASS);
-          if (sc >= PASS && !rewarded.has(i)) { rewarded.add(i); activity(2); earn(2, '🗣️ shadowing'); }
+          $('meter').innerHTML = `<div class="bar big"><i style="width:${pct}%"></i></div><b>${pct}% match</b> ${sc > PASS ? '🎉' : '· try again!'}<div class="sub">I heard: “${esc(heard[0])}”</div>`;
+          if (it.tid != null) srsMark(code, it, sc > PASS);
+          if (sc > PASS && !rewarded.has(i)) { rewarded.add(i); activity(2); earn(2, '🗣️ shadowing'); }
         },
         onError: err => { if ($('meter')) $('meter').innerHTML = `<span class="sub">${micMsg(err)}</span>`; },
       });
@@ -672,7 +672,7 @@ async function sayFast(code) {
     };
     const self = ok => { if (ok) { hits++; earn(1, '⚡ fast recall'); activity(2); } srsMark(code, w, ok); next(); };
     if (SR) {
-      const start = () => { rec = listen(L.speech, { interim: true, onResult: heard => { if (spokenScore(heard, w) >= PASS) settle(true, heard[0]); }, onError: () => {}, onEnd: () => { if (!settled && rec && left > 8) start(); } }); };
+      const start = () => { rec = listen(L.speech, { interim: true, onResult: heard => { if (spokenScore(heard, w) > PASS) settle(true, heard[0]); }, onError: () => {}, onEnd: () => { if (!settled && rec && left > 8) start(); } }); };
       start();
     }
     timer = setInterval(() => {
