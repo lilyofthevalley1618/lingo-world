@@ -9,7 +9,7 @@ h1{font-size:1.6rem;margin:6px 0 4px;font-weight:900;letter-spacing:-.01em}h2{fo
 .sub{color:var(--muted);margin:0 0 14px}.center{text-align:center}.small-print{font-size:.82rem;margin:8px 0 0}
 /* floating soft bubbles + corner blobs */
 .bubbles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.deco{position:absolute;opacity:.42;transform:rotate(var(--r));animation:floaty 18s ease-in-out infinite}
+.deco{position:absolute;transform:rotate(var(--r));animation:floaty 18s ease-in-out infinite}
 .blob{position:absolute;border-radius:50%;filter:blur(2px)}
 .blob.b1{width:340px;height:340px;right:-150px;top:-140px;background:radial-gradient(circle,#ffe2ee 0,#ffe2ee80 45%,transparent 70%)}
 .blob.b3{width:300px;height:300px;right:-140px;bottom:20%;background:radial-gradient(circle,#efe6ff 0,#efe6ff80 45%,transparent 70%)}

@@ -882,10 +882,14 @@ document.addEventListener('keydown', e => keyHandler && keyHandler(e));
     c => `<rect x="8" y="8" width="24" height="24" rx="8" fill="${c}" transform="rotate(20 20 20)"/>`,
   ];
   let seed = 11; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  const soft = [0, 1, 2, 3, 6, 7]; // circle, star, heart, blob, ring, rounded square for big shapes
   let h = '';
-  for (let i = 0; i < 38; i++) {
-    const s = 14 + Math.round(rnd() * 30), shape = sh[i % sh.length], c = cols[Math.floor(rnd() * cols.length)];
-    h += `<svg class="deco" viewBox="0 0 40 40" style="left:${(rnd() * 96).toFixed(1)}%;top:${(rnd() * 96).toFixed(1)}%;width:${s}px;height:${s}px;animation-duration:${(12 + rnd() * 14).toFixed(1)}s;animation-delay:-${(rnd() * 20).toFixed(1)}s;--r:${Math.round(rnd() * 40 - 20)}deg">${shape(c)}</svg>`;
+  for (let i = 0; i < 76; i++) {
+    const tier = i < 14 ? 2 : i < 36 ? 1 : 0; // 14 large, 22 medium, 40 small
+    const s = tier === 2 ? 120 + Math.round(rnd() * 140) : tier === 1 ? 50 + Math.round(rnd() * 60) : 16 + Math.round(rnd() * 32);
+    const shape = tier === 2 ? sh[soft[i % soft.length]] : sh[i % sh.length], c = cols[Math.floor(rnd() * cols.length)];
+    const op = tier === 2 ? .3 : tier === 1 ? .42 : .55, anim = tier === 2 ? 'animation:none;' : `animation-duration:${(16 + rnd() * 16).toFixed(1)}s;animation-delay:-${(rnd() * 20).toFixed(1)}s;`;
+    h += `<svg class="deco" viewBox="0 0 40 40" style="left:${(rnd() * 104 - 8).toFixed(1)}%;top:${(rnd() * 104 - 8).toFixed(1)}%;width:${s}px;height:${s}px;opacity:${op};${anim}--r:${Math.round(rnd() * 40 - 20)}deg">${shape(c)}</svg>`;
   }
   el.innerHTML = h + '<b class="blob b1"></b><b class="blob b2"></b><b class="blob b3"></b>';
 })();
