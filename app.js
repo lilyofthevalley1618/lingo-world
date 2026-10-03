@@ -174,7 +174,7 @@ function spokenScore(heard, item) { // 0..1, lenient
   if (!item.tiles && NUMVAL[item.en] != null && heard.some(h => h.replace(/\D/g, '') === String(NUMVAL[item.en]))) return 1;
   return Math.min(1, Math.max(0, ...heard.flatMap(h => cands.filter(Boolean).map(c => similar(h, c) + (/\d/.test(h) ? 0.2 : 0)))));
 }
-const PASS = 0.5; // speaking passes when the match score is over 50%
+const PASS = 0.3; // speaking passes when the match score is over 30%
 
 /* ---------- views: language picker ---------- */
 const GREET = ['Ready to practice speaking? 🗣️', 'Say it out loud, it sticks better! ✨', 'A few minutes a day keeps the streak alive 🔥', 'You\'re doing amazing! 💖', 'Let\'s learn something cute today 🌸'];
