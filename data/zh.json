@@ -1110,6 +1110,3244 @@
      "z": "ㄅㄨˋ ㄏㄠˇ ㄧˋ ˙ㄙ ㄨㄛˇ ㄊㄧㄥ ㄅㄨˋ ㄉㄨㄥˇ"
     }
    ]
+  },
+  {
+   "id": "school",
+   "name": "School & classes",
+   "icon": "🏫",
+   "color": "#bfe3ff",
+   "lessons": [
+    [
+     "Classes & subjects",
+     "📚"
+    ],
+    [
+     "In the classroom",
+     "✏️"
+    ],
+    [
+     "Homework & tests",
+     "📝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "School",
+     "t": "學校",
+     "r": "xuéxiào",
+     "z": "ㄒㄩㄝˊ ㄒㄧㄠˋ"
+    },
+    {
+     "en": "Teacher",
+     "t": "老師",
+     "r": "lǎoshī",
+     "z": "ㄌㄠˇ ㄕ"
+    },
+    {
+     "en": "Student",
+     "t": "學生",
+     "r": "xuéshēng",
+     "z": "ㄒㄩㄝˊ ㄕㄥ"
+    },
+    {
+     "en": "Classroom",
+     "t": "教室",
+     "r": "jiàoshì",
+     "z": "ㄐㄧㄠˋ ㄕˋ"
+    },
+    {
+     "en": "Book",
+     "t": "書",
+     "r": "shū",
+     "z": "ㄕㄨ"
+    },
+    {
+     "en": "Pen",
+     "t": "原子筆",
+     "r": "yuánzǐbǐ",
+     "z": "ㄩㄢˊ ㄗˇ ㄅㄧˇ"
+    },
+    {
+     "en": "Pencil",
+     "t": "鉛筆",
+     "r": "qiānbǐ",
+     "z": "ㄑㄧㄢ ㄅㄧˇ"
+    },
+    {
+     "en": "Notebook",
+     "t": "筆記本",
+     "r": "bǐjìběn",
+     "z": "ㄅㄧˇ ㄐㄧˋ ㄅㄣˇ"
+    },
+    {
+     "en": "Homework",
+     "t": "作業",
+     "r": "zuòyè",
+     "z": "ㄗㄨㄛˋ ㄧㄝˋ"
+    },
+    {
+     "en": "Test",
+     "t": "考試",
+     "r": "kǎoshì",
+     "z": "ㄎㄠˇ ㄕˋ"
+    },
+    {
+     "en": "Math",
+     "t": "數學",
+     "r": "shùxué",
+     "z": "ㄕㄨˋ ㄒㄩㄝˊ"
+    },
+    {
+     "en": "English",
+     "t": "英文",
+     "r": "yīngwén",
+     "z": "ㄧㄥ ㄨㄣˊ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm a student.",
+     "t": "我是學生。",
+     "tiles": [
+      "我",
+      "是",
+      "學生"
+     ],
+     "tr": [
+      "wǒ",
+      "shì",
+      "xuéshēng"
+     ],
+     "r": "wǒ shì xuéshēng",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄕˋ ㄒㄩㄝˊ ㄕㄥ"
+    },
+    {
+     "en": "I have a lot of homework today.",
+     "t": "我今天有很多作業。",
+     "tiles": [
+      "我",
+      "今天",
+      "有",
+      "很多",
+      "作業"
+     ],
+     "tr": [
+      "wǒ",
+      "jīntiān",
+      "yǒu",
+      "hěn duō",
+      "zuòyè"
+     ],
+     "r": "wǒ jīntiān yǒu hěn duō zuòyè",
+     "b": 4,
+     "z": "ㄨㄛˇ ㄐㄧㄣ ㄊㄧㄢ ㄧㄡˇ ㄏㄣˇ ㄉㄨㄛ ㄗㄨㄛˋ ㄧㄝˋ"
+    },
+    {
+     "en": "The test is tomorrow.",
+     "t": "考試是明天。",
+     "tiles": [
+      "考試",
+      "是",
+      "明天"
+     ],
+     "tr": [
+      "kǎoshì",
+      "shì",
+      "míngtiān"
+     ],
+     "r": "kǎoshì shì míngtiān",
+     "b": 0,
+     "z": "ㄎㄠˇ ㄕˋ ㄕˋ ㄇㄧㄥˊ ㄊㄧㄢ"
+    },
+    {
+     "en": "My teacher is very kind.",
+     "t": "我的老師人很好。",
+     "tiles": [
+      "我的",
+      "老師",
+      "人",
+      "很",
+      "好"
+     ],
+     "tr": [
+      "wǒde",
+      "lǎoshī",
+      "rén",
+      "hěn",
+      "hǎo"
+     ],
+     "r": "wǒde lǎoshī rén hěn hǎo",
+     "b": 1,
+     "z": "ㄨㄛˇ ˙ㄉㄜ ㄌㄠˇ ㄕ ㄖㄣˊ ㄏㄣˇ ㄏㄠˇ"
+    },
+    {
+     "en": "I like math.",
+     "t": "我喜歡數學。",
+     "tiles": [
+      "我",
+      "喜歡",
+      "數學"
+     ],
+     "tr": [
+      "wǒ",
+      "xǐhuān",
+      "shùxué"
+     ],
+     "r": "wǒ xǐhuān shùxué",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄒㄧˇ ㄏㄨㄢ ㄕㄨˋ ㄒㄩㄝˊ"
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "name": "Weather & seasons",
+   "icon": "🌦️",
+   "color": "#c8f0c0",
+   "lessons": [
+    [
+     "Sun, rain & snow",
+     "🌧️"
+    ],
+    [
+     "Hot & cold",
+     "🌡️"
+    ],
+    [
+     "Four seasons",
+     "🍂"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Weather",
+     "t": "天氣",
+     "r": "tiānqì",
+     "z": "ㄊㄧㄢ ㄑㄧˋ"
+    },
+    {
+     "en": "Sunny",
+     "t": "晴天",
+     "r": "qíngtiān",
+     "z": "ㄑㄧㄥˊ ㄊㄧㄢ"
+    },
+    {
+     "en": "Rain",
+     "t": "雨",
+     "r": "yǔ",
+     "z": "ㄩˇ"
+    },
+    {
+     "en": "Snow",
+     "t": "雪",
+     "r": "xuě",
+     "z": "ㄒㄩㄝˇ"
+    },
+    {
+     "en": "Wind",
+     "t": "風",
+     "r": "fēng",
+     "z": "ㄈㄥ"
+    },
+    {
+     "en": "Cloudy",
+     "t": "陰天",
+     "r": "yīntiān",
+     "z": "ㄧㄣ ㄊㄧㄢ"
+    },
+    {
+     "en": "It's hot",
+     "t": "很熱",
+     "r": "hěn rè",
+     "z": "ㄏㄣˇ ㄖㄜˋ"
+    },
+    {
+     "en": "It's cold",
+     "t": "很冷",
+     "r": "hěn lěng",
+     "z": "ㄏㄣˇ ㄌㄥˇ"
+    },
+    {
+     "en": "Spring",
+     "t": "春天",
+     "r": "chūntiān",
+     "z": "ㄔㄨㄣ ㄊㄧㄢ"
+    },
+    {
+     "en": "Summer",
+     "t": "夏天",
+     "r": "xiàtiān",
+     "z": "ㄒㄧㄚˋ ㄊㄧㄢ"
+    },
+    {
+     "en": "Autumn",
+     "t": "秋天",
+     "r": "qiūtiān",
+     "z": "ㄑㄧㄡ ㄊㄧㄢ"
+    },
+    {
+     "en": "Winter",
+     "t": "冬天",
+     "r": "dōngtiān",
+     "z": "ㄉㄨㄥ ㄊㄧㄢ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How's the weather today?",
+     "t": "今天天氣怎麼樣？",
+     "tiles": [
+      "今天",
+      "天氣",
+      "怎麼樣"
+     ],
+     "tr": [
+      "jīntiān",
+      "tiānqì",
+      "zěnmeyàng"
+     ],
+     "r": "jīntiān tiānqì zěnmeyàng",
+     "b": 1,
+     "z": "ㄐㄧㄣ ㄊㄧㄢ ㄊㄧㄢ ㄑㄧˋ ㄗㄣˇ ˙ㄇㄜ ㄧㄤˋ"
+    },
+    {
+     "en": "It's raining.",
+     "t": "外面在下雨。",
+     "tiles": [
+      "外面",
+      "在",
+      "下雨"
+     ],
+     "tr": [
+      "wàimiàn",
+      "zài",
+      "xiàyǔ"
+     ],
+     "r": "wàimiàn zài xiàyǔ",
+     "b": 2,
+     "z": "ㄨㄞˋ ㄇㄧㄢˋ ㄗㄞˋ ㄒㄧㄚˋ ㄩˇ"
+    },
+    {
+     "en": "It's really hot today.",
+     "t": "今天很熱。",
+     "tiles": [
+      "今天",
+      "很",
+      "熱"
+     ],
+     "tr": [
+      "jīntiān",
+      "hěn",
+      "rè"
+     ],
+     "r": "jīntiān hěn rè",
+     "b": 0,
+     "z": "ㄐㄧㄣ ㄊㄧㄢ ㄏㄣˇ ㄖㄜˋ"
+    },
+    {
+     "en": "I like spring.",
+     "t": "我喜歡春天。",
+     "tiles": [
+      "我",
+      "喜歡",
+      "春天"
+     ],
+     "tr": [
+      "wǒ",
+      "xǐhuān",
+      "chūntiān"
+     ],
+     "r": "wǒ xǐhuān chūntiān",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄒㄧˇ ㄏㄨㄢ ㄔㄨㄣ ㄊㄧㄢ"
+    },
+    {
+     "en": "Bring an umbrella.",
+     "t": "記得帶雨傘。",
+     "tiles": [
+      "記得",
+      "帶",
+      "雨傘"
+     ],
+     "tr": [
+      "jìdé",
+      "dài",
+      "yǔsǎn"
+     ],
+     "r": "jìdé dài yǔsǎn",
+     "b": 2,
+     "z": "ㄐㄧˋ ㄉㄜˊ ㄉㄞˋ ㄩˇ ㄙㄢˇ"
+    }
+   ]
+  },
+  {
+   "id": "hobbies",
+   "name": "Hobbies & sports",
+   "icon": "⚽",
+   "color": "#ffd6a5",
+   "lessons": [
+    [
+     "Free time",
+     "🎨"
+    ],
+    [
+     "Sports",
+     "🏀"
+    ],
+    [
+     "Music & movies",
+     "🎬"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Hobby",
+     "t": "興趣",
+     "r": "xìngqù",
+     "z": "ㄒㄧㄥˋ ㄑㄩˋ"
+    },
+    {
+     "en": "Soccer",
+     "t": "足球",
+     "r": "zúqiú",
+     "z": "ㄗㄨˊ ㄑㄧㄡˊ"
+    },
+    {
+     "en": "Basketball",
+     "t": "籃球",
+     "r": "lánqiú",
+     "z": "ㄌㄢˊ ㄑㄧㄡˊ"
+    },
+    {
+     "en": "Swimming",
+     "t": "游泳",
+     "r": "yóuyǒng",
+     "z": "ㄧㄡˊ ㄩㄥˇ"
+    },
+    {
+     "en": "Running",
+     "t": "跑步",
+     "r": "pǎobù",
+     "z": "ㄆㄠˇ ㄅㄨˋ"
+    },
+    {
+     "en": "Music",
+     "t": "音樂",
+     "r": "yīnlè",
+     "z": "ㄧㄣ ㄌㄜˋ"
+    },
+    {
+     "en": "To sing",
+     "t": "唱歌",
+     "r": "chànggē",
+     "z": "ㄔㄤˋ ㄍㄜ"
+    },
+    {
+     "en": "To dance",
+     "t": "跳舞",
+     "r": "tiàowǔ",
+     "z": "ㄊㄧㄠˋ ㄨˇ"
+    },
+    {
+     "en": "To draw",
+     "t": "畫畫",
+     "r": "huà huà",
+     "z": "ㄏㄨㄚˋ ㄏㄨㄚˋ"
+    },
+    {
+     "en": "Video games",
+     "t": "電玩",
+     "r": "diànwán",
+     "z": "ㄉㄧㄢˋ ㄨㄢˊ"
+    },
+    {
+     "en": "Reading",
+     "t": "看書",
+     "r": "kànshū",
+     "z": "ㄎㄢˋ ㄕㄨ"
+    },
+    {
+     "en": "Movie",
+     "t": "電影",
+     "r": "diànyǐng",
+     "z": "ㄉㄧㄢˋ ㄧㄥˇ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What are your hobbies?",
+     "t": "你的興趣是什麼？",
+     "tiles": [
+      "你的",
+      "興趣",
+      "是",
+      "什麼"
+     ],
+     "tr": [
+      "nǐde",
+      "xìngqù",
+      "shì",
+      "shénme"
+     ],
+     "r": "nǐde xìngqù shì shénme",
+     "b": 1,
+     "z": "ㄋㄧˇ ˙ㄉㄜ ㄒㄧㄥˋ ㄑㄩˋ ㄕˋ ㄕㄣˊ ˙ㄇㄜ"
+    },
+    {
+     "en": "I play basketball on weekends.",
+     "t": "我週末打籃球。",
+     "tiles": [
+      "我",
+      "週末",
+      "打",
+      "籃球"
+     ],
+     "tr": [
+      "wǒ",
+      "zhōumò",
+      "dǎ",
+      "lánqiú"
+     ],
+     "r": "wǒ zhōumò dǎ lánqiú",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄓㄡ ㄇㄛˋ ㄉㄚˇ ㄌㄢˊ ㄑㄧㄡˊ"
+    },
+    {
+     "en": "I like singing and dancing.",
+     "t": "我喜歡唱歌和跳舞。",
+     "tiles": [
+      "我",
+      "喜歡",
+      "唱歌",
+      "和",
+      "跳舞"
+     ],
+     "tr": [
+      "wǒ",
+      "xǐhuān",
+      "chànggē",
+      "hé",
+      "tiàowǔ"
+     ],
+     "r": "wǒ xǐhuān chànggē hé tiàowǔ",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄒㄧˇ ㄏㄨㄢ ㄔㄤˋ ㄍㄜ ㄏㄜˊ ㄊㄧㄠˋ ㄨˇ"
+    },
+    {
+     "en": "Do you want to watch a movie?",
+     "t": "你想看電影嗎？",
+     "tiles": [
+      "你",
+      "想",
+      "看",
+      "電影",
+      "嗎"
+     ],
+     "tr": [
+      "nǐ",
+      "xiǎng",
+      "kàn",
+      "diànyǐng",
+      "ma"
+     ],
+     "r": "nǐ xiǎng kàn diànyǐng ma",
+     "b": 3,
+     "z": "ㄋㄧˇ ㄒㄧㄤˇ ㄎㄢˋ ㄉㄧㄢˋ ㄧㄥˇ ˙ㄇㄚ"
+    },
+    {
+     "en": "I swim every morning.",
+     "t": "我每天早上游泳。",
+     "tiles": [
+      "我",
+      "每天",
+      "早上",
+      "游泳"
+     ],
+     "tr": [
+      "wǒ",
+      "měitiān",
+      "zǎoshàng",
+      "yóuyǒng"
+     ],
+     "r": "wǒ měitiān zǎoshàng yóuyǒng",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄇㄟˇ ㄊㄧㄢ ㄗㄠˇ ㄕㄤˋ ㄧㄡˊ ㄩㄥˇ"
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Body & health",
+   "icon": "🩺",
+   "color": "#f5c2e7",
+   "lessons": [
+    [
+     "Body parts",
+     "🖐️"
+    ],
+    [
+     "Feeling sick",
+     "🤒"
+    ],
+    [
+     "At the doctor",
+     "🏥"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Head",
+     "t": "頭",
+     "r": "tóu",
+     "z": "ㄊㄡˊ"
+    },
+    {
+     "en": "Eye",
+     "t": "眼睛",
+     "r": "yǎnjīng",
+     "z": "ㄧㄢˇ ㄐㄧㄥ"
+    },
+    {
+     "en": "Mouth",
+     "t": "嘴巴",
+     "r": "zuǐbā",
+     "z": "ㄗㄨㄟˇ ㄅㄚ"
+    },
+    {
+     "en": "Hand",
+     "t": "手",
+     "r": "shǒu",
+     "z": "ㄕㄡˇ"
+    },
+    {
+     "en": "Stomach",
+     "t": "肚子",
+     "r": "dùzi",
+     "z": "ㄉㄨˋ ˙ㄗ"
+    },
+    {
+     "en": "Leg",
+     "t": "腳",
+     "r": "jiǎo",
+     "z": "ㄐㄧㄠˇ"
+    },
+    {
+     "en": "Doctor",
+     "t": "醫生",
+     "r": "yīshēng",
+     "z": "ㄧ ㄕㄥ"
+    },
+    {
+     "en": "Hospital",
+     "t": "醫院",
+     "r": "yīyuàn",
+     "z": "ㄧ ㄩㄢˋ"
+    },
+    {
+     "en": "Medicine",
+     "t": "藥",
+     "r": "yào",
+     "z": "ㄧㄠˋ"
+    },
+    {
+     "en": "Fever",
+     "t": "發燒",
+     "r": "fāshāo",
+     "z": "ㄈㄚ ㄕㄠ"
+    },
+    {
+     "en": "A cold",
+     "t": "感冒",
+     "r": "gǎnmào",
+     "z": "ㄍㄢˇ ㄇㄠˋ"
+    },
+    {
+     "en": "It hurts",
+     "t": "很痛",
+     "r": "hěn tòng",
+     "z": "ㄏㄣˇ ㄊㄨㄥˋ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I have a headache.",
+     "t": "我頭痛。",
+     "tiles": [
+      "我",
+      "頭",
+      "痛"
+     ],
+     "tr": [
+      "wǒ",
+      "tóu",
+      "tòng"
+     ],
+     "r": "wǒ tóu tòng",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄊㄡˊ ㄊㄨㄥˋ"
+    },
+    {
+     "en": "I caught a cold.",
+     "t": "我感冒了。",
+     "tiles": [
+      "我",
+      "感冒",
+      "了"
+     ],
+     "tr": [
+      "wǒ",
+      "gǎnmào",
+      "le"
+     ],
+     "r": "wǒ gǎnmào le",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄍㄢˇ ㄇㄠˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "I'm going to see a doctor.",
+     "t": "我要去看醫生。",
+     "tiles": [
+      "我",
+      "要",
+      "去",
+      "看",
+      "醫生"
+     ],
+     "tr": [
+      "wǒ",
+      "yào",
+      "qù",
+      "kàn",
+      "yīshēng"
+     ],
+     "r": "wǒ yào qù kàn yīshēng",
+     "b": 4,
+     "z": "ㄨㄛˇ ㄧㄠˋ ㄑㄩˋ ㄎㄢˋ ㄧ ㄕㄥ"
+    },
+    {
+     "en": "Take your medicine.",
+     "t": "要吃藥喔。",
+     "tiles": [
+      "要",
+      "吃",
+      "藥",
+      "喔"
+     ],
+     "tr": [
+      "yào",
+      "chī",
+      "yào",
+      "o"
+     ],
+     "r": "yào chī yào o",
+     "b": 2,
+     "z": "ㄧㄠˋ ㄔ ㄧㄠˋ ˙ㄛ"
+    },
+    {
+     "en": "I feel much better now.",
+     "t": "我現在好多了。",
+     "tiles": [
+      "我",
+      "現在",
+      "好",
+      "多",
+      "了"
+     ],
+     "tr": [
+      "wǒ",
+      "xiànzài",
+      "hǎo",
+      "duō",
+      "le"
+     ],
+     "r": "wǒ xiànzài hǎo duō le",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄒㄧㄢˋ ㄗㄞˋ ㄏㄠˇ ㄉㄨㄛ ˙ㄌㄜ"
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "name": "Home & rooms",
+   "icon": "🏠",
+   "color": "#b8ecef",
+   "lessons": [
+    [
+     "Rooms",
+     "🛋️"
+    ],
+    [
+     "Furniture",
+     "🛏️"
+    ],
+    [
+     "Chores",
+     "🧹"
+    ]
+   ],
+   "words": [
+    {
+     "en": "House",
+     "t": "房子",
+     "r": "fángzi",
+     "z": "ㄈㄤˊ ˙ㄗ"
+    },
+    {
+     "en": "Room",
+     "t": "房間",
+     "r": "fángjiān",
+     "z": "ㄈㄤˊ ㄐㄧㄢ"
+    },
+    {
+     "en": "Kitchen",
+     "t": "廚房",
+     "r": "chúfáng",
+     "z": "ㄔㄨˊ ㄈㄤˊ"
+    },
+    {
+     "en": "Bathroom",
+     "t": "浴室",
+     "r": "yùshì",
+     "z": "ㄩˋ ㄕˋ"
+    },
+    {
+     "en": "Living room",
+     "t": "客廳",
+     "r": "kètīng",
+     "z": "ㄎㄜˋ ㄊㄧㄥ"
+    },
+    {
+     "en": "Bed",
+     "t": "床",
+     "r": "chuáng",
+     "z": "ㄔㄨㄤˊ"
+    },
+    {
+     "en": "Table",
+     "t": "桌子",
+     "r": "zhuōzi",
+     "z": "ㄓㄨㄛ ˙ㄗ"
+    },
+    {
+     "en": "Chair",
+     "t": "椅子",
+     "r": "yǐzi",
+     "z": "ㄧˇ ˙ㄗ"
+    },
+    {
+     "en": "Window",
+     "t": "窗戶",
+     "r": "chuānghù",
+     "z": "ㄔㄨㄤ ㄏㄨˋ"
+    },
+    {
+     "en": "Door",
+     "t": "門",
+     "r": "mén",
+     "z": "ㄇㄣˊ"
+    },
+    {
+     "en": "To clean",
+     "t": "打掃",
+     "r": "dǎsǎo",
+     "z": "ㄉㄚˇ ㄙㄠˇ"
+    },
+    {
+     "en": "To cook",
+     "t": "煮飯",
+     "r": "zhǔfàn",
+     "z": "ㄓㄨˇ ㄈㄢˋ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my house.",
+     "t": "這是我家。",
+     "tiles": [
+      "這",
+      "是",
+      "我",
+      "家"
+     ],
+     "tr": [
+      "zhè",
+      "shì",
+      "wǒ",
+      "jiā"
+     ],
+     "r": "zhè shì wǒ jiā",
+     "b": 3,
+     "z": "ㄓㄜˋ ㄕˋ ㄨㄛˇ ㄐㄧㄚ"
+    },
+    {
+     "en": "My room is small.",
+     "t": "我的房間很小。",
+     "tiles": [
+      "我的",
+      "房間",
+      "很",
+      "小"
+     ],
+     "tr": [
+      "wǒde",
+      "fángjiān",
+      "hěn",
+      "xiǎo"
+     ],
+     "r": "wǒde fángjiān hěn xiǎo",
+     "b": 1,
+     "z": "ㄨㄛˇ ˙ㄉㄜ ㄈㄤˊ ㄐㄧㄢ ㄏㄣˇ ㄒㄧㄠˇ"
+    },
+    {
+     "en": "Dad is cooking in the kitchen.",
+     "t": "爸爸在廚房煮飯。",
+     "tiles": [
+      "爸爸",
+      "在",
+      "廚房",
+      "煮飯"
+     ],
+     "tr": [
+      "bàba",
+      "zài",
+      "chúfáng",
+      "zhǔfàn"
+     ],
+     "r": "bàba zài chúfáng zhǔfàn",
+     "b": 2,
+     "z": "ㄅㄚˋ ˙ㄅㄚ ㄗㄞˋ ㄔㄨˊ ㄈㄤˊ ㄓㄨˇ ㄈㄢˋ"
+    },
+    {
+     "en": "Please open the window.",
+     "t": "請打開窗戶。",
+     "tiles": [
+      "請",
+      "打開",
+      "窗戶"
+     ],
+     "tr": [
+      "qǐng",
+      "dǎkāi",
+      "chuānghù"
+     ],
+     "r": "qǐng dǎkāi chuānghù",
+     "b": 2,
+     "z": "ㄑㄧㄥˇ ㄉㄚˇ ㄎㄞ ㄔㄨㄤ ㄏㄨˋ"
+    },
+    {
+     "en": "I clean my room on Sundays.",
+     "t": "我星期天打掃房間。",
+     "tiles": [
+      "我",
+      "星期天",
+      "打掃",
+      "房間"
+     ],
+     "tr": [
+      "wǒ",
+      "xīngqítiān",
+      "dǎsǎo",
+      "fángjiān"
+     ],
+     "r": "wǒ xīngqítiān dǎsǎo fángjiān",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄒㄧㄥ ㄑㄧˊ ㄊㄧㄢ ㄉㄚˇ ㄙㄠˇ ㄈㄤˊ ㄐㄧㄢ"
+    }
+   ]
+  },
+  {
+   "id": "shopping",
+   "name": "Clothes & shopping",
+   "icon": "🛍️",
+   "color": "#ffcfcf",
+   "lessons": [
+    [
+     "Clothes",
+     "👕"
+    ],
+    [
+     "At the store",
+     "🏬"
+    ],
+    [
+     "Paying",
+     "💳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Clothes",
+     "t": "衣服",
+     "r": "yīfú",
+     "z": "ㄧ ㄈㄨˊ"
+    },
+    {
+     "en": "Shirt",
+     "t": "襯衫",
+     "r": "chènshān",
+     "z": "ㄔㄣˋ ㄕㄢ"
+    },
+    {
+     "en": "Pants",
+     "t": "褲子",
+     "r": "kùzi",
+     "z": "ㄎㄨˋ ˙ㄗ"
+    },
+    {
+     "en": "Shoes",
+     "t": "鞋子",
+     "r": "xiézi",
+     "z": "ㄒㄧㄝˊ ˙ㄗ"
+    },
+    {
+     "en": "Dress",
+     "t": "洋裝",
+     "r": "yángzhuāng",
+     "z": "ㄧㄤˊ ㄓㄨㄤ"
+    },
+    {
+     "en": "Hat",
+     "t": "帽子",
+     "r": "màozi",
+     "z": "ㄇㄠˋ ˙ㄗ"
+    },
+    {
+     "en": "Store",
+     "t": "商店",
+     "r": "shāngdiàn",
+     "z": "ㄕㄤ ㄉㄧㄢˋ"
+    },
+    {
+     "en": "Price",
+     "t": "價錢",
+     "r": "jiàqián",
+     "z": "ㄐㄧㄚˋ ㄑㄧㄢˊ"
+    },
+    {
+     "en": "Cheap",
+     "t": "便宜",
+     "r": "piányí",
+     "z": "ㄆㄧㄢˊ ㄧˊ"
+    },
+    {
+     "en": "Expensive",
+     "t": "貴",
+     "r": "guì",
+     "z": "ㄍㄨㄟˋ"
+    },
+    {
+     "en": "To buy",
+     "t": "買",
+     "r": "mǎi",
+     "z": "ㄇㄞˇ"
+    },
+    {
+     "en": "To try on",
+     "t": "試穿",
+     "r": "shìchuān",
+     "z": "ㄕˋ ㄔㄨㄢ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How much is this shirt?",
+     "t": "這件襯衫多少錢？",
+     "tiles": [
+      "這",
+      "件",
+      "襯衫",
+      "多少",
+      "錢"
+     ],
+     "tr": [
+      "zhè",
+      "jiàn",
+      "chènshān",
+      "duōshǎo",
+      "qián"
+     ],
+     "r": "zhè jiàn chènshān duōshǎo qián",
+     "b": 2,
+     "z": "ㄓㄜˋ ㄐㄧㄢˋ ㄔㄣˋ ㄕㄢ ㄉㄨㄛ ㄕㄠˇ ㄑㄧㄢˊ"
+    },
+    {
+     "en": "It's too expensive!",
+     "t": "太貴了！",
+     "tiles": [
+      "太",
+      "貴",
+      "了"
+     ],
+     "tr": [
+      "tài",
+      "guì",
+      "le"
+     ],
+     "r": "tài guì le",
+     "b": 1,
+     "z": "ㄊㄞˋ ㄍㄨㄟˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "Can I try it on?",
+     "t": "我可以試穿嗎？",
+     "tiles": [
+      "我",
+      "可以",
+      "試穿",
+      "嗎"
+     ],
+     "tr": [
+      "wǒ",
+      "kěyǐ",
+      "shìchuān",
+      "ma"
+     ],
+     "r": "wǒ kěyǐ shìchuān ma",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄎㄜˇ ㄧˇ ㄕˋ ㄔㄨㄢ ˙ㄇㄚ"
+    },
+    {
+     "en": "I'll buy this one.",
+     "t": "我要買這個。",
+     "tiles": [
+      "我",
+      "要",
+      "買",
+      "這個"
+     ],
+     "tr": [
+      "wǒ",
+      "yào",
+      "mǎi",
+      "zhège"
+     ],
+     "r": "wǒ yào mǎi zhège",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄧㄠˋ ㄇㄞˇ ㄓㄜˋ ˙ㄍㄜ"
+    },
+    {
+     "en": "These shoes are cute.",
+     "t": "這雙鞋子好可愛。",
+     "tiles": [
+      "這",
+      "雙",
+      "鞋子",
+      "好",
+      "可愛"
+     ],
+     "tr": [
+      "zhè",
+      "shuāng",
+      "xiézi",
+      "hǎo",
+      "kě'ài"
+     ],
+     "r": "zhè shuāng xiézi hǎo kě'ài",
+     "b": 2,
+     "z": "ㄓㄜˋ ㄕㄨㄤ ㄒㄧㄝˊ ˙ㄗ ㄏㄠˇ ㄎㄜˇ ㄞˋ"
+    }
+   ]
+  },
+  {
+   "id": "travel",
+   "name": "Transportation & travel",
+   "icon": "🚆",
+   "color": "#d4e6a8",
+   "lessons": [
+    [
+     "Getting around",
+     "🚇"
+    ],
+    [
+     "At the airport",
+     "✈️"
+    ],
+    [
+     "Asking the way",
+     "🧭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Train",
+     "t": "火車",
+     "r": "huǒchē",
+     "z": "ㄏㄨㄛˇ ㄔㄜ"
+    },
+    {
+     "en": "Subway",
+     "t": "捷運",
+     "r": "jiéyùn",
+     "z": "ㄐㄧㄝˊ ㄩㄣˋ"
+    },
+    {
+     "en": "Bus",
+     "t": "公車",
+     "r": "gōngchē",
+     "z": "ㄍㄨㄥ ㄔㄜ"
+    },
+    {
+     "en": "Taxi",
+     "t": "計程車",
+     "r": "jìchéngchē",
+     "z": "ㄐㄧˋ ㄔㄥˊ ㄔㄜ"
+    },
+    {
+     "en": "Airplane",
+     "t": "飛機",
+     "r": "fēijī",
+     "z": "ㄈㄟ ㄐㄧ"
+    },
+    {
+     "en": "Airport",
+     "t": "機場",
+     "r": "jīchǎng",
+     "z": "ㄐㄧ ㄔㄤˇ"
+    },
+    {
+     "en": "Station",
+     "t": "車站",
+     "r": "chēzhàn",
+     "z": "ㄔㄜ ㄓㄢˋ"
+    },
+    {
+     "en": "Ticket",
+     "t": "票",
+     "r": "piào",
+     "z": "ㄆㄧㄠˋ"
+    },
+    {
+     "en": "Passport",
+     "t": "護照",
+     "r": "hùzhào",
+     "z": "ㄏㄨˋ ㄓㄠˋ"
+    },
+    {
+     "en": "Map",
+     "t": "地圖",
+     "r": "dìtú",
+     "z": "ㄉㄧˋ ㄊㄨˊ"
+    },
+    {
+     "en": "Left",
+     "t": "左邊",
+     "r": "zuǒbiān",
+     "z": "ㄗㄨㄛˇ ㄅㄧㄢ"
+    },
+    {
+     "en": "Right",
+     "t": "右邊",
+     "r": "yòubiān",
+     "z": "ㄧㄡˋ ㄅㄧㄢ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Where is the station?",
+     "t": "車站在哪裡？",
+     "tiles": [
+      "車站",
+      "在",
+      "哪裡"
+     ],
+     "tr": [
+      "chēzhàn",
+      "zài",
+      "nǎlǐ"
+     ],
+     "r": "chēzhàn zài nǎlǐ",
+     "b": 0,
+     "z": "ㄔㄜ ㄓㄢˋ ㄗㄞˋ ㄋㄚˇ ㄌㄧˇ"
+    },
+    {
+     "en": "I take the subway to school.",
+     "t": "我坐捷運去學校。",
+     "tiles": [
+      "我",
+      "坐",
+      "捷運",
+      "去",
+      "學校"
+     ],
+     "tr": [
+      "wǒ",
+      "zuò",
+      "jiéyùn",
+      "qù",
+      "xuéxiào"
+     ],
+     "r": "wǒ zuò jiéyùn qù xuéxiào",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄗㄨㄛˋ ㄐㄧㄝˊ ㄩㄣˋ ㄑㄩˋ ㄒㄩㄝˊ ㄒㄧㄠˋ"
+    },
+    {
+     "en": "One ticket, please.",
+     "t": "我要一張票。",
+     "tiles": [
+      "我",
+      "要",
+      "一",
+      "張",
+      "票"
+     ],
+     "tr": [
+      "wǒ",
+      "yào",
+      "yī",
+      "zhāng",
+      "piào"
+     ],
+     "r": "wǒ yào yī zhāng piào",
+     "b": 4,
+     "z": "ㄨㄛˇ ㄧㄠˋ ㄧ ㄓㄤ ㄆㄧㄠˋ"
+    },
+    {
+     "en": "Turn left here.",
+     "t": "在這裡左轉。",
+     "tiles": [
+      "在",
+      "這裡",
+      "左轉"
+     ],
+     "tr": [
+      "zài",
+      "zhèlǐ",
+      "zuǒzhuǎn"
+     ],
+     "r": "zài zhèlǐ zuǒzhuǎn",
+     "b": 2,
+     "z": "ㄗㄞˋ ㄓㄜˋ ㄌㄧˇ ㄗㄨㄛˇ ㄓㄨㄢˇ"
+    },
+    {
+     "en": "I'm going to the airport.",
+     "t": "我要去機場。",
+     "tiles": [
+      "我",
+      "要",
+      "去",
+      "機場"
+     ],
+     "tr": [
+      "wǒ",
+      "yào",
+      "qù",
+      "jīchǎng"
+     ],
+     "r": "wǒ yào qù jīchǎng",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄧㄠˋ ㄑㄩˋ ㄐㄧ ㄔㄤˇ"
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "name": "Time, dates & schedules",
+   "icon": "⏰",
+   "color": "#e2d1f9",
+   "lessons": [
+    [
+     "Today & tomorrow",
+     "📆"
+    ],
+    [
+     "Telling time",
+     "🕐"
+    ],
+    [
+     "My schedule",
+     "🗓️"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Today",
+     "t": "今天",
+     "r": "jīntiān",
+     "z": "ㄐㄧㄣ ㄊㄧㄢ"
+    },
+    {
+     "en": "Tomorrow",
+     "t": "明天",
+     "r": "míngtiān",
+     "z": "ㄇㄧㄥˊ ㄊㄧㄢ"
+    },
+    {
+     "en": "Yesterday",
+     "t": "昨天",
+     "r": "zuótiān",
+     "z": "ㄗㄨㄛˊ ㄊㄧㄢ"
+    },
+    {
+     "en": "Monday",
+     "t": "星期一",
+     "r": "xīngqí yī",
+     "z": "ㄒㄧㄥ ㄑㄧˊ ㄧ"
+    },
+    {
+     "en": "Friday",
+     "t": "星期五",
+     "r": "xīngqí wǔ",
+     "z": "ㄒㄧㄥ ㄑㄧˊ ㄨˇ"
+    },
+    {
+     "en": "Weekend",
+     "t": "週末",
+     "r": "zhōumò",
+     "z": "ㄓㄡ ㄇㄛˋ"
+    },
+    {
+     "en": "Morning",
+     "t": "早上",
+     "r": "zǎoshàng",
+     "z": "ㄗㄠˇ ㄕㄤˋ"
+    },
+    {
+     "en": "Night",
+     "t": "晚上",
+     "r": "wǎnshàng",
+     "z": "ㄨㄢˇ ㄕㄤˋ"
+    },
+    {
+     "en": "Hour",
+     "t": "小時",
+     "r": "xiǎoshí",
+     "z": "ㄒㄧㄠˇ ㄕˊ"
+    },
+    {
+     "en": "Minute",
+     "t": "分鐘",
+     "r": "fēnzhōng",
+     "z": "ㄈㄣ ㄓㄨㄥ"
+    },
+    {
+     "en": "Early",
+     "t": "早",
+     "r": "zǎo",
+     "z": "ㄗㄠˇ"
+    },
+    {
+     "en": "Late",
+     "t": "晚",
+     "r": "wǎn",
+     "z": "ㄨㄢˇ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What time is it?",
+     "t": "現在幾點？",
+     "tiles": [
+      "現在",
+      "幾",
+      "點"
+     ],
+     "tr": [
+      "xiànzài",
+      "jǐ",
+      "diǎn"
+     ],
+     "r": "xiànzài jǐ diǎn",
+     "b": 0,
+     "z": "ㄒㄧㄢˋ ㄗㄞˋ ㄐㄧˇ ㄉㄧㄢˇ"
+    },
+    {
+     "en": "It's three o'clock.",
+     "t": "現在三點。",
+     "tiles": [
+      "現在",
+      "三",
+      "點"
+     ],
+     "tr": [
+      "xiànzài",
+      "sān",
+      "diǎn"
+     ],
+     "r": "xiànzài sān diǎn",
+     "b": 0,
+     "z": "ㄒㄧㄢˋ ㄗㄞˋ ㄙㄢ ㄉㄧㄢˇ"
+    },
+    {
+     "en": "Class starts at nine.",
+     "t": "九點上課。",
+     "tiles": [
+      "九",
+      "點",
+      "上課"
+     ],
+     "tr": [
+      "jiǔ",
+      "diǎn",
+      "shàngkè"
+     ],
+     "r": "jiǔ diǎn shàngkè",
+     "b": 2,
+     "z": "ㄐㄧㄡˇ ㄉㄧㄢˇ ㄕㄤˋ ㄎㄜˋ"
+    },
+    {
+     "en": "I'm busy on Monday.",
+     "t": "我星期一很忙。",
+     "tiles": [
+      "我",
+      "星期一",
+      "很",
+      "忙"
+     ],
+     "tr": [
+      "wǒ",
+      "xīngqí yī",
+      "hěn",
+      "máng"
+     ],
+     "r": "wǒ xīngqí yī hěn máng",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄒㄧㄥ ㄑㄧˊ ㄧ ㄏㄣˇ ㄇㄤˊ"
+    },
+    {
+     "en": "See you tomorrow!",
+     "t": "明天見！",
+     "tiles": [
+      "明天",
+      "見"
+     ],
+     "tr": [
+      "míngtiān",
+      "jiàn"
+     ],
+     "r": "míngtiān jiàn",
+     "b": 0,
+     "z": "ㄇㄧㄥˊ ㄊㄧㄢ ㄐㄧㄢˋ"
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "name": "Jobs & work",
+   "icon": "💼",
+   "color": "#fff1b8",
+   "lessons": [
+    [
+     "Jobs",
+     "👩‍🍳"
+    ],
+    [
+     "At work",
+     "🏢"
+    ],
+    [
+     "Dream job",
+     "🌟"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Work",
+     "t": "工作",
+     "r": "gōngzuò",
+     "z": "ㄍㄨㄥ ㄗㄨㄛˋ"
+    },
+    {
+     "en": "Office",
+     "t": "辦公室",
+     "r": "bàngōngshì",
+     "z": "ㄅㄢˋ ㄍㄨㄥ ㄕˋ"
+    },
+    {
+     "en": "Nurse",
+     "t": "護士",
+     "r": "hùshì",
+     "z": "ㄏㄨˋ ㄕˋ"
+    },
+    {
+     "en": "Chef",
+     "t": "廚師",
+     "r": "chúshī",
+     "z": "ㄔㄨˊ ㄕ"
+    },
+    {
+     "en": "Police officer",
+     "t": "警察",
+     "r": "jǐngchá",
+     "z": "ㄐㄧㄥˇ ㄔㄚˊ"
+    },
+    {
+     "en": "Engineer",
+     "t": "工程師",
+     "r": "gōngchéngshī",
+     "z": "ㄍㄨㄥ ㄔㄥˊ ㄕ"
+    },
+    {
+     "en": "Artist",
+     "t": "藝術家",
+     "r": "yìshùjiā",
+     "z": "ㄧˋ ㄕㄨˋ ㄐㄧㄚ"
+    },
+    {
+     "en": "Boss",
+     "t": "老闆",
+     "r": "lǎobǎn",
+     "z": "ㄌㄠˇ ㄅㄢˇ"
+    },
+    {
+     "en": "Coworker",
+     "t": "同事",
+     "r": "tóngshì",
+     "z": "ㄊㄨㄥˊ ㄕˋ"
+    },
+    {
+     "en": "Meeting",
+     "t": "會議",
+     "r": "huìyì",
+     "z": "ㄏㄨㄟˋ ㄧˋ"
+    },
+    {
+     "en": "Salary",
+     "t": "薪水",
+     "r": "xīnshuǐ",
+     "z": "ㄒㄧㄣ ㄕㄨㄟˇ"
+    },
+    {
+     "en": "To work",
+     "t": "上班",
+     "r": "shàngbān",
+     "z": "ㄕㄤˋ ㄅㄢ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What do you do for work?",
+     "t": "你做什麼工作？",
+     "tiles": [
+      "你",
+      "做",
+      "什麼",
+      "工作"
+     ],
+     "tr": [
+      "nǐ",
+      "zuò",
+      "shénme",
+      "gōngzuò"
+     ],
+     "r": "nǐ zuò shénme gōngzuò",
+     "b": 3,
+     "z": "ㄋㄧˇ ㄗㄨㄛˋ ㄕㄣˊ ˙ㄇㄜ ㄍㄨㄥ ㄗㄨㄛˋ"
+    },
+    {
+     "en": "I'm a nurse.",
+     "t": "我是護士。",
+     "tiles": [
+      "我",
+      "是",
+      "護士"
+     ],
+     "tr": [
+      "wǒ",
+      "shì",
+      "hùshì"
+     ],
+     "r": "wǒ shì hùshì",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄕˋ ㄏㄨˋ ㄕˋ"
+    },
+    {
+     "en": "I work at an office.",
+     "t": "我在辦公室上班。",
+     "tiles": [
+      "我",
+      "在",
+      "辦公室",
+      "上班"
+     ],
+     "tr": [
+      "wǒ",
+      "zài",
+      "bàngōngshì",
+      "shàngbān"
+     ],
+     "r": "wǒ zài bàngōngshì shàngbān",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄗㄞˋ ㄅㄢˋ ㄍㄨㄥ ㄕˋ ㄕㄤˋ ㄅㄢ"
+    },
+    {
+     "en": "I have a meeting at ten.",
+     "t": "我十點要開會。",
+     "tiles": [
+      "我",
+      "十",
+      "點",
+      "要",
+      "開會"
+     ],
+     "tr": [
+      "wǒ",
+      "shí",
+      "diǎn",
+      "yào",
+      "kāihuì"
+     ],
+     "r": "wǒ shí diǎn yào kāihuì",
+     "b": 4,
+     "z": "ㄨㄛˇ ㄕˊ ㄉㄧㄢˇ ㄧㄠˋ ㄎㄞ ㄏㄨㄟˋ"
+    },
+    {
+     "en": "I want to be a chef.",
+     "t": "我想當廚師。",
+     "tiles": [
+      "我",
+      "想",
+      "當",
+      "廚師"
+     ],
+     "tr": [
+      "wǒ",
+      "xiǎng",
+      "dāng",
+      "chúshī"
+     ],
+     "r": "wǒ xiǎng dāng chúshī",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄒㄧㄤˇ ㄉㄤ ㄔㄨˊ ㄕ"
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "name": "Making plans with friends",
+   "icon": "📅",
+   "color": "#c9d6ff",
+   "lessons": [
+    [
+     "Free or busy?",
+     "💌"
+    ],
+    [
+     "Places to go",
+     "🎡"
+    ],
+    [
+     "Yes, no & maybe",
+     "🤔"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Together",
+     "t": "一起",
+     "r": "yìqǐ",
+     "z": "ㄧˋ ㄑㄧˇ"
+    },
+    {
+     "en": "Free (not busy)",
+     "t": "有空",
+     "r": "yǒukòng",
+     "z": "ㄧㄡˇ ㄎㄨㄥˋ"
+    },
+    {
+     "en": "Busy",
+     "t": "忙",
+     "r": "máng",
+     "z": "ㄇㄤˊ"
+    },
+    {
+     "en": "Party",
+     "t": "派對",
+     "r": "pàiduì",
+     "z": "ㄆㄞˋ ㄉㄨㄟˋ"
+    },
+    {
+     "en": "Park",
+     "t": "公園",
+     "r": "gōngyuán",
+     "z": "ㄍㄨㄥ ㄩㄢˊ"
+    },
+    {
+     "en": "Café",
+     "t": "咖啡廳",
+     "r": "kāfēitīng",
+     "z": "ㄎㄚ ㄈㄟ ㄊㄧㄥ"
+    },
+    {
+     "en": "Beach",
+     "t": "海邊",
+     "r": "hǎibiān",
+     "z": "ㄏㄞˇ ㄅㄧㄢ"
+    },
+    {
+     "en": "Mall",
+     "t": "百貨公司",
+     "r": "bǎihuò gōngsī",
+     "z": "ㄅㄞˇ ㄏㄨㄛˋ ㄍㄨㄥ ㄙ"
+    },
+    {
+     "en": "Let's go!",
+     "t": "走吧！",
+     "r": "zǒu ba!",
+     "z": "ㄗㄡˇ ˙ㄅㄚ!"
+    },
+    {
+     "en": "Sounds good",
+     "t": "好啊",
+     "r": "hǎo a",
+     "z": "ㄏㄠˇ ˙ㄚ"
+    },
+    {
+     "en": "Maybe",
+     "t": "可能",
+     "r": "kěnéng",
+     "z": "ㄎㄜˇ ㄋㄥˊ"
+    },
+    {
+     "en": "Next time",
+     "t": "下次",
+     "r": "xiàcì",
+     "z": "ㄒㄧㄚˋ ㄘˋ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Are you free this weekend?",
+     "t": "你這個週末有空嗎？",
+     "tiles": [
+      "你",
+      "這個",
+      "週末",
+      "有空",
+      "嗎"
+     ],
+     "tr": [
+      "nǐ",
+      "zhège",
+      "zhōumò",
+      "yǒukòng",
+      "ma"
+     ],
+     "r": "nǐ zhège zhōumò yǒukòng ma",
+     "b": 3,
+     "z": "ㄋㄧˇ ㄓㄜˋ ˙ㄍㄜ ㄓㄡ ㄇㄛˋ ㄧㄡˇ ㄎㄨㄥˋ ˙ㄇㄚ"
+    },
+    {
+     "en": "Let's go to the park together.",
+     "t": "我們一起去公園吧。",
+     "tiles": [
+      "我們",
+      "一起",
+      "去",
+      "公園",
+      "吧"
+     ],
+     "tr": [
+      "wǒmen",
+      "yìqǐ",
+      "qù",
+      "gōngyuán",
+      "ba"
+     ],
+     "r": "wǒmen yìqǐ qù gōngyuán ba",
+     "b": 1,
+     "z": "ㄨㄛˇ ˙ㄇㄣ ㄧˋ ㄑㄧˇ ㄑㄩˋ ㄍㄨㄥ ㄩㄢˊ ˙ㄅㄚ"
+    },
+    {
+     "en": "What time should we meet?",
+     "t": "我們幾點見面？",
+     "tiles": [
+      "我們",
+      "幾",
+      "點",
+      "見面"
+     ],
+     "tr": [
+      "wǒmen",
+      "jǐ",
+      "diǎn",
+      "jiànmiàn"
+     ],
+     "r": "wǒmen jǐ diǎn jiànmiàn",
+     "b": 3,
+     "z": "ㄨㄛˇ ˙ㄇㄣ ㄐㄧˇ ㄉㄧㄢˇ ㄐㄧㄢˋ ㄇㄧㄢˋ"
+    },
+    {
+     "en": "Sorry, I'm busy today.",
+     "t": "不好意思，我今天很忙。",
+     "tiles": [
+      "不好意思",
+      "我",
+      "今天",
+      "很",
+      "忙"
+     ],
+     "tr": [
+      "bù hǎoyìsi",
+      "wǒ",
+      "jīntiān",
+      "hěn",
+      "máng"
+     ],
+     "r": "bù hǎoyìsi wǒ jīntiān hěn máng",
+     "b": 4,
+     "z": "ㄅㄨˋ ㄏㄠˇ ㄧˋ ˙ㄙ ㄨㄛˇ ㄐㄧㄣ ㄊㄧㄢ ㄏㄣˇ ㄇㄤˊ"
+    },
+    {
+     "en": "Sounds good, see you then!",
+     "t": "好啊，到時候見！",
+     "tiles": [
+      "好啊",
+      "到時候",
+      "見"
+     ],
+     "tr": [
+      "hǎo a",
+      "dào shíhòu",
+      "jiàn"
+     ],
+     "r": "hǎo a dào shíhòu jiàn",
+     "b": 0,
+     "z": "ㄏㄠˇ ˙ㄚ ㄉㄠˋ ㄕˊ ㄏㄡˋ ㄐㄧㄢˋ"
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Phone & texting",
+   "icon": "📱",
+   "color": "#ffdcc2",
+   "lessons": [
+    [
+     "My phone",
+     "📱"
+    ],
+    [
+     "Texting",
+     "💬"
+    ],
+    [
+     "Online",
+     "🌐"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Phone",
+     "t": "手機",
+     "r": "shǒujī",
+     "z": "ㄕㄡˇ ㄐㄧ"
+    },
+    {
+     "en": "Computer",
+     "t": "電腦",
+     "r": "diànnǎo",
+     "z": "ㄉㄧㄢˋ ㄋㄠˇ"
+    },
+    {
+     "en": "Message",
+     "t": "訊息",
+     "r": "xùnxī",
+     "z": "ㄒㄩㄣˋ ㄒㄧ"
+    },
+    {
+     "en": "To call",
+     "t": "打電話",
+     "r": "dǎ diànhuà",
+     "z": "ㄉㄚˇ ㄉㄧㄢˋ ㄏㄨㄚˋ"
+    },
+    {
+     "en": "Internet",
+     "t": "網路",
+     "r": "wǎnglù",
+     "z": "ㄨㄤˇ ㄌㄨˋ"
+    },
+    {
+     "en": "Password",
+     "t": "密碼",
+     "r": "mìmǎ",
+     "z": "ㄇㄧˋ ㄇㄚˇ"
+    },
+    {
+     "en": "Photo",
+     "t": "照片",
+     "r": "zhàopiān",
+     "z": "ㄓㄠˋ ㄆㄧㄢ"
+    },
+    {
+     "en": "App",
+     "t": "應用程式",
+     "r": "yīngyòng chéngshì",
+     "z": "ㄧㄥ ㄩㄥˋ ㄔㄥˊ ㄕˋ"
+    },
+    {
+     "en": "Battery",
+     "t": "電池",
+     "r": "diànchí",
+     "z": "ㄉㄧㄢˋ ㄔˊ"
+    },
+    {
+     "en": "Charger",
+     "t": "充電器",
+     "r": "chōngdiànqì",
+     "z": "ㄔㄨㄥ ㄉㄧㄢˋ ㄑㄧˋ"
+    },
+    {
+     "en": "Email",
+     "t": "電子郵件",
+     "r": "diànzǐ yóujiàn",
+     "z": "ㄉㄧㄢˋ ㄗˇ ㄧㄡˊ ㄐㄧㄢˋ"
+    },
+    {
+     "en": "To send a text",
+     "t": "傳訊息",
+     "r": "chuán xùnxī",
+     "z": "ㄔㄨㄢˊ ㄒㄩㄣˋ ㄒㄧ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What's your phone number?",
+     "t": "你的手機號碼是多少？",
+     "tiles": [
+      "你的",
+      "手機",
+      "號碼",
+      "是",
+      "多少"
+     ],
+     "tr": [
+      "nǐde",
+      "shǒujī",
+      "hàomǎ",
+      "shì",
+      "duōshǎo"
+     ],
+     "r": "nǐde shǒujī hàomǎ shì duōshǎo",
+     "b": 1,
+     "z": "ㄋㄧˇ ˙ㄉㄜ ㄕㄡˇ ㄐㄧ ㄏㄠˋ ㄇㄚˇ ㄕˋ ㄉㄨㄛ ㄕㄠˇ"
+    },
+    {
+     "en": "I'll text you later.",
+     "t": "我晚點傳訊息給你。",
+     "tiles": [
+      "我",
+      "晚點",
+      "傳",
+      "訊息",
+      "給",
+      "你"
+     ],
+     "tr": [
+      "wǒ",
+      "wǎndiǎn",
+      "chuán",
+      "xùnxī",
+      "gěi",
+      "nǐ"
+     ],
+     "r": "wǒ wǎndiǎn chuán xùnxī gěi nǐ",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄨㄢˇ ㄉㄧㄢˇ ㄔㄨㄢˊ ㄒㄩㄣˋ ㄒㄧ ㄍㄟˇ ㄋㄧˇ"
+    },
+    {
+     "en": "My battery is dead.",
+     "t": "我的手機沒電了。",
+     "tiles": [
+      "我的",
+      "手機",
+      "沒電",
+      "了"
+     ],
+     "tr": [
+      "wǒde",
+      "shǒujī",
+      "méi diàn",
+      "le"
+     ],
+     "r": "wǒde shǒujī méi diàn le",
+     "b": 1,
+     "z": "ㄨㄛˇ ˙ㄉㄜ ㄕㄡˇ ㄐㄧ ㄇㄟˊ ㄉㄧㄢˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "Can I take a photo?",
+     "t": "我可以拍照嗎？",
+     "tiles": [
+      "我",
+      "可以",
+      "拍照",
+      "嗎"
+     ],
+     "tr": [
+      "wǒ",
+      "kěyǐ",
+      "pāizhào",
+      "ma"
+     ],
+     "r": "wǒ kěyǐ pāizhào ma",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄎㄜˇ ㄧˇ ㄆㄞ ㄓㄠˋ ˙ㄇㄚ"
+    },
+    {
+     "en": "What's the Wi-Fi password?",
+     "t": "WiFi密碼是什麼？",
+     "tiles": [
+      "WiFi",
+      "密碼",
+      "是",
+      "什麼"
+     ],
+     "tr": [
+      "WiFi",
+      "mìmǎ",
+      "shì",
+      "shénme"
+     ],
+     "r": "WiFi mìmǎ shì shénme",
+     "b": 1,
+     "z": "WiFi ㄇㄧˋ ㄇㄚˇ ㄕˋ ㄕㄣˊ ˙ㄇㄜ"
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "name": "Emotions & opinions",
+   "icon": "💭",
+   "color": "#bde8d4",
+   "lessons": [
+    [
+     "Happy & sad",
+     "😊"
+    ],
+    [
+     "Big feelings",
+     "😤"
+    ],
+    [
+     "Opinions",
+     "💭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Happy",
+     "t": "開心",
+     "r": "kāixīn",
+     "z": "ㄎㄞ ㄒㄧㄣ"
+    },
+    {
+     "en": "Sad",
+     "t": "難過",
+     "r": "nánguò",
+     "z": "ㄋㄢˊ ㄍㄨㄛˋ"
+    },
+    {
+     "en": "Angry",
+     "t": "生氣",
+     "r": "shēngqì",
+     "z": "ㄕㄥ ㄑㄧˋ"
+    },
+    {
+     "en": "Tired",
+     "t": "累",
+     "r": "lèi",
+     "z": "ㄌㄟˋ"
+    },
+    {
+     "en": "Nervous",
+     "t": "緊張",
+     "r": "jǐnzhāng",
+     "z": "ㄐㄧㄣˇ ㄓㄤ"
+    },
+    {
+     "en": "Boring",
+     "t": "無聊",
+     "r": "wúliáo",
+     "z": "ㄨˊ ㄌㄧㄠˊ"
+    },
+    {
+     "en": "Scared",
+     "t": "害怕",
+     "r": "hàipà",
+     "z": "ㄏㄞˋ ㄆㄚˋ"
+    },
+    {
+     "en": "Fun",
+     "t": "好玩",
+     "r": "hǎowán",
+     "z": "ㄏㄠˇ ㄨㄢˊ"
+    },
+    {
+     "en": "Interesting",
+     "t": "有趣",
+     "r": "yǒuqù",
+     "z": "ㄧㄡˇ ㄑㄩˋ"
+    },
+    {
+     "en": "I think…",
+     "t": "我覺得…",
+     "r": "wǒ juéde…",
+     "z": "ㄨㄛˇ ㄐㄩㄝˊ ˙ㄉㄜ…"
+    },
+    {
+     "en": "I agree",
+     "t": "我同意",
+     "r": "wǒ tóngyì",
+     "z": "ㄨㄛˇ ㄊㄨㄥˊ ㄧˋ"
+    },
+    {
+     "en": "Really?",
+     "t": "真的嗎？",
+     "r": "zhēnde ma?",
+     "z": "ㄓㄣ ˙ㄉㄜ ˙ㄇㄚ?"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm so happy today!",
+     "t": "我今天好開心！",
+     "tiles": [
+      "我",
+      "今天",
+      "好",
+      "開心"
+     ],
+     "tr": [
+      "wǒ",
+      "jīntiān",
+      "hǎo",
+      "kāixīn"
+     ],
+     "r": "wǒ jīntiān hǎo kāixīn",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄐㄧㄣ ㄊㄧㄢ ㄏㄠˇ ㄎㄞ ㄒㄧㄣ"
+    },
+    {
+     "en": "Why are you sad?",
+     "t": "你為什麼難過？",
+     "tiles": [
+      "你",
+      "為什麼",
+      "難過"
+     ],
+     "tr": [
+      "nǐ",
+      "wèishénme",
+      "nánguò"
+     ],
+     "r": "nǐ wèishénme nánguò",
+     "b": 2,
+     "z": "ㄋㄧˇ ㄨㄟˋ ㄕㄣˊ ˙ㄇㄜ ㄋㄢˊ ㄍㄨㄛˋ"
+    },
+    {
+     "en": "I think it is interesting.",
+     "t": "我覺得很有趣。",
+     "tiles": [
+      "我",
+      "覺得",
+      "很",
+      "有趣"
+     ],
+     "tr": [
+      "wǒ",
+      "juéde",
+      "hěn",
+      "yǒuqù"
+     ],
+     "r": "wǒ juéde hěn yǒuqù",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄐㄩㄝˊ ˙ㄉㄜ ㄏㄣˇ ㄧㄡˇ ㄑㄩˋ"
+    },
+    {
+     "en": "I'm really tired.",
+     "t": "我好累。",
+     "tiles": [
+      "我",
+      "好",
+      "累"
+     ],
+     "tr": [
+      "wǒ",
+      "hǎo",
+      "lèi"
+     ],
+     "r": "wǒ hǎo lèi",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄏㄠˇ ㄌㄟˋ"
+    },
+    {
+     "en": "I think so too.",
+     "t": "我也這麼覺得。",
+     "tiles": [
+      "我",
+      "也",
+      "這麼",
+      "覺得"
+     ],
+     "tr": [
+      "wǒ",
+      "yě",
+      "zhème",
+      "juéde"
+     ],
+     "r": "wǒ yě zhème juéde",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄧㄝˇ ㄓㄜˋ ˙ㄇㄜ ㄐㄩㄝˊ ˙ㄉㄜ"
+    }
+   ]
+  },
+  {
+   "id": "past",
+   "name": "Grammar: Past tense",
+   "icon": "⏪",
+   "color": "#f8d0f0",
+   "lessons": [
+    [
+     "When it happened",
+     "⏪"
+    ],
+    [
+     "What I did",
+     "✅"
+    ],
+    [
+     "Telling stories",
+     "📖"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Last night",
+     "t": "昨天晚上",
+     "r": "zuótiān wǎnshàng",
+     "z": "ㄗㄨㄛˊ ㄊㄧㄢ ㄨㄢˇ ㄕㄤˋ"
+    },
+    {
+     "en": "Last week",
+     "t": "上星期",
+     "r": "shàng xīngqí",
+     "z": "ㄕㄤˋ ㄒㄧㄥ ㄑㄧˊ"
+    },
+    {
+     "en": "Last year",
+     "t": "去年",
+     "r": "qùnián",
+     "z": "ㄑㄩˋ ㄋㄧㄢˊ"
+    },
+    {
+     "en": "Two days ago",
+     "t": "兩天前",
+     "r": "liǎngtiān qián",
+     "z": "ㄌㄧㄤˇ ㄊㄧㄢ ㄑㄧㄢˊ"
+    },
+    {
+     "en": "Already",
+     "t": "已經",
+     "r": "yǐjīng",
+     "z": "ㄧˇ ㄐㄧㄥ"
+    },
+    {
+     "en": "I went",
+     "t": "我去了",
+     "r": "wǒ qù le",
+     "z": "ㄨㄛˇ ㄑㄩˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "I ate",
+     "t": "我吃了",
+     "r": "wǒ chī le",
+     "z": "ㄨㄛˇ ㄔ ˙ㄌㄜ"
+    },
+    {
+     "en": "I saw",
+     "t": "我看到了",
+     "r": "wǒ kàndào le",
+     "z": "ㄨㄛˇ ㄎㄢˋ ㄉㄠˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "I bought",
+     "t": "我買了",
+     "r": "wǒ mǎi le",
+     "z": "ㄨㄛˇ ㄇㄞˇ ˙ㄌㄜ"
+    },
+    {
+     "en": "I studied",
+     "t": "我念了書",
+     "r": "wǒ niàn le shū",
+     "z": "ㄨㄛˇ ㄋㄧㄢˋ ˙ㄌㄜ ㄕㄨ"
+    },
+    {
+     "en": "I slept",
+     "t": "我睡了",
+     "r": "wǒ shuì le",
+     "z": "ㄨㄛˇ ㄕㄨㄟˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "It was fun",
+     "t": "很好玩",
+     "r": "hěn hǎowán",
+     "z": "ㄏㄣˇ ㄏㄠˇ ㄨㄢˊ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I went to the park yesterday.",
+     "t": "我昨天去了公園。",
+     "tiles": [
+      "我",
+      "昨天",
+      "去了",
+      "公園"
+     ],
+     "tr": [
+      "wǒ",
+      "zuótiān",
+      "qù le",
+      "gōngyuán"
+     ],
+     "r": "wǒ zuótiān qù le gōngyuán",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄗㄨㄛˊ ㄊㄧㄢ ㄑㄩˋ ˙ㄌㄜ ㄍㄨㄥ ㄩㄢˊ"
+    },
+    {
+     "en": "I ate ramen last night.",
+     "t": "我昨天晚上吃了拉麵。",
+     "tiles": [
+      "我",
+      "昨天晚上",
+      "吃了",
+      "拉麵"
+     ],
+     "tr": [
+      "wǒ",
+      "zuótiān wǎnshàng",
+      "chī le",
+      "lāmiàn"
+     ],
+     "r": "wǒ zuótiān wǎnshàng chī le lāmiàn",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄗㄨㄛˊ ㄊㄧㄢ ㄨㄢˇ ㄕㄤˋ ㄔ ˙ㄌㄜ ㄌㄚ ㄇㄧㄢˋ"
+    },
+    {
+     "en": "I saw a movie last week.",
+     "t": "我上星期看了一部電影。",
+     "tiles": [
+      "我",
+      "上星期",
+      "看了",
+      "一",
+      "部",
+      "電影"
+     ],
+     "tr": [
+      "wǒ",
+      "shàng xīngqí",
+      "kàn le",
+      "yī",
+      "bù",
+      "diànyǐng"
+     ],
+     "r": "wǒ shàng xīngqí kàn le yī bù diànyǐng",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄕㄤˋ ㄒㄧㄥ ㄑㄧˊ ㄎㄢˋ ˙ㄌㄜ ㄧ ㄅㄨˋ ㄉㄧㄢˋ ㄧㄥˇ"
+    },
+    {
+     "en": "I already did my homework.",
+     "t": "我已經寫完作業了。",
+     "tiles": [
+      "我",
+      "已經",
+      "寫完",
+      "作業",
+      "了"
+     ],
+     "tr": [
+      "wǒ",
+      "yǐjīng",
+      "xiěwán",
+      "zuòyè",
+      "le"
+     ],
+     "r": "wǒ yǐjīng xiěwán zuòyè le",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄧˇ ㄐㄧㄥ ㄒㄧㄝˇ ㄨㄢˊ ㄗㄨㄛˋ ㄧㄝˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "It was really fun!",
+     "t": "真的很好玩！",
+     "tiles": [
+      "真的",
+      "很",
+      "好玩"
+     ],
+     "tr": [
+      "zhēnde",
+      "hěn",
+      "hǎowán"
+     ],
+     "r": "zhēnde hěn hǎowán",
+     "b": 2,
+     "z": "ㄓㄣ ˙ㄉㄜ ㄏㄣˇ ㄏㄠˇ ㄨㄢˊ"
+    }
+   ],
+   "note": "Mandarin verbs don't change. Add 了 (le) after the verb for a finished action: 我吃了 (wǒ chī le) = I ate. Time words like 昨天 (zuótiān) go before the verb."
+  },
+  {
+   "id": "future",
+   "name": "Grammar: Future",
+   "icon": "⏩",
+   "color": "#d7e8ff",
+   "lessons": [
+    [
+     "Tomorrow & later",
+     "⏩"
+    ],
+    [
+     "Plans & goals",
+     "🎯"
+    ],
+    [
+     "Dreams",
+     "🌈"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Tonight",
+     "t": "今天晚上",
+     "r": "jīntiān wǎnshàng",
+     "z": "ㄐㄧㄣ ㄊㄧㄢ ㄨㄢˇ ㄕㄤˋ"
+    },
+    {
+     "en": "Next week",
+     "t": "下星期",
+     "r": "xià xīngqí",
+     "z": "ㄒㄧㄚˋ ㄒㄧㄥ ㄑㄧˊ"
+    },
+    {
+     "en": "Next year",
+     "t": "明年",
+     "r": "míngnián",
+     "z": "ㄇㄧㄥˊ ㄋㄧㄢˊ"
+    },
+    {
+     "en": "Later",
+     "t": "等一下",
+     "r": "děng yíxià",
+     "z": "ㄉㄥˇ ㄧˊ ㄒㄧㄚˋ"
+    },
+    {
+     "en": "Soon",
+     "t": "很快",
+     "r": "hěn kuài",
+     "z": "ㄏㄣˇ ㄎㄨㄞˋ"
+    },
+    {
+     "en": "I will go",
+     "t": "我會去",
+     "r": "wǒ huì qù",
+     "z": "ㄨㄛˇ ㄏㄨㄟˋ ㄑㄩˋ"
+    },
+    {
+     "en": "I will study",
+     "t": "我會念書",
+     "r": "wǒ huì niànshū",
+     "z": "ㄨㄛˇ ㄏㄨㄟˋ ㄋㄧㄢˋ ㄕㄨ"
+    },
+    {
+     "en": "I'm going to travel",
+     "t": "我要去旅行",
+     "r": "wǒ yào qù lǚxíng",
+     "z": "ㄨㄛˇ ㄧㄠˋ ㄑㄩˋ ㄌㄩˇ ㄒㄧㄥˊ"
+    },
+    {
+     "en": "I will call you",
+     "t": "我會打給你",
+     "r": "wǒ huì dǎ gěi nǐ",
+     "z": "ㄨㄛˇ ㄏㄨㄟˋ ㄉㄚˇ ㄍㄟˇ ㄋㄧˇ"
+    },
+    {
+     "en": "I want to…",
+     "t": "我想…",
+     "r": "wǒ xiǎng…",
+     "z": "ㄨㄛˇ ㄒㄧㄤˇ…"
+    },
+    {
+     "en": "Plan",
+     "t": "計畫",
+     "r": "jìhuà",
+     "z": "ㄐㄧˋ ㄏㄨㄚˋ"
+    },
+    {
+     "en": "Dream",
+     "t": "夢想",
+     "r": "mèngxiǎng",
+     "z": "ㄇㄥˋ ㄒㄧㄤˇ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I will go to the beach tomorrow.",
+     "t": "我明天要去海邊。",
+     "tiles": [
+      "我",
+      "明天",
+      "要",
+      "去",
+      "海邊"
+     ],
+     "tr": [
+      "wǒ",
+      "míngtiān",
+      "yào",
+      "qù",
+      "hǎibiān"
+     ],
+     "r": "wǒ míngtiān yào qù hǎibiān",
+     "b": 4,
+     "z": "ㄨㄛˇ ㄇㄧㄥˊ ㄊㄧㄢ ㄧㄠˋ ㄑㄩˋ ㄏㄞˇ ㄅㄧㄢ"
+    },
+    {
+     "en": "I'm going to study tonight.",
+     "t": "我今天晚上要念書。",
+     "tiles": [
+      "我",
+      "今天晚上",
+      "要",
+      "念書"
+     ],
+     "tr": [
+      "wǒ",
+      "jīntiān wǎnshàng",
+      "yào",
+      "niànshū"
+     ],
+     "r": "wǒ jīntiān wǎnshàng yào niànshū",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄐㄧㄣ ㄊㄧㄢ ㄨㄢˇ ㄕㄤˋ ㄧㄠˋ ㄋㄧㄢˋ ㄕㄨ"
+    },
+    {
+     "en": "Next year I will travel a lot.",
+     "t": "明年我要常常去旅行。",
+     "tiles": [
+      "明年",
+      "我",
+      "要",
+      "常常",
+      "去",
+      "旅行"
+     ],
+     "tr": [
+      "míngnián",
+      "wǒ",
+      "yào",
+      "chángcháng",
+      "qù",
+      "lǚxíng"
+     ],
+     "r": "míngnián wǒ yào chángcháng qù lǚxíng",
+     "b": 0,
+     "z": "ㄇㄧㄥˊ ㄋㄧㄢˊ ㄨㄛˇ ㄧㄠˋ ㄔㄤˊ ㄔㄤˊ ㄑㄩˋ ㄌㄩˇ ㄒㄧㄥˊ"
+    },
+    {
+     "en": "I'll call you later.",
+     "t": "我等一下打給你。",
+     "tiles": [
+      "我",
+      "等一下",
+      "打",
+      "給",
+      "你"
+     ],
+     "tr": [
+      "wǒ",
+      "děng yíxià",
+      "dǎ",
+      "gěi",
+      "nǐ"
+     ],
+     "r": "wǒ děng yíxià dǎ gěi nǐ",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄉㄥˇ ㄧˊ ㄒㄧㄚˋ ㄉㄚˇ ㄍㄟˇ ㄋㄧˇ"
+    },
+    {
+     "en": "My dream is to be a singer.",
+     "t": "我的夢想是當歌手。",
+     "tiles": [
+      "我的",
+      "夢想",
+      "是",
+      "當",
+      "歌手"
+     ],
+     "tr": [
+      "wǒde",
+      "mèngxiǎng",
+      "shì",
+      "dāng",
+      "gēshǒu"
+     ],
+     "r": "wǒde mèngxiǎng shì dāng gēshǒu",
+     "b": 1,
+     "z": "ㄨㄛˇ ˙ㄉㄜ ㄇㄥˋ ㄒㄧㄤˇ ㄕˋ ㄉㄤ ㄍㄜ ㄕㄡˇ"
+    }
+   ],
+   "note": "Use 會 (huì) = will, or 要 (yào) = going to: 我會去 (wǒ huì qù) = I will go. Time words like 明天 (míngtiān) make the future clear."
+  },
+  {
+   "id": "questions",
+   "name": "Grammar: Questions",
+   "icon": "❓",
+   "color": "#ffe0e9",
+   "lessons": [
+    [
+     "Question words",
+     "❓"
+    ],
+    [
+     "Asking about people",
+     "🙋"
+    ],
+    [
+     "Asking for help",
+     "🆘"
+    ]
+   ],
+   "words": [
+    {
+     "en": "What?",
+     "t": "什麼？",
+     "r": "shénme?",
+     "z": "ㄕㄣˊ ˙ㄇㄜ?"
+    },
+    {
+     "en": "Who?",
+     "t": "誰？",
+     "r": "shéi?",
+     "z": "ㄕㄟˊ?"
+    },
+    {
+     "en": "Where?",
+     "t": "哪裡？",
+     "r": "nǎlǐ?",
+     "z": "ㄋㄚˇ ㄌㄧˇ?"
+    },
+    {
+     "en": "When?",
+     "t": "什麼時候？",
+     "r": "shénme shíhòu?",
+     "z": "ㄕㄣˊ ˙ㄇㄜ ㄕˊ ㄏㄡˋ?"
+    },
+    {
+     "en": "Why?",
+     "t": "為什麼？",
+     "r": "wèishénme?",
+     "z": "ㄨㄟˋ ㄕㄣˊ ˙ㄇㄜ?"
+    },
+    {
+     "en": "How?",
+     "t": "怎麼？",
+     "r": "zěnme?",
+     "z": "ㄗㄣˇ ˙ㄇㄜ?"
+    },
+    {
+     "en": "How much?",
+     "t": "多少錢？",
+     "r": "duōshǎo qián?",
+     "z": "ㄉㄨㄛ ㄕㄠˇ ㄑㄧㄢˊ?"
+    },
+    {
+     "en": "Which one?",
+     "t": "哪一個？",
+     "r": "nǎ yí ge?",
+     "z": "ㄋㄚˇ ㄧˊ ˙ㄍㄜ?"
+    },
+    {
+     "en": "What time?",
+     "t": "幾點？",
+     "r": "jǐ diǎn?",
+     "z": "ㄐㄧˇ ㄉㄧㄢˇ?"
+    },
+    {
+     "en": "Can you help me?",
+     "t": "可以幫我嗎？",
+     "r": "kěyǐ bāng wǒ ma?",
+     "z": "ㄎㄜˇ ㄧˇ ㄅㄤ ㄨㄛˇ ˙ㄇㄚ?"
+    },
+    {
+     "en": "What does it mean?",
+     "t": "這是什麼意思？",
+     "r": "zhè shì shénme yìsi?",
+     "z": "ㄓㄜˋ ㄕˋ ㄕㄣˊ ˙ㄇㄜ ㄧˋ ˙ㄙ?"
+    },
+    {
+     "en": "Is that right?",
+     "t": "對嗎？",
+     "r": "duìma?",
+     "z": "ㄉㄨㄟˋ ˙ㄇㄚ?"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What is this?",
+     "t": "這是什麼？",
+     "tiles": [
+      "這",
+      "是",
+      "什麼"
+     ],
+     "tr": [
+      "zhè",
+      "shì",
+      "shénme"
+     ],
+     "r": "zhè shì shénme",
+     "b": 2,
+     "z": "ㄓㄜˋ ㄕˋ ㄕㄣˊ ˙ㄇㄜ"
+    },
+    {
+     "en": "Where do you live?",
+     "t": "你住在哪裡？",
+     "tiles": [
+      "你",
+      "住",
+      "在",
+      "哪裡"
+     ],
+     "tr": [
+      "nǐ",
+      "zhù",
+      "zài",
+      "nǎlǐ"
+     ],
+     "r": "nǐ zhù zài nǎlǐ",
+     "b": 3,
+     "z": "ㄋㄧˇ ㄓㄨˋ ㄗㄞˋ ㄋㄚˇ ㄌㄧˇ"
+    },
+    {
+     "en": "Who is that person?",
+     "t": "那個人是誰？",
+     "tiles": [
+      "那個",
+      "人",
+      "是",
+      "誰"
+     ],
+     "tr": [
+      "nàge",
+      "rén",
+      "shì",
+      "shéi"
+     ],
+     "r": "nàge rén shì shéi",
+     "b": 0,
+     "z": "ㄋㄚˋ ˙ㄍㄜ ㄖㄣˊ ㄕˋ ㄕㄟˊ"
+    },
+    {
+     "en": "When does class start?",
+     "t": "什麼時候上課？",
+     "tiles": [
+      "什麼時候",
+      "上課"
+     ],
+     "tr": [
+      "shénme shíhòu",
+      "shàngkè"
+     ],
+     "r": "shénme shíhòu shàngkè",
+     "b": 0,
+     "z": "ㄕㄣˊ ˙ㄇㄜ ㄕˊ ㄏㄡˋ ㄕㄤˋ ㄎㄜˋ"
+    },
+    {
+     "en": "How do you say this?",
+     "t": "這個怎麼說？",
+     "tiles": [
+      "這個",
+      "怎麼",
+      "說"
+     ],
+     "tr": [
+      "zhège",
+      "zěnme",
+      "shuō"
+     ],
+     "r": "zhège zěnme shuō",
+     "b": 1,
+     "z": "ㄓㄜˋ ˙ㄍㄜ ㄗㄣˇ ˙ㄇㄜ ㄕㄨㄛ"
+    }
+   ],
+   "note": "Add 嗎 (ma) to make a yes/no question: 你好嗎？(nǐ hǎo ma?). With question words like 什麼 (shénme) or 哪裡 (nǎlǐ), don't add 嗎 (ma)."
+  },
+  {
+   "id": "negation",
+   "name": "Grammar: Negation",
+   "icon": "🚫",
+   "color": "#e6dcc9",
+   "lessons": [
+    [
+     "No & not",
+     "🙅"
+    ],
+    [
+     "Don't & can't",
+     "⛔"
+    ],
+    [
+     "Not yet",
+     "⏳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Not",
+     "t": "不",
+     "r": "bù",
+     "z": "ㄅㄨˋ"
+    },
+    {
+     "en": "I don't know",
+     "t": "我不知道",
+     "r": "wǒ bù zhīdào",
+     "z": "ㄨㄛˇ ㄅㄨˋ ㄓ ㄉㄠˋ"
+    },
+    {
+     "en": "I don't like it",
+     "t": "我不喜歡",
+     "r": "wǒ bù xǐhuān",
+     "z": "ㄨㄛˇ ㄅㄨˋ ㄒㄧˇ ㄏㄨㄢ"
+    },
+    {
+     "en": "I don't have it",
+     "t": "我沒有",
+     "r": "wǒ méiyǒu",
+     "z": "ㄨㄛˇ ㄇㄟˊ ㄧㄡˇ"
+    },
+    {
+     "en": "I can't",
+     "t": "我不行",
+     "r": "wǒ bùxíng",
+     "z": "ㄨㄛˇ ㄅㄨˋ ㄒㄧㄥˊ"
+    },
+    {
+     "en": "Not yet",
+     "t": "還沒",
+     "r": "hái méi",
+     "z": "ㄏㄞˊ ㄇㄟˊ"
+    },
+    {
+     "en": "Never",
+     "t": "從來沒有",
+     "r": "cónglái méiyǒu",
+     "z": "ㄘㄨㄥˊ ㄌㄞˊ ㄇㄟˊ ㄧㄡˇ"
+    },
+    {
+     "en": "Nothing",
+     "t": "什麼都沒有",
+     "r": "shénme dōu méiyǒu",
+     "z": "ㄕㄣˊ ˙ㄇㄜ ㄉㄡ ㄇㄟˊ ㄧㄡˇ"
+    },
+    {
+     "en": "Nobody",
+     "t": "沒有人",
+     "r": "méiyǒu rén",
+     "z": "ㄇㄟˊ ㄧㄡˇ ㄖㄣˊ"
+    },
+    {
+     "en": "It's not…",
+     "t": "不是…",
+     "r": "búshì",
+     "z": "ㄅㄨˊ ㄕˋ"
+    },
+    {
+     "en": "Don't!",
+     "t": "不要！",
+     "r": "búyào!",
+     "z": "ㄅㄨˊ ㄧㄠˋ!"
+    },
+    {
+     "en": "No problem",
+     "t": "沒問題",
+     "r": "méi wèntí",
+     "z": "ㄇㄟˊ ㄨㄣˋ ㄊㄧˊ"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I don't eat meat.",
+     "t": "我不吃肉。",
+     "tiles": [
+      "我",
+      "不",
+      "吃",
+      "肉"
+     ],
+     "tr": [
+      "wǒ",
+      "bù",
+      "chī",
+      "ròu"
+     ],
+     "r": "wǒ bù chī ròu",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄅㄨˋ ㄔ ㄖㄡˋ"
+    },
+    {
+     "en": "I don't have time today.",
+     "t": "我今天沒有時間。",
+     "tiles": [
+      "我",
+      "今天",
+      "沒有",
+      "時間"
+     ],
+     "tr": [
+      "wǒ",
+      "jīntiān",
+      "méiyǒu",
+      "shíjiān"
+     ],
+     "r": "wǒ jīntiān méiyǒu shíjiān",
+     "b": 3,
+     "z": "ㄨㄛˇ ㄐㄧㄣ ㄊㄧㄢ ㄇㄟˊ ㄧㄡˇ ㄕˊ ㄐㄧㄢ"
+    },
+    {
+     "en": "This is not my bag.",
+     "t": "這不是我的包包。",
+     "tiles": [
+      "這",
+      "不是",
+      "我的",
+      "包包"
+     ],
+     "tr": [
+      "zhè",
+      "búshì",
+      "wǒde",
+      "bāobāo"
+     ],
+     "r": "zhè búshì wǒde bāobāo",
+     "b": 3,
+     "z": "ㄓㄜˋ ㄅㄨˊ ㄕˋ ㄨㄛˇ ˙ㄉㄜ ㄅㄠ ㄅㄠ"
+    },
+    {
+     "en": "I haven't eaten yet.",
+     "t": "我還沒吃。",
+     "tiles": [
+      "我",
+      "還沒",
+      "吃"
+     ],
+     "tr": [
+      "wǒ",
+      "hái méi",
+      "chī"
+     ],
+     "r": "wǒ hái méi chī",
+     "b": 1,
+     "z": "ㄨㄛˇ ㄏㄞˊ ㄇㄟˊ ㄔ"
+    },
+    {
+     "en": "I can't swim.",
+     "t": "我不會游泳。",
+     "tiles": [
+      "我",
+      "不會",
+      "游泳"
+     ],
+     "tr": [
+      "wǒ",
+      "bùhuì",
+      "yóuyǒng"
+     ],
+     "r": "wǒ bùhuì yóuyǒng",
+     "b": 2,
+     "z": "ㄨㄛˇ ㄅㄨˋ ㄏㄨㄟˋ ㄧㄡˊ ㄩㄥˇ"
+    }
+   ],
+   "note": "不 (bù) = don't / not (habits, wants). 沒 (méi) = didn't / don't have: 我沒有時間 (wǒ méiyǒu shíjiān). 還沒 (hái méi) = not yet."
+  },
+  {
+   "id": "polite",
+   "name": "Grammar: Polite vs casual",
+   "icon": "🎩",
+   "color": "#cdeccd",
+   "lessons": [
+    [
+     "Polite words",
+     "🎩"
+    ],
+    [
+     "Casual with friends",
+     "😎"
+    ],
+    [
+     "Formal vs friendly",
+     "🤝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Thank you (polite)",
+     "t": "謝謝您",
+     "r": "xièxie nín",
+     "z": "ㄒㄧㄝˋ ˙ㄒㄧㄝ ㄋㄧㄣˊ"
+    },
+    {
+     "en": "Thanks (casual)",
+     "t": "謝啦",
+     "r": "xiè la",
+     "z": "ㄒㄧㄝˋ ˙ㄌㄚ"
+    },
+    {
+     "en": "I'm sorry (polite)",
+     "t": "真的很抱歉",
+     "r": "zhēnde hěn bàoqiàn",
+     "z": "ㄓㄣ ˙ㄉㄜ ㄏㄣˇ ㄅㄠˋ ㄑㄧㄢˋ"
+    },
+    {
+     "en": "Sorry (casual)",
+     "t": "對不起啦",
+     "r": "duìbùqǐ la",
+     "z": "ㄉㄨㄟˋ ㄅㄨˋ ㄑㄧˇ ˙ㄌㄚ"
+    },
+    {
+     "en": "Goodbye (polite)",
+     "t": "再見",
+     "r": "zàijiàn",
+     "z": "ㄗㄞˋ ㄐㄧㄢˋ"
+    },
+    {
+     "en": "Bye (casual)",
+     "t": "掰掰",
+     "r": "bāibāi",
+     "z": "ㄅㄞ ㄅㄞ"
+    },
+    {
+     "en": "How are you? (polite)",
+     "t": "您好嗎？",
+     "r": "nín hǎo ma?",
+     "z": "ㄋㄧㄣˊ ㄏㄠˇ ˙ㄇㄚ?"
+    },
+    {
+     "en": "What's up? (casual)",
+     "t": "最近怎麼樣？",
+     "r": "zuìjìn zěnmeyàng?",
+     "z": "ㄗㄨㄟˋ ㄐㄧㄣˋ ㄗㄣˇ ˙ㄇㄜ ㄧㄤˋ?"
+    },
+    {
+     "en": "Yes (polite)",
+     "t": "是的",
+     "r": "shìde",
+     "z": "ㄕˋ ˙ㄉㄜ"
+    },
+    {
+     "en": "Yeah (casual)",
+     "t": "對啊",
+     "r": "duì a",
+     "z": "ㄉㄨㄟˋ ˙ㄚ"
+    },
+    {
+     "en": "Excuse me (polite)",
+     "t": "請問",
+     "r": "qǐngwèn",
+     "z": "ㄑㄧㄥˇ ㄨㄣˋ"
+    },
+    {
+     "en": "Hey! (casual)",
+     "t": "欸！",
+     "r": "ēi!",
+     "z": "ㄟ!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Excuse me, where is the restroom? (polite)",
+     "t": "請問，廁所在哪裡？",
+     "tiles": [
+      "請問",
+      "廁所",
+      "在",
+      "哪裡"
+     ],
+     "tr": [
+      "qǐngwèn",
+      "cèsuǒ",
+      "zài",
+      "nǎlǐ"
+     ],
+     "r": "qǐngwèn cèsuǒ zài nǎlǐ",
+     "b": 0,
+     "z": "ㄑㄧㄥˇ ㄨㄣˋ ㄘㄜˋ ㄙㄨㄛˇ ㄗㄞˋ ㄋㄚˇ ㄌㄧˇ"
+    },
+    {
+     "en": "Hey, what's up? (casual)",
+     "t": "欸，最近怎麼樣？",
+     "tiles": [
+      "欸",
+      "最近",
+      "怎麼樣"
+     ],
+     "tr": [
+      "ēi",
+      "zuìjìn",
+      "zěnmeyàng"
+     ],
+     "r": "ēi zuìjìn zěnmeyàng",
+     "b": 2,
+     "z": "ㄟ ㄗㄨㄟˋ ㄐㄧㄣˋ ㄗㄣˇ ˙ㄇㄜ ㄧㄤˋ"
+    },
+    {
+     "en": "I'm sorry I'm late. (polite)",
+     "t": "對不起，我遲到了。",
+     "tiles": [
+      "對不起",
+      "我",
+      "遲到",
+      "了"
+     ],
+     "tr": [
+      "duìbùqǐ",
+      "wǒ",
+      "chídào",
+      "le"
+     ],
+     "r": "duìbùqǐ wǒ chídào le",
+     "b": 0,
+     "z": "ㄉㄨㄟˋ ㄅㄨˋ ㄑㄧˇ ㄨㄛˇ ㄔˊ ㄉㄠˋ ˙ㄌㄜ"
+    },
+    {
+     "en": "Sorry, my bad! (casual)",
+     "t": "對不起啦，我的錯！",
+     "tiles": [
+      "對不起",
+      "啦",
+      "我的",
+      "錯"
+     ],
+     "tr": [
+      "duìbùqǐ",
+      "la",
+      "wǒde",
+      "cuò"
+     ],
+     "r": "duìbùqǐ la wǒde cuò",
+     "b": 0,
+     "z": "ㄉㄨㄟˋ ㄅㄨˋ ㄑㄧˇ ˙ㄌㄚ ㄨㄛˇ ˙ㄉㄜ ㄘㄨㄛˋ"
+    },
+    {
+     "en": "Bye, see you later! (casual)",
+     "t": "掰掰，待會見！",
+     "tiles": [
+      "掰掰",
+      "待會",
+      "見"
+     ],
+     "tr": [
+      "bāibāi",
+      "dāihuǐ",
+      "jiàn"
+     ],
+     "r": "bāibāi dāihuǐ jiàn",
+     "b": 0,
+     "z": "ㄅㄞ ㄅㄞ ㄉㄞ ㄏㄨㄟˇ ㄐㄧㄢˋ"
+    }
+   ],
+   "note": "您 (nín) is the polite 'you'. 請問 (qǐngwèn) = excuse me, may I ask. Adding 啦 (la) or 啊 (a) sounds casual and friendly."
   }
  ]
 }

@@ -905,6 +905,2779 @@
      "b": 0
     }
    ]
+  },
+  {
+   "id": "school",
+   "name": "School & classes",
+   "icon": "🏫",
+   "color": "#bfe3ff",
+   "lessons": [
+    [
+     "Classes & subjects",
+     "📚"
+    ],
+    [
+     "In the classroom",
+     "✏️"
+    ],
+    [
+     "Homework & tests",
+     "📝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "School",
+     "t": "학교",
+     "r": "hakgyo"
+    },
+    {
+     "en": "Teacher",
+     "t": "선생님",
+     "r": "seonsaengnim"
+    },
+    {
+     "en": "Student",
+     "t": "학생",
+     "r": "haksaeng"
+    },
+    {
+     "en": "Classroom",
+     "t": "교실",
+     "r": "gyosil"
+    },
+    {
+     "en": "Book",
+     "t": "책",
+     "r": "chaek"
+    },
+    {
+     "en": "Pen",
+     "t": "펜",
+     "r": "pen"
+    },
+    {
+     "en": "Pencil",
+     "t": "연필",
+     "r": "yeonpil"
+    },
+    {
+     "en": "Notebook",
+     "t": "공책",
+     "r": "gongchaek"
+    },
+    {
+     "en": "Homework",
+     "t": "숙제",
+     "r": "sukje"
+    },
+    {
+     "en": "Test",
+     "t": "시험",
+     "r": "siheom"
+    },
+    {
+     "en": "Math",
+     "t": "수학",
+     "r": "suhak"
+    },
+    {
+     "en": "English",
+     "t": "영어",
+     "r": "yeongeo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm a student.",
+     "t": "저는 학생이에요.",
+     "tiles": [
+      "저는",
+      "학생이에요"
+     ],
+     "tr": [
+      "jeoneun",
+      "haksaengieyo"
+     ],
+     "r": "jeoneun haksaengieyo",
+     "b": 1
+    },
+    {
+     "en": "I have a lot of homework today.",
+     "t": "오늘 숙제가 많아요.",
+     "tiles": [
+      "오늘",
+      "숙제가",
+      "많아요"
+     ],
+     "tr": [
+      "oneul",
+      "sukjega",
+      "manayo"
+     ],
+     "r": "oneul sukjega manayo",
+     "b": 2
+    },
+    {
+     "en": "The test is tomorrow.",
+     "t": "시험은 내일이에요.",
+     "tiles": [
+      "시험은",
+      "내일이에요"
+     ],
+     "tr": [
+      "siheomeun",
+      "naeirieyo"
+     ],
+     "r": "siheomeun naeirieyo",
+     "b": 1
+    },
+    {
+     "en": "My teacher is very kind.",
+     "t": "우리 선생님은 정말 친절해요.",
+     "tiles": [
+      "우리",
+      "선생님은",
+      "정말",
+      "친절해요"
+     ],
+     "tr": [
+      "uri",
+      "seonsaengnimeun",
+      "jeongmal",
+      "chinjeolhaeyo"
+     ],
+     "r": "uri seonsaengnimeun jeongmal chinjeolhaeyo",
+     "b": 3
+    },
+    {
+     "en": "I like math.",
+     "t": "저는 수학을 좋아해요.",
+     "tiles": [
+      "저는",
+      "수학을",
+      "좋아해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "suhageul",
+      "joahaeyo"
+     ],
+     "r": "jeoneun suhageul joahaeyo",
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "name": "Weather & seasons",
+   "icon": "🌦️",
+   "color": "#c8f0c0",
+   "lessons": [
+    [
+     "Sun, rain & snow",
+     "🌧️"
+    ],
+    [
+     "Hot & cold",
+     "🌡️"
+    ],
+    [
+     "Four seasons",
+     "🍂"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Weather",
+     "t": "날씨",
+     "r": "nalssi"
+    },
+    {
+     "en": "Sunny",
+     "t": "맑음",
+     "r": "malgeum"
+    },
+    {
+     "en": "Rain",
+     "t": "비",
+     "r": "bi"
+    },
+    {
+     "en": "Snow",
+     "t": "눈",
+     "r": "nun"
+    },
+    {
+     "en": "Wind",
+     "t": "바람",
+     "r": "baram"
+    },
+    {
+     "en": "Cloudy",
+     "t": "흐림",
+     "r": "heurim"
+    },
+    {
+     "en": "It's hot",
+     "t": "더워요",
+     "r": "deowoyo"
+    },
+    {
+     "en": "It's cold",
+     "t": "추워요",
+     "r": "chuwoyo"
+    },
+    {
+     "en": "Spring",
+     "t": "봄",
+     "r": "bom"
+    },
+    {
+     "en": "Summer",
+     "t": "여름",
+     "r": "yeoreum"
+    },
+    {
+     "en": "Autumn",
+     "t": "가을",
+     "r": "gaeul"
+    },
+    {
+     "en": "Winter",
+     "t": "겨울",
+     "r": "gyeoul"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How's the weather today?",
+     "t": "오늘 날씨 어때요?",
+     "tiles": [
+      "오늘",
+      "날씨",
+      "어때요"
+     ],
+     "tr": [
+      "oneul",
+      "nalssi",
+      "eottaeyo"
+     ],
+     "r": "oneul nalssi eottaeyo",
+     "b": 1
+    },
+    {
+     "en": "It's raining.",
+     "t": "비가 와요.",
+     "tiles": [
+      "비가",
+      "와요"
+     ],
+     "tr": [
+      "biga",
+      "wayo"
+     ],
+     "r": "biga wayo",
+     "b": 1
+    },
+    {
+     "en": "It's really hot today.",
+     "t": "오늘 너무 더워요.",
+     "tiles": [
+      "오늘",
+      "너무",
+      "더워요"
+     ],
+     "tr": [
+      "oneul",
+      "neomu",
+      "deowoyo"
+     ],
+     "r": "oneul neomu deowoyo",
+     "b": 2
+    },
+    {
+     "en": "I like spring.",
+     "t": "저는 봄을 좋아해요.",
+     "tiles": [
+      "저는",
+      "봄을",
+      "좋아해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "bomeul",
+      "joahaeyo"
+     ],
+     "r": "jeoneun bomeul joahaeyo",
+     "b": 2
+    },
+    {
+     "en": "Bring an umbrella.",
+     "t": "우산 챙기세요.",
+     "tiles": [
+      "우산",
+      "챙기세요"
+     ],
+     "tr": [
+      "usan",
+      "chaenggiseyo"
+     ],
+     "r": "usan chaenggiseyo",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "hobbies",
+   "name": "Hobbies & sports",
+   "icon": "⚽",
+   "color": "#ffd6a5",
+   "lessons": [
+    [
+     "Free time",
+     "🎨"
+    ],
+    [
+     "Sports",
+     "🏀"
+    ],
+    [
+     "Music & movies",
+     "🎬"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Hobby",
+     "t": "취미",
+     "r": "chwimi"
+    },
+    {
+     "en": "Soccer",
+     "t": "축구",
+     "r": "chukgu"
+    },
+    {
+     "en": "Basketball",
+     "t": "농구",
+     "r": "nonggu"
+    },
+    {
+     "en": "Swimming",
+     "t": "수영",
+     "r": "suyeong"
+    },
+    {
+     "en": "Running",
+     "t": "달리기",
+     "r": "dalligi"
+    },
+    {
+     "en": "Music",
+     "t": "음악",
+     "r": "eumak"
+    },
+    {
+     "en": "To sing",
+     "t": "노래하다",
+     "r": "noraehada"
+    },
+    {
+     "en": "To dance",
+     "t": "춤추다",
+     "r": "chumchuda"
+    },
+    {
+     "en": "To draw",
+     "t": "그림 그리기",
+     "r": "geurim geurigi"
+    },
+    {
+     "en": "Video games",
+     "t": "게임",
+     "r": "geim"
+    },
+    {
+     "en": "Reading",
+     "t": "독서",
+     "r": "dokseo"
+    },
+    {
+     "en": "Movie",
+     "t": "영화",
+     "r": "yeonghwa"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What are your hobbies?",
+     "t": "취미가 뭐예요?",
+     "tiles": [
+      "취미가",
+      "뭐예요"
+     ],
+     "tr": [
+      "chwimiga",
+      "mwoyeyo"
+     ],
+     "r": "chwimiga mwoyeyo",
+     "b": 1
+    },
+    {
+     "en": "I play basketball on weekends.",
+     "t": "주말에 농구를 해요.",
+     "tiles": [
+      "주말에",
+      "농구를",
+      "해요"
+     ],
+     "tr": [
+      "jumare",
+      "nonggureul",
+      "haeyo"
+     ],
+     "r": "jumare nonggureul haeyo",
+     "b": 1
+    },
+    {
+     "en": "I like singing and dancing.",
+     "t": "노래하고 춤추는 걸 좋아해요.",
+     "tiles": [
+      "노래하고",
+      "춤추는",
+      "걸",
+      "좋아해요"
+     ],
+     "tr": [
+      "noraehago",
+      "chumchuneun",
+      "geol",
+      "joahaeyo"
+     ],
+     "r": "noraehago chumchuneun geol joahaeyo",
+     "b": 3
+    },
+    {
+     "en": "Do you want to watch a movie?",
+     "t": "영화 볼래요?",
+     "tiles": [
+      "영화",
+      "볼래요"
+     ],
+     "tr": [
+      "yeonghwa",
+      "bollaeyo"
+     ],
+     "r": "yeonghwa bollaeyo",
+     "b": 0
+    },
+    {
+     "en": "I swim every morning.",
+     "t": "저는 매일 아침 수영해요.",
+     "tiles": [
+      "저는",
+      "매일",
+      "아침",
+      "수영해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "maeil",
+      "achim",
+      "suyeonghaeyo"
+     ],
+     "r": "jeoneun maeil achim suyeonghaeyo",
+     "b": 3
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Body & health",
+   "icon": "🩺",
+   "color": "#f5c2e7",
+   "lessons": [
+    [
+     "Body parts",
+     "🖐️"
+    ],
+    [
+     "Feeling sick",
+     "🤒"
+    ],
+    [
+     "At the doctor",
+     "🏥"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Head",
+     "t": "머리",
+     "r": "meori"
+    },
+    {
+     "en": "Eye",
+     "t": "눈",
+     "r": "nun"
+    },
+    {
+     "en": "Mouth",
+     "t": "입",
+     "r": "ip"
+    },
+    {
+     "en": "Hand",
+     "t": "손",
+     "r": "son"
+    },
+    {
+     "en": "Stomach",
+     "t": "배",
+     "r": "bae"
+    },
+    {
+     "en": "Leg",
+     "t": "다리",
+     "r": "dari"
+    },
+    {
+     "en": "Doctor",
+     "t": "의사",
+     "r": "uisa"
+    },
+    {
+     "en": "Hospital",
+     "t": "병원",
+     "r": "byeongwon"
+    },
+    {
+     "en": "Medicine",
+     "t": "약",
+     "r": "yak"
+    },
+    {
+     "en": "Fever",
+     "t": "열",
+     "r": "yeol"
+    },
+    {
+     "en": "A cold",
+     "t": "감기",
+     "r": "gamgi"
+    },
+    {
+     "en": "It hurts",
+     "t": "아파요",
+     "r": "apayo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I have a headache.",
+     "t": "머리가 아파요.",
+     "tiles": [
+      "머리가",
+      "아파요"
+     ],
+     "tr": [
+      "meoriga",
+      "apayo"
+     ],
+     "r": "meoriga apayo",
+     "b": 1
+    },
+    {
+     "en": "I caught a cold.",
+     "t": "감기에 걸렸어요.",
+     "tiles": [
+      "감기에",
+      "걸렸어요"
+     ],
+     "tr": [
+      "gamgie",
+      "geollyeosseoyo"
+     ],
+     "r": "gamgie geollyeosseoyo",
+     "b": 1
+    },
+    {
+     "en": "I'm going to see a doctor.",
+     "t": "병원에 가요.",
+     "tiles": [
+      "병원에",
+      "가요"
+     ],
+     "tr": [
+      "byeongwone",
+      "gayo"
+     ],
+     "r": "byeongwone gayo",
+     "b": 0
+    },
+    {
+     "en": "Take your medicine.",
+     "t": "약 드세요.",
+     "tiles": [
+      "약",
+      "드세요"
+     ],
+     "tr": [
+      "yak",
+      "deuseyo"
+     ],
+     "r": "yak deuseyo",
+     "b": 0
+    },
+    {
+     "en": "I feel much better now.",
+     "t": "이제 많이 나아졌어요.",
+     "tiles": [
+      "이제",
+      "많이",
+      "나아졌어요"
+     ],
+     "tr": [
+      "ije",
+      "mani",
+      "naajyeosseoyo"
+     ],
+     "r": "ije mani naajyeosseoyo",
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "name": "Home & rooms",
+   "icon": "🏠",
+   "color": "#b8ecef",
+   "lessons": [
+    [
+     "Rooms",
+     "🛋️"
+    ],
+    [
+     "Furniture",
+     "🛏️"
+    ],
+    [
+     "Chores",
+     "🧹"
+    ]
+   ],
+   "words": [
+    {
+     "en": "House",
+     "t": "집",
+     "r": "jip"
+    },
+    {
+     "en": "Room",
+     "t": "방",
+     "r": "bang"
+    },
+    {
+     "en": "Kitchen",
+     "t": "부엌",
+     "r": "bueok"
+    },
+    {
+     "en": "Bathroom",
+     "t": "욕실",
+     "r": "yoksil"
+    },
+    {
+     "en": "Living room",
+     "t": "거실",
+     "r": "geosil"
+    },
+    {
+     "en": "Bed",
+     "t": "침대",
+     "r": "chimdae"
+    },
+    {
+     "en": "Table",
+     "t": "테이블",
+     "r": "teibeul"
+    },
+    {
+     "en": "Chair",
+     "t": "의자",
+     "r": "uija"
+    },
+    {
+     "en": "Window",
+     "t": "창문",
+     "r": "changmun"
+    },
+    {
+     "en": "Door",
+     "t": "문",
+     "r": "mun"
+    },
+    {
+     "en": "To clean",
+     "t": "청소하다",
+     "r": "cheongsohada"
+    },
+    {
+     "en": "To cook",
+     "t": "요리하다",
+     "r": "yorihada"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my house.",
+     "t": "여기가 우리 집이에요.",
+     "tiles": [
+      "여기가",
+      "우리",
+      "집이에요"
+     ],
+     "tr": [
+      "yeogiga",
+      "uri",
+      "jibieyo"
+     ],
+     "r": "yeogiga uri jibieyo",
+     "b": 2
+    },
+    {
+     "en": "My room is small.",
+     "t": "제 방은 작아요.",
+     "tiles": [
+      "제",
+      "방은",
+      "작아요"
+     ],
+     "tr": [
+      "je",
+      "bangeun",
+      "jagayo"
+     ],
+     "r": "je bangeun jagayo",
+     "b": 2
+    },
+    {
+     "en": "Dad is cooking in the kitchen.",
+     "t": "아빠는 부엌에서 요리하고 있어요.",
+     "tiles": [
+      "아빠는",
+      "부엌에서",
+      "요리하고",
+      "있어요"
+     ],
+     "tr": [
+      "appaneun",
+      "bueokeseo",
+      "yorihago",
+      "isseoyo"
+     ],
+     "r": "appaneun bueokeseo yorihago isseoyo",
+     "b": 2
+    },
+    {
+     "en": "Please open the window.",
+     "t": "창문 좀 열어 주세요.",
+     "tiles": [
+      "창문",
+      "좀",
+      "열어",
+      "주세요"
+     ],
+     "tr": [
+      "changmun",
+      "jom",
+      "yeoreo",
+      "juseyo"
+     ],
+     "r": "changmun jom yeoreo juseyo",
+     "b": 0
+    },
+    {
+     "en": "I clean my room on Sundays.",
+     "t": "일요일에 방을 청소해요.",
+     "tiles": [
+      "일요일에",
+      "방을",
+      "청소해요"
+     ],
+     "tr": [
+      "iryoire",
+      "bangeul",
+      "cheongsohaeyo"
+     ],
+     "r": "iryoire bangeul cheongsohaeyo",
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "shopping",
+   "name": "Clothes & shopping",
+   "icon": "🛍️",
+   "color": "#ffcfcf",
+   "lessons": [
+    [
+     "Clothes",
+     "👕"
+    ],
+    [
+     "At the store",
+     "🏬"
+    ],
+    [
+     "Paying",
+     "💳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Clothes",
+     "t": "옷",
+     "r": "ot"
+    },
+    {
+     "en": "Shirt",
+     "t": "셔츠",
+     "r": "syeocheu"
+    },
+    {
+     "en": "Pants",
+     "t": "바지",
+     "r": "baji"
+    },
+    {
+     "en": "Shoes",
+     "t": "신발",
+     "r": "sinbal"
+    },
+    {
+     "en": "Dress",
+     "t": "원피스",
+     "r": "wonpiseu"
+    },
+    {
+     "en": "Hat",
+     "t": "모자",
+     "r": "moja"
+    },
+    {
+     "en": "Store",
+     "t": "가게",
+     "r": "gage"
+    },
+    {
+     "en": "Price",
+     "t": "가격",
+     "r": "gagyeok"
+    },
+    {
+     "en": "Cheap",
+     "t": "싸요",
+     "r": "ssayo"
+    },
+    {
+     "en": "Expensive",
+     "t": "비싸요",
+     "r": "bissayo"
+    },
+    {
+     "en": "To buy",
+     "t": "사다",
+     "r": "sada"
+    },
+    {
+     "en": "To try on",
+     "t": "입어 보다",
+     "r": "ibeo boda"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How much is this shirt?",
+     "t": "이 셔츠 얼마예요?",
+     "tiles": [
+      "이",
+      "셔츠",
+      "얼마예요"
+     ],
+     "tr": [
+      "i",
+      "syeocheu",
+      "eolmayeyo"
+     ],
+     "r": "i syeocheu eolmayeyo",
+     "b": 1
+    },
+    {
+     "en": "It's too expensive!",
+     "t": "너무 비싸요!",
+     "tiles": [
+      "너무",
+      "비싸요"
+     ],
+     "tr": [
+      "neomu",
+      "bissayo"
+     ],
+     "r": "neomu bissayo",
+     "b": 1
+    },
+    {
+     "en": "Can I try it on?",
+     "t": "입어 봐도 돼요?",
+     "tiles": [
+      "입어",
+      "봐도",
+      "돼요"
+     ],
+     "tr": [
+      "ibeo",
+      "bwado",
+      "dwaeyo"
+     ],
+     "r": "ibeo bwado dwaeyo",
+     "b": 2
+    },
+    {
+     "en": "I'll buy this one.",
+     "t": "이걸로 살게요.",
+     "tiles": [
+      "이걸로",
+      "살게요"
+     ],
+     "tr": [
+      "igeollo",
+      "salgeyo"
+     ],
+     "r": "igeollo salgeyo",
+     "b": 1
+    },
+    {
+     "en": "These shoes are cute.",
+     "t": "이 신발 귀여워요.",
+     "tiles": [
+      "이",
+      "신발",
+      "귀여워요"
+     ],
+     "tr": [
+      "i",
+      "sinbal",
+      "gwiyeowoyo"
+     ],
+     "r": "i sinbal gwiyeowoyo",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "travel",
+   "name": "Transportation & travel",
+   "icon": "🚆",
+   "color": "#d4e6a8",
+   "lessons": [
+    [
+     "Getting around",
+     "🚇"
+    ],
+    [
+     "At the airport",
+     "✈️"
+    ],
+    [
+     "Asking the way",
+     "🧭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Train",
+     "t": "기차",
+     "r": "gicha"
+    },
+    {
+     "en": "Subway",
+     "t": "지하철",
+     "r": "jihacheol"
+    },
+    {
+     "en": "Bus",
+     "t": "버스",
+     "r": "beoseu"
+    },
+    {
+     "en": "Taxi",
+     "t": "택시",
+     "r": "taeksi"
+    },
+    {
+     "en": "Airplane",
+     "t": "비행기",
+     "r": "bihaenggi"
+    },
+    {
+     "en": "Airport",
+     "t": "공항",
+     "r": "gonghang"
+    },
+    {
+     "en": "Station",
+     "t": "역",
+     "r": "yeok"
+    },
+    {
+     "en": "Ticket",
+     "t": "표",
+     "r": "pyo"
+    },
+    {
+     "en": "Passport",
+     "t": "여권",
+     "r": "yeogwon"
+    },
+    {
+     "en": "Map",
+     "t": "지도",
+     "r": "jido"
+    },
+    {
+     "en": "Left",
+     "t": "왼쪽",
+     "r": "oenjjok"
+    },
+    {
+     "en": "Right",
+     "t": "오른쪽",
+     "r": "oreunjjok"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Where is the station?",
+     "t": "역이 어디예요?",
+     "tiles": [
+      "역이",
+      "어디예요"
+     ],
+     "tr": [
+      "yeogi",
+      "eodiyeyo"
+     ],
+     "r": "yeogi eodiyeyo",
+     "b": 1
+    },
+    {
+     "en": "I take the subway to school.",
+     "t": "지하철로 학교에 가요.",
+     "tiles": [
+      "지하철로",
+      "학교에",
+      "가요"
+     ],
+     "tr": [
+      "jihacheollo",
+      "hakgyoe",
+      "gayo"
+     ],
+     "r": "jihacheollo hakgyoe gayo",
+     "b": 0
+    },
+    {
+     "en": "One ticket, please.",
+     "t": "표 한 장 주세요.",
+     "tiles": [
+      "표",
+      "한",
+      "장",
+      "주세요"
+     ],
+     "tr": [
+      "pyo",
+      "han",
+      "jang",
+      "juseyo"
+     ],
+     "r": "pyo han jang juseyo",
+     "b": 0
+    },
+    {
+     "en": "Turn left here.",
+     "t": "여기서 왼쪽으로 가세요.",
+     "tiles": [
+      "여기서",
+      "왼쪽으로",
+      "가세요"
+     ],
+     "tr": [
+      "yeogiseo",
+      "oenjjogeuro",
+      "gaseyo"
+     ],
+     "r": "yeogiseo oenjjogeuro gaseyo",
+     "b": 1
+    },
+    {
+     "en": "I'm going to the airport.",
+     "t": "공항에 가요.",
+     "tiles": [
+      "공항에",
+      "가요"
+     ],
+     "tr": [
+      "gonghange",
+      "gayo"
+     ],
+     "r": "gonghange gayo",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "name": "Time, dates & schedules",
+   "icon": "⏰",
+   "color": "#e2d1f9",
+   "lessons": [
+    [
+     "Today & tomorrow",
+     "📆"
+    ],
+    [
+     "Telling time",
+     "🕐"
+    ],
+    [
+     "My schedule",
+     "🗓️"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Today",
+     "t": "오늘",
+     "r": "oneul"
+    },
+    {
+     "en": "Tomorrow",
+     "t": "내일",
+     "r": "naeil"
+    },
+    {
+     "en": "Yesterday",
+     "t": "어제",
+     "r": "eoje"
+    },
+    {
+     "en": "Monday",
+     "t": "월요일",
+     "r": "woryoil"
+    },
+    {
+     "en": "Friday",
+     "t": "금요일",
+     "r": "geumyoil"
+    },
+    {
+     "en": "Weekend",
+     "t": "주말",
+     "r": "jumal"
+    },
+    {
+     "en": "Morning",
+     "t": "아침",
+     "r": "achim"
+    },
+    {
+     "en": "Night",
+     "t": "밤",
+     "r": "bam"
+    },
+    {
+     "en": "Hour",
+     "t": "시간",
+     "r": "sigan"
+    },
+    {
+     "en": "Minute",
+     "t": "분",
+     "r": "bun"
+    },
+    {
+     "en": "Early",
+     "t": "일찍",
+     "r": "iljjik"
+    },
+    {
+     "en": "Late",
+     "t": "늦게",
+     "r": "neutge"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What time is it?",
+     "t": "지금 몇 시예요?",
+     "tiles": [
+      "지금",
+      "몇",
+      "시예요"
+     ],
+     "tr": [
+      "jigeum",
+      "myeot",
+      "siyeyo"
+     ],
+     "r": "jigeum myeot siyeyo",
+     "b": 2
+    },
+    {
+     "en": "It's three o'clock.",
+     "t": "세 시예요.",
+     "tiles": [
+      "세",
+      "시예요"
+     ],
+     "tr": [
+      "se",
+      "siyeyo"
+     ],
+     "r": "se siyeyo",
+     "b": 1
+    },
+    {
+     "en": "Class starts at nine.",
+     "t": "수업은 아홉 시에 시작해요.",
+     "tiles": [
+      "수업은",
+      "아홉",
+      "시에",
+      "시작해요"
+     ],
+     "tr": [
+      "sueobeun",
+      "ahop",
+      "sie",
+      "sijakhaeyo"
+     ],
+     "r": "sueobeun ahop sie sijakhaeyo",
+     "b": 3
+    },
+    {
+     "en": "I'm busy on Monday.",
+     "t": "월요일에 바빠요.",
+     "tiles": [
+      "월요일에",
+      "바빠요"
+     ],
+     "tr": [
+      "woryoire",
+      "bappayo"
+     ],
+     "r": "woryoire bappayo",
+     "b": 0
+    },
+    {
+     "en": "See you tomorrow!",
+     "t": "내일 봐요!",
+     "tiles": [
+      "내일",
+      "봐요"
+     ],
+     "tr": [
+      "naeil",
+      "bwayo"
+     ],
+     "r": "naeil bwayo",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "name": "Jobs & work",
+   "icon": "💼",
+   "color": "#fff1b8",
+   "lessons": [
+    [
+     "Jobs",
+     "👩‍🍳"
+    ],
+    [
+     "At work",
+     "🏢"
+    ],
+    [
+     "Dream job",
+     "🌟"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Work",
+     "t": "일",
+     "r": "il"
+    },
+    {
+     "en": "Office",
+     "t": "사무실",
+     "r": "samusil"
+    },
+    {
+     "en": "Nurse",
+     "t": "간호사",
+     "r": "ganhosa"
+    },
+    {
+     "en": "Chef",
+     "t": "요리사",
+     "r": "yorisa"
+    },
+    {
+     "en": "Police officer",
+     "t": "경찰관",
+     "r": "gyeongchalgwan"
+    },
+    {
+     "en": "Engineer",
+     "t": "엔지니어",
+     "r": "enjinieo"
+    },
+    {
+     "en": "Artist",
+     "t": "예술가",
+     "r": "yesulga"
+    },
+    {
+     "en": "Boss",
+     "t": "사장님",
+     "r": "sajangnim"
+    },
+    {
+     "en": "Coworker",
+     "t": "동료",
+     "r": "dongnyo"
+    },
+    {
+     "en": "Meeting",
+     "t": "회의",
+     "r": "hoeui"
+    },
+    {
+     "en": "Salary",
+     "t": "월급",
+     "r": "wolgeup"
+    },
+    {
+     "en": "To work",
+     "t": "일하다",
+     "r": "ilhada"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What do you do for work?",
+     "t": "무슨 일 하세요?",
+     "tiles": [
+      "무슨",
+      "일",
+      "하세요"
+     ],
+     "tr": [
+      "museun",
+      "il",
+      "haseyo"
+     ],
+     "r": "museun il haseyo",
+     "b": 1
+    },
+    {
+     "en": "I'm a nurse.",
+     "t": "저는 간호사예요.",
+     "tiles": [
+      "저는",
+      "간호사예요"
+     ],
+     "tr": [
+      "jeoneun",
+      "ganhosayeyo"
+     ],
+     "r": "jeoneun ganhosayeyo",
+     "b": 1
+    },
+    {
+     "en": "I work at an office.",
+     "t": "사무실에서 일해요.",
+     "tiles": [
+      "사무실에서",
+      "일해요"
+     ],
+     "tr": [
+      "samusireseo",
+      "ilhaeyo"
+     ],
+     "r": "samusireseo ilhaeyo",
+     "b": 0
+    },
+    {
+     "en": "I have a meeting at ten.",
+     "t": "열 시에 회의가 있어요.",
+     "tiles": [
+      "열",
+      "시에",
+      "회의가",
+      "있어요"
+     ],
+     "tr": [
+      "yeol",
+      "sie",
+      "hoeuiga",
+      "isseoyo"
+     ],
+     "r": "yeol sie hoeuiga isseoyo",
+     "b": 3
+    },
+    {
+     "en": "I want to be a chef.",
+     "t": "요리사가 되고 싶어요.",
+     "tiles": [
+      "요리사가",
+      "되고",
+      "싶어요"
+     ],
+     "tr": [
+      "yorisaga",
+      "doego",
+      "sipeoyo"
+     ],
+     "r": "yorisaga doego sipeoyo",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "name": "Making plans with friends",
+   "icon": "📅",
+   "color": "#c9d6ff",
+   "lessons": [
+    [
+     "Free or busy?",
+     "💌"
+    ],
+    [
+     "Places to go",
+     "🎡"
+    ],
+    [
+     "Yes, no & maybe",
+     "🤔"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Together",
+     "t": "같이",
+     "r": "gachi"
+    },
+    {
+     "en": "Free (not busy)",
+     "t": "시간 있어요",
+     "r": "sigan isseoyo"
+    },
+    {
+     "en": "Busy",
+     "t": "바빠요",
+     "r": "bappayo"
+    },
+    {
+     "en": "Party",
+     "t": "파티",
+     "r": "pati"
+    },
+    {
+     "en": "Park",
+     "t": "공원",
+     "r": "gongwon"
+    },
+    {
+     "en": "Café",
+     "t": "카페",
+     "r": "kape"
+    },
+    {
+     "en": "Beach",
+     "t": "바다",
+     "r": "bada"
+    },
+    {
+     "en": "Mall",
+     "t": "백화점",
+     "r": "baekhwajeom"
+    },
+    {
+     "en": "Let's go!",
+     "t": "가자!",
+     "r": "gaja"
+    },
+    {
+     "en": "Sounds good",
+     "t": "좋아요",
+     "r": "joayo"
+    },
+    {
+     "en": "Maybe",
+     "t": "아마",
+     "r": "ama"
+    },
+    {
+     "en": "Next time",
+     "t": "다음에",
+     "r": "daeume"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Are you free this weekend?",
+     "t": "이번 주말에 시간 있어요?",
+     "tiles": [
+      "이번",
+      "주말에",
+      "시간",
+      "있어요"
+     ],
+     "tr": [
+      "ibeon",
+      "jumare",
+      "sigan",
+      "isseoyo"
+     ],
+     "r": "ibeon jumare sigan isseoyo",
+     "b": 3
+    },
+    {
+     "en": "Let's go to the park together.",
+     "t": "같이 공원에 가요.",
+     "tiles": [
+      "같이",
+      "공원에",
+      "가요"
+     ],
+     "tr": [
+      "gachi",
+      "gongwone",
+      "gayo"
+     ],
+     "r": "gachi gongwone gayo",
+     "b": 0
+    },
+    {
+     "en": "What time should we meet?",
+     "t": "몇 시에 만날까요?",
+     "tiles": [
+      "몇",
+      "시에",
+      "만날까요"
+     ],
+     "tr": [
+      "myeot",
+      "sie",
+      "mannalkkayo"
+     ],
+     "r": "myeot sie mannalkkayo",
+     "b": 2
+    },
+    {
+     "en": "Sorry, I'm busy today.",
+     "t": "미안해요, 오늘은 바빠요.",
+     "tiles": [
+      "미안해요",
+      "오늘은",
+      "바빠요"
+     ],
+     "tr": [
+      "mianhaeyo",
+      "oneureun",
+      "bappayo"
+     ],
+     "r": "mianhaeyo oneureun bappayo",
+     "b": 2
+    },
+    {
+     "en": "Sounds good, see you then!",
+     "t": "좋아요, 그때 봐요!",
+     "tiles": [
+      "좋아요",
+      "그때",
+      "봐요"
+     ],
+     "tr": [
+      "joayo",
+      "geuttae",
+      "bwayo"
+     ],
+     "r": "joayo geuttae bwayo",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Phone & texting",
+   "icon": "📱",
+   "color": "#ffdcc2",
+   "lessons": [
+    [
+     "My phone",
+     "📱"
+    ],
+    [
+     "Texting",
+     "💬"
+    ],
+    [
+     "Online",
+     "🌐"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Phone",
+     "t": "휴대폰",
+     "r": "hyudaepon"
+    },
+    {
+     "en": "Computer",
+     "t": "컴퓨터",
+     "r": "keompyuteo"
+    },
+    {
+     "en": "Message",
+     "t": "메시지",
+     "r": "mesiji"
+    },
+    {
+     "en": "To call",
+     "t": "전화하다",
+     "r": "jeonhwahada"
+    },
+    {
+     "en": "Internet",
+     "t": "인터넷",
+     "r": "inteonet"
+    },
+    {
+     "en": "Password",
+     "t": "비밀번호",
+     "r": "bimilbeonho"
+    },
+    {
+     "en": "Photo",
+     "t": "사진",
+     "r": "sajin"
+    },
+    {
+     "en": "App",
+     "t": "앱",
+     "r": "aep"
+    },
+    {
+     "en": "Battery",
+     "t": "배터리",
+     "r": "baeteori"
+    },
+    {
+     "en": "Charger",
+     "t": "충전기",
+     "r": "chungjeongi"
+    },
+    {
+     "en": "Email",
+     "t": "이메일",
+     "r": "imeil"
+    },
+    {
+     "en": "To send a text",
+     "t": "문자 보내다",
+     "r": "munja bonaeda"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What's your phone number?",
+     "t": "전화번호가 뭐예요?",
+     "tiles": [
+      "전화번호가",
+      "뭐예요"
+     ],
+     "tr": [
+      "jeonhwabeonhoga",
+      "mwoyeyo"
+     ],
+     "r": "jeonhwabeonhoga mwoyeyo",
+     "b": 0
+    },
+    {
+     "en": "I'll text you later.",
+     "t": "나중에 문자할게요.",
+     "tiles": [
+      "나중에",
+      "문자할게요"
+     ],
+     "tr": [
+      "najunge",
+      "munjahalgeyo"
+     ],
+     "r": "najunge munjahalgeyo",
+     "b": 1
+    },
+    {
+     "en": "My battery is dead.",
+     "t": "배터리가 다 됐어요.",
+     "tiles": [
+      "배터리가",
+      "다",
+      "됐어요"
+     ],
+     "tr": [
+      "baeteoriga",
+      "da",
+      "dwaesseoyo"
+     ],
+     "r": "baeteoriga da dwaesseoyo",
+     "b": 0
+    },
+    {
+     "en": "Can I take a photo?",
+     "t": "사진 찍어도 돼요?",
+     "tiles": [
+      "사진",
+      "찍어도",
+      "돼요"
+     ],
+     "tr": [
+      "sajin",
+      "jjigeodo",
+      "dwaeyo"
+     ],
+     "r": "sajin jjigeodo dwaeyo",
+     "b": 0
+    },
+    {
+     "en": "What's the Wi-Fi password?",
+     "t": "와이파이 비밀번호가 뭐예요?",
+     "tiles": [
+      "와이파이",
+      "비밀번호가",
+      "뭐예요"
+     ],
+     "tr": [
+      "waipai",
+      "bimilbeonhoga",
+      "mwoyeyo"
+     ],
+     "r": "waipai bimilbeonhoga mwoyeyo",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "name": "Emotions & opinions",
+   "icon": "💭",
+   "color": "#bde8d4",
+   "lessons": [
+    [
+     "Happy & sad",
+     "😊"
+    ],
+    [
+     "Big feelings",
+     "😤"
+    ],
+    [
+     "Opinions",
+     "💭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Happy",
+     "t": "기뻐요",
+     "r": "gippeoyo"
+    },
+    {
+     "en": "Sad",
+     "t": "슬퍼요",
+     "r": "seulpeoyo"
+    },
+    {
+     "en": "Angry",
+     "t": "화나요",
+     "r": "hwanayo"
+    },
+    {
+     "en": "Tired",
+     "t": "피곤해요",
+     "r": "pigonhaeyo"
+    },
+    {
+     "en": "Nervous",
+     "t": "긴장돼요",
+     "r": "ginjangdwaeyo"
+    },
+    {
+     "en": "Boring",
+     "t": "지루해요",
+     "r": "jiruhaeyo"
+    },
+    {
+     "en": "Scared",
+     "t": "무서워요",
+     "r": "museowoyo"
+    },
+    {
+     "en": "Fun",
+     "t": "재미있어요",
+     "r": "jaemiisseoyo"
+    },
+    {
+     "en": "Interesting",
+     "t": "흥미로워요",
+     "r": "heungmirowoyo"
+    },
+    {
+     "en": "I think…",
+     "t": "제 생각에는…",
+     "r": "je saenggageneun…"
+    },
+    {
+     "en": "I agree",
+     "t": "동의해요",
+     "r": "donguihaeyo"
+    },
+    {
+     "en": "Really?",
+     "t": "정말요?",
+     "r": "jeongmaryo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm so happy today!",
+     "t": "오늘 정말 기뻐요!",
+     "tiles": [
+      "오늘",
+      "정말",
+      "기뻐요"
+     ],
+     "tr": [
+      "oneul",
+      "jeongmal",
+      "gippeoyo"
+     ],
+     "r": "oneul jeongmal gippeoyo",
+     "b": 2
+    },
+    {
+     "en": "Why are you sad?",
+     "t": "왜 슬퍼요?",
+     "tiles": [
+      "왜",
+      "슬퍼요"
+     ],
+     "tr": [
+      "wae",
+      "seulpeoyo"
+     ],
+     "r": "wae seulpeoyo",
+     "b": 1
+    },
+    {
+     "en": "I think it is interesting.",
+     "t": "재미있는 것 같아요.",
+     "tiles": [
+      "재미있는",
+      "것",
+      "같아요"
+     ],
+     "tr": [
+      "jaemiinneun",
+      "geot",
+      "gatayo"
+     ],
+     "r": "jaemiinneun geot gatayo",
+     "b": 0
+    },
+    {
+     "en": "I'm really tired.",
+     "t": "너무 피곤해요.",
+     "tiles": [
+      "너무",
+      "피곤해요"
+     ],
+     "tr": [
+      "neomu",
+      "pigonhaeyo"
+     ],
+     "r": "neomu pigonhaeyo",
+     "b": 1
+    },
+    {
+     "en": "I think so too.",
+     "t": "저도 그렇게 생각해요.",
+     "tiles": [
+      "저도",
+      "그렇게",
+      "생각해요"
+     ],
+     "tr": [
+      "jeodo",
+      "geureoke",
+      "saenggakhaeyo"
+     ],
+     "r": "jeodo geureoke saenggakhaeyo",
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "past",
+   "name": "Grammar: Past tense",
+   "icon": "⏪",
+   "color": "#f8d0f0",
+   "lessons": [
+    [
+     "When it happened",
+     "⏪"
+    ],
+    [
+     "What I did",
+     "✅"
+    ],
+    [
+     "Telling stories",
+     "📖"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Last night",
+     "t": "어젯밤",
+     "r": "eojetbam"
+    },
+    {
+     "en": "Last week",
+     "t": "지난주",
+     "r": "jinanju"
+    },
+    {
+     "en": "Last year",
+     "t": "작년",
+     "r": "jangnyeon"
+    },
+    {
+     "en": "Two days ago",
+     "t": "이틀 전",
+     "r": "iteul jeon"
+    },
+    {
+     "en": "Already",
+     "t": "벌써",
+     "r": "beolsseo"
+    },
+    {
+     "en": "I went",
+     "t": "갔어요",
+     "r": "gasseoyo"
+    },
+    {
+     "en": "I ate",
+     "t": "먹었어요",
+     "r": "meogeosseoyo"
+    },
+    {
+     "en": "I saw",
+     "t": "봤어요",
+     "r": "bwasseoyo"
+    },
+    {
+     "en": "I bought",
+     "t": "샀어요",
+     "r": "sasseoyo"
+    },
+    {
+     "en": "I studied",
+     "t": "공부했어요",
+     "r": "gongbuhaesseoyo"
+    },
+    {
+     "en": "I slept",
+     "t": "잤어요",
+     "r": "jasseoyo"
+    },
+    {
+     "en": "It was fun",
+     "t": "재미있었어요",
+     "r": "jaemiisseosseoyo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I went to the park yesterday.",
+     "t": "어제 공원에 갔어요.",
+     "tiles": [
+      "어제",
+      "공원에",
+      "갔어요"
+     ],
+     "tr": [
+      "eoje",
+      "gongwone",
+      "gasseoyo"
+     ],
+     "r": "eoje gongwone gasseoyo",
+     "b": 2
+    },
+    {
+     "en": "I ate ramen last night.",
+     "t": "어젯밤에 라면을 먹었어요.",
+     "tiles": [
+      "어젯밤에",
+      "라면을",
+      "먹었어요"
+     ],
+     "tr": [
+      "eojetbame",
+      "ramyeoneul",
+      "meogeosseoyo"
+     ],
+     "r": "eojetbame ramyeoneul meogeosseoyo",
+     "b": 2
+    },
+    {
+     "en": "I saw a movie last week.",
+     "t": "지난주에 영화를 봤어요.",
+     "tiles": [
+      "지난주에",
+      "영화를",
+      "봤어요"
+     ],
+     "tr": [
+      "jinanjue",
+      "yeonghwareul",
+      "bwasseoyo"
+     ],
+     "r": "jinanjue yeonghwareul bwasseoyo",
+     "b": 2
+    },
+    {
+     "en": "I already did my homework.",
+     "t": "벌써 숙제를 했어요.",
+     "tiles": [
+      "벌써",
+      "숙제를",
+      "했어요"
+     ],
+     "tr": [
+      "beolsseo",
+      "sukjereul",
+      "haesseoyo"
+     ],
+     "r": "beolsseo sukjereul haesseoyo",
+     "b": 0
+    },
+    {
+     "en": "It was really fun!",
+     "t": "정말 재미있었어요!",
+     "tiles": [
+      "정말",
+      "재미있었어요"
+     ],
+     "tr": [
+      "jeongmal",
+      "jaemiisseosseoyo"
+     ],
+     "r": "jeongmal jaemiisseosseoyo",
+     "b": 1
+    }
+   ],
+   "note": "Past: add 았/었 (at/eot) + 어요 (eoyo): 가요 (gayo) → 갔어요 (gasseoyo), 먹어요 (meogeoyo) → 먹었어요 (meogeosseoyo), 해요 (haeyo) → 했어요 (haesseoyo)."
+  },
+  {
+   "id": "future",
+   "name": "Grammar: Future",
+   "icon": "⏩",
+   "color": "#d7e8ff",
+   "lessons": [
+    [
+     "Tomorrow & later",
+     "⏩"
+    ],
+    [
+     "Plans & goals",
+     "🎯"
+    ],
+    [
+     "Dreams",
+     "🌈"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Tonight",
+     "t": "오늘 밤",
+     "r": "oneul bam"
+    },
+    {
+     "en": "Next week",
+     "t": "다음 주",
+     "r": "daeum ju"
+    },
+    {
+     "en": "Next year",
+     "t": "내년",
+     "r": "naenyeon"
+    },
+    {
+     "en": "Later",
+     "t": "나중에",
+     "r": "najunge"
+    },
+    {
+     "en": "Soon",
+     "t": "곧",
+     "r": "got"
+    },
+    {
+     "en": "I will go",
+     "t": "갈 거예요",
+     "r": "gal geoyeyo"
+    },
+    {
+     "en": "I will study",
+     "t": "공부할 거예요",
+     "r": "gongbuhal geoyeyo"
+    },
+    {
+     "en": "I'm going to travel",
+     "t": "여행할 거예요",
+     "r": "yeohaenghal geoyeyo"
+    },
+    {
+     "en": "I will call you",
+     "t": "전화할게요",
+     "r": "jeonhwahalgeyo"
+    },
+    {
+     "en": "I want to…",
+     "t": "…고 싶어요",
+     "r": "…go sipeoyo"
+    },
+    {
+     "en": "Plan",
+     "t": "계획",
+     "r": "gyehoek"
+    },
+    {
+     "en": "Dream",
+     "t": "꿈",
+     "r": "kkum"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I will go to the beach tomorrow.",
+     "t": "내일 바다에 갈 거예요.",
+     "tiles": [
+      "내일",
+      "바다에",
+      "갈",
+      "거예요"
+     ],
+     "tr": [
+      "naeil",
+      "badae",
+      "gal",
+      "geoyeyo"
+     ],
+     "r": "naeil badae gal geoyeyo",
+     "b": 3
+    },
+    {
+     "en": "I'm going to study tonight.",
+     "t": "오늘 밤에 공부할 거예요.",
+     "tiles": [
+      "오늘",
+      "밤에",
+      "공부할",
+      "거예요"
+     ],
+     "tr": [
+      "oneul",
+      "bame",
+      "gongbuhal",
+      "geoyeyo"
+     ],
+     "r": "oneul bame gongbuhal geoyeyo",
+     "b": 3
+    },
+    {
+     "en": "Next year I will travel a lot.",
+     "t": "내년에는 여행을 많이 할 거예요.",
+     "tiles": [
+      "내년에는",
+      "여행을",
+      "많이",
+      "할",
+      "거예요"
+     ],
+     "tr": [
+      "naenyeoneneun",
+      "yeohaengeul",
+      "mani",
+      "hal",
+      "geoyeyo"
+     ],
+     "r": "naenyeoneneun yeohaengeul mani hal geoyeyo",
+     "b": 0
+    },
+    {
+     "en": "I'll call you later.",
+     "t": "나중에 전화할게요.",
+     "tiles": [
+      "나중에",
+      "전화할게요"
+     ],
+     "tr": [
+      "najunge",
+      "jeonhwahalgeyo"
+     ],
+     "r": "najunge jeonhwahalgeyo",
+     "b": 0
+    },
+    {
+     "en": "My dream is to be a singer.",
+     "t": "제 꿈은 가수가 되는 거예요.",
+     "tiles": [
+      "제",
+      "꿈은",
+      "가수가",
+      "되는",
+      "거예요"
+     ],
+     "tr": [
+      "je",
+      "kkumeun",
+      "gasuga",
+      "doeneun",
+      "geoyeyo"
+     ],
+     "r": "je kkumeun gasuga doeneun geoyeyo",
+     "b": 4
+    }
+   ],
+   "note": "Future/intention: ～(으)ㄹ 거예요 ((eu)l geoyeyo): 가다 (gada) → 갈 거예요 (gal geoyeyo). A promise to someone: ～(으)ㄹ게요 ((eu)lgeyo): 전화할게요 (jeonhwahalgeyo)."
+  },
+  {
+   "id": "questions",
+   "name": "Grammar: Questions",
+   "icon": "❓",
+   "color": "#ffe0e9",
+   "lessons": [
+    [
+     "Question words",
+     "❓"
+    ],
+    [
+     "Asking about people",
+     "🙋"
+    ],
+    [
+     "Asking for help",
+     "🆘"
+    ]
+   ],
+   "words": [
+    {
+     "en": "What?",
+     "t": "뭐?",
+     "r": "mwo"
+    },
+    {
+     "en": "Who?",
+     "t": "누구?",
+     "r": "nugu"
+    },
+    {
+     "en": "Where?",
+     "t": "어디?",
+     "r": "eodi"
+    },
+    {
+     "en": "When?",
+     "t": "언제?",
+     "r": "eonje"
+    },
+    {
+     "en": "Why?",
+     "t": "왜?",
+     "r": "wae"
+    },
+    {
+     "en": "How?",
+     "t": "어떻게?",
+     "r": "eotteoke"
+    },
+    {
+     "en": "How much?",
+     "t": "얼마예요?",
+     "r": "eolmayeyo"
+    },
+    {
+     "en": "Which one?",
+     "t": "어느 거?",
+     "r": "eoneu geo"
+    },
+    {
+     "en": "What time?",
+     "t": "몇 시?",
+     "r": "myeot si"
+    },
+    {
+     "en": "Can you help me?",
+     "t": "도와줄 수 있어요?",
+     "r": "dowajul su isseoyo"
+    },
+    {
+     "en": "What does it mean?",
+     "t": "무슨 뜻이에요?",
+     "r": "museun tteusieyo"
+    },
+    {
+     "en": "Is that right?",
+     "t": "맞아요?",
+     "r": "majayo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What is this?",
+     "t": "이게 뭐예요?",
+     "tiles": [
+      "이게",
+      "뭐예요"
+     ],
+     "tr": [
+      "ige",
+      "mwoyeyo"
+     ],
+     "r": "ige mwoyeyo",
+     "b": 1
+    },
+    {
+     "en": "Where do you live?",
+     "t": "어디에 살아요?",
+     "tiles": [
+      "어디에",
+      "살아요"
+     ],
+     "tr": [
+      "eodie",
+      "sarayo"
+     ],
+     "r": "eodie sarayo",
+     "b": 1
+    },
+    {
+     "en": "Who is that person?",
+     "t": "저 사람은 누구예요?",
+     "tiles": [
+      "저",
+      "사람은",
+      "누구예요"
+     ],
+     "tr": [
+      "jeo",
+      "sarameun",
+      "nuguyeyo"
+     ],
+     "r": "jeo sarameun nuguyeyo",
+     "b": 2
+    },
+    {
+     "en": "When does class start?",
+     "t": "수업이 언제 시작해요?",
+     "tiles": [
+      "수업이",
+      "언제",
+      "시작해요"
+     ],
+     "tr": [
+      "sueobi",
+      "eonje",
+      "sijakhaeyo"
+     ],
+     "r": "sueobi eonje sijakhaeyo",
+     "b": 2
+    },
+    {
+     "en": "How do you say this?",
+     "t": "이거 어떻게 말해요?",
+     "tiles": [
+      "이거",
+      "어떻게",
+      "말해요"
+     ],
+     "tr": [
+      "igeo",
+      "eotteoke",
+      "malhaeyo"
+     ],
+     "r": "igeo eotteoke malhaeyo",
+     "b": 2
+    }
+   ],
+   "note": "Same ending as a statement, just raise your voice at the end: 맞아요? (majayo?). Question words: 뭐 (mwo), 누구 (nugu), 어디 (eodi), 언제 (eonje), 왜 (wae)."
+  },
+  {
+   "id": "negation",
+   "name": "Grammar: Negation",
+   "icon": "🚫",
+   "color": "#e6dcc9",
+   "lessons": [
+    [
+     "No & not",
+     "🙅"
+    ],
+    [
+     "Don't & can't",
+     "⛔"
+    ],
+    [
+     "Not yet",
+     "⏳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Not",
+     "t": "안",
+     "r": "an"
+    },
+    {
+     "en": "I don't know",
+     "t": "몰라요",
+     "r": "mollayo"
+    },
+    {
+     "en": "I don't like it",
+     "t": "안 좋아해요",
+     "r": "an joahaeyo"
+    },
+    {
+     "en": "I don't have it",
+     "t": "없어요",
+     "r": "eopseoyo"
+    },
+    {
+     "en": "I can't",
+     "t": "못 해요",
+     "r": "mot haeyo"
+    },
+    {
+     "en": "Not yet",
+     "t": "아직이요",
+     "r": "ajigiyo"
+    },
+    {
+     "en": "Never",
+     "t": "한 번도 없어요",
+     "r": "han beondo eopseoyo"
+    },
+    {
+     "en": "Nothing",
+     "t": "아무것도 없어요",
+     "r": "amugeotdo eopseoyo"
+    },
+    {
+     "en": "Nobody",
+     "t": "아무도 없어요",
+     "r": "amudo eopseoyo"
+    },
+    {
+     "en": "It's not…",
+     "t": "…아니에요",
+     "r": "…anieyo"
+    },
+    {
+     "en": "Don't!",
+     "t": "하지 마!",
+     "r": "haji ma"
+    },
+    {
+     "en": "No problem",
+     "t": "문제없어요",
+     "r": "munjeeopseoyo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I don't eat meat.",
+     "t": "저는 고기를 안 먹어요.",
+     "tiles": [
+      "저는",
+      "고기를",
+      "안",
+      "먹어요"
+     ],
+     "tr": [
+      "jeoneun",
+      "gogireul",
+      "an",
+      "meogeoyo"
+     ],
+     "r": "jeoneun gogireul an meogeoyo",
+     "b": 2
+    },
+    {
+     "en": "I don't have time today.",
+     "t": "오늘은 시간이 없어요.",
+     "tiles": [
+      "오늘은",
+      "시간이",
+      "없어요"
+     ],
+     "tr": [
+      "oneureun",
+      "sigani",
+      "eopseoyo"
+     ],
+     "r": "oneureun sigani eopseoyo",
+     "b": 2
+    },
+    {
+     "en": "This is not my bag.",
+     "t": "이건 제 가방이 아니에요.",
+     "tiles": [
+      "이건",
+      "제",
+      "가방이",
+      "아니에요"
+     ],
+     "tr": [
+      "igeon",
+      "je",
+      "gabangi",
+      "anieyo"
+     ],
+     "r": "igeon je gabangi anieyo",
+     "b": 3
+    },
+    {
+     "en": "I haven't eaten yet.",
+     "t": "아직 안 먹었어요.",
+     "tiles": [
+      "아직",
+      "안",
+      "먹었어요"
+     ],
+     "tr": [
+      "ajik",
+      "an",
+      "meogeosseoyo"
+     ],
+     "r": "ajik an meogeosseoyo",
+     "b": 1
+    },
+    {
+     "en": "I can't swim.",
+     "t": "저는 수영을 못해요.",
+     "tiles": [
+      "저는",
+      "수영을",
+      "못해요"
+     ],
+     "tr": [
+      "jeoneun",
+      "suyeongeul",
+      "mothaeyo"
+     ],
+     "r": "jeoneun suyeongeul mothaeyo",
+     "b": 2
+    }
+   ],
+   "note": "Put 안 (an) before the verb = don't: 안 먹어요 (an meogeoyo). 못 (mot) = can't: 못 해요 (mot haeyo). 없어요 (eopseoyo) = don't have / there isn't."
+  },
+  {
+   "id": "polite",
+   "name": "Grammar: Polite vs casual",
+   "icon": "🎩",
+   "color": "#cdeccd",
+   "lessons": [
+    [
+     "Polite words",
+     "🎩"
+    ],
+    [
+     "Casual with friends",
+     "😎"
+    ],
+    [
+     "Formal vs friendly",
+     "🤝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Thank you (polite)",
+     "t": "감사합니다",
+     "r": "gamsahamnida"
+    },
+    {
+     "en": "Thanks (casual)",
+     "t": "고마워",
+     "r": "gomawo"
+    },
+    {
+     "en": "I'm sorry (polite)",
+     "t": "죄송합니다",
+     "r": "joesonghamnida"
+    },
+    {
+     "en": "Sorry (casual)",
+     "t": "미안해",
+     "r": "mianhae"
+    },
+    {
+     "en": "Goodbye (polite)",
+     "t": "안녕히 가세요",
+     "r": "annyeonghi gaseyo"
+    },
+    {
+     "en": "Bye (casual)",
+     "t": "잘 가",
+     "r": "jal ga"
+    },
+    {
+     "en": "How are you? (polite)",
+     "t": "잘 지내세요?",
+     "r": "jal jinaeseyo"
+    },
+    {
+     "en": "What's up? (casual)",
+     "t": "잘 지내?",
+     "r": "jal jinae"
+    },
+    {
+     "en": "Yes (polite)",
+     "t": "네",
+     "r": "ne"
+    },
+    {
+     "en": "Yeah (casual)",
+     "t": "응",
+     "r": "eung"
+    },
+    {
+     "en": "Excuse me (polite)",
+     "t": "실례합니다",
+     "r": "sillyehamnida"
+    },
+    {
+     "en": "Hey! (casual)",
+     "t": "야!",
+     "r": "ya"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Excuse me, where is the restroom? (polite)",
+     "t": "실례합니다, 화장실이 어디예요?",
+     "tiles": [
+      "실례합니다",
+      "화장실이",
+      "어디예요"
+     ],
+     "tr": [
+      "sillyehamnida",
+      "hwajangsiri",
+      "eodiyeyo"
+     ],
+     "r": "sillyehamnida hwajangsiri eodiyeyo",
+     "b": 0
+    },
+    {
+     "en": "Hey, what's up? (casual)",
+     "t": "야, 잘 지내?",
+     "tiles": [
+      "야",
+      "잘",
+      "지내"
+     ],
+     "tr": [
+      "ya",
+      "jal",
+      "jinae"
+     ],
+     "r": "ya jal jinae",
+     "b": 2
+    },
+    {
+     "en": "I'm sorry I'm late. (polite)",
+     "t": "늦어서 죄송합니다.",
+     "tiles": [
+      "늦어서",
+      "죄송합니다"
+     ],
+     "tr": [
+      "neujeoseo",
+      "joesonghamnida"
+     ],
+     "r": "neujeoseo joesonghamnida",
+     "b": 1
+    },
+    {
+     "en": "Sorry, my bad! (casual)",
+     "t": "미안, 내 잘못이야!",
+     "tiles": [
+      "미안",
+      "내",
+      "잘못이야"
+     ],
+     "tr": [
+      "mian",
+      "nae",
+      "jalmosiya"
+     ],
+     "r": "mian nae jalmosiya",
+     "b": 2
+    },
+    {
+     "en": "Bye, see you later! (casual)",
+     "t": "잘 가, 이따 봐!",
+     "tiles": [
+      "잘",
+      "가",
+      "이따",
+      "봐"
+     ],
+     "tr": [
+      "jal",
+      "ga",
+      "itta",
+      "bwa"
+     ],
+     "r": "jal ga itta bwa",
+     "b": 2
+    }
+   ],
+   "note": "～요 (yo) endings are polite (해요 haeyo); dropping 요 is casual 반말 (banmal) for close friends: 고마워요 (gomawoyo) → 고마워 (gomawo). ～ㅂ니다 (mnida) is extra formal."
   }
  ]
 }

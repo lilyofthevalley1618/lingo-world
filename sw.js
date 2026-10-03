@@ -1,5 +1,5 @@
 // Network-first service worker: always tries fresh files (so updates show up), falls back to cache offline.
-const CACHE = 'lingo-world-v14';
+const CACHE = 'lingo-world-v15';
 const CORE = ['./', 'index.html', 'style.css', 'characters.js', 'app.js', 'manifest.json', 'icons/icon.svg',
   'data/es.json', 'data/fr.json', 'data/zh.json', 'data/yue.json', 'data/ja.json', 'data/ko.json', 'data/zh-read.json', 'data/yue-read.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });

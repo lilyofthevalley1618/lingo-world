@@ -229,3 +229,10 @@ a.card,.pcard,.item,.lcard,.fc{transition:transform .15s}a.card:hover,.pcard:hov
 @keyframes livepulse{0%,100%{transform:scale(.8);opacity:.6}50%{transform:scale(1.25);opacity:1}}
 .micerr{color:#c2476b;font-weight:600}
 .tryagain{margin-left:6px;vertical-align:middle}
+
+/* mic level meter */
+.lvl{display:inline-block;width:70px;height:8px;border-radius:99px;background:#ece6fb;overflow:hidden;vertical-align:middle;margin-left:4px}
+.lvl i{display:block;height:100%;width:4%;border-radius:99px;background:linear-gradient(90deg,#a3e6d2,#b7c0ff,#ff8fab);transition:width .08s linear}
+.heardnow{margin-top:6px;font-weight:700;color:#36305c}
+.heardnow small{font-weight:500;color:var(--muted,#8a8aa0)}
+.lvltip{margin-top:6px;font-size:.9em;color:#a0527a;background:#fff0f5;border-radius:12px;padding:6px 10px}

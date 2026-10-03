@@ -687,6 +687,2212 @@
      "b": 3
     }
    ]
+  },
+  {
+   "id": "school",
+   "name": "School & classes",
+   "icon": "🏫",
+   "color": "#bfe3ff",
+   "lessons": [
+    [
+     "Classes & subjects",
+     "📚"
+    ],
+    [
+     "In the classroom",
+     "✏️"
+    ],
+    [
+     "Homework & tests",
+     "📝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "School",
+     "t": "l'école"
+    },
+    {
+     "en": "Teacher",
+     "t": "le professeur"
+    },
+    {
+     "en": "Student",
+     "t": "l'étudiant"
+    },
+    {
+     "en": "Classroom",
+     "t": "la salle de classe"
+    },
+    {
+     "en": "Book",
+     "t": "le livre"
+    },
+    {
+     "en": "Pen",
+     "t": "le stylo"
+    },
+    {
+     "en": "Pencil",
+     "t": "le crayon"
+    },
+    {
+     "en": "Notebook",
+     "t": "le cahier"
+    },
+    {
+     "en": "Homework",
+     "t": "les devoirs"
+    },
+    {
+     "en": "Test",
+     "t": "l'examen"
+    },
+    {
+     "en": "Math",
+     "t": "les maths"
+    },
+    {
+     "en": "English",
+     "t": "l'anglais"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm a student.",
+     "t": "Je suis étudiant.",
+     "tiles": [
+      "Je",
+      "suis",
+      "étudiant"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I have a lot of homework today.",
+     "t": "J'ai beaucoup de devoirs aujourd'hui.",
+     "tiles": [
+      "J'ai",
+      "beaucoup",
+      "de",
+      "devoirs",
+      "aujourd'hui"
+     ],
+     "b": 4
+    },
+    {
+     "en": "The test is tomorrow.",
+     "t": "L'examen est demain.",
+     "tiles": [
+      "L'examen",
+      "est",
+      "demain"
+     ],
+     "b": 0
+    },
+    {
+     "en": "My teacher is very kind.",
+     "t": "Mon professeur est très gentil.",
+     "tiles": [
+      "Mon",
+      "professeur",
+      "est",
+      "très",
+      "gentil"
+     ],
+     "b": 1
+    },
+    {
+     "en": "I like math.",
+     "t": "J'aime les maths.",
+     "tiles": [
+      "J'aime",
+      "les",
+      "maths"
+     ],
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "name": "Weather & seasons",
+   "icon": "🌦️",
+   "color": "#c8f0c0",
+   "lessons": [
+    [
+     "Sun, rain & snow",
+     "🌧️"
+    ],
+    [
+     "Hot & cold",
+     "🌡️"
+    ],
+    [
+     "Four seasons",
+     "🍂"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Weather",
+     "t": "la météo"
+    },
+    {
+     "en": "Sunny",
+     "t": "ensoleillé"
+    },
+    {
+     "en": "Rain",
+     "t": "la pluie"
+    },
+    {
+     "en": "Snow",
+     "t": "la neige"
+    },
+    {
+     "en": "Wind",
+     "t": "le vent"
+    },
+    {
+     "en": "Cloudy",
+     "t": "nuageux"
+    },
+    {
+     "en": "It's hot",
+     "t": "Il fait chaud"
+    },
+    {
+     "en": "It's cold",
+     "t": "Il fait froid"
+    },
+    {
+     "en": "Spring",
+     "t": "le printemps"
+    },
+    {
+     "en": "Summer",
+     "t": "l'été"
+    },
+    {
+     "en": "Autumn",
+     "t": "l'automne"
+    },
+    {
+     "en": "Winter",
+     "t": "l'hiver"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How's the weather today?",
+     "t": "Quel temps fait-il aujourd'hui ?",
+     "tiles": [
+      "Quel",
+      "temps",
+      "fait-il",
+      "aujourd'hui"
+     ],
+     "b": 3
+    },
+    {
+     "en": "It's raining.",
+     "t": "Il pleut.",
+     "tiles": [
+      "Il",
+      "pleut"
+     ],
+     "b": 1
+    },
+    {
+     "en": "It's really hot today.",
+     "t": "Il fait très chaud aujourd'hui.",
+     "tiles": [
+      "Il",
+      "fait",
+      "très",
+      "chaud",
+      "aujourd'hui"
+     ],
+     "b": 4
+    },
+    {
+     "en": "I like spring.",
+     "t": "J'aime le printemps.",
+     "tiles": [
+      "J'aime",
+      "le",
+      "printemps"
+     ],
+     "b": 2
+    },
+    {
+     "en": "Bring an umbrella.",
+     "t": "Prends un parapluie.",
+     "tiles": [
+      "Prends",
+      "un",
+      "parapluie"
+     ],
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "hobbies",
+   "name": "Hobbies & sports",
+   "icon": "⚽",
+   "color": "#ffd6a5",
+   "lessons": [
+    [
+     "Free time",
+     "🎨"
+    ],
+    [
+     "Sports",
+     "🏀"
+    ],
+    [
+     "Music & movies",
+     "🎬"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Hobby",
+     "t": "le passe-temps"
+    },
+    {
+     "en": "Soccer",
+     "t": "le football"
+    },
+    {
+     "en": "Basketball",
+     "t": "le basket"
+    },
+    {
+     "en": "Swimming",
+     "t": "la natation"
+    },
+    {
+     "en": "Running",
+     "t": "la course"
+    },
+    {
+     "en": "Music",
+     "t": "la musique"
+    },
+    {
+     "en": "To sing",
+     "t": "chanter"
+    },
+    {
+     "en": "To dance",
+     "t": "danser"
+    },
+    {
+     "en": "To draw",
+     "t": "dessiner"
+    },
+    {
+     "en": "Video games",
+     "t": "les jeux vidéo"
+    },
+    {
+     "en": "Reading",
+     "t": "la lecture"
+    },
+    {
+     "en": "Movie",
+     "t": "le film"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What are your hobbies?",
+     "t": "Quels sont tes passe-temps ?",
+     "tiles": [
+      "Quels",
+      "sont",
+      "tes",
+      "passe-temps"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I play basketball on weekends.",
+     "t": "Je joue au basket le week-end.",
+     "tiles": [
+      "Je",
+      "joue",
+      "au",
+      "basket",
+      "le",
+      "week-end"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I like singing and dancing.",
+     "t": "J'aime chanter et danser.",
+     "tiles": [
+      "J'aime",
+      "chanter",
+      "et",
+      "danser"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Do you want to watch a movie?",
+     "t": "Tu veux regarder un film ?",
+     "tiles": [
+      "Tu",
+      "veux",
+      "regarder",
+      "un",
+      "film"
+     ],
+     "b": 4
+    },
+    {
+     "en": "I swim every morning.",
+     "t": "Je nage tous les matins.",
+     "tiles": [
+      "Je",
+      "nage",
+      "tous",
+      "les",
+      "matins"
+     ],
+     "b": 4
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Body & health",
+   "icon": "🩺",
+   "color": "#f5c2e7",
+   "lessons": [
+    [
+     "Body parts",
+     "🖐️"
+    ],
+    [
+     "Feeling sick",
+     "🤒"
+    ],
+    [
+     "At the doctor",
+     "🏥"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Head",
+     "t": "la tête"
+    },
+    {
+     "en": "Eye",
+     "t": "l'œil"
+    },
+    {
+     "en": "Mouth",
+     "t": "la bouche"
+    },
+    {
+     "en": "Hand",
+     "t": "la main"
+    },
+    {
+     "en": "Stomach",
+     "t": "le ventre"
+    },
+    {
+     "en": "Leg",
+     "t": "la jambe"
+    },
+    {
+     "en": "Doctor",
+     "t": "le médecin"
+    },
+    {
+     "en": "Hospital",
+     "t": "l'hôpital"
+    },
+    {
+     "en": "Medicine",
+     "t": "le médicament"
+    },
+    {
+     "en": "Fever",
+     "t": "la fièvre"
+    },
+    {
+     "en": "A cold",
+     "t": "le rhume"
+    },
+    {
+     "en": "It hurts",
+     "t": "J'ai mal"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I have a headache.",
+     "t": "J'ai mal à la tête.",
+     "tiles": [
+      "J'ai",
+      "mal",
+      "à",
+      "la",
+      "tête"
+     ],
+     "b": 4
+    },
+    {
+     "en": "I caught a cold.",
+     "t": "J'ai attrapé un rhume.",
+     "tiles": [
+      "J'ai",
+      "attrapé",
+      "un",
+      "rhume"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I'm going to see a doctor.",
+     "t": "Je vais voir un médecin.",
+     "tiles": [
+      "Je",
+      "vais",
+      "voir",
+      "un",
+      "médecin"
+     ],
+     "b": 4
+    },
+    {
+     "en": "Take your medicine.",
+     "t": "Prends ton médicament.",
+     "tiles": [
+      "Prends",
+      "ton",
+      "médicament"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I feel much better now.",
+     "t": "Je me sens beaucoup mieux maintenant.",
+     "tiles": [
+      "Je",
+      "me",
+      "sens",
+      "beaucoup",
+      "mieux",
+      "maintenant"
+     ],
+     "b": 5
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "name": "Home & rooms",
+   "icon": "🏠",
+   "color": "#b8ecef",
+   "lessons": [
+    [
+     "Rooms",
+     "🛋️"
+    ],
+    [
+     "Furniture",
+     "🛏️"
+    ],
+    [
+     "Chores",
+     "🧹"
+    ]
+   ],
+   "words": [
+    {
+     "en": "House",
+     "t": "la maison"
+    },
+    {
+     "en": "Room",
+     "t": "la chambre"
+    },
+    {
+     "en": "Kitchen",
+     "t": "la cuisine"
+    },
+    {
+     "en": "Bathroom",
+     "t": "la salle de bain"
+    },
+    {
+     "en": "Living room",
+     "t": "le salon"
+    },
+    {
+     "en": "Bed",
+     "t": "le lit"
+    },
+    {
+     "en": "Table",
+     "t": "la table"
+    },
+    {
+     "en": "Chair",
+     "t": "la chaise"
+    },
+    {
+     "en": "Window",
+     "t": "la fenêtre"
+    },
+    {
+     "en": "Door",
+     "t": "la porte"
+    },
+    {
+     "en": "To clean",
+     "t": "nettoyer"
+    },
+    {
+     "en": "To cook",
+     "t": "cuisiner"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my house.",
+     "t": "C'est ma maison.",
+     "tiles": [
+      "C'est",
+      "ma",
+      "maison"
+     ],
+     "b": 2
+    },
+    {
+     "en": "My room is small.",
+     "t": "Ma chambre est petite.",
+     "tiles": [
+      "Ma",
+      "chambre",
+      "est",
+      "petite"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Dad is cooking in the kitchen.",
+     "t": "Papa cuisine dans la cuisine.",
+     "tiles": [
+      "Papa",
+      "cuisine",
+      "dans",
+      "la",
+      "cuisine"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Please open the window.",
+     "t": "Ouvre la fenêtre, s'il te plaît.",
+     "tiles": [
+      "Ouvre",
+      "la",
+      "fenêtre",
+      "s'il",
+      "te",
+      "plaît"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I clean my room on Sundays.",
+     "t": "Je range ma chambre le dimanche.",
+     "tiles": [
+      "Je",
+      "range",
+      "ma",
+      "chambre",
+      "le",
+      "dimanche"
+     ],
+     "b": 3
+    }
+   ]
+  },
+  {
+   "id": "shopping",
+   "name": "Clothes & shopping",
+   "icon": "🛍️",
+   "color": "#ffcfcf",
+   "lessons": [
+    [
+     "Clothes",
+     "👕"
+    ],
+    [
+     "At the store",
+     "🏬"
+    ],
+    [
+     "Paying",
+     "💳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Clothes",
+     "t": "les vêtements"
+    },
+    {
+     "en": "Shirt",
+     "t": "la chemise"
+    },
+    {
+     "en": "Pants",
+     "t": "le pantalon"
+    },
+    {
+     "en": "Shoes",
+     "t": "les chaussures"
+    },
+    {
+     "en": "Dress",
+     "t": "la robe"
+    },
+    {
+     "en": "Hat",
+     "t": "le chapeau"
+    },
+    {
+     "en": "Store",
+     "t": "le magasin"
+    },
+    {
+     "en": "Price",
+     "t": "le prix"
+    },
+    {
+     "en": "Cheap",
+     "t": "pas cher"
+    },
+    {
+     "en": "Expensive",
+     "t": "cher"
+    },
+    {
+     "en": "To buy",
+     "t": "acheter"
+    },
+    {
+     "en": "To try on",
+     "t": "essayer"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How much is this shirt?",
+     "t": "Combien coûte cette chemise ?",
+     "tiles": [
+      "Combien",
+      "coûte",
+      "cette",
+      "chemise"
+     ],
+     "b": 3
+    },
+    {
+     "en": "It's too expensive!",
+     "t": "C'est trop cher !",
+     "tiles": [
+      "C'est",
+      "trop",
+      "cher"
+     ],
+     "b": 2
+    },
+    {
+     "en": "Can I try it on?",
+     "t": "Je peux l'essayer ?",
+     "tiles": [
+      "Je",
+      "peux",
+      "l'essayer"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I'll buy this one.",
+     "t": "Je prends celui-ci.",
+     "tiles": [
+      "Je",
+      "prends",
+      "celui-ci"
+     ],
+     "b": 2
+    },
+    {
+     "en": "These shoes are cute.",
+     "t": "Ces chaussures sont mignonnes.",
+     "tiles": [
+      "Ces",
+      "chaussures",
+      "sont",
+      "mignonnes"
+     ],
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "travel",
+   "name": "Transportation & travel",
+   "icon": "🚆",
+   "color": "#d4e6a8",
+   "lessons": [
+    [
+     "Getting around",
+     "🚇"
+    ],
+    [
+     "At the airport",
+     "✈️"
+    ],
+    [
+     "Asking the way",
+     "🧭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Train",
+     "t": "le train"
+    },
+    {
+     "en": "Subway",
+     "t": "le métro"
+    },
+    {
+     "en": "Bus",
+     "t": "le bus"
+    },
+    {
+     "en": "Taxi",
+     "t": "le taxi"
+    },
+    {
+     "en": "Airplane",
+     "t": "l'avion"
+    },
+    {
+     "en": "Airport",
+     "t": "l'aéroport"
+    },
+    {
+     "en": "Station",
+     "t": "la gare"
+    },
+    {
+     "en": "Ticket",
+     "t": "le billet"
+    },
+    {
+     "en": "Passport",
+     "t": "le passeport"
+    },
+    {
+     "en": "Map",
+     "t": "la carte"
+    },
+    {
+     "en": "Left",
+     "t": "à gauche"
+    },
+    {
+     "en": "Right",
+     "t": "à droite"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Where is the station?",
+     "t": "Où est la gare ?",
+     "tiles": [
+      "Où",
+      "est",
+      "la",
+      "gare"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I take the subway to school.",
+     "t": "Je vais à l'école en métro.",
+     "tiles": [
+      "Je",
+      "vais",
+      "à",
+      "l'école",
+      "en",
+      "métro"
+     ],
+     "b": 5
+    },
+    {
+     "en": "One ticket, please.",
+     "t": "Un billet, s'il vous plaît.",
+     "tiles": [
+      "Un",
+      "billet",
+      "s'il",
+      "vous",
+      "plaît"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Turn left here.",
+     "t": "Tournez à gauche ici.",
+     "tiles": [
+      "Tournez",
+      "à",
+      "gauche",
+      "ici"
+     ],
+     "b": 0
+    },
+    {
+     "en": "I'm going to the airport.",
+     "t": "Je vais à l'aéroport.",
+     "tiles": [
+      "Je",
+      "vais",
+      "à",
+      "l'aéroport"
+     ],
+     "b": 3
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "name": "Time, dates & schedules",
+   "icon": "⏰",
+   "color": "#e2d1f9",
+   "lessons": [
+    [
+     "Today & tomorrow",
+     "📆"
+    ],
+    [
+     "Telling time",
+     "🕐"
+    ],
+    [
+     "My schedule",
+     "🗓️"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Today",
+     "t": "aujourd'hui"
+    },
+    {
+     "en": "Tomorrow",
+     "t": "demain"
+    },
+    {
+     "en": "Yesterday",
+     "t": "hier"
+    },
+    {
+     "en": "Monday",
+     "t": "lundi"
+    },
+    {
+     "en": "Friday",
+     "t": "vendredi"
+    },
+    {
+     "en": "Weekend",
+     "t": "le week-end"
+    },
+    {
+     "en": "Morning",
+     "t": "le matin"
+    },
+    {
+     "en": "Night",
+     "t": "la nuit"
+    },
+    {
+     "en": "Hour",
+     "t": "l'heure"
+    },
+    {
+     "en": "Minute",
+     "t": "la minute"
+    },
+    {
+     "en": "Early",
+     "t": "tôt"
+    },
+    {
+     "en": "Late",
+     "t": "tard"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What time is it?",
+     "t": "Quelle heure est-il ?",
+     "tiles": [
+      "Quelle",
+      "heure",
+      "est-il"
+     ],
+     "b": 1
+    },
+    {
+     "en": "It's three o'clock.",
+     "t": "Il est trois heures.",
+     "tiles": [
+      "Il",
+      "est",
+      "trois",
+      "heures"
+     ],
+     "b": 3
+    },
+    {
+     "en": "Class starts at nine.",
+     "t": "Le cours commence à neuf heures.",
+     "tiles": [
+      "Le",
+      "cours",
+      "commence",
+      "à",
+      "neuf",
+      "heures"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I'm busy on Monday.",
+     "t": "Je suis occupé lundi.",
+     "tiles": [
+      "Je",
+      "suis",
+      "occupé",
+      "lundi"
+     ],
+     "b": 3
+    },
+    {
+     "en": "See you tomorrow!",
+     "t": "À demain !",
+     "tiles": [
+      "À",
+      "demain"
+     ],
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "name": "Jobs & work",
+   "icon": "💼",
+   "color": "#fff1b8",
+   "lessons": [
+    [
+     "Jobs",
+     "👩‍🍳"
+    ],
+    [
+     "At work",
+     "🏢"
+    ],
+    [
+     "Dream job",
+     "🌟"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Work",
+     "t": "le travail"
+    },
+    {
+     "en": "Office",
+     "t": "le bureau"
+    },
+    {
+     "en": "Nurse",
+     "t": "l'infirmière"
+    },
+    {
+     "en": "Chef",
+     "t": "le cuisinier"
+    },
+    {
+     "en": "Police officer",
+     "t": "le policier"
+    },
+    {
+     "en": "Engineer",
+     "t": "l'ingénieur"
+    },
+    {
+     "en": "Artist",
+     "t": "l'artiste"
+    },
+    {
+     "en": "Boss",
+     "t": "le patron"
+    },
+    {
+     "en": "Coworker",
+     "t": "le collègue"
+    },
+    {
+     "en": "Meeting",
+     "t": "la réunion"
+    },
+    {
+     "en": "Salary",
+     "t": "le salaire"
+    },
+    {
+     "en": "To work",
+     "t": "travailler"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What do you do for work?",
+     "t": "Qu'est-ce que tu fais comme travail ?",
+     "tiles": [
+      "Qu'est-ce",
+      "que",
+      "tu",
+      "fais",
+      "comme",
+      "travail"
+     ],
+     "b": 5
+    },
+    {
+     "en": "I'm a nurse.",
+     "t": "Je suis infirmière.",
+     "tiles": [
+      "Je",
+      "suis",
+      "infirmière"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I work at an office.",
+     "t": "Je travaille dans un bureau.",
+     "tiles": [
+      "Je",
+      "travaille",
+      "dans",
+      "un",
+      "bureau"
+     ],
+     "b": 4
+    },
+    {
+     "en": "I have a meeting at ten.",
+     "t": "J'ai une réunion à dix heures.",
+     "tiles": [
+      "J'ai",
+      "une",
+      "réunion",
+      "à",
+      "dix",
+      "heures"
+     ],
+     "b": 2
+    },
+    {
+     "en": "I want to be a chef.",
+     "t": "Je veux être cuisinier.",
+     "tiles": [
+      "Je",
+      "veux",
+      "être",
+      "cuisinier"
+     ],
+     "b": 3
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "name": "Making plans with friends",
+   "icon": "📅",
+   "color": "#c9d6ff",
+   "lessons": [
+    [
+     "Free or busy?",
+     "💌"
+    ],
+    [
+     "Places to go",
+     "🎡"
+    ],
+    [
+     "Yes, no & maybe",
+     "🤔"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Together",
+     "t": "ensemble"
+    },
+    {
+     "en": "Free (not busy)",
+     "t": "libre"
+    },
+    {
+     "en": "Busy",
+     "t": "occupé"
+    },
+    {
+     "en": "Party",
+     "t": "la fête"
+    },
+    {
+     "en": "Park",
+     "t": "le parc"
+    },
+    {
+     "en": "Café",
+     "t": "le café"
+    },
+    {
+     "en": "Beach",
+     "t": "la plage"
+    },
+    {
+     "en": "Mall",
+     "t": "le centre commercial"
+    },
+    {
+     "en": "Let's go!",
+     "t": "On y va !"
+    },
+    {
+     "en": "Sounds good",
+     "t": "Ça marche"
+    },
+    {
+     "en": "Maybe",
+     "t": "peut-être"
+    },
+    {
+     "en": "Next time",
+     "t": "la prochaine fois"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Are you free this weekend?",
+     "t": "Tu es libre ce week-end ?",
+     "tiles": [
+      "Tu",
+      "es",
+      "libre",
+      "ce",
+      "week-end"
+     ],
+     "b": 2
+    },
+    {
+     "en": "Let's go to the park together.",
+     "t": "Allons au parc ensemble.",
+     "tiles": [
+      "Allons",
+      "au",
+      "parc",
+      "ensemble"
+     ],
+     "b": 2
+    },
+    {
+     "en": "What time should we meet?",
+     "t": "On se retrouve à quelle heure ?",
+     "tiles": [
+      "On",
+      "se",
+      "retrouve",
+      "à",
+      "quelle",
+      "heure"
+     ],
+     "b": 2
+    },
+    {
+     "en": "Sorry, I'm busy today.",
+     "t": "Désolé, je suis occupé aujourd'hui.",
+     "tiles": [
+      "Désolé",
+      "je",
+      "suis",
+      "occupé",
+      "aujourd'hui"
+     ],
+     "b": 3
+    },
+    {
+     "en": "Sounds good, see you then!",
+     "t": "Ça marche, à tout à l'heure !",
+     "tiles": [
+      "Ça",
+      "marche",
+      "à",
+      "tout",
+      "à",
+      "l'heure"
+     ],
+     "b": 5
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Phone & texting",
+   "icon": "📱",
+   "color": "#ffdcc2",
+   "lessons": [
+    [
+     "My phone",
+     "📱"
+    ],
+    [
+     "Texting",
+     "💬"
+    ],
+    [
+     "Online",
+     "🌐"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Phone",
+     "t": "le portable"
+    },
+    {
+     "en": "Computer",
+     "t": "l'ordinateur"
+    },
+    {
+     "en": "Message",
+     "t": "le message"
+    },
+    {
+     "en": "To call",
+     "t": "appeler"
+    },
+    {
+     "en": "Internet",
+     "t": "internet"
+    },
+    {
+     "en": "Password",
+     "t": "le mot de passe"
+    },
+    {
+     "en": "Photo",
+     "t": "la photo"
+    },
+    {
+     "en": "App",
+     "t": "l'appli"
+    },
+    {
+     "en": "Battery",
+     "t": "la batterie"
+    },
+    {
+     "en": "Charger",
+     "t": "le chargeur"
+    },
+    {
+     "en": "Email",
+     "t": "l'e-mail"
+    },
+    {
+     "en": "To send a text",
+     "t": "envoyer un message"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What's your phone number?",
+     "t": "Quel est ton numéro de téléphone ?",
+     "tiles": [
+      "Quel",
+      "est",
+      "ton",
+      "numéro",
+      "de",
+      "téléphone"
+     ],
+     "b": 5
+    },
+    {
+     "en": "I'll text you later.",
+     "t": "Je t'envoie un message plus tard.",
+     "tiles": [
+      "Je",
+      "t'envoie",
+      "un",
+      "message",
+      "plus",
+      "tard"
+     ],
+     "b": 3
+    },
+    {
+     "en": "My battery is dead.",
+     "t": "Je n'ai plus de batterie.",
+     "tiles": [
+      "Je",
+      "n'ai",
+      "plus",
+      "de",
+      "batterie"
+     ],
+     "b": 4
+    },
+    {
+     "en": "Can I take a photo?",
+     "t": "Je peux prendre une photo ?",
+     "tiles": [
+      "Je",
+      "peux",
+      "prendre",
+      "une",
+      "photo"
+     ],
+     "b": 4
+    },
+    {
+     "en": "What's the Wi-Fi password?",
+     "t": "Quel est le mot de passe du wifi ?",
+     "tiles": [
+      "Quel",
+      "est",
+      "le",
+      "mot",
+      "de",
+      "passe",
+      "du",
+      "wifi"
+     ],
+     "b": 5
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "name": "Emotions & opinions",
+   "icon": "💭",
+   "color": "#bde8d4",
+   "lessons": [
+    [
+     "Happy & sad",
+     "😊"
+    ],
+    [
+     "Big feelings",
+     "😤"
+    ],
+    [
+     "Opinions",
+     "💭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Happy",
+     "t": "heureux"
+    },
+    {
+     "en": "Sad",
+     "t": "triste"
+    },
+    {
+     "en": "Angry",
+     "t": "en colère"
+    },
+    {
+     "en": "Tired",
+     "t": "fatigué"
+    },
+    {
+     "en": "Nervous",
+     "t": "nerveux"
+    },
+    {
+     "en": "Boring",
+     "t": "ennuyeux"
+    },
+    {
+     "en": "Scared",
+     "t": "effrayé"
+    },
+    {
+     "en": "Fun",
+     "t": "amusant"
+    },
+    {
+     "en": "Interesting",
+     "t": "intéressant"
+    },
+    {
+     "en": "I think…",
+     "t": "Je pense que…"
+    },
+    {
+     "en": "I agree",
+     "t": "Je suis d'accord"
+    },
+    {
+     "en": "Really?",
+     "t": "C'est vrai ?"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm so happy today!",
+     "t": "Je suis très heureux aujourd'hui !",
+     "tiles": [
+      "Je",
+      "suis",
+      "très",
+      "heureux",
+      "aujourd'hui"
+     ],
+     "b": 3
+    },
+    {
+     "en": "Why are you sad?",
+     "t": "Pourquoi tu es triste ?",
+     "tiles": [
+      "Pourquoi",
+      "tu",
+      "es",
+      "triste"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I think it is interesting.",
+     "t": "Je pense que c'est intéressant.",
+     "tiles": [
+      "Je",
+      "pense",
+      "que",
+      "c'est",
+      "intéressant"
+     ],
+     "b": 4
+    },
+    {
+     "en": "I'm really tired.",
+     "t": "Je suis très fatigué.",
+     "tiles": [
+      "Je",
+      "suis",
+      "très",
+      "fatigué"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I think so too.",
+     "t": "Je pense aussi.",
+     "tiles": [
+      "Je",
+      "pense",
+      "aussi"
+     ],
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "past",
+   "name": "Grammar: Past tense",
+   "icon": "⏪",
+   "color": "#f8d0f0",
+   "lessons": [
+    [
+     "When it happened",
+     "⏪"
+    ],
+    [
+     "What I did",
+     "✅"
+    ],
+    [
+     "Telling stories",
+     "📖"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Last night",
+     "t": "hier soir"
+    },
+    {
+     "en": "Last week",
+     "t": "la semaine dernière"
+    },
+    {
+     "en": "Last year",
+     "t": "l'année dernière"
+    },
+    {
+     "en": "Two days ago",
+     "t": "il y a deux jours"
+    },
+    {
+     "en": "Already",
+     "t": "déjà"
+    },
+    {
+     "en": "I went",
+     "t": "je suis allé"
+    },
+    {
+     "en": "I ate",
+     "t": "j'ai mangé"
+    },
+    {
+     "en": "I saw",
+     "t": "j'ai vu"
+    },
+    {
+     "en": "I bought",
+     "t": "j'ai acheté"
+    },
+    {
+     "en": "I studied",
+     "t": "j'ai étudié"
+    },
+    {
+     "en": "I slept",
+     "t": "j'ai dormi"
+    },
+    {
+     "en": "It was fun",
+     "t": "c'était amusant"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I went to the park yesterday.",
+     "t": "Hier, je suis allé au parc.",
+     "tiles": [
+      "Hier",
+      "je",
+      "suis",
+      "allé",
+      "au",
+      "parc"
+     ],
+     "b": 5
+    },
+    {
+     "en": "I ate ramen last night.",
+     "t": "Hier soir, j'ai mangé des ramen.",
+     "tiles": [
+      "Hier",
+      "soir",
+      "j'ai",
+      "mangé",
+      "des",
+      "ramen"
+     ],
+     "b": 5
+    },
+    {
+     "en": "I saw a movie last week.",
+     "t": "J'ai vu un film la semaine dernière.",
+     "tiles": [
+      "J'ai",
+      "vu",
+      "un",
+      "film",
+      "la",
+      "semaine",
+      "dernière"
+     ],
+     "b": 6
+    },
+    {
+     "en": "I already did my homework.",
+     "t": "J'ai déjà fait mes devoirs.",
+     "tiles": [
+      "J'ai",
+      "déjà",
+      "fait",
+      "mes",
+      "devoirs"
+     ],
+     "b": 1
+    },
+    {
+     "en": "It was really fun!",
+     "t": "C'était vraiment amusant !",
+     "tiles": [
+      "C'était",
+      "vraiment",
+      "amusant"
+     ],
+     "b": 1
+    }
+   ],
+   "note": "Passé composé = avoir + past participle: j'ai mangé, j'ai vu. Movement verbs use être: je suis allé(e)."
+  },
+  {
+   "id": "future",
+   "name": "Grammar: Future",
+   "icon": "⏩",
+   "color": "#d7e8ff",
+   "lessons": [
+    [
+     "Tomorrow & later",
+     "⏩"
+    ],
+    [
+     "Plans & goals",
+     "🎯"
+    ],
+    [
+     "Dreams",
+     "🌈"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Tonight",
+     "t": "ce soir"
+    },
+    {
+     "en": "Next week",
+     "t": "la semaine prochaine"
+    },
+    {
+     "en": "Next year",
+     "t": "l'année prochaine"
+    },
+    {
+     "en": "Later",
+     "t": "plus tard"
+    },
+    {
+     "en": "Soon",
+     "t": "bientôt"
+    },
+    {
+     "en": "I will go",
+     "t": "j'irai"
+    },
+    {
+     "en": "I will study",
+     "t": "j'étudierai"
+    },
+    {
+     "en": "I'm going to travel",
+     "t": "je vais voyager"
+    },
+    {
+     "en": "I will call you",
+     "t": "je t'appellerai"
+    },
+    {
+     "en": "I want to…",
+     "t": "je veux…"
+    },
+    {
+     "en": "Plan",
+     "t": "le projet"
+    },
+    {
+     "en": "Dream",
+     "t": "le rêve"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I will go to the beach tomorrow.",
+     "t": "Demain, j'irai à la plage.",
+     "tiles": [
+      "Demain",
+      "j'irai",
+      "à",
+      "la",
+      "plage"
+     ],
+     "b": 1
+    },
+    {
+     "en": "I'm going to study tonight.",
+     "t": "Ce soir, je vais étudier.",
+     "tiles": [
+      "Ce",
+      "soir",
+      "je",
+      "vais",
+      "étudier"
+     ],
+     "b": 4
+    },
+    {
+     "en": "Next year I will travel a lot.",
+     "t": "L'année prochaine, je voyagerai beaucoup.",
+     "tiles": [
+      "L'année",
+      "prochaine",
+      "je",
+      "voyagerai",
+      "beaucoup"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I'll call you later.",
+     "t": "Je t'appelle plus tard.",
+     "tiles": [
+      "Je",
+      "t'appelle",
+      "plus",
+      "tard"
+     ],
+     "b": 1
+    },
+    {
+     "en": "My dream is to be a singer.",
+     "t": "Mon rêve, c'est d'être chanteur.",
+     "tiles": [
+      "Mon",
+      "rêve",
+      "c'est",
+      "d'être",
+      "chanteur"
+     ],
+     "b": 1
+    }
+   ],
+   "note": "Near future: aller + infinitive (je vais voyager). Simple future: infinitive + -ai (j'étudierai). Irregular: aller → j'irai."
+  },
+  {
+   "id": "questions",
+   "name": "Grammar: Questions",
+   "icon": "❓",
+   "color": "#ffe0e9",
+   "lessons": [
+    [
+     "Question words",
+     "❓"
+    ],
+    [
+     "Asking about people",
+     "🙋"
+    ],
+    [
+     "Asking for help",
+     "🆘"
+    ]
+   ],
+   "words": [
+    {
+     "en": "What?",
+     "t": "Quoi ?"
+    },
+    {
+     "en": "Who?",
+     "t": "Qui ?"
+    },
+    {
+     "en": "Where?",
+     "t": "Où ?"
+    },
+    {
+     "en": "When?",
+     "t": "Quand ?"
+    },
+    {
+     "en": "Why?",
+     "t": "Pourquoi ?"
+    },
+    {
+     "en": "How?",
+     "t": "Comment ?"
+    },
+    {
+     "en": "How much?",
+     "t": "Combien ça coûte ?"
+    },
+    {
+     "en": "Which one?",
+     "t": "Lequel ?"
+    },
+    {
+     "en": "What time?",
+     "t": "À quelle heure ?"
+    },
+    {
+     "en": "Can you help me?",
+     "t": "Tu peux m'aider ?"
+    },
+    {
+     "en": "What does it mean?",
+     "t": "Ça veut dire quoi ?"
+    },
+    {
+     "en": "Is that right?",
+     "t": "C'est correct ?"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What is this?",
+     "t": "Qu'est-ce que c'est ?",
+     "tiles": [
+      "Qu'est-ce",
+      "que",
+      "c'est"
+     ],
+     "b": 0
+    },
+    {
+     "en": "Where do you live?",
+     "t": "Tu habites où ?",
+     "tiles": [
+      "Tu",
+      "habites",
+      "où"
+     ],
+     "b": 1
+    },
+    {
+     "en": "Who is that person?",
+     "t": "Qui est cette personne ?",
+     "tiles": [
+      "Qui",
+      "est",
+      "cette",
+      "personne"
+     ],
+     "b": 3
+    },
+    {
+     "en": "When does class start?",
+     "t": "Le cours commence quand ?",
+     "tiles": [
+      "Le",
+      "cours",
+      "commence",
+      "quand"
+     ],
+     "b": 2
+    },
+    {
+     "en": "How do you say this?",
+     "t": "Comment on dit ça ?",
+     "tiles": [
+      "Comment",
+      "on",
+      "dit",
+      "ça"
+     ],
+     "b": 0
+    }
+   ],
+   "note": "Casual: just raise your voice (Tu habites où ?). Neutral: Est-ce que… ? Formal: invert (Où habitez-vous ?)."
+  },
+  {
+   "id": "negation",
+   "name": "Grammar: Negation",
+   "icon": "🚫",
+   "color": "#e6dcc9",
+   "lessons": [
+    [
+     "No & not",
+     "🙅"
+    ],
+    [
+     "Don't & can't",
+     "⛔"
+    ],
+    [
+     "Not yet",
+     "⏳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Not",
+     "t": "ne… pas"
+    },
+    {
+     "en": "I don't know",
+     "t": "Je ne sais pas"
+    },
+    {
+     "en": "I don't like it",
+     "t": "Je n'aime pas ça"
+    },
+    {
+     "en": "I don't have it",
+     "t": "Je ne l'ai pas"
+    },
+    {
+     "en": "I can't",
+     "t": "Je ne peux pas"
+    },
+    {
+     "en": "Not yet",
+     "t": "Pas encore"
+    },
+    {
+     "en": "Never",
+     "t": "Jamais"
+    },
+    {
+     "en": "Nothing",
+     "t": "Rien"
+    },
+    {
+     "en": "Nobody",
+     "t": "Personne"
+    },
+    {
+     "en": "It's not…",
+     "t": "Ce n'est pas…"
+    },
+    {
+     "en": "Don't!",
+     "t": "Ne fais pas ça !"
+    },
+    {
+     "en": "No problem",
+     "t": "Pas de problème"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I don't eat meat.",
+     "t": "Je ne mange pas de viande.",
+     "tiles": [
+      "Je",
+      "ne",
+      "mange",
+      "pas",
+      "de",
+      "viande"
+     ],
+     "b": 5
+    },
+    {
+     "en": "I don't have time today.",
+     "t": "Je n'ai pas le temps aujourd'hui.",
+     "tiles": [
+      "Je",
+      "n'ai",
+      "pas",
+      "le",
+      "temps",
+      "aujourd'hui"
+     ],
+     "b": 5
+    },
+    {
+     "en": "This is not my bag.",
+     "t": "Ce n'est pas mon sac.",
+     "tiles": [
+      "Ce",
+      "n'est",
+      "pas",
+      "mon",
+      "sac"
+     ],
+     "b": 1
+    },
+    {
+     "en": "I haven't eaten yet.",
+     "t": "Je n'ai pas encore mangé.",
+     "tiles": [
+      "Je",
+      "n'ai",
+      "pas",
+      "encore",
+      "mangé"
+     ],
+     "b": 3
+    },
+    {
+     "en": "I can't swim.",
+     "t": "Je ne sais pas nager.",
+     "tiles": [
+      "Je",
+      "ne",
+      "sais",
+      "pas",
+      "nager"
+     ],
+     "b": 4
+    }
+   ],
+   "note": "Wrap the verb with ne… pas: Je ne mange pas. In casual speech people often drop ne: Je sais pas."
+  },
+  {
+   "id": "polite",
+   "name": "Grammar: Polite vs casual",
+   "icon": "🎩",
+   "color": "#cdeccd",
+   "lessons": [
+    [
+     "Polite words",
+     "🎩"
+    ],
+    [
+     "Casual with friends",
+     "😎"
+    ],
+    [
+     "Formal vs friendly",
+     "🤝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Thank you (polite)",
+     "t": "Merci beaucoup"
+    },
+    {
+     "en": "Thanks (casual)",
+     "t": "Merci"
+    },
+    {
+     "en": "I'm sorry (polite)",
+     "t": "Je suis vraiment désolé"
+    },
+    {
+     "en": "Sorry (casual)",
+     "t": "Pardon"
+    },
+    {
+     "en": "Goodbye (polite)",
+     "t": "Au revoir"
+    },
+    {
+     "en": "Bye (casual)",
+     "t": "Salut"
+    },
+    {
+     "en": "How are you? (polite)",
+     "t": "Comment allez-vous ?"
+    },
+    {
+     "en": "What's up? (casual)",
+     "t": "Ça va ?"
+    },
+    {
+     "en": "Yes (polite)",
+     "t": "Oui"
+    },
+    {
+     "en": "Yeah (casual)",
+     "t": "Ouais"
+    },
+    {
+     "en": "Excuse me (polite)",
+     "t": "Excusez-moi"
+    },
+    {
+     "en": "Hey! (casual)",
+     "t": "Hé !"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Excuse me, where is the restroom? (polite)",
+     "t": "Excusez-moi, où sont les toilettes ?",
+     "tiles": [
+      "Excusez-moi",
+      "où",
+      "sont",
+      "les",
+      "toilettes"
+     ],
+     "b": 0
+    },
+    {
+     "en": "Hey, what's up? (casual)",
+     "t": "Salut, ça va ?",
+     "tiles": [
+      "Salut",
+      "ça",
+      "va"
+     ],
+     "b": 0
+    },
+    {
+     "en": "I'm sorry I'm late. (polite)",
+     "t": "Excusez-moi pour le retard.",
+     "tiles": [
+      "Excusez-moi",
+      "pour",
+      "le",
+      "retard"
+     ],
+     "b": 0
+    },
+    {
+     "en": "Sorry, my bad! (casual)",
+     "t": "Pardon, c'est ma faute !",
+     "tiles": [
+      "Pardon",
+      "c'est",
+      "ma",
+      "faute"
+     ],
+     "b": 0
+    },
+    {
+     "en": "Bye, see you later! (casual)",
+     "t": "Salut, à plus !",
+     "tiles": [
+      "Salut",
+      "à",
+      "plus"
+     ],
+     "b": 0
+    }
+   ],
+   "note": "Vous is polite (and plural); tu is casual for friends, family and kids. Comment allez-vous ? vs Ça va ?"
   }
  ]
 }

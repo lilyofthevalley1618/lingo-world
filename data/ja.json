@@ -935,6 +935,3025 @@
      "b": 1
     }
    ]
+  },
+  {
+   "id": "school",
+   "name": "School & classes",
+   "icon": "🏫",
+   "color": "#bfe3ff",
+   "lessons": [
+    [
+     "Classes & subjects",
+     "📚"
+    ],
+    [
+     "In the classroom",
+     "✏️"
+    ],
+    [
+     "Homework & tests",
+     "📝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "School",
+     "t": "学校（がっこう）",
+     "r": "gakkō"
+    },
+    {
+     "en": "Teacher",
+     "t": "先生（せんせい）",
+     "r": "sensei"
+    },
+    {
+     "en": "Student",
+     "t": "学生（がくせい）",
+     "r": "gakusei"
+    },
+    {
+     "en": "Classroom",
+     "t": "教室（きょうしつ）",
+     "r": "kyōshitsu"
+    },
+    {
+     "en": "Book",
+     "t": "本（ほん）",
+     "r": "hon"
+    },
+    {
+     "en": "Pen",
+     "t": "ペン",
+     "r": "pen"
+    },
+    {
+     "en": "Pencil",
+     "t": "鉛筆（えんぴつ）",
+     "r": "enpitsu"
+    },
+    {
+     "en": "Notebook",
+     "t": "ノート",
+     "r": "nōto"
+    },
+    {
+     "en": "Homework",
+     "t": "宿題（しゅくだい）",
+     "r": "shukudai"
+    },
+    {
+     "en": "Test",
+     "t": "試験（しけん）",
+     "r": "shiken"
+    },
+    {
+     "en": "Math",
+     "t": "数学（すうがく）",
+     "r": "sūgaku"
+    },
+    {
+     "en": "English",
+     "t": "英語（えいご）",
+     "r": "eigo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm a student.",
+     "t": "私は学生です。",
+     "tiles": [
+      "私",
+      "は",
+      "学生",
+      "です"
+     ],
+     "tr": [
+      "watashi",
+      "wa",
+      "gakusei",
+      "desu"
+     ],
+     "r": "watashi wa gakusei desu",
+     "b": 2
+    },
+    {
+     "en": "I have a lot of homework today.",
+     "t": "今日は宿題が多いです。",
+     "tiles": [
+      "今日",
+      "は",
+      "宿題",
+      "が",
+      "多い",
+      "です"
+     ],
+     "tr": [
+      "kyō",
+      "wa",
+      "shukudai",
+      "ga",
+      "ōi",
+      "desu"
+     ],
+     "r": "kyō wa shukudai ga ōi desu",
+     "b": 2
+    },
+    {
+     "en": "The test is tomorrow.",
+     "t": "試験は明日です。",
+     "tiles": [
+      "試験",
+      "は",
+      "明日",
+      "です"
+     ],
+     "tr": [
+      "shiken",
+      "wa",
+      "ashita",
+      "desu"
+     ],
+     "r": "shiken wa ashita desu",
+     "b": 0
+    },
+    {
+     "en": "My teacher is very kind.",
+     "t": "先生はとても優しいです。",
+     "tiles": [
+      "先生",
+      "は",
+      "とても",
+      "優しい",
+      "です"
+     ],
+     "tr": [
+      "sensei",
+      "wa",
+      "totemo",
+      "yasashii",
+      "desu"
+     ],
+     "r": "sensei wa totemo yasashii desu",
+     "b": 0
+    },
+    {
+     "en": "I like math.",
+     "t": "数学が好きです。",
+     "tiles": [
+      "数学",
+      "が",
+      "好き",
+      "です"
+     ],
+     "tr": [
+      "sūgaku",
+      "ga",
+      "suki",
+      "desu"
+     ],
+     "r": "sūgaku ga suki desu",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "name": "Weather & seasons",
+   "icon": "🌦️",
+   "color": "#c8f0c0",
+   "lessons": [
+    [
+     "Sun, rain & snow",
+     "🌧️"
+    ],
+    [
+     "Hot & cold",
+     "🌡️"
+    ],
+    [
+     "Four seasons",
+     "🍂"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Weather",
+     "t": "天気（てんき）",
+     "r": "tenki"
+    },
+    {
+     "en": "Sunny",
+     "t": "晴れ（はれ）",
+     "r": "hare"
+    },
+    {
+     "en": "Rain",
+     "t": "雨（あめ）",
+     "r": "ame"
+    },
+    {
+     "en": "Snow",
+     "t": "雪（ゆき）",
+     "r": "yuki"
+    },
+    {
+     "en": "Wind",
+     "t": "風（かぜ）",
+     "r": "kaze"
+    },
+    {
+     "en": "Cloudy",
+     "t": "曇り（くもり）",
+     "r": "kumori"
+    },
+    {
+     "en": "It's hot",
+     "t": "暑い（あつい）",
+     "r": "atsui"
+    },
+    {
+     "en": "It's cold",
+     "t": "寒い（さむい）",
+     "r": "samui"
+    },
+    {
+     "en": "Spring",
+     "t": "春（はる）",
+     "r": "haru"
+    },
+    {
+     "en": "Summer",
+     "t": "夏（なつ）",
+     "r": "natsu"
+    },
+    {
+     "en": "Autumn",
+     "t": "秋（あき）",
+     "r": "aki"
+    },
+    {
+     "en": "Winter",
+     "t": "冬（ふゆ）",
+     "r": "fuyu"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How's the weather today?",
+     "t": "今日の天気はどうですか？",
+     "tiles": [
+      "今日",
+      "の",
+      "天気",
+      "は",
+      "どう",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "kyō",
+      "no",
+      "tenki",
+      "wa",
+      "dō",
+      "desu",
+      "ka"
+     ],
+     "r": "kyō no tenki wa dō desu ka",
+     "b": 2
+    },
+    {
+     "en": "It's raining.",
+     "t": "雨が降っています。",
+     "tiles": [
+      "雨",
+      "が",
+      "降って",
+      "います"
+     ],
+     "tr": [
+      "ame",
+      "ga",
+      "futte",
+      "imasu"
+     ],
+     "r": "ame ga futte imasu",
+     "b": 0
+    },
+    {
+     "en": "It's really hot today.",
+     "t": "今日はとても暑いです。",
+     "tiles": [
+      "今日",
+      "は",
+      "とても",
+      "暑い",
+      "です"
+     ],
+     "tr": [
+      "kyō",
+      "wa",
+      "totemo",
+      "atsui",
+      "desu"
+     ],
+     "r": "kyō wa totemo atsui desu",
+     "b": 3
+    },
+    {
+     "en": "I like spring.",
+     "t": "春が好きです。",
+     "tiles": [
+      "春",
+      "が",
+      "好き",
+      "です"
+     ],
+     "tr": [
+      "haru",
+      "ga",
+      "suki",
+      "desu"
+     ],
+     "r": "haru ga suki desu",
+     "b": 0
+    },
+    {
+     "en": "Bring an umbrella.",
+     "t": "傘を持って行ってください。",
+     "tiles": [
+      "傘",
+      "を",
+      "持って",
+      "行って",
+      "ください"
+     ],
+     "tr": [
+      "kasa",
+      "o",
+      "motte",
+      "itte",
+      "kudasai"
+     ],
+     "r": "kasa o motte itte kudasai",
+     "b": 4
+    }
+   ]
+  },
+  {
+   "id": "hobbies",
+   "name": "Hobbies & sports",
+   "icon": "⚽",
+   "color": "#ffd6a5",
+   "lessons": [
+    [
+     "Free time",
+     "🎨"
+    ],
+    [
+     "Sports",
+     "🏀"
+    ],
+    [
+     "Music & movies",
+     "🎬"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Hobby",
+     "t": "趣味（しゅみ）",
+     "r": "shumi"
+    },
+    {
+     "en": "Soccer",
+     "t": "サッカー",
+     "r": "sakkā"
+    },
+    {
+     "en": "Basketball",
+     "t": "バスケ",
+     "r": "basuke"
+    },
+    {
+     "en": "Swimming",
+     "t": "水泳（すいえい）",
+     "r": "suiei"
+    },
+    {
+     "en": "Running",
+     "t": "ランニング",
+     "r": "ranningu"
+    },
+    {
+     "en": "Music",
+     "t": "音楽（おんがく）",
+     "r": "ongaku"
+    },
+    {
+     "en": "To sing",
+     "t": "歌う（うたう）",
+     "r": "utau"
+    },
+    {
+     "en": "To dance",
+     "t": "踊る（おどる）",
+     "r": "odoru"
+    },
+    {
+     "en": "To draw",
+     "t": "絵を描く（えをかく）",
+     "r": "e o kaku"
+    },
+    {
+     "en": "Video games",
+     "t": "ゲーム",
+     "r": "gēmu"
+    },
+    {
+     "en": "Reading",
+     "t": "読書（どくしょ）",
+     "r": "dokusho"
+    },
+    {
+     "en": "Movie",
+     "t": "映画（えいが）",
+     "r": "eiga"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What are your hobbies?",
+     "t": "趣味は何ですか？",
+     "tiles": [
+      "趣味",
+      "は",
+      "何",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "shumi",
+      "wa",
+      "nan",
+      "desu",
+      "ka"
+     ],
+     "r": "shumi wa nan desu ka",
+     "b": 0
+    },
+    {
+     "en": "I play basketball on weekends.",
+     "t": "週末にバスケをします。",
+     "tiles": [
+      "週末",
+      "に",
+      "バスケ",
+      "を",
+      "します"
+     ],
+     "tr": [
+      "shūmatsu",
+      "ni",
+      "basuke",
+      "o",
+      "shimasu"
+     ],
+     "r": "shūmatsu ni basuke o shimasu",
+     "b": 2
+    },
+    {
+     "en": "I like singing and dancing.",
+     "t": "歌とダンスが好きです。",
+     "tiles": [
+      "歌",
+      "と",
+      "ダンス",
+      "が",
+      "好き",
+      "です"
+     ],
+     "tr": [
+      "uta",
+      "to",
+      "dansu",
+      "ga",
+      "suki",
+      "desu"
+     ],
+     "r": "uta to dansu ga suki desu",
+     "b": 2
+    },
+    {
+     "en": "Do you want to watch a movie?",
+     "t": "映画を見ませんか？",
+     "tiles": [
+      "映画",
+      "を",
+      "見ません",
+      "か"
+     ],
+     "tr": [
+      "eiga",
+      "o",
+      "mimasen",
+      "ka"
+     ],
+     "r": "eiga o mimasen ka",
+     "b": 0
+    },
+    {
+     "en": "I swim every morning.",
+     "t": "毎朝泳ぎます。",
+     "tiles": [
+      "毎朝",
+      "泳ぎます"
+     ],
+     "tr": [
+      "maiasa",
+      "oyogimasu"
+     ],
+     "r": "maiasa oyogimasu",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Body & health",
+   "icon": "🩺",
+   "color": "#f5c2e7",
+   "lessons": [
+    [
+     "Body parts",
+     "🖐️"
+    ],
+    [
+     "Feeling sick",
+     "🤒"
+    ],
+    [
+     "At the doctor",
+     "🏥"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Head",
+     "t": "頭（あたま）",
+     "r": "atama"
+    },
+    {
+     "en": "Eye",
+     "t": "目（め）",
+     "r": "me"
+    },
+    {
+     "en": "Mouth",
+     "t": "口（くち）",
+     "r": "kuchi"
+    },
+    {
+     "en": "Hand",
+     "t": "手（て）",
+     "r": "te"
+    },
+    {
+     "en": "Stomach",
+     "t": "お腹（おなか）",
+     "r": "onaka"
+    },
+    {
+     "en": "Leg",
+     "t": "足（あし）",
+     "r": "ashi"
+    },
+    {
+     "en": "Doctor",
+     "t": "医者（いしゃ）",
+     "r": "isha"
+    },
+    {
+     "en": "Hospital",
+     "t": "病院（びょういん）",
+     "r": "byōin"
+    },
+    {
+     "en": "Medicine",
+     "t": "薬（くすり）",
+     "r": "kusuri"
+    },
+    {
+     "en": "Fever",
+     "t": "熱（ねつ）",
+     "r": "netsu"
+    },
+    {
+     "en": "A cold",
+     "t": "風邪（かぜ）",
+     "r": "kaze"
+    },
+    {
+     "en": "It hurts",
+     "t": "痛い（いたい）",
+     "r": "itai"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I have a headache.",
+     "t": "頭が痛いです。",
+     "tiles": [
+      "頭",
+      "が",
+      "痛い",
+      "です"
+     ],
+     "tr": [
+      "atama",
+      "ga",
+      "itai",
+      "desu"
+     ],
+     "r": "atama ga itai desu",
+     "b": 0
+    },
+    {
+     "en": "I caught a cold.",
+     "t": "風邪をひきました。",
+     "tiles": [
+      "風邪",
+      "を",
+      "ひきました"
+     ],
+     "tr": [
+      "kaze",
+      "o",
+      "hikimashita"
+     ],
+     "r": "kaze o hikimashita",
+     "b": 0
+    },
+    {
+     "en": "I'm going to see a doctor.",
+     "t": "病院に行きます。",
+     "tiles": [
+      "病院",
+      "に",
+      "行きます"
+     ],
+     "tr": [
+      "byōin",
+      "ni",
+      "ikimasu"
+     ],
+     "r": "byōin ni ikimasu",
+     "b": 0
+    },
+    {
+     "en": "Take your medicine.",
+     "t": "薬を飲んでください。",
+     "tiles": [
+      "薬",
+      "を",
+      "飲んで",
+      "ください"
+     ],
+     "tr": [
+      "kusuri",
+      "o",
+      "nonde",
+      "kudasai"
+     ],
+     "r": "kusuri o nonde kudasai",
+     "b": 0
+    },
+    {
+     "en": "I feel much better now.",
+     "t": "今はだいぶ良くなりました。",
+     "tiles": [
+      "今",
+      "は",
+      "だいぶ",
+      "良く",
+      "なりました"
+     ],
+     "tr": [
+      "ima",
+      "wa",
+      "daibu",
+      "yoku",
+      "narimashita"
+     ],
+     "r": "ima wa daibu yoku narimashita",
+     "b": 4
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "name": "Home & rooms",
+   "icon": "🏠",
+   "color": "#b8ecef",
+   "lessons": [
+    [
+     "Rooms",
+     "🛋️"
+    ],
+    [
+     "Furniture",
+     "🛏️"
+    ],
+    [
+     "Chores",
+     "🧹"
+    ]
+   ],
+   "words": [
+    {
+     "en": "House",
+     "t": "家（いえ）",
+     "r": "ie"
+    },
+    {
+     "en": "Room",
+     "t": "部屋（へや）",
+     "r": "heya"
+    },
+    {
+     "en": "Kitchen",
+     "t": "台所（だいどころ）",
+     "r": "daidokoro"
+    },
+    {
+     "en": "Bathroom",
+     "t": "お風呂（おふろ）",
+     "r": "ofuro"
+    },
+    {
+     "en": "Living room",
+     "t": "リビング",
+     "r": "ribingu"
+    },
+    {
+     "en": "Bed",
+     "t": "ベッド",
+     "r": "beddo"
+    },
+    {
+     "en": "Table",
+     "t": "テーブル",
+     "r": "tēburu"
+    },
+    {
+     "en": "Chair",
+     "t": "椅子（いす）",
+     "r": "isu"
+    },
+    {
+     "en": "Window",
+     "t": "窓（まど）",
+     "r": "mado"
+    },
+    {
+     "en": "Door",
+     "t": "ドア",
+     "r": "doa"
+    },
+    {
+     "en": "To clean",
+     "t": "掃除する（そうじする）",
+     "r": "sōji suru"
+    },
+    {
+     "en": "To cook",
+     "t": "料理する（りょうりする）",
+     "r": "ryōri suru"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "This is my house.",
+     "t": "ここが私の家です。",
+     "tiles": [
+      "ここ",
+      "が",
+      "私",
+      "の",
+      "家",
+      "です"
+     ],
+     "tr": [
+      "koko",
+      "ga",
+      "watashi",
+      "no",
+      "ie",
+      "desu"
+     ],
+     "r": "koko ga watashi no ie desu",
+     "b": 4
+    },
+    {
+     "en": "My room is small.",
+     "t": "私の部屋は小さいです。",
+     "tiles": [
+      "私",
+      "の",
+      "部屋",
+      "は",
+      "小さい",
+      "です"
+     ],
+     "tr": [
+      "watashi",
+      "no",
+      "heya",
+      "wa",
+      "chiisai",
+      "desu"
+     ],
+     "r": "watashi no heya wa chiisai desu",
+     "b": 2
+    },
+    {
+     "en": "Dad is cooking in the kitchen.",
+     "t": "父は台所で料理しています。",
+     "tiles": [
+      "父",
+      "は",
+      "台所",
+      "で",
+      "料理",
+      "して",
+      "います"
+     ],
+     "tr": [
+      "chichi",
+      "wa",
+      "daidokoro",
+      "de",
+      "ryōri",
+      "shite",
+      "imasu"
+     ],
+     "r": "chichi wa daidokoro de ryōri shite imasu",
+     "b": 2
+    },
+    {
+     "en": "Please open the window.",
+     "t": "窓を開けてください。",
+     "tiles": [
+      "窓",
+      "を",
+      "開けて",
+      "ください"
+     ],
+     "tr": [
+      "mado",
+      "o",
+      "akete",
+      "kudasai"
+     ],
+     "r": "mado o akete kudasai",
+     "b": 0
+    },
+    {
+     "en": "I clean my room on Sundays.",
+     "t": "日曜日に部屋を掃除します。",
+     "tiles": [
+      "日曜日",
+      "に",
+      "部屋",
+      "を",
+      "掃除",
+      "します"
+     ],
+     "tr": [
+      "nichiyōbi",
+      "ni",
+      "heya",
+      "o",
+      "sōji",
+      "shimasu"
+     ],
+     "r": "nichiyōbi ni heya o sōji shimasu",
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "shopping",
+   "name": "Clothes & shopping",
+   "icon": "🛍️",
+   "color": "#ffcfcf",
+   "lessons": [
+    [
+     "Clothes",
+     "👕"
+    ],
+    [
+     "At the store",
+     "🏬"
+    ],
+    [
+     "Paying",
+     "💳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Clothes",
+     "t": "服（ふく）",
+     "r": "fuku"
+    },
+    {
+     "en": "Shirt",
+     "t": "シャツ",
+     "r": "shatsu"
+    },
+    {
+     "en": "Pants",
+     "t": "ズボン",
+     "r": "zubon"
+    },
+    {
+     "en": "Shoes",
+     "t": "靴（くつ）",
+     "r": "kutsu"
+    },
+    {
+     "en": "Dress",
+     "t": "ワンピース",
+     "r": "wanpīsu"
+    },
+    {
+     "en": "Hat",
+     "t": "帽子（ぼうし）",
+     "r": "bōshi"
+    },
+    {
+     "en": "Store",
+     "t": "店（みせ）",
+     "r": "mise"
+    },
+    {
+     "en": "Price",
+     "t": "値段（ねだん）",
+     "r": "nedan"
+    },
+    {
+     "en": "Cheap",
+     "t": "安い（やすい）",
+     "r": "yasui"
+    },
+    {
+     "en": "Expensive",
+     "t": "高い（たかい）",
+     "r": "takai"
+    },
+    {
+     "en": "To buy",
+     "t": "買う（かう）",
+     "r": "kau"
+    },
+    {
+     "en": "To try on",
+     "t": "試着する（しちゃくする）",
+     "r": "shichaku suru"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "How much is this shirt?",
+     "t": "このシャツはいくらですか？",
+     "tiles": [
+      "この",
+      "シャツ",
+      "は",
+      "いくら",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "kono",
+      "shatsu",
+      "wa",
+      "ikura",
+      "desu",
+      "ka"
+     ],
+     "r": "kono shatsu wa ikura desu ka",
+     "b": 1
+    },
+    {
+     "en": "It's too expensive!",
+     "t": "高すぎます！",
+     "tiles": [
+      "高すぎます"
+     ],
+     "tr": [
+      "takasugimasu"
+     ],
+     "r": "takasugimasu",
+     "b": 0
+    },
+    {
+     "en": "Can I try it on?",
+     "t": "試着してもいいですか？",
+     "tiles": [
+      "試着",
+      "して",
+      "も",
+      "いい",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "shichaku",
+      "shite",
+      "mo",
+      "ii",
+      "desu",
+      "ka"
+     ],
+     "r": "shichaku shite mo ii desu ka",
+     "b": 4
+    },
+    {
+     "en": "I'll buy this one.",
+     "t": "これを買います。",
+     "tiles": [
+      "これ",
+      "を",
+      "買います"
+     ],
+     "tr": [
+      "kore",
+      "o",
+      "kaimasu"
+     ],
+     "r": "kore o kaimasu",
+     "b": 2
+    },
+    {
+     "en": "These shoes are cute.",
+     "t": "この靴はかわいいです。",
+     "tiles": [
+      "この",
+      "靴",
+      "は",
+      "かわいい",
+      "です"
+     ],
+     "tr": [
+      "kono",
+      "kutsu",
+      "wa",
+      "kawaii",
+      "desu"
+     ],
+     "r": "kono kutsu wa kawaii desu",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "travel",
+   "name": "Transportation & travel",
+   "icon": "🚆",
+   "color": "#d4e6a8",
+   "lessons": [
+    [
+     "Getting around",
+     "🚇"
+    ],
+    [
+     "At the airport",
+     "✈️"
+    ],
+    [
+     "Asking the way",
+     "🧭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Train",
+     "t": "電車（でんしゃ）",
+     "r": "densha"
+    },
+    {
+     "en": "Subway",
+     "t": "地下鉄（ちかてつ）",
+     "r": "chikatetsu"
+    },
+    {
+     "en": "Bus",
+     "t": "バス",
+     "r": "basu"
+    },
+    {
+     "en": "Taxi",
+     "t": "タクシー",
+     "r": "takushī"
+    },
+    {
+     "en": "Airplane",
+     "t": "飛行機（ひこうき）",
+     "r": "hikōki"
+    },
+    {
+     "en": "Airport",
+     "t": "空港（くうこう）",
+     "r": "kūkō"
+    },
+    {
+     "en": "Station",
+     "t": "駅（えき）",
+     "r": "eki"
+    },
+    {
+     "en": "Ticket",
+     "t": "切符（きっぷ）",
+     "r": "kippu"
+    },
+    {
+     "en": "Passport",
+     "t": "パスポート",
+     "r": "pasupōto"
+    },
+    {
+     "en": "Map",
+     "t": "地図（ちず）",
+     "r": "chizu"
+    },
+    {
+     "en": "Left",
+     "t": "左（ひだり）",
+     "r": "hidari"
+    },
+    {
+     "en": "Right",
+     "t": "右（みぎ）",
+     "r": "migi"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Where is the station?",
+     "t": "駅はどこですか？",
+     "tiles": [
+      "駅",
+      "は",
+      "どこ",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "eki",
+      "wa",
+      "doko",
+      "desu",
+      "ka"
+     ],
+     "r": "eki wa doko desu ka",
+     "b": 0
+    },
+    {
+     "en": "I take the subway to school.",
+     "t": "地下鉄で学校に行きます。",
+     "tiles": [
+      "地下鉄",
+      "で",
+      "学校",
+      "に",
+      "行きます"
+     ],
+     "tr": [
+      "chikatetsu",
+      "de",
+      "gakkō",
+      "ni",
+      "ikimasu"
+     ],
+     "r": "chikatetsu de gakkō ni ikimasu",
+     "b": 0
+    },
+    {
+     "en": "One ticket, please.",
+     "t": "切符を一枚ください。",
+     "tiles": [
+      "切符",
+      "を",
+      "一枚",
+      "ください"
+     ],
+     "tr": [
+      "kippu",
+      "o",
+      "ichimai",
+      "kudasai"
+     ],
+     "r": "kippu o ichimai kudasai",
+     "b": 0
+    },
+    {
+     "en": "Turn left here.",
+     "t": "ここを左に曲がってください。",
+     "tiles": [
+      "ここ",
+      "を",
+      "左",
+      "に",
+      "曲がって",
+      "ください"
+     ],
+     "tr": [
+      "koko",
+      "o",
+      "hidari",
+      "ni",
+      "magatte",
+      "kudasai"
+     ],
+     "r": "koko o hidari ni magatte kudasai",
+     "b": 2
+    },
+    {
+     "en": "I'm going to the airport.",
+     "t": "空港に行きます。",
+     "tiles": [
+      "空港",
+      "に",
+      "行きます"
+     ],
+     "tr": [
+      "kūkō",
+      "ni",
+      "ikimasu"
+     ],
+     "r": "kūkō ni ikimasu",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "name": "Time, dates & schedules",
+   "icon": "⏰",
+   "color": "#e2d1f9",
+   "lessons": [
+    [
+     "Today & tomorrow",
+     "📆"
+    ],
+    [
+     "Telling time",
+     "🕐"
+    ],
+    [
+     "My schedule",
+     "🗓️"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Today",
+     "t": "今日（きょう）",
+     "r": "kyō"
+    },
+    {
+     "en": "Tomorrow",
+     "t": "明日（あした）",
+     "r": "ashita"
+    },
+    {
+     "en": "Yesterday",
+     "t": "昨日（きのう）",
+     "r": "kinō"
+    },
+    {
+     "en": "Monday",
+     "t": "月曜日（げつようび）",
+     "r": "getsuyōbi"
+    },
+    {
+     "en": "Friday",
+     "t": "金曜日（きんようび）",
+     "r": "kin'yōbi"
+    },
+    {
+     "en": "Weekend",
+     "t": "週末（しゅうまつ）",
+     "r": "shūmatsu"
+    },
+    {
+     "en": "Morning",
+     "t": "朝（あさ）",
+     "r": "asa"
+    },
+    {
+     "en": "Night",
+     "t": "夜（よる）",
+     "r": "yoru"
+    },
+    {
+     "en": "Hour",
+     "t": "時間（じかん）",
+     "r": "jikan"
+    },
+    {
+     "en": "Minute",
+     "t": "分（ふん）",
+     "r": "fun"
+    },
+    {
+     "en": "Early",
+     "t": "早い（はやい）",
+     "r": "hayai"
+    },
+    {
+     "en": "Late",
+     "t": "遅い（おそい）",
+     "r": "osoi"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What time is it?",
+     "t": "今何時ですか？",
+     "tiles": [
+      "今",
+      "何時",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "ima",
+      "nanji",
+      "desu",
+      "ka"
+     ],
+     "r": "ima nanji desu ka",
+     "b": 2
+    },
+    {
+     "en": "It's three o'clock.",
+     "t": "三時です。",
+     "tiles": [
+      "三時",
+      "です"
+     ],
+     "tr": [
+      "sanji",
+      "desu"
+     ],
+     "r": "sanji desu",
+     "b": 1
+    },
+    {
+     "en": "Class starts at nine.",
+     "t": "授業は九時に始まります。",
+     "tiles": [
+      "授業",
+      "は",
+      "九時",
+      "に",
+      "始まります"
+     ],
+     "tr": [
+      "jugyō",
+      "wa",
+      "kuji",
+      "ni",
+      "hajimarimasu"
+     ],
+     "r": "jugyō wa kuji ni hajimarimasu",
+     "b": 4
+    },
+    {
+     "en": "I'm busy on Monday.",
+     "t": "月曜日は忙しいです。",
+     "tiles": [
+      "月曜日",
+      "は",
+      "忙しい",
+      "です"
+     ],
+     "tr": [
+      "getsuyōbi",
+      "wa",
+      "isogashii",
+      "desu"
+     ],
+     "r": "getsuyōbi wa isogashii desu",
+     "b": 0
+    },
+    {
+     "en": "See you tomorrow!",
+     "t": "また明日！",
+     "tiles": [
+      "また",
+      "明日"
+     ],
+     "tr": [
+      "mata",
+      "ashita"
+     ],
+     "r": "mata ashita",
+     "b": 1
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "name": "Jobs & work",
+   "icon": "💼",
+   "color": "#fff1b8",
+   "lessons": [
+    [
+     "Jobs",
+     "👩‍🍳"
+    ],
+    [
+     "At work",
+     "🏢"
+    ],
+    [
+     "Dream job",
+     "🌟"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Work",
+     "t": "仕事（しごと）",
+     "r": "shigoto"
+    },
+    {
+     "en": "Office",
+     "t": "オフィス",
+     "r": "ofisu"
+    },
+    {
+     "en": "Nurse",
+     "t": "看護師（かんごし）",
+     "r": "kangoshi"
+    },
+    {
+     "en": "Chef",
+     "t": "シェフ",
+     "r": "shefu"
+    },
+    {
+     "en": "Police officer",
+     "t": "警察官（けいさつかん）",
+     "r": "keisatsukan"
+    },
+    {
+     "en": "Engineer",
+     "t": "エンジニア",
+     "r": "enjinia"
+    },
+    {
+     "en": "Artist",
+     "t": "芸術家（げいじゅつか）",
+     "r": "geijutsuka"
+    },
+    {
+     "en": "Boss",
+     "t": "上司（じょうし）",
+     "r": "jōshi"
+    },
+    {
+     "en": "Coworker",
+     "t": "同僚（どうりょう）",
+     "r": "dōryō"
+    },
+    {
+     "en": "Meeting",
+     "t": "会議（かいぎ）",
+     "r": "kaigi"
+    },
+    {
+     "en": "Salary",
+     "t": "給料（きゅうりょう）",
+     "r": "kyūryō"
+    },
+    {
+     "en": "To work",
+     "t": "働く（はたらく）",
+     "r": "hataraku"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What do you do for work?",
+     "t": "お仕事は何ですか？",
+     "tiles": [
+      "お仕事",
+      "は",
+      "何",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "o-shigoto",
+      "wa",
+      "nan",
+      "desu",
+      "ka"
+     ],
+     "r": "o-shigoto wa nan desu ka",
+     "b": 0
+    },
+    {
+     "en": "I'm a nurse.",
+     "t": "看護師です。",
+     "tiles": [
+      "看護師",
+      "です"
+     ],
+     "tr": [
+      "kangoshi",
+      "desu"
+     ],
+     "r": "kangoshi desu",
+     "b": 0
+    },
+    {
+     "en": "I work at an office.",
+     "t": "オフィスで働いています。",
+     "tiles": [
+      "オフィス",
+      "で",
+      "働いて",
+      "います"
+     ],
+     "tr": [
+      "ofisu",
+      "de",
+      "hataraite",
+      "imasu"
+     ],
+     "r": "ofisu de hataraite imasu",
+     "b": 0
+    },
+    {
+     "en": "I have a meeting at ten.",
+     "t": "十時に会議があります。",
+     "tiles": [
+      "十時",
+      "に",
+      "会議",
+      "が",
+      "あります"
+     ],
+     "tr": [
+      "jūji",
+      "ni",
+      "kaigi",
+      "ga",
+      "arimasu"
+     ],
+     "r": "jūji ni kaigi ga arimasu",
+     "b": 2
+    },
+    {
+     "en": "I want to be a chef.",
+     "t": "シェフになりたいです。",
+     "tiles": [
+      "シェフ",
+      "に",
+      "なりたい",
+      "です"
+     ],
+     "tr": [
+      "shefu",
+      "ni",
+      "naritai",
+      "desu"
+     ],
+     "r": "shefu ni naritai desu",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "name": "Making plans with friends",
+   "icon": "📅",
+   "color": "#c9d6ff",
+   "lessons": [
+    [
+     "Free or busy?",
+     "💌"
+    ],
+    [
+     "Places to go",
+     "🎡"
+    ],
+    [
+     "Yes, no & maybe",
+     "🤔"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Together",
+     "t": "一緒に（いっしょに）",
+     "r": "issho ni"
+    },
+    {
+     "en": "Free (not busy)",
+     "t": "暇（ひま）",
+     "r": "hima"
+    },
+    {
+     "en": "Busy",
+     "t": "忙しい（いそがしい）",
+     "r": "isogashii"
+    },
+    {
+     "en": "Party",
+     "t": "パーティー",
+     "r": "pātī"
+    },
+    {
+     "en": "Park",
+     "t": "公園（こうえん）",
+     "r": "kōen"
+    },
+    {
+     "en": "Café",
+     "t": "カフェ",
+     "r": "kafe"
+    },
+    {
+     "en": "Beach",
+     "t": "海（うみ）",
+     "r": "umi"
+    },
+    {
+     "en": "Mall",
+     "t": "デパート",
+     "r": "depāto"
+    },
+    {
+     "en": "Let's go!",
+     "t": "行こう！（いこう）",
+     "r": "ikō!"
+    },
+    {
+     "en": "Sounds good",
+     "t": "いいね",
+     "r": "ii ne"
+    },
+    {
+     "en": "Maybe",
+     "t": "たぶん",
+     "r": "tabun"
+    },
+    {
+     "en": "Next time",
+     "t": "今度（こんど）",
+     "r": "kondo"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Are you free this weekend?",
+     "t": "今週末暇ですか？",
+     "tiles": [
+      "今週末",
+      "暇",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "konshūmatsu",
+      "hima",
+      "desu",
+      "ka"
+     ],
+     "r": "konshūmatsu hima desu ka",
+     "b": 1
+    },
+    {
+     "en": "Let's go to the park together.",
+     "t": "一緒に公園に行こう。",
+     "tiles": [
+      "一緒に",
+      "公園",
+      "に",
+      "行こう"
+     ],
+     "tr": [
+      "issho ni",
+      "kōen",
+      "ni",
+      "ikō"
+     ],
+     "r": "issho ni kōen ni ikō",
+     "b": 0
+    },
+    {
+     "en": "What time should we meet?",
+     "t": "何時に会いましょうか？",
+     "tiles": [
+      "何時",
+      "に",
+      "会いましょう",
+      "か"
+     ],
+     "tr": [
+      "nanji",
+      "ni",
+      "aimashō",
+      "ka"
+     ],
+     "r": "nanji ni aimashō ka",
+     "b": 2
+    },
+    {
+     "en": "Sorry, I'm busy today.",
+     "t": "すみません、今日は忙しいです。",
+     "tiles": [
+      "すみません",
+      "今日",
+      "は",
+      "忙しい",
+      "です"
+     ],
+     "tr": [
+      "sumimasen",
+      "kyō",
+      "wa",
+      "isogashii",
+      "desu"
+     ],
+     "r": "sumimasen kyō wa isogashii desu",
+     "b": 3
+    },
+    {
+     "en": "Sounds good, see you then!",
+     "t": "いいね、じゃあまたね！",
+     "tiles": [
+      "いいね",
+      "じゃあ",
+      "また",
+      "ね"
+     ],
+     "tr": [
+      "ii ne",
+      "jā",
+      "mata",
+      "ne"
+     ],
+     "r": "ii ne jā mata ne",
+     "b": 0
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Phone & texting",
+   "icon": "📱",
+   "color": "#ffdcc2",
+   "lessons": [
+    [
+     "My phone",
+     "📱"
+    ],
+    [
+     "Texting",
+     "💬"
+    ],
+    [
+     "Online",
+     "🌐"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Phone",
+     "t": "スマホ",
+     "r": "sumaho"
+    },
+    {
+     "en": "Computer",
+     "t": "パソコン",
+     "r": "pasokon"
+    },
+    {
+     "en": "Message",
+     "t": "メッセージ",
+     "r": "messēji"
+    },
+    {
+     "en": "To call",
+     "t": "電話する（でんわする）",
+     "r": "denwa suru"
+    },
+    {
+     "en": "Internet",
+     "t": "インターネット",
+     "r": "intānetto"
+    },
+    {
+     "en": "Password",
+     "t": "パスワード",
+     "r": "pasuwādo"
+    },
+    {
+     "en": "Photo",
+     "t": "写真（しゃしん）",
+     "r": "shashin"
+    },
+    {
+     "en": "App",
+     "t": "アプリ",
+     "r": "apuri"
+    },
+    {
+     "en": "Battery",
+     "t": "バッテリー",
+     "r": "batterī"
+    },
+    {
+     "en": "Charger",
+     "t": "充電器（じゅうでんき）",
+     "r": "jūdenki"
+    },
+    {
+     "en": "Email",
+     "t": "メール",
+     "r": "mēru"
+    },
+    {
+     "en": "To send a text",
+     "t": "メッセージを送る（めっせーじをおくる）",
+     "r": "messēji o okuru"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What's your phone number?",
+     "t": "電話番号は何番ですか？",
+     "tiles": [
+      "電話番号",
+      "は",
+      "何番",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "denwa bangō",
+      "wa",
+      "nanban",
+      "desu",
+      "ka"
+     ],
+     "r": "denwa bangō wa nanban desu ka",
+     "b": 0
+    },
+    {
+     "en": "I'll text you later.",
+     "t": "後でメッセージを送ります。",
+     "tiles": [
+      "後で",
+      "メッセージ",
+      "を",
+      "送ります"
+     ],
+     "tr": [
+      "atode",
+      "messēji",
+      "o",
+      "okurimasu"
+     ],
+     "r": "atode messēji o okurimasu",
+     "b": 1
+    },
+    {
+     "en": "My battery is dead.",
+     "t": "バッテリーが切れました。",
+     "tiles": [
+      "バッテリー",
+      "が",
+      "切れました"
+     ],
+     "tr": [
+      "batterī",
+      "ga",
+      "kiremashita"
+     ],
+     "r": "batterī ga kiremashita",
+     "b": 0
+    },
+    {
+     "en": "Can I take a photo?",
+     "t": "写真を撮ってもいいですか？",
+     "tiles": [
+      "写真",
+      "を",
+      "撮って",
+      "も",
+      "いい",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "shashin",
+      "o",
+      "totte",
+      "mo",
+      "ii",
+      "desu",
+      "ka"
+     ],
+     "r": "shashin o totte mo ii desu ka",
+     "b": 0
+    },
+    {
+     "en": "What's the Wi-Fi password?",
+     "t": "WiFiのパスワードは何ですか？",
+     "tiles": [
+      "WiFi",
+      "の",
+      "パスワード",
+      "は",
+      "何",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "WiFi",
+      "no",
+      "pasuwādo",
+      "wa",
+      "nan",
+      "desu",
+      "ka"
+     ],
+     "r": "WiFi no pasuwādo wa nan desu ka",
+     "b": 2
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "name": "Emotions & opinions",
+   "icon": "💭",
+   "color": "#bde8d4",
+   "lessons": [
+    [
+     "Happy & sad",
+     "😊"
+    ],
+    [
+     "Big feelings",
+     "😤"
+    ],
+    [
+     "Opinions",
+     "💭"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Happy",
+     "t": "嬉しい（うれしい）",
+     "r": "ureshii"
+    },
+    {
+     "en": "Sad",
+     "t": "悲しい（かなしい）",
+     "r": "kanashii"
+    },
+    {
+     "en": "Angry",
+     "t": "怒ってる（おこってる）",
+     "r": "okotteru"
+    },
+    {
+     "en": "Tired",
+     "t": "疲れた（つかれた）",
+     "r": "tsukareta"
+    },
+    {
+     "en": "Nervous",
+     "t": "緊張（きんちょう）",
+     "r": "kinchō"
+    },
+    {
+     "en": "Boring",
+     "t": "つまらない",
+     "r": "tsumaranai"
+    },
+    {
+     "en": "Scared",
+     "t": "怖い（こわい）",
+     "r": "kowai"
+    },
+    {
+     "en": "Fun",
+     "t": "楽しい（たのしい）",
+     "r": "tanoshii"
+    },
+    {
+     "en": "Interesting",
+     "t": "面白い（おもしろい）",
+     "r": "omoshiroi"
+    },
+    {
+     "en": "I think…",
+     "t": "…と思います（…とおもいます）",
+     "r": "… to omoimasu"
+    },
+    {
+     "en": "I agree",
+     "t": "賛成です（さんせいです）",
+     "r": "sansei desu"
+    },
+    {
+     "en": "Really?",
+     "t": "本当に？（ほんとうに）",
+     "r": "hontō ni?"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I'm so happy today!",
+     "t": "今日はとても嬉しいです！",
+     "tiles": [
+      "今日",
+      "は",
+      "とても",
+      "嬉しい",
+      "です"
+     ],
+     "tr": [
+      "kyō",
+      "wa",
+      "totemo",
+      "ureshii",
+      "desu"
+     ],
+     "r": "kyō wa totemo ureshii desu",
+     "b": 3
+    },
+    {
+     "en": "Why are you sad?",
+     "t": "どうして悲しいの？",
+     "tiles": [
+      "どうして",
+      "悲しい",
+      "の"
+     ],
+     "tr": [
+      "dōshite",
+      "kanashii",
+      "no"
+     ],
+     "r": "dōshite kanashii no",
+     "b": 1
+    },
+    {
+     "en": "I think it is interesting.",
+     "t": "面白いと思います。",
+     "tiles": [
+      "面白い",
+      "と",
+      "思います"
+     ],
+     "tr": [
+      "omoshiroi",
+      "to",
+      "omoimasu"
+     ],
+     "r": "omoshiroi to omoimasu",
+     "b": 0
+    },
+    {
+     "en": "I'm really tired.",
+     "t": "とても疲れました。",
+     "tiles": [
+      "とても",
+      "疲れました"
+     ],
+     "tr": [
+      "totemo",
+      "tsukaremashita"
+     ],
+     "r": "totemo tsukaremashita",
+     "b": 1
+    },
+    {
+     "en": "I think so too.",
+     "t": "私もそう思います。",
+     "tiles": [
+      "私",
+      "も",
+      "そう",
+      "思います"
+     ],
+     "tr": [
+      "watashi",
+      "mo",
+      "sō",
+      "omoimasu"
+     ],
+     "r": "watashi mo sō omoimasu",
+     "b": 3
+    }
+   ]
+  },
+  {
+   "id": "past",
+   "name": "Grammar: Past tense",
+   "icon": "⏪",
+   "color": "#f8d0f0",
+   "lessons": [
+    [
+     "When it happened",
+     "⏪"
+    ],
+    [
+     "What I did",
+     "✅"
+    ],
+    [
+     "Telling stories",
+     "📖"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Last night",
+     "t": "昨夜（ゆうべ）",
+     "r": "yūbe"
+    },
+    {
+     "en": "Last week",
+     "t": "先週（せんしゅう）",
+     "r": "senshū"
+    },
+    {
+     "en": "Last year",
+     "t": "去年（きょねん）",
+     "r": "kyonen"
+    },
+    {
+     "en": "Two days ago",
+     "t": "二日前（ふつかまえ）",
+     "r": "futsuka mae"
+    },
+    {
+     "en": "Already",
+     "t": "もう",
+     "r": "mō"
+    },
+    {
+     "en": "I went",
+     "t": "行きました（いきました）",
+     "r": "ikimashita"
+    },
+    {
+     "en": "I ate",
+     "t": "食べました（たべました）",
+     "r": "tabemashita"
+    },
+    {
+     "en": "I saw",
+     "t": "見ました（みました）",
+     "r": "mimashita"
+    },
+    {
+     "en": "I bought",
+     "t": "買いました（かいました）",
+     "r": "kaimashita"
+    },
+    {
+     "en": "I studied",
+     "t": "勉強しました（べんきょうしました）",
+     "r": "benkyō shimashita"
+    },
+    {
+     "en": "I slept",
+     "t": "寝ました（ねました）",
+     "r": "nemashita"
+    },
+    {
+     "en": "It was fun",
+     "t": "楽しかった（たのしかった）",
+     "r": "tanoshikatta"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I went to the park yesterday.",
+     "t": "昨日公園に行きました。",
+     "tiles": [
+      "昨日",
+      "公園",
+      "に",
+      "行きました"
+     ],
+     "tr": [
+      "kinō",
+      "kōen",
+      "ni",
+      "ikimashita"
+     ],
+     "r": "kinō kōen ni ikimashita",
+     "b": 3
+    },
+    {
+     "en": "I ate ramen last night.",
+     "t": "昨夜ラーメンを食べました。",
+     "tiles": [
+      "昨夜",
+      "ラーメン",
+      "を",
+      "食べました"
+     ],
+     "tr": [
+      "yūbe",
+      "rāmen",
+      "o",
+      "tabemashita"
+     ],
+     "r": "yūbe rāmen o tabemashita",
+     "b": 0
+    },
+    {
+     "en": "I saw a movie last week.",
+     "t": "先週映画を見ました。",
+     "tiles": [
+      "先週",
+      "映画",
+      "を",
+      "見ました"
+     ],
+     "tr": [
+      "senshū",
+      "eiga",
+      "o",
+      "mimashita"
+     ],
+     "r": "senshū eiga o mimashita",
+     "b": 0
+    },
+    {
+     "en": "I already did my homework.",
+     "t": "もう宿題をしました。",
+     "tiles": [
+      "もう",
+      "宿題",
+      "を",
+      "しました"
+     ],
+     "tr": [
+      "mō",
+      "shukudai",
+      "o",
+      "shimashita"
+     ],
+     "r": "mō shukudai o shimashita",
+     "b": 0
+    },
+    {
+     "en": "It was really fun!",
+     "t": "すごく楽しかったです！",
+     "tiles": [
+      "すごく",
+      "楽しかった",
+      "です"
+     ],
+     "tr": [
+      "sugoku",
+      "tanoshikatta",
+      "desu"
+     ],
+     "r": "sugoku tanoshikatta desu",
+     "b": 1
+    }
+   ],
+   "note": "Polite past: change ～ます (masu) to ～ました (mashita): 食べます (tabemasu) → 食べました (tabemashita). Adjectives: 楽しい (tanoshii) → 楽しかった (tanoshikatta)."
+  },
+  {
+   "id": "future",
+   "name": "Grammar: Future",
+   "icon": "⏩",
+   "color": "#d7e8ff",
+   "lessons": [
+    [
+     "Tomorrow & later",
+     "⏩"
+    ],
+    [
+     "Plans & goals",
+     "🎯"
+    ],
+    [
+     "Dreams",
+     "🌈"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Tonight",
+     "t": "今夜（こんや）",
+     "r": "kon'ya"
+    },
+    {
+     "en": "Next week",
+     "t": "来週（らいしゅう）",
+     "r": "raishū"
+    },
+    {
+     "en": "Next year",
+     "t": "来年（らいねん）",
+     "r": "rainen"
+    },
+    {
+     "en": "Later",
+     "t": "後で（あとで）",
+     "r": "atode"
+    },
+    {
+     "en": "Soon",
+     "t": "もうすぐ",
+     "r": "mō sugu"
+    },
+    {
+     "en": "I will go",
+     "t": "行きます（いきます）",
+     "r": "ikimasu"
+    },
+    {
+     "en": "I will study",
+     "t": "勉強します（べんきょうします）",
+     "r": "benkyō shimasu"
+    },
+    {
+     "en": "I'm going to travel",
+     "t": "旅行します（りょこうします）",
+     "r": "ryokō shimasu"
+    },
+    {
+     "en": "I will call you",
+     "t": "電話します（でんわします）",
+     "r": "denwa shimasu"
+    },
+    {
+     "en": "I want to…",
+     "t": "…たいです",
+     "r": "… tai desu"
+    },
+    {
+     "en": "Plan",
+     "t": "予定（よてい）",
+     "r": "yotei"
+    },
+    {
+     "en": "Dream",
+     "t": "夢（ゆめ）",
+     "r": "yume"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I will go to the beach tomorrow.",
+     "t": "明日海に行きます。",
+     "tiles": [
+      "明日",
+      "海",
+      "に",
+      "行きます"
+     ],
+     "tr": [
+      "ashita",
+      "umi",
+      "ni",
+      "ikimasu"
+     ],
+     "r": "ashita umi ni ikimasu",
+     "b": 3
+    },
+    {
+     "en": "I'm going to study tonight.",
+     "t": "今夜勉強します。",
+     "tiles": [
+      "今夜",
+      "勉強",
+      "します"
+     ],
+     "tr": [
+      "kon'ya",
+      "benkyō",
+      "shimasu"
+     ],
+     "r": "kon'ya benkyō shimasu",
+     "b": 0
+    },
+    {
+     "en": "Next year I will travel a lot.",
+     "t": "来年はたくさん旅行します。",
+     "tiles": [
+      "来年",
+      "は",
+      "たくさん",
+      "旅行",
+      "します"
+     ],
+     "tr": [
+      "rainen",
+      "wa",
+      "takusan",
+      "ryokō",
+      "shimasu"
+     ],
+     "r": "rainen wa takusan ryokō shimasu",
+     "b": 0
+    },
+    {
+     "en": "I'll call you later.",
+     "t": "後で電話します。",
+     "tiles": [
+      "後で",
+      "電話",
+      "します"
+     ],
+     "tr": [
+      "atode",
+      "denwa",
+      "shimasu"
+     ],
+     "r": "atode denwa shimasu",
+     "b": 0
+    },
+    {
+     "en": "My dream is to be a singer.",
+     "t": "私の夢は歌手になることです。",
+     "tiles": [
+      "私",
+      "の",
+      "夢",
+      "は",
+      "歌手",
+      "に",
+      "なる",
+      "こと",
+      "です"
+     ],
+     "tr": [
+      "watashi",
+      "no",
+      "yume",
+      "wa",
+      "kashu",
+      "ni",
+      "naru",
+      "koto",
+      "desu"
+     ],
+     "r": "watashi no yume wa kashu ni naru koto desu",
+     "b": 2
+    }
+   ],
+   "note": "Japanese has no separate future: the ～ます (masu) form covers present and future. 明日行きます (ashita ikimasu) = I will go tomorrow. Want to: ～たいです (tai desu)."
+  },
+  {
+   "id": "questions",
+   "name": "Grammar: Questions",
+   "icon": "❓",
+   "color": "#ffe0e9",
+   "lessons": [
+    [
+     "Question words",
+     "❓"
+    ],
+    [
+     "Asking about people",
+     "🙋"
+    ],
+    [
+     "Asking for help",
+     "🆘"
+    ]
+   ],
+   "words": [
+    {
+     "en": "What?",
+     "t": "何？（なに）",
+     "r": "nani?"
+    },
+    {
+     "en": "Who?",
+     "t": "誰？（だれ）",
+     "r": "dare?"
+    },
+    {
+     "en": "Where?",
+     "t": "どこ？",
+     "r": "doko?"
+    },
+    {
+     "en": "When?",
+     "t": "いつ？",
+     "r": "itsu?"
+    },
+    {
+     "en": "Why?",
+     "t": "どうして？",
+     "r": "dōshite?"
+    },
+    {
+     "en": "How?",
+     "t": "どうやって？",
+     "r": "dō yatte?"
+    },
+    {
+     "en": "How much?",
+     "t": "いくら？",
+     "r": "ikura?"
+    },
+    {
+     "en": "Which one?",
+     "t": "どれ？",
+     "r": "dore?"
+    },
+    {
+     "en": "What time?",
+     "t": "何時？（なんじ）",
+     "r": "nanji?"
+    },
+    {
+     "en": "Can you help me?",
+     "t": "手伝ってくれますか？（てつだってくれますか）",
+     "r": "tetsudatte kuremasu ka?"
+    },
+    {
+     "en": "What does it mean?",
+     "t": "どういう意味ですか？（どういういみですか）",
+     "r": "dō iu imi desu ka?"
+    },
+    {
+     "en": "Is that right?",
+     "t": "合っていますか？（あっていますか）",
+     "r": "atte imasu ka?"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "What is this?",
+     "t": "これは何ですか？",
+     "tiles": [
+      "これ",
+      "は",
+      "何",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "kore",
+      "wa",
+      "nan",
+      "desu",
+      "ka"
+     ],
+     "r": "kore wa nan desu ka",
+     "b": 3
+    },
+    {
+     "en": "Where do you live?",
+     "t": "どこに住んでいますか？",
+     "tiles": [
+      "どこ",
+      "に",
+      "住んで",
+      "います",
+      "か"
+     ],
+     "tr": [
+      "doko",
+      "ni",
+      "sunde",
+      "imasu",
+      "ka"
+     ],
+     "r": "doko ni sunde imasu ka",
+     "b": 3
+    },
+    {
+     "en": "Who is that person?",
+     "t": "あの人は誰ですか？",
+     "tiles": [
+      "あの",
+      "人",
+      "は",
+      "誰",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "ano",
+      "hito",
+      "wa",
+      "dare",
+      "desu",
+      "ka"
+     ],
+     "r": "ano hito wa dare desu ka",
+     "b": 4
+    },
+    {
+     "en": "When does class start?",
+     "t": "授業はいつ始まりますか？",
+     "tiles": [
+      "授業",
+      "は",
+      "いつ",
+      "始まります",
+      "か"
+     ],
+     "tr": [
+      "jugyō",
+      "wa",
+      "itsu",
+      "hajimarimasu",
+      "ka"
+     ],
+     "r": "jugyō wa itsu hajimarimasu ka",
+     "b": 3
+    },
+    {
+     "en": "How do you say this?",
+     "t": "これはどう言いますか？",
+     "tiles": [
+      "これ",
+      "は",
+      "どう",
+      "言います",
+      "か"
+     ],
+     "tr": [
+      "kore",
+      "wa",
+      "dō",
+      "iimasu",
+      "ka"
+     ],
+     "r": "kore wa dō iimasu ka",
+     "b": 3
+    }
+   ],
+   "note": "Add か (ka) to the end of a polite sentence: これは何ですか？(kore wa nan desu ka?). Question words: 何 (nani/nan), 誰 (dare), どこ (doko), いつ (itsu)."
+  },
+  {
+   "id": "negation",
+   "name": "Grammar: Negation",
+   "icon": "🚫",
+   "color": "#e6dcc9",
+   "lessons": [
+    [
+     "No & not",
+     "🙅"
+    ],
+    [
+     "Don't & can't",
+     "⛔"
+    ],
+    [
+     "Not yet",
+     "⏳"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Not",
+     "t": "…ない",
+     "r": "… nai"
+    },
+    {
+     "en": "I don't know",
+     "t": "分かりません（わかりません）",
+     "r": "wakarimasen"
+    },
+    {
+     "en": "I don't like it",
+     "t": "好きじゃないです（すきじゃないです）",
+     "r": "suki ja nai desu"
+    },
+    {
+     "en": "I don't have it",
+     "t": "持っていません（もっていません）",
+     "r": "motte imasen"
+    },
+    {
+     "en": "I can't",
+     "t": "できません",
+     "r": "dekimasen"
+    },
+    {
+     "en": "Not yet",
+     "t": "まだです",
+     "r": "mada desu"
+    },
+    {
+     "en": "Never",
+     "t": "一度もない（いちどもない）",
+     "r": "ichido mo nai"
+    },
+    {
+     "en": "Nothing",
+     "t": "何もない（なにもない）",
+     "r": "nani mo nai"
+    },
+    {
+     "en": "Nobody",
+     "t": "誰もいない（だれもいない）",
+     "r": "dare mo inai"
+    },
+    {
+     "en": "It's not…",
+     "t": "…じゃないです",
+     "r": "… ja nai desu"
+    },
+    {
+     "en": "Don't!",
+     "t": "だめ！",
+     "r": "dame!"
+    },
+    {
+     "en": "No problem",
+     "t": "問題ないです（もんだいないです）",
+     "r": "mondai nai desu"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "I don't eat meat.",
+     "t": "肉は食べません。",
+     "tiles": [
+      "肉",
+      "は",
+      "食べません"
+     ],
+     "tr": [
+      "niku",
+      "wa",
+      "tabemasen"
+     ],
+     "r": "niku wa tabemasen",
+     "b": 2
+    },
+    {
+     "en": "I don't have time today.",
+     "t": "今日は時間がありません。",
+     "tiles": [
+      "今日",
+      "は",
+      "時間",
+      "が",
+      "ありません"
+     ],
+     "tr": [
+      "kyō",
+      "wa",
+      "jikan",
+      "ga",
+      "arimasen"
+     ],
+     "r": "kyō wa jikan ga arimasen",
+     "b": 4
+    },
+    {
+     "en": "This is not my bag.",
+     "t": "これは私のかばんではありません。",
+     "tiles": [
+      "これ",
+      "は",
+      "私",
+      "の",
+      "かばん",
+      "では",
+      "ありません"
+     ],
+     "tr": [
+      "kore",
+      "wa",
+      "watashi",
+      "no",
+      "kaban",
+      "dewa",
+      "arimasen"
+     ],
+     "r": "kore wa watashi no kaban dewa arimasen",
+     "b": 6
+    },
+    {
+     "en": "I haven't eaten yet.",
+     "t": "まだ食べていません。",
+     "tiles": [
+      "まだ",
+      "食べて",
+      "いません"
+     ],
+     "tr": [
+      "mada",
+      "tabete",
+      "imasen"
+     ],
+     "r": "mada tabete imasen",
+     "b": 2
+    },
+    {
+     "en": "I can't swim.",
+     "t": "泳げません。",
+     "tiles": [
+      "泳げません"
+     ],
+     "tr": [
+      "oyogemasen"
+     ],
+     "r": "oyogemasen",
+     "b": 0
+    }
+   ],
+   "note": "Polite negative: ～ます (masu) → ～ません (masen): 食べません (tabemasen) = I don't eat. Not (noun/adjective): ～じゃないです (ja nai desu)."
+  },
+  {
+   "id": "polite",
+   "name": "Grammar: Polite vs casual",
+   "icon": "🎩",
+   "color": "#cdeccd",
+   "lessons": [
+    [
+     "Polite words",
+     "🎩"
+    ],
+    [
+     "Casual with friends",
+     "😎"
+    ],
+    [
+     "Formal vs friendly",
+     "🤝"
+    ]
+   ],
+   "words": [
+    {
+     "en": "Thank you (polite)",
+     "t": "ありがとうございます",
+     "r": "arigatō gozaimasu"
+    },
+    {
+     "en": "Thanks (casual)",
+     "t": "ありがとう",
+     "r": "arigatō"
+    },
+    {
+     "en": "I'm sorry (polite)",
+     "t": "申し訳ありません（もうしわけありません）",
+     "r": "mōshiwake arimasen"
+    },
+    {
+     "en": "Sorry (casual)",
+     "t": "ごめん",
+     "r": "gomen"
+    },
+    {
+     "en": "Goodbye (polite)",
+     "t": "失礼します（しつれいします）",
+     "r": "shitsurei shimasu"
+    },
+    {
+     "en": "Bye (casual)",
+     "t": "じゃあね",
+     "r": "jā ne"
+    },
+    {
+     "en": "How are you? (polite)",
+     "t": "お元気ですか？（おげんきですか）",
+     "r": "o-genki desu ka?"
+    },
+    {
+     "en": "What's up? (casual)",
+     "t": "元気？（げんき）",
+     "r": "genki?"
+    },
+    {
+     "en": "Yes (polite)",
+     "t": "はい",
+     "r": "hai"
+    },
+    {
+     "en": "Yeah (casual)",
+     "t": "うん",
+     "r": "un"
+    },
+    {
+     "en": "Excuse me (polite)",
+     "t": "すみません",
+     "r": "sumimasen"
+    },
+    {
+     "en": "Hey! (casual)",
+     "t": "ねえ！",
+     "r": "nē!"
+    }
+   ],
+   "sentences": [
+    {
+     "en": "Excuse me, where is the restroom? (polite)",
+     "t": "すみません、トイレはどこですか？",
+     "tiles": [
+      "すみません",
+      "トイレ",
+      "は",
+      "どこ",
+      "です",
+      "か"
+     ],
+     "tr": [
+      "sumimasen",
+      "toire",
+      "wa",
+      "doko",
+      "desu",
+      "ka"
+     ],
+     "r": "sumimasen toire wa doko desu ka",
+     "b": 0
+    },
+    {
+     "en": "Hey, what's up? (casual)",
+     "t": "ねえ、元気？",
+     "tiles": [
+      "ねえ",
+      "元気"
+     ],
+     "tr": [
+      "nē",
+      "genki"
+     ],
+     "r": "nē genki",
+     "b": 1
+    },
+    {
+     "en": "I'm sorry I'm late. (polite)",
+     "t": "遅れて申し訳ありません。",
+     "tiles": [
+      "遅れて",
+      "申し訳ありません"
+     ],
+     "tr": [
+      "okurete",
+      "mōshiwake arimasen"
+     ],
+     "r": "okurete mōshiwake arimasen",
+     "b": 1
+    },
+    {
+     "en": "Sorry, my bad! (casual)",
+     "t": "ごめん、私のせい！",
+     "tiles": [
+      "ごめん",
+      "私",
+      "の",
+      "せい"
+     ],
+     "tr": [
+      "gomen",
+      "watashi",
+      "no",
+      "sei"
+     ],
+     "r": "gomen watashi no sei",
+     "b": 0
+    },
+    {
+     "en": "Bye, see you later! (casual)",
+     "t": "じゃあね、また後で！",
+     "tiles": [
+      "じゃあね",
+      "また",
+      "後で"
+     ],
+     "tr": [
+      "jā ne",
+      "mata",
+      "atode"
+     ],
+     "r": "jā ne mata atode",
+     "b": 0
+    }
+   ],
+   "note": "です/ます (desu/masu) is the polite style; friends drop it: 元気ですか？(genki desu ka?) → 元気？(genki?). ありがとうございます (arigatō gozaimasu) → ありがとう (arigatō)."
   }
  ]
 }

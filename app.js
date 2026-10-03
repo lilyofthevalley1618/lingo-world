@@ -11,6 +11,7 @@ const EMOJI = { Hello: '👋', 'Good morning': '🌅', 'Good afternoon': '☀️
   Red: '🔴', Blue: '🔵', Green: '🟢', Yellow: '🟡', Orange: '🟠', Purple: '🟣', Pink: '🌸', Black: '⚫', White: '⚪', Gray: '🩶', Brown: '🟤', Gold: '🥇', Silver: '🥈', Color: '🎨', Rainbow: '🌈',
   Family: '👨‍👩‍👧', Mother: '👩', Father: '👨', Parents: '👫', 'Older brother': '👦⬆️', 'Younger brother': '👦⬇️', 'Older sister': '👧⬆️', 'Younger sister': '👧⬇️', Grandmother: '👵', Grandfather: '👴', Son: '👦', Daughter: '👧', Husband: '🤵', Wife: '👰', Baby: '👶', Friend: '🧑‍🤝‍🧑',
   Yes: '✅', No: '❌', "What's your name?": '📛', 'My name is …': '🙋', "I don't understand": '🤔', 'Please speak slowly': '🐢', 'Do you speak English?': '🇬🇧', 'Where is the bathroom?': '🚻', 'How much is this?': '💰', "I'm hungry": '😋', "It's delicious!": '😍', "I don't know": '🤷', "Let's go!": '🏃', 'Good luck!': '🍀', 'Cheers!': '🥂' };
+Object.assign(EMOJI, {"School": "🏫", "Teacher": "🧑‍🏫", "Student": "🧑‍🎓", "Classroom": "🚪", "Book": "📕", "Pen": "🖊️", "Pencil": "✏️", "Notebook": "📓", "Homework": "📝", "Test": "💯", "Math": "➗", "English": "🔤", "Weather": "🌤️", "Sunny": "☀️", "Rain": "🌧️", "Snow": "❄️", "Wind": "💨", "Cloudy": "☁️", "It's hot": "🥵", "It's cold": "🥶", "Spring": "🌸", "Summer": "🌻", "Autumn": "🍂", "Winter": "⛄", "Hobby": "🎨", "Soccer": "⚽", "Basketball": "🏀", "Swimming": "🏊", "Running": "🏃", "Music": "🎵", "To sing": "🎤", "To dance": "💃", "To draw": "🖍️", "Video games": "🎮", "Reading": "📖", "Movie": "🎬", "Head": "🙆", "Eye": "👁️", "Mouth": "👄", "Hand": "✋", "Stomach": "🫃", "Leg": "🦵", "Doctor": "🧑‍⚕️", "Hospital": "🏥", "Medicine": "💊", "Fever": "🤒", "A cold": "🤧", "It hurts": "🤕", "House": "🏠", "Room": "🧸", "Kitchen": "🍳", "Bathroom": "🛁", "Living room": "🛋️", "Bed": "🛏️", "Table": "🍽️", "Chair": "🪑", "Window": "🪟", "Door": "🚪", "To clean": "🧹", "To cook": "🍲", "Clothes": "👕", "Shirt": "👔", "Pants": "👖", "Shoes": "👟", "Dress": "👗", "Hat": "🧢", "Store": "🏬", "Price": "🏷️", "Cheap": "👍", "Expensive": "💸", "To buy": "🛒", "To try on": "🪞", "Train": "🚆", "Subway": "🚇", "Bus": "🚌", "Taxi": "🚕", "Airplane": "✈️", "Airport": "🛫", "Station": "🚉", "Ticket": "🎫", "Passport": "🛂", "Map": "🗺️", "Left": "⬅️", "Right": "➡️", "Today": "📍", "Tomorrow": "⏭️", "Yesterday": "⏮️", "Monday": "1️⃣", "Friday": "5️⃣", "Weekend": "🎉", "Morning": "🌅", "Night": "🌙", "Hour": "🕐", "Minute": "⏱️", "Early": "🐓", "Late": "🐢", "Work": "💼", "Office": "🏢", "Nurse": "👩‍⚕️", "Chef": "👩‍🍳", "Police officer": "👮", "Engineer": "👷", "Artist": "🧑‍🎨", "Boss": "🧑‍💼", "Coworker": "🤝", "Meeting": "🗣️", "Salary": "💰", "To work": "🛠️", "Together": "🧑‍🤝‍🧑", "Free (not busy)": "🙌", "Busy": "😵", "Party": "🎉", "Park": "🌳", "Café": "☕", "Beach": "🏖️", "Mall": "🛍️", "Let's go!": "🚀", "Sounds good": "👌", "Maybe": "🤷", "Next time": "🔁", "Phone": "📱", "Computer": "💻", "Message": "💬", "To call": "📞", "Internet": "🌐", "Password": "🔑", "Photo": "📸", "App": "📲", "Battery": "🔋", "Charger": "🔌", "Email": "📧", "To send a text": "✉️", "Happy": "😊", "Sad": "😢", "Angry": "😠", "Tired": "😴", "Nervous": "😬", "Boring": "🥱", "Scared": "😱", "Fun": "🥳", "Interesting": "🧐", "I think…": "💭", "I agree": "🤝", "Really?": "😮", "Last night": "🌃", "Last week": "⏮️", "Last year": "📆", "Two days ago": "⏳", "Already": "✔️", "I went": "🚶", "I ate": "🍽️", "I saw": "👀", "I bought": "🛍️", "I studied": "📚", "I slept": "😴", "It was fun": "🥳", "Tonight": "🌌", "Next week": "⏭️", "Next year": "🎆", "Later": "⌛", "Soon": "🔜", "I will go": "🚶‍♀️", "I will study": "📖", "I'm going to travel": "🧳", "I will call you": "📞", "I want to…": "🎯", "Plan": "📝", "Dream": "🌈", "What?": "🤔", "Who?": "🕵️", "Where?": "📍", "When?": "🕰️", "Why?": "❔", "How?": "🛠️", "How much?": "💲", "Which one?": "👉", "What time?": "🕒", "Can you help me?": "🆘", "What does it mean?": "📖", "Is that right?": "✅", "Not": "❌", "I don't know": "🤷‍♀️", "I don't like it": "👎", "I don't have it": "✋", "I can't": "🙅‍♀️", "Not yet": "⏳", "Never": "🚫", "Nothing": "🫥", "Nobody": "👻", "It's not…": "❎", "Don't!": "🛑", "No problem": "👌", "Thank you (polite)": "🙇", "Thanks (casual)": "🙌", "I'm sorry (polite)": "🙇‍♀️", "Sorry (casual)": "😅", "Goodbye (polite)": "👋", "Bye (casual)": "✌️", "How are you? (polite)": "🎩", "What's up? (casual)": "😎", "Yes (polite)": "🙂", "Yeah (casual)": "👍", "Excuse me (polite)": "🙋", "Hey! (casual)": "👋"});
 const NUMVAL = { Zero: 0, One: 1, Two: 2, Three: 3, Four: 4, Five: 5, Six: 6, Seven: 7, Eight: 8, Nine: 9, Ten: 10, Eleven: 11, Twenty: 20, 'One hundred': 100, 'One thousand': 1000 };
 const QUIZ_LEN = 10, PER_TOPIC = 4;
 const app = document.getElementById('app');
@@ -203,22 +204,54 @@ const micMsg = err => ({
   'language-not-supported': 'This browser can\'t recognize this language yet. Try Chrome, or skip for now.',
   unsupported: 'This browser can\'t check speech. Try Chrome or Safari, or say it out loud and skip.',
 })[err] || 'Didn\'t catch that. Try again!';
+// Mic level meter (getUserMedia + AnalyserNode). Skipped on Android, where holding the mic can starve SpeechRecognition.
+let meterOff = /Android/i.test(navigator.userAgent);
+function micMeter(el) {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (meterOff || !AC || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return null;
+  let stream = null, ctx = null, raf = 0, stopped = false, quietSince = Date.now();
+  const t0 = setTimeout(() => navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } }).then(st => {
+    if (stopped) { st.getTracks().forEach(t => t.stop()); return; }
+    stream = st; ctx = new AC();
+    const an = ctx.createAnalyser(); an.fftSize = 512; ctx.createMediaStreamSource(st).connect(an);
+    const buf = new Uint8Array(an.fftSize);
+    const tick = () => {
+      if (stopped) return;
+      an.getByteTimeDomainData(buf); let sum = 0; for (let i = 0; i < buf.length; i++) { const x = (buf[i] - 128) / 128; sum += x * x; }
+      const lvl = Math.min(1, Math.sqrt(sum / buf.length) * 7), bar = el.querySelector('.lvl i'), tip = el.querySelector('.lvltip');
+      if (bar) bar.style.width = Math.max(4, Math.round(lvl * 100)) + '%';
+      if (lvl > 0.07) quietSince = Date.now();
+      if (tip) tip.hidden = Date.now() - quietSince < 3000;
+      raf = requestAnimationFrame(tick);
+    };
+    tick();
+  }).catch(() => { const m = el.querySelector('.lvl'); if (m) m.remove(); }), 250); // let recognition grab the mic first
+  return () => { stopped = true; clearTimeout(t0); cancelAnimationFrame(raf); if (stream) stream.getTracks().forEach(t => t.stop()); if (ctx && ctx.close) ctx.close().catch(() => {}); };
+}
 // Shared mic button + live status. Tap the mic again to stop early.
 function micRun({ lang, btn, out, onAlts, onStart }) {
-  let ctrl = null;
+  let ctrl = null, meterStop = null, retriedNoMeter = false;
+  const endMeter = () => { if (meterStop) { meterStop(); meterStop = null; } };
   const begin = () => {
     if (ctrl) { ctrl.stop(); return; }
     btn.classList.add('on'); if (onStart) onStart();
-    out.innerHTML = '<span class="live"><i class="dotlive"></i> Listening… say it! <small>(tap 🎤 again when you\'re done)</small></span>';
+    out.innerHTML = `<div class="live"><i class="dotlive"></i> Listening… <span class="lvl" aria-hidden="true"><i></i></span></div><div class="heardnow"><small>Say it! Tap 🎤 again when you're done.</small></div>
+      <div class="lvltip" hidden>🔇 I can't hear much. Check your mic isn't muted, hold the phone closer, and speak up a little.</div>`;
+    meterStop = micMeter(out);
     ctrl = listen(lang, {
-      onInterim: a => { if (out.isConnected) out.innerHTML = `<span class="live"><i class="dotlive"></i> Listening… “${esc(a[0])}”</span>`; },
-      onResult: a => onAlts(a),
-      onError: err => { if (!out.isConnected) return; out.innerHTML = `<span class="micerr">${esc(micMsg(err))}</span> <button class="btn small alt tryagain">🎤 Try again</button>`; out.querySelector('.tryagain').onclick = begin; },
-      onEnd: () => { ctrl = null; btn.classList.remove('on'); },
+      onInterim: a => { const h = out.querySelector('.heardnow'); if (h) h.innerHTML = `“${esc(a[0])}”`; },
+      onResult: a => { endMeter(); onAlts(a); },
+      onError: err => {
+        const hadMeter = !!meterStop; endMeter();
+        if (err === 'audio-capture' && hadMeter && !retriedNoMeter) { meterOff = true; retriedNoMeter = true; ctrl = null; return setTimeout(begin, 200); } // meter fought for the mic: retry without it
+        if (!out.isConnected) return;
+        out.innerHTML = `<span class="micerr">${esc(micMsg(err))}</span> <button class="btn small alt tryagain">🎤 Try again</button>`; out.querySelector('.tryagain').onclick = begin;
+      },
+      onEnd: () => { endMeter(); ctrl = null; btn.classList.remove('on'); },
     });
   };
   btn.onclick = begin;
-  return { begin, stop: () => ctrl && ctrl.abort() };
+  return { begin, stop: () => { endMeter(); if (ctrl) ctrl.abort(); ctrl = null; btn.classList.remove('on'); } };
 }
 const retryMsg = (heard, sc) => `I heard “${esc(heard)}” (${Math.round(sc * 100)}%). So close! <button class="btn small alt tryagain">🎤 Try again</button>`;
 
@@ -340,13 +373,15 @@ function langsView() {
     const [flag, name, native, color] = META[c];
     const done = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length, due = dueKeys(c).length;
     html += `<a class="card lang ${S.lang === c ? 'sel' : ''}" style="--c:${color}" href="#/${c}"><span class="flag">${flag}</span><span class="nm">${name}</span><span class="nt">${native}</span>
-      <div class="bar"><i style="width:${Math.round(done / 24 * 100)}%"></i></div><span class="nt">${done}/24 lessons${due ? ` · <b>${due} to review</b>` : ''}</span></a>`;
+      <div class="bar"><i style="width:${Math.round(done / COURSE_LESSONS * 100)}%"></i></div><span class="nt">${done}/${COURSE_LESSONS} lessons${due ? ` · <b>${due} to review</b>` : ''}</span></a>`;
   }
   app.innerHTML = html + '</div>';
 }
 
 /* ---------- views: course path (soft wavy trail with lesson cards) ---------- */
 const TOPIC_COLORS = { greetings: '#b7c0ff', numbers: '#a3e6d2', food: '#ffd0b3', colors: '#ffc6dd', family: '#d9ccff', phrases: '#ffe8a6' };
+const topicColor = t => t.color || TOPIC_COLORS[t.id] || '#d9ccff';
+const COURSE_LESSONS = 23 * 4; // 6 starter topics + 17 new units, 4 lessons each
 const LESSON_INFO = {
   greetings: [['Hello & times of day', '👋'], ['Goodbyes & how are you', '🙋'], ['Polite words', '🙏']],
   numbers: [['Counting 0–4', '🔢'], ['Counting 5–9', '🖐️'], ['Big numbers', '💯']],
@@ -355,6 +390,7 @@ const LESSON_INFO = {
   family: [['Parents & brothers', '👨‍👩‍👦'], ['Sisters & grandparents', '👵'], ['Partners & friends', '🧑‍🤝‍🧑']],
   phrases: [['Yes, no & names', '📛'], ['Getting around', '🗺️'], ['Fun phrases', '🥳']] };
 const lessons = Object.fromEntries(Object.entries(LESSON_INFO).map(([k, v]) => [k, [...v, ['Treasure review', '🎁']]]));
+const lessonTitles = t => t.lessons ? [...t.lessons, ['Treasure review', '🎁']] : lessons[t.id] || [['Lesson 1', '📘'], ['Lesson 2', '📗'], ['Lesson 3', '📙'], ['Treasure review', '🎁']];
 const isDone = (code, id) => !!S.done[code + '|' + id];
 const lessonOrder = L => L.topics.flatMap(t => [0, 1, 2, 3].map(k => t.id + '|' + k));
 function isUnlocked(L, id) { const o = lessonOrder(L), i = o.indexOf(id); return i === 0 || (i > 0 && isDone(L.code, o[i - 1])); }
@@ -376,13 +412,13 @@ async function langView(code) {
     ${!SR ? '<div class="note">🎤 This browser can\'t check your speaking (try Chrome or Safari). You can still say things out loud and self-check.</div>' : ''}`;
   let y = 0, items = '', pts = [], n = 0;
   L.topics.forEach((t, ti) => {
-    const col = TOPIC_COLORS[t.id], nDone = [0, 1, 2, 3].filter(k => isDone(code, t.id + '|' + k)).length;
+    const col = topicColor(t), nDone = [0, 1, 2, 3].filter(k => isDone(code, t.id + '|' + k)).length;
     items += `<div class="sec-banner" style="top:${y}px;--c:${col}"><div class="sec-l"><div class="sec-n">Section ${ti + 1} · ${META[code][1]}</div><div class="sec-t">${t.icon} ${t.name}</div>
       <div class="sec-links"><a href="#/${code}/${t.id}/cards">🃏 Flashcards</a><a href="#/${code}/${t.id}/quiz">❓ Quiz</a></div></div>${ring(Math.round(nDone / PER_TOPIC * 100))}</div>`;
     y += 124;
     for (let k = 0; k < PER_TOPIC; k++) {
       const id = t.id + '|' + k, done = isDone(code, id), open = isUnlocked(L, id), cur = id === current, chest = k === 3, side = n++ % 2 ? 'right' : 'left';
-      const [title, icon] = lessons[t.id][k], h = cur ? 128 : 112;
+      const [title, icon] = lessonTitles(t)[k], h = cur ? 128 : 112;
       pts.push([cur ? 50 : side === 'left' ? 30 : 70, y + h / 2]);
       const cls = `lcard ${cur ? 'current' : side}${done ? ' done' : ''}${!open ? ' locked' : ''}${chest ? ' chest' : ''}`;
       const inner = cur ? `<div class="lc-m">${mascot('happy', 82, 'bob')}</div><div class="lc-txt"><div class="lc-start">Start here</div><div class="lc-title">${title}</div></div><span class="timechip">⚡ ${chest ? 2 : 3} MIN</span>`
@@ -416,7 +452,7 @@ async function practiceHub() {
       <a class="pcard" style="--c:#ffd0b3" href="#/${code}/practice/fast"><span>⚡</span><b>Say it fast</b><small>Speed recall</small></a>
       <a class="pcard" style="--c:#a3e6d2" href="#/${code}/practice/review"><span>🔁</span><b>Review</b><small>${due ? due + ' words due' : 'All caught up'}</small></a>
       <a class="pcard" style="--c:#b7c0ff" href="#/${code}/all/quiz"><span>🎯</span><b>Quiz</b><small>Mixed topics</small></a></div>
-    <h2>Flashcards</h2><div class="fc-list">${L.topics.map(t => `<a class="fc" style="--c:${TOPIC_COLORS[t.id]}" href="#/${code}/${t.id}/cards"><span>${t.icon}</span>${t.name}</a>`).join('')}</div>`;
+    <h2>Flashcards</h2><div class="fc-list">${L.topics.map(t => `<a class="fc" style="--c:${topicColor(t)}" href="#/${code}/${t.id}/cards"><span>${t.icon}</span>${t.name}</a>`).join('')}</div>`;
 }
 
 /* ---------- profile (tab) ---------- */
@@ -425,7 +461,7 @@ function profile() {
   app.innerHTML = `<div class="stage card">${mascot('cheer', 140, 'bob')}<div><h1>Your profile</h1><div class="lvl">Level ${level()}</div>
       <div class="bar"><i style="width:${S.xp % 100}%"></i></div><div class="sub">${100 - S.xp % 100} XP to level ${level() + 1}</div></div></div>
     <div class="res-stats"><a href="#/streak"><b>🔥 ${liveStreak()}</b><span>day streak ›</span></a><div><b>🏆 ${S.xp}</b><span>total XP</span></div><div><b><span class="coin">B</span> ${S.blingos.toLocaleString()}</b><span>Blingos</span></div><div><b>📚 ${total}</b><span>lessons</span></div></div>
-    <h2>Languages</h2><div class="plist">${LANGS.map(c => { const d = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length; return `<a class="prow" href="#/${c}"><span>${META[c][0]} ${META[c][1]}</span><div class="bar"><i style="width:${d / 24 * 100}%"></i></div><small>${d}/24</small></a>`; }).join('')}</div>
+    <h2>Languages</h2><div class="plist">${LANGS.map(c => { const d = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length; return `<a class="prow" href="#/${c}"><span>${META[c][0]} ${META[c][1]}</span><div class="bar"><i style="width:${d / COURSE_LESSONS * 100}%"></i></div><small>${d}/${COURSE_LESSONS}</small></a>`; }).join('')}</div>
     <h2>Settings</h2><div class="card settings"><label class="chk"><input type="checkbox" id="slowset" ${S.slow ? 'checked' : ''}> 🐢 Slow audio by default</label><label class="chk"><input type="checkbox" id="zyset" ${S.zhuyin ? 'checked' : ''}> ㄅㄆㄇ Show Zhuyin for Chinese (Taiwan)</label>
       <div class="row"><a class="btn alt small" href="#/me">👗 My Character</a><a class="btn alt small" href="#/shop">🛍️ Shop</a></div></div>
     <h2>🔈 Voices</h2><div class="card settings" id="voices"></div>
@@ -456,8 +492,11 @@ const SCENES = [
   { id: 'meet', title: 'Meeting a new friend', icon: '🤝', partner: 'dumpling', turns: [['p', 'w:greetings:0'], ['u', 'w:greetings:0'], ['p', 'w:phrases:2'], ['u', 's:phrases:0'], ['p', 'w:greetings:14'], ['u', 'w:greetings:14'], ['p', 's:greetings:0'], ['u', 's:greetings:1'], ['p', 's:greetings:2'], ['u', 'w:greetings:5']] },
   { id: 'snack', title: 'Snack time', icon: '🍜', partner: 'taco', turns: [['p', 'w:phrases:9'], ['u', 'w:phrases:12'], ['p', 's:food:0'], ['u', 's:food:1'], ['p', 's:food:3'], ['u', 'w:phrases:10'], ['p', 'w:phrases:14'], ['u', 'w:phrases:14']] },
   { id: 'family', title: 'Family photos', icon: '📸', partner: 'peach', turns: [['p', 's:family:0'], ['u', 'w:greetings:14'], ['p', 's:numbers:2'], ['u', 's:family:3'], ['p', 's:family:2'], ['u', 'w:greetings:0']] },
+  { id: 'weekend', title: 'Weekend plans', icon: '🎡', partner: 'cupcake', turns: [['p', 's:plans:0'], ['u', 'w:plans:1'], ['p', 's:hobbies:3'], ['u', 'w:plans:9'], ['u', 's:plans:2'], ['p', 's:time:1'], ['u', 's:plans:4']] },
+  { id: 'shop', title: 'Shopping trip', icon: '🛍️', partner: 'macaron', turns: [['u', 'w:polite:10'], ['p', 'w:greetings:0'], ['u', 's:shopping:0'], ['p', 'w:shopping:8'], ['u', 's:shopping:2'], ['p', 'w:plans:9'], ['u', 's:shopping:3'], ['p', 'w:polite:0']] },
   { id: 'city', title: 'Out in the city', icon: '🏙️', partner: 'sushi', turns: [['u', 'w:greetings:12'], ['p', 'w:phrases:0'], ['u', 's:phrases:1'], ['p', 'w:phrases:11'], ['u', 'w:greetings:9'], ['p', 'w:greetings:10']] },
 ];
+let chatRun = 0;
 async function chat(code, sceneId) {
   const L = await load(code), $ = id => document.getElementById(id);
   if (!sceneId) {
@@ -468,7 +507,7 @@ async function chat(code, sceneId) {
   const sc = SCENES.find(s => s.id === sceneId); if (!sc) return go(`#/${code}/practice/chat`);
   const ref = r => { const [kind, tid, i] = r.split(':'), T = L.topics.find(t => t.id === tid); return kind === 'w' ? { ...T.words[+i], tid, i: +i } : T.sentences[+i]; };
   const turns = sc.turns.map(([who, r]) => ({ who, item: ref(r) })), partner = { char: sc.partner, acc: {} }, said = [];
-  let ti = 0, spoke = 0;
+  let ti = 0, spoke = 0; const run = ++chatRun;
   app.innerHTML = `<div class="lesson chatwrap"><div class="lbar"><a class="x" href="#/${code}/practice/chat" aria-label="Quit">✕</a><div class="progress"><i id="cprog" style="width:0%"></i></div><span class="hearts">💬</span></div>
     <div class="pill-label">${sc.icon} ${sc.title}</div><div class="chat" id="chat"></div></div><div class="checkbar" id="reply"></div>`;
   const chatEl = $('chat');
@@ -480,6 +519,7 @@ async function chat(code, sceneId) {
     chatEl.lastElementChild.scrollIntoView({ block: 'end', behavior: 'smooth' });
   };
   const step = () => {
+    if (run !== chatRun || !$('cprog')) return; // left this conversation: stop its timers
     $('cprog').style.width = (ti / turns.length * 100) + '%';
     if (ti >= turns.length) return end();
     const { who, item } = turns[ti];
@@ -522,7 +562,7 @@ function lessonPlan(T, k) {
   const f = j => F[j % F.length], sw0 = F.filter(sayable), sw = j => sw0.length ? sw0[j % sw0.length] : f(j);
   const uniq = arr => arr.filter((x, i) => arr.findIndex(y => y.t === x.t || y.en === x.en) === i);
   let ws = uniq(F).slice(0, 5); if (ws.length < 4) ws = uniq([...ws, ...shuffle(words)]).slice(0, 5);
-  const s1 = T.sentences[k % 4], s2 = T.sentences[(k + 1) % 4], s3 = T.sentences[(k + 2) % 4], num = T.id === 'numbers';
+  const ns = T.sentences.length, s1 = T.sentences[k % ns], s2 = T.sentences[(k + 1) % ns], s3 = T.sentences[(k + 2) % ns], num = T.id === 'numbers';
   return [
     { type: 'listen_pick', w: f(0) }, { type: 'speak_repeat', w: sw(0) }, { type: 'mc_t', w: f(1) }, { type: 'listen_respond', w: f(2) },
     { type: 'match', ws }, { type: 'speak_recall', w: sw(1) }, { type: 'build_t', s: s1 },
