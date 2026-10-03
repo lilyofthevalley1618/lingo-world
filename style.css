@@ -126,3 +126,20 @@ a.card,.pcard,.node,.item{transition:transform .15s}a.card:hover,.pcard:hover{tr
 .toast{position:fixed;left:50%;top:70px;transform:translate(-50%,-20px);background:#fff;border-radius:99px;padding:9px 16px;box-shadow:var(--shadow);font-weight:800;opacity:0;pointer-events:none;transition:all .25s;z-index:30;white-space:nowrap}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 .sline{display:block}
+/* vertical trail */
+.trail{position:relative;max-width:480px;margin:6px auto 0}
+.trail-svg{position:absolute;left:50%;top:0;overflow:visible;pointer-events:none;z-index:1}
+.tbanner{position:absolute;left:0;right:0;height:86px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 16px;border-radius:24px;background:var(--c);box-shadow:var(--shadow-s);z-index:2}
+.tnode{position:absolute;width:110px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;z-index:3}
+.tdot{width:76px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;color:#fff;background:var(--c);text-shadow:0 2px 0 rgba(90,80,150,.25);box-shadow:0 7px 0 rgba(110,100,170,.28),inset 0 -6px 0 rgba(0,0,0,.05);transition:transform .1s}
+.tnode:active .tdot{transform:translateY(5px);box-shadow:0 2px 0 rgba(110,100,170,.28)}
+.tnode.done .tdot{background:radial-gradient(circle at 35% 30%,#fff1b8,#ffd36e);color:#fff;box-shadow:0 7px 0 #e8b64a}
+.tnode.locked .tdot{background:#ece9f5;color:#aaa5c3;font-size:1.5rem;text-shadow:none;box-shadow:0 7px 0 #d9d5e8}
+.tnode.current .tdot{animation:tbounce 1.4s ease-in-out infinite;outline:6px solid rgba(255,255,255,.9);box-shadow:0 7px 0 rgba(110,100,170,.28),0 0 0 12px rgba(167,178,255,.35)}
+@keyframes tbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.tnode.chest .tdot{background:none;box-shadow:none;border-radius:18px;width:78px}.tnode.chest.locked .tdot svg{filter:grayscale(1);opacity:.45}.tnode.chest.current .tdot{outline:none;box-shadow:none}
+.tlabel{font-size:.78rem;color:var(--muted);font-weight:700;margin-top:9px;background:rgba(255,255,255,.85);border-radius:99px;padding:1px 8px}
+.tstart{position:absolute;top:-30px;background:#fff;color:var(--peri-d);font-weight:900;font-size:.75rem;padding:5px 12px;border-radius:12px;box-shadow:var(--shadow);animation:bob 1.3s ease-in-out infinite;z-index:4}
+.tstart:after{content:"";position:absolute;left:50%;bottom:-6px;margin-left:-6px;border:6px solid transparent;border-bottom:0;border-top-color:#fff}
+.tmascot{position:absolute;z-index:3;pointer-events:none}
+.linkbtn{background:none;color:var(--muted);font-size:.8rem;text-decoration:underline;padding:8px;margin-top:10px}

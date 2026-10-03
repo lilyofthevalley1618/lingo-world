@@ -176,20 +176,38 @@ async function langView(code) {
       <a class="pcard" style="--c:#ddd2ff" href="#/${code}/practice/shadow"><span>🗣️</span><b>Shadowing</b><small>Hear it, repeat it</small></a>
       <a class="pcard" style="--c:#ffd3b8" href="#/${code}/practice/fast"><span>⚡</span><b>Say it fast</b><small>Speed recall</small></a>
       <a class="pcard" style="--c:#bfe0ff" href="#/${code}/all/quiz"><span>🎯</span><b>Quiz</b><small>Mixed topics</small></a></div>`;
-  const offs = [0, 64, 0, -64];
+  // Duolingo-style vertical trail: zig-zag nodes, dotted trail line, section banners, chest reviews, mascot by the current node
+  const OFFS = [0, 58, 92, 58, 0, -58, -92, -58];
+  let y = 8, idx = 0, items = '', pts = [];
   L.topics.forEach((t, ti) => {
     const nDone = [0, 1, 2, 3].filter(k => isDone(code, t.id + '|' + k)).length;
-    html += `<section class="unit" style="--c:${L.color}"><div class="unit-head"><div><div class="unit-n">Unit ${ti + 1} · ${nDone}/${PER_TOPIC} done</div><div class="unit-t">${t.icon} ${t.name}</div></div>
-      <div class="row"><a class="btn small light" href="#/${code}/${t.id}/cards">🃏 Flashcards</a><a class="btn small light" href="#/${code}/${t.id}/quiz">❓ Quiz</a></div></div><div class="path">`;
+    items += `<div class="tbanner" style="top:${y}px;--c:${L.color}"><div><div class="unit-n">Unit ${ti + 1} · ${nDone}/${PER_TOPIC} done</div><div class="unit-t">${t.icon} ${t.name}</div></div>
+      <div class="row"><a class="btn small light" href="#/${code}/${t.id}/cards" title="Flashcards">🃏</a><a class="btn small light" href="#/${code}/${t.id}/quiz" title="Quiz">❓</a></div></div>`;
+    y += 112;
     for (let k = 0; k < PER_TOPIC; k++) {
-      const id = t.id + '|' + k, done = isDone(code, id), open = isUnlocked(L, id), cur = id === current;
-      const inner = `${cur ? '<span class="start">START</span>' : ''}<span class="dot">${done ? '✓' : k === 3 ? '🏆' : open ? '★' : '🔒'}</span><span class="nlabel">${k === 3 ? 'Review' : 'Lesson ' + (k + 1)}</span>`;
-      html += open ? `<a class="node ${done ? 'done' : ''} ${cur ? 'current' : ''}" style="--x:${offs[k]}px" href="#/${code}/${t.id}/lesson/${k}">${inner}</a>`
-        : `<span class="node locked" style="--x:${offs[k]}px" title="Finish the lesson before to unlock">${inner}</span>`;
+      const id = t.id + '|' + k, done = isDone(code, id), open = isUnlocked(L, id), cur = id === current, chest = k === 3;
+      const x = OFFS[idx++ % OFFS.length]; pts.push([x, y + 36]);
+      const st = done ? 'done' : cur ? 'current' : open ? 'open' : 'locked';
+      const icon = chest ? chestSVG(done) : done ? '★' : cur ? '★' : open ? '★' : '🔒';
+      const inner = `${cur ? '<span class="tstart">START</span>' : ''}<span class="tdot">${icon}</span><span class="tlabel">${chest ? (done ? 'Review ✓' : 'Review chest') : 'Lesson ' + (k + 1)}</span>`;
+      const style = `top:${y}px;left:calc(50% + ${x}px);--c:${L.color}`;
+      items += open ? `<a class="tnode ${st} ${chest ? 'chest' : ''}" style="${style}" href="#/${code}/${t.id}/lesson/${k}" aria-label="${t.name} ${chest ? 'review' : 'lesson ' + (k + 1)}">${inner}</a>`
+        : `<span class="tnode ${st} ${chest ? 'chest' : ''}" style="${style}" title="Finish the step before to unlock">${inner}</span>`;
+      if (cur) items += `<div class="tmascot" style="top:${y - 18}px;left:calc(50% + ${x + (x > 0 ? -150 : 62)}px)">${mascot('happy', 88, 'bob')}</div>`;
+      y += chest ? 118 : 100;
     }
-    html += '</div></section>';
+    y += 6;
   });
+  let d = `M${pts[0][0]} ${pts[0][1]}`;
+  for (let j = 1; j < pts.length; j++) { const [x0, y0] = pts[j - 1], [x1, y1] = pts[j], m = (y0 + y1) / 2; d += ` C${x0} ${m} ${x1} ${m} ${x1} ${y1}`; }
+  html += `<h2>Your path</h2><div class="trail" style="height:${y + 10}px"><svg class="trail-svg" width="1" height="${y}" aria-hidden="true">
+    <path d="${d}" fill="none" stroke="#e6e0fb" stroke-width="16" stroke-linecap="round"/><path d="${d}" fill="none" stroke="#c9bcff" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 15"/></svg>${items}</div>`;
   app.innerHTML = html;
+  const cur = app.querySelector('.tnode.current');
+  if (cur && order.indexOf(current) > 2) setTimeout(() => cur.scrollIntoView({ block: 'center', behavior: 'smooth' }), 150);
+}
+function chestSVG(open) {
+  return `<svg viewBox="0 0 64 56" width="58" height="50" aria-hidden="true"><rect x="6" y="24" width="52" height="28" rx="6" fill="#f7c08f" stroke="#d99a63" stroke-width="3"/>${open ? '<path d="M8 24 L14 6 L56 10 L56 24Z" fill="#ffd8ae" stroke="#d99a63" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="18" r="4" fill="#ffe08f"/><circle cx="32" cy="16" r="4" fill="#ffe08f"/><circle cx="44" cy="18" r="4" fill="#ffe08f"/>' : '<path d="M6 24 Q6 8 22 8 L42 8 Q58 8 58 24Z" fill="#ffd8ae" stroke="#d99a63" stroke-width="3"/>'}<rect x="6" y="30" width="52" height="6" fill="#ffe08f"/><rect x="27" y="27" width="10" height="12" rx="3" fill="#ffd36e" stroke="#c9932e" stroke-width="2"/></svg>`;
 }
 
 /* ---------- lesson plans (speaking-first: 7 of 12 are speak/listen) ---------- */
@@ -627,7 +645,8 @@ function charScreen(mode) {
       return `<div class="item card ${eq ? 'eq' : ''}" data-id="${id ?? ''}">${charSVG(withItem(S.equip, charTab, id), 'happy', 92)}<div class="iname">${esc(it.name)}${charTab === 'accs' ? `<small>${ACCS[id].slot}</small>` : ''}</div>
         ${own ? `<button class="btn small ${eq ? 'alt' : ''}" data-act="wear" ${eq && sticky ? 'disabled' : ''}>${eq ? (sticky ? 'Wearing ✓' : 'Take off') : 'Wear'}</button>`
           : `<button class="btn small buy" data-act="buy" ${S.blingos < it.price ? 'disabled' : ''}><span class="coin">B</span> ${it.price}</button>`}</div>`;
-    }).join('') : `<p class="sub">Nothing here yet. Visit the <a href="#/shop"><b>Shop</b></a>!</p>`}</div>`;
+    }).join('') : `<p class="sub">Nothing here yet. Visit the <a href="#/shop"><b>Shop</b></a>!</p>`}</div><p class="center"><button class="linkbtn" id="redeem">Redeem code</button></p>`;
+  document.getElementById('redeem').onclick = redeem;
   app.querySelectorAll('.chip').forEach(b => b.onclick = () => { charTab = b.dataset.cat; tryOn = null; charScreen(mode); });
   app.querySelectorAll('.item').forEach(card => {
     const id = card.dataset.id || null, cat = charTab;
@@ -649,6 +668,22 @@ function charScreen(mode) {
       tryOn = { cat, id }; charScreen(mode);
     };
   });
+}
+
+/* ---------- gift codes (hash only, one-time per device) ---------- */
+const GIFTS = { '0603c00fd56a893f33919c38454c29700c79f2ae41fbb6f6fb712bd17ac1d733': 700000 };
+async function redeem() {
+  const raw = prompt('Enter a gift code');
+  if (!raw) return;
+  if (!(window.crypto && crypto.subtle)) return toast('Codes need a secure (https) page.');
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw.trim().toUpperCase()));
+  const h = [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+  S.redeemed = S.redeemed || {};
+  if (!GIFTS[h]) return toast('Hmm, that code isn\'t valid.');
+  if (S.redeemed[h]) return toast('This code was already redeemed on this device.');
+  S.redeemed[h] = 1; S.blingos += GIFTS[h]; save(); updateStats();
+  toast(`🎁 <span class="coin">B</span> +${GIFTS[h].toLocaleString()} Blingos!`);
+  if (location.hash === '#/me' || location.hash === '#/shop') charScreen(location.hash.slice(2));
 }
 
 /* ---------- router ---------- */
