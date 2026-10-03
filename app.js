@@ -31,13 +31,32 @@ S.equip = Object.assign({ char: 'strawberry', color: null, face: null, acc: {}, 
   if (refund) { S.blingos += refund; S.refundMsg = refund; }
 }
 const save = () => localStorage.setItem(KEY, JSON.stringify(S));
-const dayStr = d => d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-function liveStreak() { const y = new Date(); y.setDate(y.getDate() - 1); return (S.lastDay === dayStr(new Date()) || S.lastDay === dayStr(y)) ? S.streak : 0; }
+const pad2 = n => String(n).padStart(2, '0');
+const dayStr = d => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; // local date key
+const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+const parseDay = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d); };
+const MAX_FREEZES = 3, FREEZE_PRICE = 100, MILESTONES = [7, 30, 100];
+{ // streak data: days {key: 1 practiced | 'f' frozen}, longest, freezes
+  if (S.lastDay && !/^\d{4}-\d\d-\d\d$/.test(S.lastDay)) S.lastDay = dayStr(parseDay(S.lastDay));
+  S.freezes = S.freezes || 0;
+  if (!S.days) { S.days = {}; if (S.lastDay && S.streak) for (let i = 0; i < S.streak; i++) S.days[dayStr(addDays(parseDay(S.lastDay), -i))] = 1; }
+  S.longest = Math.max(S.longest || 0, S.streak || 0);
+}
+function applyFreezes() { // missed day(s)? auto-use freezes if there are enough to cover them all
+  if (!S.lastDay || !S.streak) return;
+  const yest = addDays(new Date(), -1), missed = [];
+  for (let d = addDays(parseDay(S.lastDay), 1); d <= yest && missed.length < 400; d = addDays(d, 1)) missed.push(dayStr(d));
+  if (!missed.length || missed.length > S.freezes) return;
+  missed.forEach(k => S.days[k] = 'f'); S.freezes -= missed.length; S.lastDay = dayStr(yest); S.freezeMsg = missed.length; save();
+}
+function liveStreak() { const y = addDays(new Date(), -1); return (S.lastDay === dayStr(new Date()) || S.lastDay === dayStr(y)) ? S.streak : 0; }
 function activity(xp) {
+  applyFreezes();
   const today = dayStr(new Date());
   if (S.lastDay !== today) {
-    const y = new Date(); y.setDate(y.getDate() - 1);
-    S.streak = S.lastDay === dayStr(y) ? S.streak + 1 : 1; S.lastDay = today;
+    S.streak = S.lastDay === dayStr(addDays(new Date(), -1)) ? S.streak + 1 : 1; S.lastDay = today; S.days[today] = 1;
+    S.longest = Math.max(S.longest || 0, S.streak);
+    S.celebrate = { day: today, n: S.streak };
     earn(5 + (S.streak % 7 === 0 ? 25 : 0), S.streak % 7 === 0 ? `🔥 ${S.streak}-day streak bonus!` : '🔥 daily streak');
   }
   S.xp += xp; save(); updateStats();
@@ -270,7 +289,7 @@ function profile() {
   const total = LANGS.reduce((a, c) => a + Object.keys(S.done).filter(k => k.startsWith(c + '|')).length, 0);
   app.innerHTML = `<div class="stage card">${mascot('cheer', 140, 'bob')}<div><h1>Your profile</h1><div class="lvl">Level ${level()}</div>
       <div class="bar"><i style="width:${S.xp % 100}%"></i></div><div class="sub">${100 - S.xp % 100} XP to level ${level() + 1}</div></div></div>
-    <div class="res-stats"><div><b>🔥 ${liveStreak()}</b><span>day streak</span></div><div><b>🏆 ${S.xp}</b><span>total XP</span></div><div><b><span class="coin">B</span> ${S.blingos.toLocaleString()}</b><span>Blingos</span></div><div><b>📚 ${total}</b><span>lessons</span></div></div>
+    <div class="res-stats"><a href="#/streak"><b>🔥 ${liveStreak()}</b><span>day streak ›</span></a><div><b>🏆 ${S.xp}</b><span>total XP</span></div><div><b><span class="coin">B</span> ${S.blingos.toLocaleString()}</b><span>Blingos</span></div><div><b>📚 ${total}</b><span>lessons</span></div></div>
     <h2>Languages</h2><div class="plist">${LANGS.map(c => { const d = Object.keys(S.done).filter(k => k.startsWith(c + '|')).length; return `<a class="prow" href="#/${c}"><span>${META[c][0]} ${META[c][1]}</span><div class="bar"><i style="width:${d / 24 * 100}%"></i></div><small>${d}/24</small></a>`; }).join('')}</div>
     <h2>Settings</h2><div class="card settings"><label class="chk"><input type="checkbox" id="slowset" ${S.slow ? 'checked' : ''}> 🐢 Slow audio by default</label><label class="chk"><input type="checkbox" id="zyset" ${S.zhuyin ? 'checked' : ''}> ㄅㄆㄇ Show Zhuyin for Chinese (Taiwan)</label>
       <div class="row"><a class="btn alt small" href="#/me">👗 My Character</a><a class="btn alt small" href="#/shop">🛍️ Shop</a></div></div>
@@ -354,7 +373,7 @@ async function chat(code, sceneId) {
     };
   };
   const end = () => {
-    earn(5, 'conversation done'); activity(5);
+    earn(5, 'conversation done'); activity(5); setTimeout(maybeCelebrate, 900);
     $('reply').innerHTML = `<div class="checkbar-in col"><div class="fb-row"><div class="fb-m">${mascot('cheer', 58)}</div><div class="fb-text"><div class="fb-head">Great chat! 🎉</div><div class="fb-def">You said ${spoke} of ${turns.filter(t => t.who === 'u').length} replies out loud.</div></div></div>
       <div class="row"><a class="bigbtn" href="#/${code}/practice/chat">MORE CHATS</a></div></div>`;
   };
@@ -794,7 +813,7 @@ function charScreen(mode) {
       <div class="wallet"><span class="coin">B</span> ${S.blingos} Blingos</div>${tryOn ? `<div class="sub">Trying on: <b>${esc(nameOf(tryOn.cat, tryOn.id))}</b></div>` : '<div class="sub">Tap any item to try it on.</div>'}
       <p class="sub small-print">Earn Blingos from lessons, speaking (bonus!), reviews, quizzes and your daily streak.</p></div></div>
     <div class="tabs"><a class="tab ${!shop ? 'on' : ''}" href="#/me">👗 Closet</a><a class="tab ${shop ? 'on' : ''}" href="#/shop">🛍️ Shop</a></div>
-    <div class="chips">${Object.entries(SHOP_CATS).map(([k, [n]]) => `<button class="chip ${k === charTab ? 'on' : ''}" data-cat="${k}">${n}</button>`).join('')}</div>
+    ${shop ? freezeCard() : ''}<div class="chips">${Object.entries(SHOP_CATS).map(([k, [n]]) => `<button class="chip ${k === charTab ? 'on' : ''}" data-cat="${k}">${n}</button>`).join('')}</div>
     <div class="items">${ids.length ? ids.map(id => {
       const it = id == null ? { name: DEFAULT_NAME[charTab], price: 0 } : items[id];
       const own = id == null || S.owned[charTab].includes(id), eq = id == null ? S.equip[charTab === 'colors' ? 'color' : 'face'] == null : isEquipped(charTab, id);
@@ -804,6 +823,7 @@ function charScreen(mode) {
           : `<button class="btn small buy" data-act="buy" ${S.blingos < it.price ? 'disabled' : ''}><span class="coin">B</span> ${it.price}</button>`}</div>`;
     }).join('') : `<p class="sub">Nothing here yet. Visit the <a href="#/shop"><b>Shop</b></a>!</p>`}</div><p class="center"><button class="linkbtn" id="redeem">Redeem code</button></p>`;
   document.getElementById('redeem').onclick = redeem;
+  if (document.getElementById('buyfz')) document.getElementById('buyfz').onclick = () => buyFreeze(() => charScreen(mode));
   app.querySelectorAll('.chip').forEach(b => b.onclick = () => { charTab = b.dataset.cat; tryOn = null; charScreen(mode); });
   app.querySelectorAll('.item').forEach(card => {
     const id = card.dataset.id || null, cat = charTab;
@@ -843,6 +863,63 @@ async function redeem() {
   if (location.hash === '#/me' || location.hash === '#/shop') charScreen(location.hash.slice(2));
 }
 
+/* ---------- streak: screen, celebration, freezes ---------- */
+const flameSVG = (size = 120, cls = '') => `<svg class="flame ${cls}" viewBox="0 0 100 120" width="${size}" height="${size * 1.2}" aria-hidden="true"><defs><linearGradient id="flg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff9fb8"/><stop offset=".6" stop-color="#ffb98f"/><stop offset="1" stop-color="#ffd98a"/></linearGradient></defs>
+  <path d="M50 4 C58 26 84 40 86 72 C88 98 70 116 50 116 C30 116 12 100 14 74 C15 58 24 48 32 40 C32 54 38 60 44 62 C40 40 44 20 50 4Z" fill="url(#flg)" stroke="#f39ab0" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M50 52 C56 66 70 74 68 92 C67 104 58 110 50 110 C40 110 32 102 33 90 C34 78 42 74 44 64 C47 70 49 72 52 72 C50 64 48 58 50 52Z" fill="#fff3c0"/>
+  <circle cx="42" cy="88" r="3.5" fill="#4a3f63"/><circle cx="58" cy="88" r="3.5" fill="#4a3f63"/><path d="M45 96 Q50 101 55 96" stroke="#4a3f63" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="37" cy="95" rx="4" ry="2.4" fill="#ff9fb8" opacity=".7"/><ellipse cx="63" cy="95" rx="4" ry="2.4" fill="#ff9fb8" opacity=".7"/></svg>`;
+const badgeSVG = (n, got) => `<div class="badge ${got ? 'got' : ''}"><svg viewBox="0 0 60 60" width="56" height="56" aria-hidden="true"><path d="M30 3 L37 11 L48 9 L49 20 L58 27 L52 36 L55 47 L44 49 L38 58 L30 52 L22 58 L16 49 L5 47 L8 36 L2 27 L11 20 L12 9 L23 11Z" fill="${got ? ({ 7: '#ffcade', 30: '#c8cfff', 100: '#ffe27a' })[n] : '#eee9e0'}" stroke="${got ? '#e8a0bc' : '#d8d0c4'}" stroke-width="2.5" stroke-linejoin="round"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="900" fill="${got ? '#4a3f63' : '#a9a2b4'}">${n}</text></svg><small>${n} days</small></div>`;
+function buyFreeze(after) {
+  if (S.freezes >= MAX_FREEZES) return toast(`🧊 You already hold ${MAX_FREEZES} freezes (max).`);
+  if (S.blingos < FREEZE_PRICE) return toast('Not enough Blingos yet. Keep practicing! 💪');
+  if (!confirm(`Buy a Streak Freeze for ${FREEZE_PRICE} Blingos?`)) return;
+  S.blingos -= FREEZE_PRICE; S.freezes++; save(); updateStats(); toast(`🧊 Streak Freeze ready! (${S.freezes}/${MAX_FREEZES})`); if (after) after();
+}
+const freezeCard = () => `<div class="card freeze-card"><span class="fz">🧊</span><div class="fz-t"><b>Streak Freeze</b><small>Keeps your streak safe if you miss a day. Used automatically. You have <b>${S.freezes}/${MAX_FREEZES}</b>.</small></div>
+  <button class="btn small" id="buyfz" ${S.freezes >= MAX_FREEZES || S.blingos < FREEZE_PRICE ? 'disabled' : ''}>${S.freezes >= MAX_FREEZES ? 'Full' : `<span class="coin">B</span> ${FREEZE_PRICE}`}</button></div>`;
+let calMonth = null;
+function streakView() {
+  const today = new Date(), tk = dayStr(today), cur = liveStreak();
+  if (!calMonth) calMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+  const cell = (d, small) => { const k = dayStr(d), v = S.days[k], fut = d > today;
+    return `<div class="dcell ${v === 1 ? 'hot' : v === 'f' ? 'frz' : ''} ${k === tk ? 'today' : ''} ${fut ? 'fut' : ''}" title="${k}">${small ? `<span class="dn">${d.getDate()}</span>` : ''}<span class="di">${v === 1 ? '🔥' : v === 'f' ? '❄️' : ''}</span></div>`; };
+  const mon = addDays(today, -((today.getDay() + 6) % 7));
+  const week = Array.from({ length: 7 }, (_, i) => addDays(mon, i));
+  const first = calMonth, lead = (first.getDay() + 6) % 7, nDays = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+  const monthDays = Object.keys(S.days).filter(k => k.startsWith(`${first.getFullYear()}-${pad2(first.getMonth() + 1)}`) && S.days[k] === 1).length;
+  const next = MILESTONES.find(m => m > cur);
+  app.innerHTML = `<a class="back" href="#/">← Home</a>
+    <div class="streak-hero card">${flameSVG(84, 'bob')}<div><div class="sh-n">${cur}</div><div class="sh-l">day streak</div>
+      <div class="sh-sub">${S.lastDay === tk ? 'You practiced today! 🎉' : cur ? 'Practice today to keep it going!' : 'Start a streak with one lesson today!'}</div></div></div>
+    <div class="res-stats"><div><b>🔥 ${cur}</b><span>current</span></div><div><b>🏆 ${S.longest}</b><span>longest</span></div><div><b>🧊 ${S.freezes}/${MAX_FREEZES}</b><span>freezes</span></div><div><b>📅 ${monthDays}</b><span>days this month</span></div></div>
+    <h2>This week</h2><div class="week">${week.map((d, i) => `<div class="wd"><small>${'MTWTFSS'[i]}</small>${cell(d)}</div>`).join('')}</div>
+    <div class="calhead"><button class="roundbtn sm" id="calprev" aria-label="Previous month">‹</button><h2>${first.toLocaleString('en-US', { month: 'long', year: 'numeric' })}</h2><button class="roundbtn sm" id="calnext" aria-label="Next month" ${first.getFullYear() === today.getFullYear() && first.getMonth() === today.getMonth() ? 'disabled' : ''}>›</button></div>
+    <div class="cal card"><div class="calgrid">${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(x => `<b>${x}</b>`).join('')}${'<div></div>'.repeat(lead)}${Array.from({ length: nDays }, (_, i) => cell(new Date(first.getFullYear(), first.getMonth(), i + 1), true)).join('')}</div>
+      <div class="legend"><span>🔥 practiced</span><span>❄️ frozen</span><span><i class="todot"></i> today</span></div></div>
+    <h2>Badges</h2><div class="badges">${MILESTONES.map(m => badgeSVG(m, S.longest >= m)).join('')}</div>${next ? `<p class="sub center">${next - cur} more day${next - cur > 1 ? 's' : ''} to the ${next}-day badge!</p>` : ''}
+    <h2>Streak Freeze</h2>${freezeCard()}`;
+  document.getElementById('calprev').onclick = () => { calMonth = new Date(first.getFullYear(), first.getMonth() - 1, 1); streakView(); };
+  document.getElementById('calnext').onclick = () => { calMonth = new Date(first.getFullYear(), first.getMonth() + 1, 1); streakView(); };
+  document.getElementById('buyfz').onclick = () => buyFreeze(streakView);
+}
+function maybeCelebrate() {
+  const c = S.celebrate; if (!c || document.getElementById('celebrate')) return;
+  if (c.day !== dayStr(new Date())) { delete S.celebrate; save(); return; }
+  delete S.celebrate; save();
+  const n = c.n, badge = MILESTONES.includes(n), cols = ['#ffc6dc', '#ffd9c4', '#fff0a8', '#c9f3df', '#cce7ff', '#c8cfff', '#e0d4ff', '#f2d0f6'];
+  const conf = Array.from({ length: 42 }, (_, i) => `<i style="left:${(Math.random() * 100).toFixed(1)}%;background:${cols[i % cols.length]};animation-delay:${(Math.random() * 1.2).toFixed(2)}s;animation-duration:${(2.4 + Math.random() * 1.8).toFixed(2)}s;${i % 3 ? '' : 'border-radius:50%;'}${i % 4 === 1 ? 'width:7px;height:16px;' : ''}"></i>`).join('');
+  const el = document.createElement('div'); el.id = 'celebrate'; el.className = 'celebrate'; el.setAttribute('role', 'dialog'); el.setAttribute('aria-label', `${n} day streak`);
+  el.innerHTML = `<div class="confetti">${conf}</div><div class="cel-card">${flameSVG(110, 'cel-flame')}<div class="cel-num" id="celnum">${Math.max(0, n - 1)}</div><div class="cel-lbl">day streak!</div>
+    ${badge ? `<div class="cel-badge">${badgeSVG(n, true)}<b>🏅 ${n}-day badge unlocked!</b></div>` : `<p class="sub">${n === 1 ? 'Your streak starts today. See you tomorrow! 💖' : 'You practiced again today. Amazing! ✨'}</p>`}
+    <div class="cel-buddies">${mascot('cheer', 96, 'cheerjump')}</div><button class="bigbtn" id="celok">KEEP IT UP!</button>
+    <a class="linkbtn" href="#/streak" id="celcal">See my streak calendar</a></div>`;
+  document.body.appendChild(el);
+  const num = el.querySelector('#celnum'); setTimeout(() => { num.textContent = n; num.classList.add('pop'); }, 700);
+  const close = () => el.remove();
+  el.querySelector('#celok').onclick = close; el.querySelector('#celcal').onclick = close;
+}
+new MutationObserver(() => { if (S.celebrate && app.querySelector('.card.result')) setTimeout(maybeCelebrate, 700); }).observe(app, { childList: true });
+
 /* ---------- router + tab bar ---------- */
 function go(h) { location.hash = h; }
 function setTabs(active) {
@@ -858,9 +935,11 @@ function route() {
   window.scrollTo(0, 0);
   const focus = mode === 'lesson' || (tid === 'practice' && (mode === 'review' || mode === 'fast' || (mode === 'chat' && parts[3])));
   document.body.classList.toggle('focus', focus);
-  setTabs(code === 'me' || code === 'shop' ? 'char' : code === 'profile' ? 'profile' : code === 'practice' || mode === 'cards' || mode === 'quiz' || (tid === 'practice' && mode !== 'review') ? 'practice' : mode === 'review' ? 'review' : 'home');
+  if (!focus) setTimeout(maybeCelebrate, 500);
+  setTabs(code === 'me' || code === 'shop' ? 'char' : code === 'profile' || code === 'streak' ? 'profile' : code === 'practice' || mode === 'cards' || mode === 'quiz' || (tid === 'practice' && mode !== 'review') ? 'practice' : mode === 'review' ? 'review' : 'home');
   if (code === 'me' || code === 'shop') { tryOn = null; return charScreen(code); }
   if (code === 'profile') return profile();
+  if (code === 'streak') { calMonth = null; return streakView(); }
   if (code === 'practice') return practiceHub();
   if (code === 'langs') return langsView();
   if (!code) return S.lang ? langView(S.lang) : langsView();
@@ -898,7 +977,8 @@ document.addEventListener('keydown', e => keyHandler && keyHandler(e));
   }
   el.innerHTML = h + '<b class="blob b1"></b><b class="blob b2"></b><b class="blob b3"></b>';
 })();
-updateStats(); route();
+applyFreezes(); updateStats(); route();
+if (S.freezeMsg) { setTimeout(() => toast(`🧊 Streak Freeze used${S.freezeMsg > 1 ? ' ×' + S.freezeMsg : ''}! Your 🔥 ${S.streak}-day streak is safe.`), 900); delete S.freezeMsg; }
 if (S.refundMsg) { setTimeout(() => toast(`👗 Outfits were retired: <span class="coin">B</span> +${S.refundMsg} Blingos refunded`), 600); delete S.refundMsg; }
 save();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
