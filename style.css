@@ -221,3 +221,11 @@ a.card,.pcard,.item,.lcard,.fc{transition:transform .15s}a.card:hover,.pcard:hov
 .confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}.confetti i{position:absolute;top:-20px;width:10px;height:10px;border-radius:3px;animation:confall 3s linear 1 both}
 @keyframes confall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(110vh) rotate(720deg)}}
 @media(prefers-reduced-motion:reduce){.cel-flame,.cheerjump,.confetti i{animation:none!important}.confetti{display:none}}
+
+/* live mic indicator */
+.live{display:inline-flex;align-items:center;gap:8px;color:#5b5fc7;font-weight:700}
+.live small{font-weight:500;color:var(--muted,#8a8aa0)}
+.dotlive{width:10px;height:10px;border-radius:50%;background:#ff8fab;display:inline-block;animation:livepulse 1s ease-in-out infinite}
+@keyframes livepulse{0%,100%{transform:scale(.8);opacity:.6}50%{transform:scale(1.25);opacity:1}}
+.micerr{color:#c2476b;font-weight:600}
+.tryagain{margin-left:6px;vertical-align:middle}

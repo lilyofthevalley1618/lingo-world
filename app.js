@@ -90,7 +90,8 @@ const rom = x => (x.r || '') + (S.zhuyin && x.z ? '\u2002' + x.z : '');
 function split(t) { const m = t.match(/^(.*?)（(.+?)）$/); return m ? { main: m[1], kana: m[2] } : { main: t, kana: '' }; } // "水（みず）"
 const kKey = (code, tid, i) => code + '|' + tid + '|' + i;
 async function load(code) {
-  if (!cache[code]) { const L = await (await fetch('data/' + code + '.json')).json(); L.color = META[code][3]; L.all = L.topics.flatMap(t => t.words.map((w, i) => ({ ...w, tid: t.id, i }))); cache[code] = L; }
+  if (!cache[code]) { const L = await (await fetch('data/' + code + '.json')).json(); L.color = META[code][3]; L.all = L.topics.flatMap(t => t.words.map((w, i) => ({ ...w, tid: t.id, i }))); cache[code] = L;
+    if (code === 'zh' || code === 'yue') fetch(`data/${code}-read.json`).then(r => r.json()).then(d => { const m = new Map(); for (const k in d) for (const c of d[k]) if (!m.has(c)) m.set(c, k); L.charRead = m; }).catch(() => {}); }
   return cache[code];
 }
 const wordByKey = (L, k) => { const [, tid, i] = k.split('|'); return L.all.find(w => w.tid === tid && w.i === +i); };
@@ -141,16 +142,85 @@ function speak(text, lang, o = {}) {
 
 /* ---------- speech in (recognition) ---------- */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-function listen(lang, { interim = false, onResult, onError, onEnd }) {
-  if (!SR) return null;
-  const rec = new SR(); rec.lang = lang; rec.interimResults = interim; rec.maxAlternatives = 5;
-  rec.onresult = e => { const r = e.results[e.results.length - 1]; onResult([...r].map(a => a.transcript), r.isFinal); };
-  rec.onerror = e => onError && onError(e.error);
-  rec.onend = () => onEnd && onEnd();
-  try { rec.start(); } catch (_) {}
-  return rec;
+// Robust recognition: continuous + interim + 5 alternatives, silence auto-stop, one auto-restart, language fallbacks.
+const SR_FALLBACK = { 'es-ES': ['es-ES', 'es-MX', 'es-US'], 'fr-FR': ['fr-FR', 'fr-CA'], 'zh-TW': ['zh-TW', 'cmn-Hant-TW', 'zh-CN'], 'zh-HK': ['zh-HK', 'yue-Hant-HK', 'zh-yue'], 'ja-JP': ['ja-JP'], 'ko-KR': ['ko-KR'] };
+const srWorking = {}; // remembers a recognition code that worked, per app language
+function listen(lang, { onInterim, onResult, onError, onEnd, maxMs = 8000, silenceMs = 2000 } = {}) {
+  if (!SR) { if (onError) onError('unsupported'); if (onEnd) onEnd(); return null; }
+  if (synth) synth.cancel(); // never let our own audio overlap the mic
+  const codes = SR_FALLBACK[lang] || [lang];
+  let ci = Math.max(0, codes.indexOf(srWorking[lang] || codes[0]));
+  let rec = null, prev = [], sess = [], interim = [], got = false, restarted = false, retry = false, done = false, stopped = false, lastErr = null, silT = null;
+  const t0 = Date.now();
+  const alts = () => {
+    const parts = [...prev, ...sess, ...(interim.length ? [interim] : [])]; if (!parts.length) return [];
+    const out = [parts.map(p => p[0]).join(' ')];
+    parts.forEach((p, i) => p.forEach(a => { out.push(a); if (parts.length > 1) out.push(parts.map((q, j) => j === i ? a : q[0]).join(' ')); }));
+    return [...new Set(out.map(x => x.trim()).filter(Boolean))];
+  };
+  const clear = () => { clearTimeout(silT); clearTimeout(maxT); };
+  const finish = () => {
+    if (done) return; done = true; clear(); try { rec && rec.stop(); } catch (_) {}
+    const a = alts();
+    if (a.length) { if (onResult) onResult(a); } else if (onError) onError(lastErr || 'no-speech');
+    if (onEnd) onEnd();
+  };
+  const start = () => {
+    rec = new SR(); rec.lang = codes[ci]; rec.continuous = true; rec.interimResults = true; rec.maxAlternatives = 5;
+    sess = []; interim = [];
+    rec.onresult = e => {
+      got = true; sess = []; interim = [];
+      for (let i = 0; i < e.results.length; i++) { const r = e.results[i], list = [...r].map(x => x.transcript).filter(Boolean); if (!list.length) continue; if (r.isFinal) sess.push(list); else interim = list; }
+      srWorking[lang] = codes[ci];
+      const a = alts(); if (a.length && onInterim) onInterim(a);
+      clearTimeout(silT); silT = setTimeout(() => { stopped = true; finish(); }, silenceMs);
+    };
+    rec.onerror = e => {
+      const err = e.error;
+      if (err === 'language-not-supported' && ci < codes.length - 1) { ci++; retry = true; return; }
+      if ((err === 'no-speech' || err === 'aborted' || err === 'network') && !got && !restarted && !stopped) { restarted = true; retry = true; return; }
+      if (!got) lastErr = err;
+    };
+    rec.onend = () => {
+      if (done) return;
+      if (retry) { retry = false; prev = prev.concat(sess); return start(); }
+      if (!got && !lastErr && !restarted && !stopped && Date.now() - t0 < maxMs - 1500) { restarted = true; return start(); } // ended too early
+      if (got && !stopped && Date.now() - t0 < maxMs - 800) { prev = prev.concat(sess); sess = []; return start(); } // keep listening through short pauses
+      finish();
+    };
+    try { rec.start(); } catch (_) { lastErr = lastErr || 'busy'; setTimeout(finish, 50); }
+  };
+  const maxT = setTimeout(() => { stopped = true; finish(); }, maxMs);
+  start();
+  return { stop: () => { stopped = true; finish(); }, abort: () => { done = true; clear(); try { rec && rec.abort(); } catch (_) {} } };
 }
-const micMsg = err => err === 'not-allowed' || err === 'service-not-allowed' ? 'Microphone is blocked. Allow it in browser settings, or skip.' : err === 'language-not-supported' ? 'This browser can\'t recognize this language yet. Skip for now.' : 'Didn\'t catch that, tap the mic and try again!';
+const micMsg = err => ({
+  'not-allowed': '🎤 Microphone access is blocked. Allow the mic for this site (iPhone: Settings → Safari → Microphone · Chrome: tap 🔒 next to the address → Microphone → Allow), then try again.',
+  'service-not-allowed': '🎤 Speech recognition is turned off. iPhone: Settings → General → Keyboard → Enable Dictation, then try again.',
+  'no-speech': 'I didn\'t hear anything. Hold the phone a little closer and speak up a bit.',
+  network: '📶 Speech recognition needs internet. Check your connection and try again.',
+  'audio-capture': 'No microphone found. Make sure no other app is using it.',
+  'language-not-supported': 'This browser can\'t recognize this language yet. Try Chrome, or skip for now.',
+  unsupported: 'This browser can\'t check speech. Try Chrome or Safari, or say it out loud and skip.',
+})[err] || 'Didn\'t catch that. Try again!';
+// Shared mic button + live status. Tap the mic again to stop early.
+function micRun({ lang, btn, out, onAlts, onStart }) {
+  let ctrl = null;
+  const begin = () => {
+    if (ctrl) { ctrl.stop(); return; }
+    btn.classList.add('on'); if (onStart) onStart();
+    out.innerHTML = '<span class="live"><i class="dotlive"></i> Listening… say it! <small>(tap 🎤 again when you\'re done)</small></span>';
+    ctrl = listen(lang, {
+      onInterim: a => { if (out.isConnected) out.innerHTML = `<span class="live"><i class="dotlive"></i> Listening… “${esc(a[0])}”</span>`; },
+      onResult: a => onAlts(a),
+      onError: err => { if (!out.isConnected) return; out.innerHTML = `<span class="micerr">${esc(micMsg(err))}</span> <button class="btn small alt tryagain">🎤 Try again</button>`; out.querySelector('.tryagain').onclick = begin; },
+      onEnd: () => { ctrl = null; btn.classList.remove('on'); },
+    });
+  };
+  btn.onclick = begin;
+  return { begin, stop: () => ctrl && ctrl.abort() };
+}
+const retryMsg = (heard, sc) => `I heard “${esc(heard)}” (${Math.round(sc * 100)}%). So close! <button class="btn small alt tryagain">🎤 Try again</button>`;
 
 /* ---------- answer checking (lenient) ---------- */
 const SYN = { mom: 'mother', mum: 'mother', dad: 'father', hi: 'hello', bye: 'goodbye', thanks: 'thank you', grey: 'gray', veggies: 'vegetables', restroom: 'bathroom', toilet: 'bathroom' };
@@ -188,10 +258,75 @@ function judge(input, cands, lang) { // typed answers -> {ok, typo}
 }
 const tCands = w => { const s = split(w.t), c = alts(s.main); if (s.kana) c.push(s.kana); if (w.r) c.push(...alts(w.r).map(r => r.replace(/[1-6]/g, ''))); return c; };
 function similar(a, b) { const x = nrm(a), y = nrm(b); if (!x || !y) return 0; if (x.includes(y)) return 1; return 1 - lev(x, y) / Math.max(x.length, y.length); }
-function spokenScore(heard, item) { // 0..1, lenient
-  const cands = item.tiles ? [item.t, (item.r || '').replace(/[1-6]/g, '')] : tCands(item);
+// Forgiving speech matching: all alternatives, romanization/reading comparison (homophones), partial credit.
+const RMAP = {};
+const CJK = /[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/;
+function readingMap(L) { // text -> reading (zh: Zhuyin, yue: Jyutping, ja/ko: romanization), from the app's own data
+  if (RMAP[L.code]) return RMAP[L.code];
+  const m = new Map(), zh = false, perChar = L.code === 'yue';
+  const add = (t, r) => { t = (t || '').replace(/[\s\p{P}…]/gu, ''); r = (r || '').trim(); if (t && r && !m.has(t)) m.set(t, r); };
+  const chars = (t, r) => { if (!perChar) return; const cs = [...t.replace(/[\s\p{P}…]/gu, '')].filter(c => CJK.test(c)), toks = r.replace(/[^\sA-Za-z0-9ㄅ-ㄩˊˇˋ˙\u00C0-\u024F\u0300-\u036f]/g, ' ').trim().split(/\s+/).filter(Boolean); if (cs.length === toks.length) cs.forEach((c, i) => add(c, toks[i])); };
+  for (const t of L.topics) {
+    for (const w of t.words) { const s = split(w.t), rd = zh ? w.z : w.r; for (const v of alts(s.main)) add(v, rd); if (s.kana) add(s.kana, w.r); if (!/\//.test(s.main)) chars(s.main, rd || ''); }
+    for (const x of t.sentences) { const rd = zh ? x.z : x.r; add(x.t, rd); chars(x.t, rd || ''); x.tiles.forEach((tl, j) => x.tr && add(tl, x.tr[j])); }
+  }
+  return (RMAP[L.code] = m);
+}
+function hangulRom(s) { // Revised Romanization (no assimilation), applied to both sides so it's consistent
+  const I = ['g', 'kk', 'n', 'd', 'tt', 'r', 'm', 'b', 'pp', 's', 'ss', '', 'j', 'jj', 'ch', 'k', 't', 'p', 'h'];
+  const V = ['a', 'ae', 'ya', 'yae', 'eo', 'e', 'yeo', 'ye', 'o', 'wa', 'wae', 'oe', 'yo', 'u', 'wo', 'we', 'wi', 'yu', 'eu', 'ui', 'i'];
+  const F = ['', 'k', 'k', 'k', 'n', 'n', 'n', 't', 'l', 'k', 'm', 'l', 'l', 'l', 'p', 'l', 'm', 'p', 'p', 't', 't', 'ng', 't', 't', 'k', 't', 'p', 't'];
+  return [...s].map(ch => { const c = ch.charCodeAt(0) - 0xac00; if (c < 0 || c > 11171) return ch; return I[Math.floor(c / 588)] + V[Math.floor((c % 588) / 28)] + F[c % 28]; }).join('');
+}
+function toReading(L, text) {
+  if (L.code === 'ko') return hangulRom(text);
+  const m = readingMap(L), cr = L.charRead, s = text.replace(/[\s\p{P}…]/gu, ''), out = [];
+  for (let i = 0; i < s.length;) {
+    let hit = false;
+    for (let n = Math.min(10, s.length - i); n > 0; n--) { const r = m.get(s.slice(i, i + n)); if (r) { out.push(r); i += n; hit = true; break; } }
+    if (hit) continue;
+    const c = s[i];
+    if (cr && cr.has(c)) { out.push(cr.get(c)); i++; continue; } // any common character -> reading (homophones)
+    if (L.code === 'ja') { const k = kanaRom(s, i); if (k) { out.push(k[0]); i += k[1]; continue; } }
+    out.push(c); i++;
+  }
+  return out.join(' ');
+}
+const KANA = (() => { const m = {}, rows = 'a i u e o|ka ki ku ke ko|sa shi su se so|ta chi tsu te to|na ni nu ne no|ha hi fu he ho|ma mi mu me mo|ya - yu - yo|ra ri ru re ro|wa - - - wo'.split('|'), h = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもや-ゆ-よらりるれろわ---を'; let k = 0; rows.forEach(r => r.split(' ').forEach(x => { const c = h[k++]; if (x !== '-' && c !== '-') m[c] = x; }));
+  Object.assign(m, { ん: 'n', が: 'ga', ぎ: 'gi', ぐ: 'gu', げ: 'ge', ご: 'go', ざ: 'za', じ: 'ji', ず: 'zu', ぜ: 'ze', ぞ: 'zo', だ: 'da', ぢ: 'ji', づ: 'zu', で: 'de', ど: 'do', ば: 'ba', び: 'bi', ぶ: 'bu', べ: 'be', ぼ: 'bo', ぱ: 'pa', ぴ: 'pi', ぷ: 'pu', ぺ: 'pe', ぽ: 'po', ぁ: 'a', ぃ: 'i', ぅ: 'u', ぇ: 'e', ぉ: 'o', ゃ: 'ya', ゅ: 'yu', ょ: 'yo', ー: '' }); return m; })();
+function kanaRom(s, i) { // hiragana/katakana -> romaji, [romaji, charsUsed]
+  const h = ch => { const c = ch.charCodeAt(0); return c >= 0x30a1 && c <= 0x30f6 ? String.fromCharCode(c - 0x60) : ch; };
+  let c = h(s[i]), nx = s[i + 1] ? h(s[i + 1]) : '';
+  if (c === 'っ' && nx && KANA[nx]) return [KANA[nx][0], 1];
+  if (!(c in KANA)) return null;
+  if (nx && 'ゃゅょ'.includes(nx) && KANA[c] && KANA[c].length > 1) { const b = KANA[c].slice(0, -1); return [(/(sh|ch|j)$/.test(b) ? b : b + 'y') + KANA[nx].slice(-1), 2]; }
+  return [KANA[c], 1];
+}
+function normRead(x, code) {
+  let s = String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[ˊˇˋ˙]/g, '').replace(/[0-9]/g, '').replace(/[\s'’\-.,!?。，！？、…·~]/g, '');
+  if (code === 'ja') s = s.replace(/ou/g, 'o').replace(/oo/g, 'o').replace(/uu/g, 'u').replace(/ei/g, 'e');
+  return s;
+}
+function lcsRatio(a, b) { // how much of target b appears (in order) in a
+  if (!a || !b) return 0; let prev = new Array(b.length + 1).fill(0);
+  for (let i = 1; i <= a.length; i++) { const cur = [0]; for (let j = 1; j <= b.length; j++) cur[j] = a[i - 1] === b[j - 1] ? prev[j - 1] + 1 : Math.max(prev[j], cur[j - 1]); prev = cur; }
+  return prev[b.length] / b.length;
+}
+const sim2 = (a, b) => { if (!a || !b) return 0; if (a.includes(b)) return 1; return Math.max(1 - lev(a, b) / Math.max(a.length, b.length), lcsRatio(a, b) * 0.95); };
+function spokenScore(heard, item, L) { // 0..1, lenient
+  const cands = (item.tiles ? [item.t, item.r || ''] : tCands(item)).filter(Boolean).map(c => c.replace(/[1-6]/g, ''));
   if (!item.tiles && NUMVAL[item.en] != null && heard.some(h => h.replace(/\D/g, '') === String(NUMVAL[item.en]))) return 1;
-  return Math.min(1, Math.max(0, ...heard.flatMap(h => cands.filter(Boolean).map(c => similar(h, c) + (/\d/.test(h) ? 0.2 : 0)))));
+  let best = 0;
+  for (const h of heard) {
+    for (const c of cands) best = Math.max(best, similar(h, c), sim2(nrm(h), nrm(c)) + (/\d/.test(h) ? 0.2 : 0));
+    if (L && L.romanLabel) { // compare readings: catches homophones / different characters / kana vs kanji
+      const code = L.code, hr = normRead(toReading(L, h), code);
+      const targets = [toReading(L, split(item.t).main), item.r, split(item.t).kana ? toReading(L, split(item.t).kana) : ''].filter(Boolean).map(t => normRead(t, code));
+      for (const t of targets) best = Math.max(best, sim2(hr, t));
+      if (!CJK.test(h)) for (const t of [item.r].filter(Boolean)) best = Math.max(best, sim2(normRead(h, code), normRead(t, code))); // romanized transcript
+    }
+  }
+  return Math.min(1, Math.max(0, best));
 }
 const PASS = 0.3; // speaking passes when the match score is over 30%
 
@@ -359,18 +494,16 @@ async function chat(code, sceneId) {
     $('reply').innerHTML = `<div class="checkbar-in col"><div class="yourturn"><div class="pill-label">Your turn · say:</div><div class="yt-t">${esc(s.main)}</div>${item.r ? `<div class="br">${esc(rom(item))}</div>` : ''}<div class="be">${esc(item.en)}</div><div id="heard" class="sub"></div></div>
       <div class="row center-row"><button class="spk" id="hear" title="Hear it">🔊</button>${SR ? '<button class="mic sm" id="mic">🎤</button>' : '<button class="bigbtn" id="self">I SAID IT ✓</button>'}<button class="roundbtn" id="skipc" title="Skip">⏭</button></div></div>`;
     $('hear').onclick = () => speak(item.t, L.speech);
-    const ok = (pct) => { bubble('me', item, pct != null ? `<span class="okchip">✓ ${pct}%</span>` : ''); ti++; step(); };
+    const ok = (pct) => { bubble('me', item, pct === 'close' ? '<span class="okchip">💖 Close enough!</span>' : pct != null ? `<span class="okchip">✓ ${pct}%</span>` : ''); ti++; step(); };
     $('skipc').onclick = () => ok(null);
     if ($('self')) $('self').onclick = () => { earn(1, '💬 practice'); ok(null); };
-    if ($('mic')) $('mic').onclick = () => {
-      if (synth) synth.cancel();
-      $('mic').classList.add('on'); $('heard').textContent = 'Listening…';
-      listen(L.speech, {
-        onResult: heard => { const sc2 = spokenScore(heard, item); if (sc2 > PASS) { spoke++; activity(2); earn(3, '💬 spoken reply'); ok(Math.round(sc2 * 100)); } else $('heard').textContent = `I heard “${heard[0]}”. Try again!`; },
-        onError: err => { if ($('heard')) $('heard').textContent = micMsg(err); },
-        onEnd: () => { if ($('mic')) $('mic').classList.remove('on'); },
-      });
-    };
+    let fails = 0;
+    if ($('mic')) micRun({ lang: L.speech, btn: $('mic'), out: $('heard'), onAlts: heard => {
+      const sc2 = spokenScore(heard, item, L);
+      if (sc2 > PASS) { spoke++; activity(2); earn(3, '💬 spoken reply'); return ok(Math.round(sc2 * 100)); }
+      if (++fails >= 2) { spoke++; activity(2); earn(3, '💖 close enough, nice try!'); return ok('close'); }
+      $('heard').innerHTML = retryMsg(heard[0], sc2); $('heard').querySelector('.tryagain').onclick = () => $('mic').click();
+    } });
   };
   const end = () => {
     earn(5, 'conversation done'); activity(5); setTimeout(maybeCelebrate, 900);
@@ -457,15 +590,13 @@ function runSession(L, cfg) {
     frame(ex, title, display + `<button class="mic" id="mic" ${SR ? '' : 'disabled'}>🎤</button><p class="sub center" id="heard">${SR ? 'Tap the mic, then say it' : 'Say it out loud, then tap “I said it ✓”'}</p>`, true);
     if ($('spk')) $('spk').onclick = () => say(item.t);
     if (autoplay) say(item.t);
-    if (SR) $('mic').onclick = () => {
-      if (synth) synth.cancel();
-      $('mic').classList.add('on'); $('heard').textContent = 'Listening…';
-      listen(L.speech, {
-        onResult: heard => { const sc = spokenScore(heard, item); $('heard').textContent = `I heard: “${heard[0]}”`; setTimeout(() => feedback({ ok: sc > PASS, heard: heard[0], score: sc, spoken: true }, ex), 300); },
-        onError: err => { if ($('heard')) $('heard').textContent = micMsg(err); },
-        onEnd: () => { if ($('mic')) $('mic').classList.remove('on'); },
-      });
-    };
+    let fails = 0;
+    if (SR) micRun({ lang: L.speech, btn: $('mic'), out: $('heard'), onAlts: heard => {
+      const sc = spokenScore(heard, item, L);
+      if (sc > PASS) return setTimeout(() => feedback({ ok: true, heard: heard[0], score: sc, spoken: true }, ex), 300);
+      if (++fails >= 2) return setTimeout(() => feedback({ ok: true, heard: heard[0], score: sc, spoken: true, msg: '💖 Close enough, nice try!' }, ex), 300);
+      $('heard').innerHTML = retryMsg(heard[0], sc); $('heard').querySelector('.tryagain').onclick = () => $('mic').click();
+    } });
     if ($('selfok')) $('selfok').onclick = () => feedback({ ok: true, self: true }, ex);
     $('skip').onclick = () => feedback({ ok: true, free: true }, ex);
   }
@@ -629,7 +760,9 @@ async function shadowing(code) {
     ...(t.id === 'phrases' || t.id === 'greetings' ? t.words.map((w, i) => ({ ...w, tid: t.id, i, topic: t.icon + ' ' + t.name })).filter(sayable) : [])]);
   let i = 0, auto = true;
   const rewarded = new Set();
+  let curMic = null;
   const render = () => {
+    if (curMic) curMic.stop();
     const it = items[i], s = split(it.t), $ = id => document.getElementById(id);
     app.innerHTML = `<a class="back" href="#/${code}">← ${L.name}</a><h1>🗣️ Shadowing</h1><p class="sub">Listen, then repeat <b>right away</b>, copying the rhythm and melody. ${SR ? '' : '(This browser can\'t check speech, so just repeat out loud.)'}</p>
       <div class="card shadow-card" style="--c:${L.color}"><div class="sub">${esc(it.topic)} · ${i + 1}/${items.length}</div>
@@ -640,21 +773,16 @@ async function shadowing(code) {
         ${SR ? `<label class="chk"><input type="checkbox" id="auto" ${auto ? 'checked' : ''}> Auto: mic starts right after the audio</label>` : ''}
         <div class="meter" id="meter"></div></div>
       <div class="ctrls"><button class="btn alt" id="prev">← Prev</button><button class="btn alt" id="next">Next →</button></div>`;
-    const repeat = () => {
-      $('meter').innerHTML = '<span class="sub">🎤 Listening… say it now!</span>';
-      listen(L.speech, {
-        onResult: heard => {
-          const sc = spokenScore(heard, it), pct = Math.round(sc * 100);
-          $('meter').innerHTML = `<div class="bar big"><i style="width:${pct}%"></i></div><b>${pct}% match</b> ${sc > PASS ? '🎉' : '· try again!'}<div class="sub">I heard: “${esc(heard[0])}”</div>`;
-          if (it.tid != null) srsMark(code, it, sc > PASS);
-          if (sc > PASS && !rewarded.has(i)) { rewarded.add(i); activity(2); earn(2, '🗣️ shadowing'); }
-        },
-        onError: err => { if ($('meter')) $('meter').innerHTML = `<span class="sub">${micMsg(err)}</span>`; },
-      });
-    };
-    $('play').onclick = () => speak(it.t, L.speech, { onend: () => { if (SR && auto && $('meter')) repeat(); } });
+    let fails = 0;
+    const mic = $('rep') ? micRun({ lang: L.speech, btn: $('rep'), out: $('meter'), onAlts: heard => {
+      const sc = spokenScore(heard, it, L), pct = Math.round(sc * 100), pass = sc > PASS || ++fails >= 2, close = pass && sc <= PASS;
+      $('meter').innerHTML = `<div class="bar big"><i style="width:${close ? 100 : pct}%"></i></div><b>${close ? '💖 Close enough, nice try!' : `${pct}% match`}</b> ${pass ? (close ? '' : '🎉') : '· so close, try again!'}<div class="sub">I heard: “${esc(heard[0])}”</div>`;
+      if (it.tid != null) srsMark(code, it, sc > PASS);
+      if (pass && !rewarded.has(i)) { rewarded.add(i); activity(2); earn(2, close ? '💖 nice try' : '🗣️ shadowing'); }
+    } }) : null;
+    curMic = mic;
+    $('play').onclick = () => speak(it.t, L.speech, { onend: () => { if (mic && auto && $('meter')) mic.begin(); } });
     $('slow').onclick = () => { S.slow = !S.slow; save(); render(); };
-    if ($('rep')) $('rep').onclick = () => { if (synth) synth.cancel(); repeat(); };
     if ($('auto')) $('auto').onchange = e => { auto = e.target.checked; };
     $('prev').onclick = () => { i = (i - 1 + items.length) % items.length; render(); };
     $('next').onclick = () => { i = (i + 1) % items.length; render(); };
@@ -680,29 +808,33 @@ async function sayFast(code) {
   };
   const round = () => {
     if (r >= rounds.length) return end();
-    const w = rounds[r], s = split(w.t); let left = secs * 10, settled = false;
+    const w = rounds[r], s = split(w.t); let left = secs * 10, settled = false, heardAny = '';
     app.innerHTML = `<div class="lesson"><div class="lbar"><a class="x" href="#/${code}">✕</a><div class="progress"><i style="width:${r / rounds.length * 100}%"></i></div><span class="hearts">⚡ ${hits}</span></div>
       <div class="fast-card card"><span class="em huge">${EMOJI[w.en] || '💬'}</span><div class="tw">${esc(w.en)}</div><div class="timer"><i id="tbar" style="width:100%"></i></div>
       <div id="fres" class="sub">${SR ? '🎤 Listening… say it!' : 'Say it out loud!'}</div><div id="fbtn" class="ctrls"></div></div></div>`;
     const answer = `<b>${esc(s.main)}</b>${w.r ? ' · <i>' + esc(rom(w)) + '</i>' : ''}${w.tip ? `<div class="tip">💡 ${esc(w.tip)}</div>` : ''}`;
     const next = () => { r++; round(); };
-    const settle = (ok, heard) => {
+    const settle = (ok, heard, close) => {
       if (settled) return; settled = true; stop();
-      if (ok) { hits++; earn(2, '⚡ fast recall'); activity(3); }
-      srsMark(code, w, ok);
-      $('fres').innerHTML = `${ok ? '✅ Yes!' : '⏰ Time\'s up!'} ${answer}${heard ? `<div class="sub">I heard: “${esc(heard)}”</div>` : ''}`;
+      if (ok) { hits++; earn(2, close ? '💖 nice try' : '⚡ fast recall'); activity(3); }
+      srsMark(code, w, ok && !close);
+      $('fres').innerHTML = `${close ? '💖 Close enough, nice try!' : ok ? '✅ Yes!' : '⏰ Time\'s up!'} ${answer}${heard ? `<div class="sub">I heard: “${esc(heard)}”</div>` : ''}`;
       speak(w.t, L.speech);
       $('fbtn').innerHTML = '<button class="btn ok" id="nx">Next →</button>'; $('nx').onclick = next; $('nx').focus();
     };
     const self = ok => { if (ok) { hits++; earn(1, '⚡ fast recall'); activity(2); } srsMark(code, w, ok); next(); };
     if (SR) {
-      const start = () => { rec = listen(L.speech, { interim: true, onResult: heard => { if (spokenScore(heard, w) > PASS) settle(true, heard[0]); }, onError: () => {}, onEnd: () => { if (!settled && rec && left > 8) start(); } }); };
+      const check = a => { heardAny = a[0]; if (spokenScore(a, w, L) > PASS) settle(true, a[0]); };
+      const start = () => { rec = listen(L.speech, { maxMs: Math.max(1500, left * 100), silenceMs: 1600,
+        onInterim: a => { if (settled) return; check(a); if (!settled && $('fres')) $('fres').innerHTML = `<span class="live"><i class="dotlive"></i> “${esc(a[0])}”</span>`; },
+        onResult: a => { if (!settled) { check(a); if (!settled && left > 12) start(); } },
+        onError: err => { if (settled) return; if ((err === 'no-speech' || err === 'aborted') && left > 12) start(); else if (err !== 'no-speech' && err !== 'aborted' && $('fres')) $('fres').textContent = micMsg(err); } }); };
       start();
     }
     timer = setInterval(() => {
       left--; const b = $('tbar'); if (b) b.style.width = (left / (secs * 10) * 100) + '%';
       if (left > 0) return;
-      if (SR) return settle(false);
+      if (SR) return heardAny ? settle(true, heardAny, true) : settle(false);
       stop(); settled = true;
       $('fres').innerHTML = 'Answer: ' + answer; speak(w.t, L.speech);
       $('fbtn').innerHTML = '<button class="btn ok" id="y">I got it ✓</button><button class="btn pink" id="n">Missed</button>';
